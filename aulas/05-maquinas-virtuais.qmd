@@ -2,169 +2,258 @@
 title: "Aula 05 — Máquinas Virtuais"
 ---
 
-## Objetivos da aula
+## Introdução - Por que virtualizar?
 
-- Entender formalmente **o que é uma máquina virtual**
-- Conhecer as **funções do hipervisor (MMV)**
-- Identificar os **componentes virtuais** de uma VM
-- Listar **benefícios e desafios** de usar VMs
+- Descentralização de recursos computacionais.
+  - Cloud computing
+- Plena utilização de recursos físicos.
+  - "Do more with less"
+  - Reaproveitamento de recursos
+- Diferentes SOs no mesmo hardware.
+  - Isolamento de aplicações
+  - Segurança
+- Redução no número de máquinas físicas.
+  - Economia de energia, espaço, dinheiro
+
+## Introdução - Por que virtualizar?
+
+- Facilidade de gerenciamento.
+- Treinamentos e ambientes de ensino.
+- Facilidade para restauração e recuperação de serviços.
+  - Maior disponibilidade
+  - Tolerância a falhas
+
+## Introdução - Por que virtualizar?
+
+::: {layout-ncol=2}
+![Funcionamento normal](../images/aula08/ha-funcionamento-normal.png)
+
+![Funcionamento com falha](../images/aula08/ha-funcionamento-falha.png)
+:::
+
+## Introdução - Contexto histórico
+
+- Surgiu na década de 60 na IBM.
+  - Soluções combinadas em hardware e software (desempenho!).
+  - Dividir logicamente o mainframe.
+- Recurso caro, necessário utilização completa.
+- Popularização do x86 no final da década de 80.
+  - Desktops
+  - Virtualização ficou de lado
+- Popularização da Internet a partir da década de 90.
+  - Alta disponibilidade,
+  - Necessidade de economia de recursos,
+  - Virtualização ganha espaço novamente.
 
 ---
 
-## Por que virtualizar?
+## Conceitos
 
-::: {.incremental}
-- **Descentralização** com controle centralizado
-- **Uso pleno de recursos** — hardware caro não fica ocioso
-- **Isolamento** — problemas em uma VM não afetam as outras
-- **Economia** — menos servidores físicos, menos energia, menos espaço
-- **Recuperação de desastres e tolerância a falhas** — uma VM pode ser movida ou recriada rapidamente
-:::
+- "Uma máquina virtual é uma cópia eficiente e isolada da máquina real" (POPEK; GOLDBERG, 1974).
+- Uma Máquina Virtual é um ambiente de computação que opera como um sistema de computador completo, com seu próprio hardware virtual, porém, executado sobre um hardware físico existente.
+- Em essência, é um computador dentro de outro computador.
+- Existem duas categorias de máquinas virtuais:
+  - Máquinas virtuais de processo (ex. JVM).
+    - Execução de programas
+  - Máquinas virtuais de sistemas (ex. Virtual Box).
+    - Execução de SO completo
 
-## O conceito formal de VM
+## Conceitos - MMV
 
-> "Uma máquina virtual é uma **cópia eficiente e isolada** da máquina real."
->
-> — Popek & Goldberg, 1974
+- Monitor de Máquina Virtual (MMV) ou Virtual Monitor Machine (VMM)
+  - Camada de software que abstrai os recursos físicos para utilização das máquinas virtuais,
+  - Hipervisor ou Hypervisor.
 
-Esse artigo de 1974 ainda é a referência formal usada até hoje para definir virtualização.
-
-## Dois tipos de VM
-
-- **VMs de processo** — virtualizam a execução de **um único processo/programa** (ex.: a JVM — Java Virtual Machine — roda um programa Java isolado do SO real)
-- **VMs de sistema** — virtualizam **um computador inteiro**, incluindo SO completo (ex.: uma VM no VirtualBox rodando Ubuntu)
-
-::: {.notes}
-Distinguir bem: JVM não é o que estamos estudando como "VM" na disciplina — é outro conceito. Nosso foco são VMs de sistema.
-:::
-
----
-
-## O MMV / Hipervisor — condições de Popek & Goldberg
+## Conceitos - MMV
 
 ![](../images/aula05/diagrama-mmv.png){fig-align="center" width="55%"}
 
-## Diagrama original de referência (variação)
+## Conceitos - MMV {.smaller}
+
+- Definições de Popek e Goldberg:
+  - O MMV deve fornecer aos programas um ambiente idêntico ao da máquina original.
+  - Os programas nesse ambiente devem apresentar como perda apenas uma diminuição de sua velocidade de execução.
+  - O MMV deve possuir controle completo sobre os recursos do sistema.
+- O MMV deve interpretar e emular o conjunto de instruções entre as máquinas virtuais e a máquina real.
+
+## Conceitos - MMV {.smaller}
+
+- Principais funções do MMV:
+  - Definir o ambiente de máquinas virtuais.
+  - Alterar o modo de execução do sistema operacional.
+    - Kernel ⟷ User
+  - Emular as instruções e escalonar CPU para as VMs
+    - Muitas instruções do processador virtual devem ser executadas diretamente pelo processador real, sem que haja intervenção do monitor (eficiência!).
+  - Gerenciar acesso a memória e disco.
+  - Intermediar as chamadas de sistema e controlar acesso a outros dispositivos de I/O.
+    - Drive USB, dispositivos de rede etc.
+
+## Conceitos - Definições
+
+- Abstração de Hardware:
+  - A máquina virtual abstrai o hardware físico subjacente, fazendo com que o sistema operacional convidado "pense" que está interagindo diretamente com hardware físico dedicado.
+- Isolamento:
+  - Cada máquina virtual é isolada das outras VMs e do sistema operacional hospedeiro.
+  - Isso significa que problemas em uma VM geralmente não afetam as outras ou o host.
+
+---
+
+## Benefícios - Otimização do Hardware
+
+- Consolidação de Servidores:
+  - Em vez de ter múltiplos servidores físicos para diferentes aplicações, é possível rodar diversas VMs em um único servidor físico potente, economizando espaço, energia e custos de hardware.
+- Utilização Máxima de Recursos:
+  - Garante que o hardware físico seja utilizado de forma mais eficiente, evitando ociosidade.
+
+## Benefícios - Flexibilidade e Agilidade
+
+- Provisionamento Rápido:
+  - Criar e configurar uma nova VM é muito mais rápido do que adquirir, instalar e configurar um novo hardware físico.
+- Portabilidade:
+  - VMs podem ser facilmente movidas de um host físico para outro (migração), o que é crucial para balanceamento de carga, manutenção ou recuperação de desastres.
+- Snapshots e Rollbacks:
+  - É possível "fotografar" o estado de uma VM em um determinado momento (snapshot) e retornar a esse estado posteriormente, ideal para testes de software ou recuperação de erros.
+
+## Benefícios - Segurança e Isolamento
+
+- Ambientes de Teste e Desenvolvimento Seguros:
+  - Desenvolvedores podem testar novas aplicações ou configurações em VMs isoladas sem o risco de afetar sistemas de produção.
+- Segurança Aprimorada:
+  - Se uma VM for comprometida por malware, o impacto é contido dentro daquela VM, sem se espalhar para o host ou outras VMs.
+
+## Benefícios - Redução de Custos
+
+- Menos Hardware:
+  - Diminui a necessidade de comprar múltiplos servidores físicos.
+- Menor Consumo de Energia:
+  - Menos servidores físicos significam menor consumo de energia e refrigeração.
+- Simplificação da Gerência:
+  - Ferramentas de virtualização centralizam a gerência de múltiplos servidores.
+
+## Benefícios - Compatibilidade e Legacy
+
+- Execução de Sistemas Operacionais Legados:
+  - Permite rodar sistemas operacionais antigos que não são compatíveis com hardware moderno, garantindo a continuidade de aplicações antigas essenciais.
+
+---
+
+## Desafios - Desafios e Considerações ao Trabalhar com VMs
+
+- Gerenciamento da Complexidade:
+  - Ambientes com muitas VMs podem se tornar complexos de gerenciar sem ferramentas adequadas.
+- Gargalos de Desempenho:
+  - I/O de Disco: O subsistema de disco é frequentemente o maior gargalo em ambientes virtualizados, especialmente com muitas VMs acessando o mesmo armazenamento.
+  - Rede: A capacidade da rede física do host e a configuração das redes virtuais são cruciais.
+
+## Desafios - Desafios e Considerações ao Trabalhar com VMs
+
+- Licenciamento de Software:
+  - O licenciamento de alguns softwares pode ser mais complexo ou caro em ambientes virtualizados.
+- Segurança:
+  - Embora o isolamento seja um benefício, vulnerabilidades no hipervisor ou configurações incorretas podem comprometer a segurança.
+- Custo Inicial:
+  - O investimento inicial em hardware potente e software de virtualização pode ser significativo, embora geralmente compense a longo prazo.
+
+---
+
+## Componentes - Componentes Virtuais {.smaller}
+
+- Para que uma VM funcione como um computador completo, ela precisa de seus próprios componentes virtuais:
+  - CPU Virtual (vCPU):
+    - O hipervisor aloca "fatias" do tempo de processamento das CPUs físicas para as vCPUs das VMs.
+    - É possível atribuir múltiplos núcleos e até processadores virtuais.
+  - Memória Virtual (vRAM):
+    - O hipervisor gerencia a alocação de memória RAM física para as VMs.
+    - Técnicas como memory ballooning e deduplication podem ser usadas para otimizar o uso da memória.
+
+## Componentes - Componentes Virtuais {.smaller}
+
+- Para que uma VM funcione como um computador completo, ela precisa de seus próprios componentes virtuais:
+  - Disco Virtual (vHDD):
+    - O disco rígido de uma VM é, na verdade, um arquivo (ou conjunto de arquivos) no sistema de arquivos do host físico.
+    - Existem diferentes formatos de disco virtual (VMDK, VHD, VDI, QCOW2) e tipos (thick provisioned, thin provisioned).
+  - Placa de Rede Virtual (vNIC):
+    - Permite que a VM se conecte à rede, seja por meio de uma ponte com a placa de rede física do host, por NAT ou por redes internas virtuais.
+  - Controladores de Dispositivo Virtuais:
+    - A VM possui controladores virtuais para diversos dispositivos, como adaptadores de barramento, controladores de vídeo, etc.
+
+---
+
+## Tipos de Máquinas Virtuais
+
+- Máquinas virtuais clássicas ou de Tipo I
+  - O monitor é implementado entre o hardware e os sistemas convidados.
+  - Executa com a maior prioridade sobre os sistemas convidados.
+  - Pode interceptar e emular todas as operações que acessam ou manipulam os recursos de hardware.
+  - VMware ESXi Server, Microsoft Hyper-V, Citrix/Xen Server.
+
+## Tipos de Máquinas Virtuais
+
+- Máquinas virtuais Hospedadas ou de Tipo II
+  - O monitor é implementado como um processo de um sistema operacional "real".
+  - O monitor simula todas as operações que o sistema anfitrião controlaria.
+  - VMware Workstation, Microsoft Virtual PC, Oracle Virtual Box.
+
+## Tipos de Máquinas Virtuais
+
+![](../images/aula04/tipo1-x-tipo2.png){fig-align="center" width="75%"}
+
+## Tipos de Máquinas Virtuais - Virtualização Total
+
+- Provê uma completa simulação da subcamada de hardware para os sistemas convidados.
+  - Todos os SOs que são capazes de executar diretamente em um hardware também podem executar em uma máquina virtual.
+    - Não há necessidade de modificações nos sistemas operacionais convidados.
+- O Monitor roda em modo kernel (Tipo 1), e os sistemas convidados em modo usuário.
+  - Todas as instruções são "testadas".
+  - As instruções sensíveis (privilegiadas) são capturadas e emuladas na VM.
+
+## Tipos de Máquinas Virtuais - Virtualização Total {.smaller}
+
+- Instruções sensíveis
+  - São aquelas que podem consultar ou alterar o status do processador.
+- Instruções privilegiadas
+  - Só podem ser executadas em modo kernel.
+    - Geram trap quando executadas em modo usuário.
+- Segundo Popek e Goldberg, uma máquina é virtualizável se:
+  - Instruções sensíveis formarem um subconjunto de instruções privilegiadas.
+- IBM/370 é virtualizável.
+
+## Tipos de Máquinas Virtuais - Virtualização Total
 
 ![](../images/aula05/diagrama-mmv-alt.png){fig-align="center" width="55%"}
 
-Um bom monitor de máquina virtual (MMV) deve garantir:
+## Tipos de Máquinas Virtuais - Virtualização Total {.smaller}
 
-::: {.incremental}
-1. **Equivalência** — o software rodando na VM se comporta como se estivesse na máquina real
-2. **Desempenho** — degradação mínima de performance comparado a rodar direto no hardware
-3. **Controle de recursos** — o MMV tem controle total sobre os recursos alocados a cada VM
-:::
-
-## Principais funções do MMV
-
-- Alternar entre **modo kernel** e **modo usuário**
-- **Emular instruções** de hardware que a VM tenta executar
-- **Escalonar CPU** entre as VMs ativas
-- Gerenciar **memória e disco** virtuais
-- Gerenciar **I/O** (entrada/saída) virtual
+- Desvantagens
+  - O número de dispositivos (drivers) a serem suportados pelo Monitor é extremamente elevado.
+  - Instruções executadas pelo SO visitante devem ser testadas pelo Monitor.
+  - Ter que contornar alguns problemas gerados pela implementação dos SOs.
+    - SOs foram projetados para serem executados como instância única nas máquinas físicas.
+    - Ex: Paginação ⟶ Disputa SOs ⟶ queda de desempenho.
 
 ---
 
-## Componentes virtuais de uma VM
+## Futuro - Tendências e o Futuro da Virtualização
 
-## vCPU e vRAM
+- Contêineres (Docker, Kubernetes):
+  - Embora não sejam VMs, os contêineres oferecem um nível diferente de abstração e isolamento e são frequentemente usados em conjunto com VMs em arquiteturas de nuvem.
+  - VMs fornecem a infraestrutura para rodar contêineres.
+- Virtualização de Funções de Rede (NFV):
+  - Virtualização de funções de rede tradicionalmente implementadas em hardware dedicado (firewalls, roteadores, balanceadores de carga).
 
-- **vCPU** — processador virtual, mapeado (não necessariamente 1:1) para núcleos físicos reais
-- **vRAM** — memória virtual, com técnicas como:
-  - *memory ballooning* — o hipervisor "recupera" memória ociosa de uma VM para dar a outra que precisa mais
-  - *memory deduplication* — páginas de memória idênticas entre VMs são compartilhadas, economizando RAM real
+## Futuro - Tendências e o Futuro da Virtualização
 
-## Disco virtual
-
-- Formatos comuns: **VMDK** (VMware), **VHD** (Hyper-V), **VDI** (VirtualBox), **QCOW2** (KVM/Xen)
-- **Thick provisioning** — todo o espaço é reservado de uma vez
-- **Thin provisioning** — o espaço cresce sob demanda, conforme a VM realmente usa
-
-## Rede virtual
-
-- **vNIC** — placa de rede virtual da VM
-- Permite que várias VMs compartilhem a mesma placa de rede física, com isolamento lógico
+- Edge Computing:
+  - VMs em locais de borda para processamento de dados mais próximo da fonte.
+- Serverless Computing:
+  - Embora abstraia ainda mais a infraestrutura, VMs ainda são o substrato para muitas plataformas serverless.
+- Inteligência Artificial e Machine Learning:
+  - VMs com GPUs virtuais ou pass-through de GPU para cargas de trabalho de IA.
 
 ---
 
-## Benefícios das VMs
-
-::: {.incremental}
-- **Consolidação de servidores** — menos hardware físico fazendo o mesmo trabalho
-- **Provisionamento rápido** — criar uma nova VM em minutos, sem comprar hardware
-- **Portabilidade e migração** — mover uma VM entre servidores físicos com pouca ou nenhuma interrupção
-- **Snapshots e rollback** — "fotografar" o estado da VM e voltar a ele se algo der errado
-- **Segurança e isolamento** — VM comprometida não afeta as demais
-- **Compatibilidade com sistemas legados** — rodar um SO antigo isolado, sem depender de hardware antigo
-:::
-
-## Desafios das VMs
-
-::: {.incremental}
-- Complexidade de gerenciamento em ambientes grandes
-- Gargalos de I/O (disco e rede) quando muitas VMs disputam o mesmo hardware
-- Licenciamento de software pode ficar complexo (por VM, por núcleo físico...)
-- Segurança do **próprio hipervisor** vira um ponto crítico — se ele for comprometido, todas as VMs estão em risco
-- Custo inicial de hardware potente para hospedar muitas VMs
-:::
-
----
-
-## Tipo I x Tipo II (revisão)
-
-| | Tipo I (clássico) | Tipo II (hospedado) |
-|---|---|---|
-| Exemplos | VMware ESXi, Hyper-V, Xen Server | VMware Workstation, VirtualBox |
-| Onde roda | Direto no hardware | Dentro de um SO |
-| Uso | Produção / data center | Testes / uso pessoal |
-
-## Virtualização total: instruções sensíveis x privilegiadas
-
-- Para uma arquitetura ser **totalmente virtualizável** (condição de Popek-Goldberg), toda instrução "sensível" (que muda o estado do sistema) deve também ser "privilegiada" (só executável em modo kernel)
-- **Exemplo histórico:** o mainframe **IBM System/370** (anos 1970) foi projetado desde o início para cumprir essa condição — por isso já rodava múltiplas VMs de forma nativa e eficiente décadas antes do x86
-- O x86 clássico **não cumpria** essa condição perfeitamente — daí a necessidade de técnicas extras (tradução binária, paravirtualização, extensões de hardware como Intel VT-x/AMD-V) para virtualizar corretamente
+## Obrigado!
 
 ::: {.notes}
-Não é preciso aprofundar a matemática — o importante é o aluno entender que nem toda arquitetura de processador é "virtualizável de graça"; foi um problema real de engenharia resolvido ao longo dos anos 2000.
+Fim da Aula 05 — conteúdo fiel ao material de referência do professor anterior (PDF de 30 slides), com autoria atualizada.
 :::
-
----
-
-## O futuro: VMs e containers
-
-- **Containers** (Docker/Kubernetes) não substituem VMs — **complementam**: são mais leves, mas compartilham o kernel do host
-- Tendências: **NFV** (virtualização de funções de rede), **edge computing**, **serverless**, VMs com **GPU dedicada** para IA
-
-::: {.notes}
-Gancho para as aulas de Docker mais adiante no curso.
-:::
-
-## Atividade da aula
-
-::: {.callout-lab}
-**Discussão em grupo (10 min):**
-
-Uma escola tem 1 servidor físico potente e quer oferecer a cada turma um "laboratório virtual" isolado (SO próprio, aplicações próprias).
-
-1. Vocês usariam hipervisor Tipo 1 ou Tipo 2? Por quê?
-2. Que componente virtual (vCPU, vRAM, disco, rede) vocês acham que será o gargalo mais provável se muitas turmas usarem ao mesmo tempo?
-:::
-
-## Síntese da aula
-
-- VM = "cópia eficiente e isolada da máquina real" (Popek & Goldberg, 1974)
-- O **MMV/hipervisor** gerencia CPU, memória, disco e I/O virtuais
-- Componentes: **vCPU, vRAM, disco virtual (VMDK/VHD/VDI/QCOW2), vNIC**
-- VMs trazem grandes benefícios, mas também desafios de gerenciamento e segurança do hipervisor
-
-## Próxima aula
-
-**Prática: VirtualBox** — vamos criar e explorar uma máquina virtual de verdade
-
----
-
-## Referências
-
-- POPEK, G.; GOLDBERG, R. *Formal Requirements for Virtualizable Third Generation Architectures*. 1974.
-- VERAS, M. *Virtualização: componente central do datacenter*. Brasport, 2011.

@@ -1,5 +1,5 @@
 ---
-title: "Aula 03 — Grades Computacionais e TI Verde"
+title: "Aula 03 — Grades Computacionais, TI Verde e Arquitetura NIST"
 ---
 
 ## Objetivos da aula
@@ -7,6 +7,7 @@ title: "Aula 03 — Grades Computacionais e TI Verde"
 - Entender o que é **grid computing** e como se diferencia da nuvem
 - Compreender os fundamentos de **TI verde (Green IT)**
 - Relacionar sustentabilidade com o dia a dia de data centers e nuvem
+- Conhecer a **Arquitetura de Referência NIST** para computação em nuvem
 
 ---
 
@@ -68,6 +69,33 @@ Conjunto de práticas para **reduzir o impacto ambiental** da tecnologia da info
 
 ::: {.callout-note}
 Um único servidor físico rodando **20 VMs** consome muito menos energia total do que **20 servidores físicos** separados, cada um subutilizado. Por isso virtualização é, ao mesmo tempo, uma tecnologia de eficiência de custo **e** de sustentabilidade.
+:::
+
+---
+
+## A Arquitetura de Referência NIST
+
+O **NIST** (National Institute of Standards and Technology, EUA) publicou em 2011 a definição formal de computação em nuvem — hoje é a referência mundial (documento SP 800-145).
+
+Ela define a nuvem por **5 características essenciais, 3 modelos de serviço e 4 modelos de implantação**.
+
+## As 5 características essenciais (NIST)
+
+::: {.incremental}
+1. **Self-service sob demanda** — o usuário provisiona recursos sozinho, sem intervenção humana do provedor
+2. **Amplo acesso via rede** — disponível pela internet, em qualquer dispositivo
+3. **Pool de recursos** — recursos compartilhados dinamicamente entre múltiplos clientes (multi-tenancy)
+4. **Elasticidade rápida** — recursos aumentam/diminuem automaticamente conforme a demanda
+5. **Serviço mensurável** — uso é monitorado, controlado e cobrado de forma transparente (pay-per-use)
+:::
+
+## Os 3 modelos de serviço e os 4 modelos de implantação (NIST)
+
+- **3 modelos de serviço** — IaaS, PaaS e SaaS (vistos na Aula 02) — o NIST formaliza essa mesma divisão
+- **4 modelos de implantação** — pública, privada e híbrida (vistas na Aula 01), mais a **nuvem comunitária**: infraestrutura compartilhada por várias organizações com interesses/requisitos em comum (ex.: hospitais de uma mesma rede pública, universidades de um consórcio)
+
+::: {.callout-note}
+O NIST formaliza em normas o que o mercado já usa na prática — por isso é a referência citada em provas, certificações (AWS, Azure, CompTIA Cloud+) e documentos técnicos.
 :::
 
 ---
