@@ -1,0 +1,1507 @@
+[
+  {
+    "objectID": "aulas/15-revisao-geral.html#objetivos-da-aula",
+    "href": "aulas/15-revisao-geral.html#objetivos-da-aula",
+    "title": "Aula 15 — Revisão Geral",
+    "section": "Objetivos da aula",
+    "text": "Objetivos da aula\n\nRevisar os principais conceitos de todo o curso\nTirar dúvidas finais antes da avaliação\nConectar os pontos entre os temas vistos"
+  },
+  {
+    "objectID": "aulas/15-revisao-geral.html#o-mapa-do-curso",
+    "href": "aulas/15-revisao-geral.html#o-mapa-do-curso",
+    "title": "Aula 15 — Revisão Geral",
+    "section": "O mapa do curso",
+    "text": "O mapa do curso\n\nIntrodução à nuvem — o que é, modelos de implantação (Aula 01)\nModelos de serviço + NIST — IaaS/PaaS/SaaS, arquitetura de referência (Aula 02)\nGrades computacionais e TI verde — outros modelos de infraestrutura e sustentabilidade (Aula 03)\nVirtualização — conceitos, hipervisores, taxonomia (Aula 04)\nMáquinas virtuais — MMV, Popek-Goldberg, componentes virtuais (Aula 05)\nPrática VirtualBox — criar e explorar uma VM real (Aula 06)"
+  },
+  {
+    "objectID": "aulas/15-revisao-geral.html#o-mapa-do-curso-continuação",
+    "href": "aulas/15-revisao-geral.html#o-mapa-do-curso-continuação",
+    "title": "Aula 15 — Revisão Geral",
+    "section": "O mapa do curso (continuação)",
+    "text": "O mapa do curso (continuação)\n\nData centers — organização, dispositivos, RAID, consolidação (Aula 07)\nVMware x Xen — dois hipervisores Tipo 1 reais (Aula 08)\nDocker: conceitos — containers x VMs, arquitetura (Aula 09)\nPrática Docker I e II — comandos reais, MySQL, Python, run/exec (Aulas 10-11)\nGerenciamento em nuvem — multicloud, IaC, Kubernetes, FinOps (Aula 12)\nAWS, Azure, GCP, OpenStack — provedores reais do mercado (Aula 13)"
+  },
+  {
+    "objectID": "aulas/15-revisao-geral.html#os-grandes-fios-condutores",
+    "href": "aulas/15-revisao-geral.html#os-grandes-fios-condutores",
+    "title": "Aula 15 — Revisão Geral",
+    "section": "Os grandes fios condutores",
+    "text": "Os grandes fios condutores\n\n\n\n\n\n\nNota\n\n\n1. Virtualização é a base de tudo. Sem ela, a nuvem na escala atual não existiria — nem VMs, nem containers.\n\n\n\n\n\n\n\n\n\nNota\n\n\n2. Containers ≠ substitutos de VMs. São complementares — containers são mais leves, mas dependem do mesmo kernel do host; VMs oferecem isolamento mais forte.\n\n\n\n\n\n\n\n\n\nNota\n\n\n3. Toda decisão de nuvem é uma troca (trade-off). Controle x conveniência, custo x performance, público x privado — não existe resposta certa universal, só a mais adequada ao cenário."
+  },
+  {
+    "objectID": "aulas/15-revisao-geral.html#quadro-resumo-modelos-de-implantação",
+    "href": "aulas/15-revisao-geral.html#quadro-resumo-modelos-de-implantação",
+    "title": "Aula 15 — Revisão Geral",
+    "section": "Quadro-resumo: modelos de implantação",
+    "text": "Quadro-resumo: modelos de implantação\n\n\n\n\n\n\n\n\n\nPública\nPrivada\nHíbrida\nComunitária\n\n\n\n\nCompartilhada, provedor externo\nDedicada, uso exclusivo\nCombinação das duas\nCompartilhada entre organizações afins"
+  },
+  {
+    "objectID": "aulas/15-revisao-geral.html#quadro-resumo-modelos-de-serviço",
+    "href": "aulas/15-revisao-geral.html#quadro-resumo-modelos-de-serviço",
+    "title": "Aula 15 — Revisão Geral",
+    "section": "Quadro-resumo: modelos de serviço",
+    "text": "Quadro-resumo: modelos de serviço\n\n\n\n\n\n\n\n\nIaaS\nPaaS\nSaaS\n\n\n\n\nInfraestrutura (você gerencia SO+apps)\nPlataforma (você só gerencia código)\nSoftware pronto (você só usa)"
+  },
+  {
+    "objectID": "aulas/15-revisao-geral.html#quadro-resumo-virtualização-x-containers",
+    "href": "aulas/15-revisao-geral.html#quadro-resumo-virtualização-x-containers",
+    "title": "Aula 15 — Revisão Geral",
+    "section": "Quadro-resumo: virtualização x containers",
+    "text": "Quadro-resumo: virtualização x containers\n\n\n\n\nVM\nContainer\n\n\n\n\nIsolamento\nHipervisor\nKernel compartilhado\n\n\nPeso\nPesado\nLeve\n\n\nExemplo\nVirtualBox, ESXi, Xen\nDocker"
+  },
+  {
+    "objectID": "aulas/15-revisao-geral.html#exercícios-de-revisão-rápida-oral",
+    "href": "aulas/15-revisao-geral.html#exercícios-de-revisão-rápida-oral",
+    "title": "Aula 15 — Revisão Geral",
+    "section": "Exercícios de revisão rápida (oral)",
+    "text": "Exercícios de revisão rápida (oral)\n\nQual a diferença entre hipervisor Tipo 1 e Tipo 2?\nCite as 5 características essenciais da nuvem segundo o NIST\nO que é consolidação de serviços e por que ela é sustentável?\nQual comando Docker reaproveita um container existente, em vez de criar um novo?\nCite um cenário em que OpenStack seria preferível a AWS"
+  },
+  {
+    "objectID": "aulas/15-revisao-geral.html#dúvidas-finais",
+    "href": "aulas/15-revisao-geral.html#dúvidas-finais",
+    "title": "Aula 15 — Revisão Geral",
+    "section": "Dúvidas finais",
+    "text": "Dúvidas finais\n\nÚltimos 15-20 minutos: espaço aberto para perguntas sobre qualquer tema do curso, revisão de comandos Docker, ou dúvidas sobre o projeto final."
+  },
+  {
+    "objectID": "aulas/15-revisao-geral.html#encerramento",
+    "href": "aulas/15-revisao-geral.html#encerramento",
+    "title": "Aula 15 — Revisão Geral",
+    "section": "Encerramento",
+    "text": "Encerramento\nObrigado pela participação ao longo do curso!\nComputação em Nuvem e Virtualização — do conceito à prática."
+  },
+  {
+    "objectID": "aulas/13-provedores-aws-azure-gcp-openstack.html#objetivos-da-aula",
+    "href": "aulas/13-provedores-aws-azure-gcp-openstack.html#objetivos-da-aula",
+    "title": "Aula 13 — AWS, Azure, Google Cloud e OpenStack",
+    "section": "Objetivos da aula",
+    "text": "Objetivos da aula\n\nConhecer os três maiores provedores de nuvem pública\nEntender o que é o OpenStack e seu papel na nuvem privada\nComparar as plataformas e seus principais serviços"
+  },
+  {
+    "objectID": "aulas/13-provedores-aws-azure-gcp-openstack.html#o-mercado-de-nuvem-pública-hoje",
+    "href": "aulas/13-provedores-aws-azure-gcp-openstack.html#o-mercado-de-nuvem-pública-hoje",
+    "title": "Aula 13 — AWS, Azure, Google Cloud e OpenStack",
+    "section": "O mercado de nuvem pública hoje",
+    "text": "O mercado de nuvem pública hoje\n\nAmazon Web Services (AWS) — pioneira comercial (2006), ainda líder de mercado\nMicrosoft Azure — forte integração com o ecossistema Microsoft (Windows Server, Active Directory, Office 365)\nGoogle Cloud Platform (GCP) — forte em dados, machine learning e Kubernetes (o Google criou o Kubernetes)\n\n\nNão é preciso decorar market share — o importante é o aluno reconhecer os 3 nomes e entender o “sabor” de cada um."
+  },
+  {
+    "objectID": "aulas/13-provedores-aws-azure-gcp-openstack.html#aws-amazon-web-services",
+    "href": "aulas/13-provedores-aws-azure-gcp-openstack.html#aws-amazon-web-services",
+    "title": "Aula 13 — AWS, Azure, Google Cloud e OpenStack",
+    "section": "AWS — Amazon Web Services",
+    "text": "AWS — Amazon Web Services\n\n\n\nCategoria\nServiço\nEquivale a\n\n\n\n\nComputação\nEC2\nVM (IaaS)\n\n\nArmazenamento\nS3\nArmazenamento de objetos\n\n\nBanco de dados\nRDS\nBanco relacional gerenciado\n\n\nServerless\nLambda\nFaaS\n\n\nRede\nVPC\nRede virtual privada"
+  },
+  {
+    "objectID": "aulas/13-provedores-aws-azure-gcp-openstack.html#microsoft-azure",
+    "href": "aulas/13-provedores-aws-azure-gcp-openstack.html#microsoft-azure",
+    "title": "Aula 13 — AWS, Azure, Google Cloud e OpenStack",
+    "section": "Microsoft Azure",
+    "text": "Microsoft Azure\n\n\n\n\n\n\n\n\nCategoria\nServiço\nEquivale a\n\n\n\n\nComputação\nVirtual Machines\nVM (IaaS)\n\n\nArmazenamento\nBlob Storage\nArmazenamento de objetos\n\n\nBanco de dados\nAzure SQL Database\nBanco relacional gerenciado\n\n\nServerless\nAzure Functions\nFaaS\n\n\nPlataforma\nApp Services\nPaaS"
+  },
+  {
+    "objectID": "aulas/13-provedores-aws-azure-gcp-openstack.html#google-cloud-platform-gcp",
+    "href": "aulas/13-provedores-aws-azure-gcp-openstack.html#google-cloud-platform-gcp",
+    "title": "Aula 13 — AWS, Azure, Google Cloud e OpenStack",
+    "section": "Google Cloud Platform (GCP)",
+    "text": "Google Cloud Platform (GCP)\n\n\n\n\n\n\n\n\nCategoria\nServiço\nEquivale a\n\n\n\n\nComputação\nCompute Engine\nVM (IaaS)\n\n\nArmazenamento\nCloud Storage\nArmazenamento de objetos\n\n\nBanco de dados\nCloud SQL\nBanco relacional gerenciado\n\n\nServerless\nCloud Functions\nFaaS\n\n\nContainers\nGKE (Google Kubernetes Engine)\nOrquestração gerenciada"
+  },
+  {
+    "objectID": "aulas/13-provedores-aws-azure-gcp-openstack.html#comparando-os-sabores",
+    "href": "aulas/13-provedores-aws-azure-gcp-openstack.html#comparando-os-sabores",
+    "title": "Aula 13 — AWS, Azure, Google Cloud e OpenStack",
+    "section": "Comparando os “sabores”",
+    "text": "Comparando os “sabores”\n\nAWS — maior variedade de serviços, ecossistema mais maduro, curva de aprendizado maior\nAzure — melhor escolha se a empresa já usa muito produto Microsoft (Windows Server, .NET, Active Directory)\nGCP — destaque em big data, IA/ML e é a origem do Kubernetes — forte para times mais “cloud native”\n\n\n\n\n\n\n\nNota\n\n\nNa prática, os 3 oferecem serviços equivalentes para as necessidades básicas (IaaS/PaaS/SaaS) — a escolha real depende de custo, integração com o que a empresa já usa, e conhecimento da equipe."
+  },
+  {
+    "objectID": "aulas/13-provedores-aws-azure-gcp-openstack.html#e-a-nuvem-privada-openstack",
+    "href": "aulas/13-provedores-aws-azure-gcp-openstack.html#e-a-nuvem-privada-openstack",
+    "title": "Aula 13 — AWS, Azure, Google Cloud e OpenStack",
+    "section": "E a nuvem privada? OpenStack",
+    "text": "E a nuvem privada? OpenStack\n\nOpenStack é uma plataforma open source para construir e gerenciar nuvem privada (ou pública), com um conjunto de serviços modulares.\n\n\nNasceu em 2010 (projeto conjunto da NASA e Rackspace)\nPermite que uma empresa monte sua própria AWS particular, dentro do seu data center"
+  },
+  {
+    "objectID": "aulas/13-provedores-aws-azure-gcp-openstack.html#principais-componentes-do-openstack",
+    "href": "aulas/13-provedores-aws-azure-gcp-openstack.html#principais-componentes-do-openstack",
+    "title": "Aula 13 — AWS, Azure, Google Cloud e OpenStack",
+    "section": "Principais componentes do OpenStack",
+    "text": "Principais componentes do OpenStack\n\n\n\nComponente\nFunção\n\n\n\n\nNova\nComputação (equivalente ao EC2)\n\n\nSwift\nArmazenamento de objetos (equivalente ao S3)\n\n\nCinder\nArmazenamento em bloco (discos virtuais)\n\n\nNeutron\nRede virtual (SDN)\n\n\nKeystone\nIdentidade e autenticação\n\n\nHorizon\nPainel de controle (dashboard web)"
+  },
+  {
+    "objectID": "aulas/13-provedores-aws-azure-gcp-openstack.html#quando-usar-openstack",
+    "href": "aulas/13-provedores-aws-azure-gcp-openstack.html#quando-usar-openstack",
+    "title": "Aula 13 — AWS, Azure, Google Cloud e OpenStack",
+    "section": "Quando usar OpenStack?",
+    "text": "Quando usar OpenStack?\n\nEmpresas que precisam manter dados no próprio data center (regulamentação, segurança, soberania de dados)\nEmpresas que já têm hardware próprio e querem evitar custo recorrente de nuvem pública\nProvedores de nuvem menores/regionais que querem oferecer serviços “estilo AWS” com sua própria infraestrutura\n\n\n\n\n\n\n\nNota\n\n\nOpenStack é mais complexo de implantar e manter do que simplesmente contratar AWS/Azure/GCP — é uma escolha de quem tem equipe técnica e motivo forte para não depender de nuvem pública."
+  },
+  {
+    "objectID": "aulas/13-provedores-aws-azure-gcp-openstack.html#visão-geral-comparativa",
+    "href": "aulas/13-provedores-aws-azure-gcp-openstack.html#visão-geral-comparativa",
+    "title": "Aula 13 — AWS, Azure, Google Cloud e OpenStack",
+    "section": "Visão geral comparativa",
+    "text": "Visão geral comparativa\n\n\n\n\n\n\n\n\n\nAWS / Azure / GCP\nOpenStack\n\n\n\n\nModelo\nNuvem pública (SaaS de infraestrutura)\nVocê constrói sua própria nuvem\n\n\nCusto\nPay-as-you-go, sem investimento inicial\nInvestimento em hardware + equipe técnica\n\n\nManutenção\nZero — o provedor cuida\nSua própria equipe cuida\n\n\nControle\nMenor\nTotal\n\n\nIdeal para\nMaioria das empresas\nEmpresas com requisitos específicos de dados/soberania"
+  },
+  {
+    "objectID": "aulas/13-provedores-aws-azure-gcp-openstack.html#atividade-da-aula",
+    "href": "aulas/13-provedores-aws-azure-gcp-openstack.html#atividade-da-aula",
+    "title": "Aula 13 — AWS, Azure, Google Cloud e OpenStack",
+    "section": "Atividade da aula",
+    "text": "Atividade da aula\n\nEm grupos (10 min):\nUm hospital público precisa decidir entre usar AWS ou montar uma nuvem privada com OpenStack para armazenar prontuários de pacientes.\n\nQue fatores pesam a favor do OpenStack nesse cenário?\nQue fatores pesariam a favor da AWS?\nQual vocês recomendariam, considerando também a LGPD?"
+  },
+  {
+    "objectID": "aulas/13-provedores-aws-azure-gcp-openstack.html#síntese-da-aula",
+    "href": "aulas/13-provedores-aws-azure-gcp-openstack.html#síntese-da-aula",
+    "title": "Aula 13 — AWS, Azure, Google Cloud e OpenStack",
+    "section": "Síntese da aula",
+    "text": "Síntese da aula\n\nAWS, Azure e GCP têm serviços equivalentes (IaaS/PaaS/FaaS), mas ecossistemas e pontos fortes diferentes\nOpenStack permite construir nuvem privada open source, com componentes modulares (Nova, Swift, Cinder, Neutron, Keystone, Horizon)\nA escolha entre nuvem pública e OpenStack depende de controle, custo, equipe técnica e requisitos regulatórios"
+  },
+  {
+    "objectID": "aulas/13-provedores-aws-azure-gcp-openstack.html#próxima-aula",
+    "href": "aulas/13-provedores-aws-azure-gcp-openstack.html#próxima-aula",
+    "title": "Aula 13 — AWS, Azure, Google Cloud e OpenStack",
+    "section": "Próxima aula",
+    "text": "Próxima aula\nProjeto: Análise Comparativa de Soluções de Nuvem — atividade avaliativa final em grupo"
+  },
+  {
+    "objectID": "aulas/13-provedores-aws-azure-gcp-openstack.html#referências",
+    "href": "aulas/13-provedores-aws-azure-gcp-openstack.html#referências",
+    "title": "Aula 13 — AWS, Azure, Google Cloud e OpenStack",
+    "section": "Referências",
+    "text": "Referências\n\naws.amazon.com, azure.microsoft.com, cloud.google.com\nopenstack.org"
+  },
+  {
+    "objectID": "aulas/11-pratica-docker-2.html#objetivos-da-aula",
+    "href": "aulas/11-pratica-docker-2.html#objetivos-da-aula",
+    "title": "Aula 11 — Prática Docker II",
+    "section": "Objetivos da aula",
+    "text": "Objetivos da aula\n\nConsolidar vocabulário Docker (imagem, container, volume, tag, registro)\nPraticar mais comandos: ps, stop, exec, flags\nEntender a diferença entre criar e reaproveitar um container\n\n\nContinuação direta da Aula 10 — mesmo ambiente (Play with Docker)."
+  },
+  {
+    "objectID": "aulas/11-pratica-docker-2.html#glossário-rápido",
+    "href": "aulas/11-pratica-docker-2.html#glossário-rápido",
+    "title": "Aula 11 — Prática Docker II",
+    "section": "Glossário rápido",
+    "text": "Glossário rápido\n\n\n\nTermo\nSignificado\n\n\n\n\nImagem\nMolde read-only para criar containers\n\n\nDockerfile\nReceita para construir uma imagem\n\n\nBuild\nProcesso de gerar a imagem a partir do Dockerfile\n\n\nContainer\nInstância em execução de uma imagem\n\n\nVolume\nArmazenamento persistente, sobrevive ao container\n\n\nTag\nVersão da imagem (ex.: python:3, ubuntu:18.04)\n\n\nRegistro\nOnde imagens ficam armazenadas (ex.: Docker Hub)"
+  },
+  {
+    "objectID": "aulas/11-pratica-docker-2.html#o-que-acontece-quando-você-roda-docker-run",
+    "href": "aulas/11-pratica-docker-2.html#o-que-acontece-quando-você-roda-docker-run",
+    "title": "Aula 11 — Prática Docker II",
+    "section": "O que acontece quando você roda docker run?",
+    "text": "O que acontece quando você roda docker run?\ndocker run php\nPergunta: o que vocês acham que acontece aqui?\n\n\nDocker verifica se a imagem php existe localmente\nSe não existir, baixa automaticamente do Docker Hub\nCria um novo container a partir da imagem\nExecuta o container"
+  },
+  {
+    "objectID": "aulas/11-pratica-docker-2.html#testando-com-imagens-simples",
+    "href": "aulas/11-pratica-docker-2.html#testando-com-imagens-simples",
+    "title": "Aula 11 — Prática Docker II",
+    "section": "Testando com imagens simples",
+    "text": "Testando com imagens simples\ndocker run alpine\ndocker run ubuntu\ndocker run debian\n\nEssas imagens não têm um processo “de longa duração” por padrão → o container inicia e para imediatamente\nVer todas as imagens já baixadas localmente:\n\ndocker images"
+  },
+  {
+    "objectID": "aulas/11-pratica-docker-2.html#docker-ps-x-docker-ps--a",
+    "href": "aulas/11-pratica-docker-2.html#docker-ps-x-docker-ps--a",
+    "title": "Aula 11 — Prática Docker II",
+    "section": "docker ps x docker ps -a",
+    "text": "docker ps x docker ps -a\ndocker ps\nMostra só os containers em execução no momento.\ndocker ps -a\nMostra todos os containers, incluindo os que já pararam.\n\n\n\n\n\n\nNota\n\n\nUm container “parado” não é destruído — ele continua existindo até ser removido explicitamente com docker rm."
+  },
+  {
+    "objectID": "aulas/11-pratica-docker-2.html#passando-um-comando-ao-criar-o-container",
+    "href": "aulas/11-pratica-docker-2.html#passando-um-comando-ao-criar-o-container",
+    "title": "Aula 11 — Prática Docker II",
+    "section": "Passando um comando ao criar o container",
+    "text": "Passando um comando ao criar o container\ndocker run alpine echo \"Ola Mundo\"\nO container é criado, executa o comando (echo \"Ola Mundo\") e termina."
+  },
+  {
+    "objectID": "aulas/11-pratica-docker-2.html#tags-de-versão",
+    "href": "aulas/11-pratica-docker-2.html#tags-de-versão",
+    "title": "Aula 11 — Prática Docker II",
+    "section": "Tags de versão",
+    "text": "Tags de versão\ndocker run ubuntu:18.04 cat /etc/issue\n\nA tag (18.04) define qual versão da imagem usar\nSe a tag for omitida, o Docker assume latest por padrão"
+  },
+  {
+    "objectID": "aulas/11-pratica-docker-2.html#parando-um-container",
+    "href": "aulas/11-pratica-docker-2.html#parando-um-container",
+    "title": "Aula 11 — Prática Docker II",
+    "section": "Parando um container",
+    "text": "Parando um container\ndocker stop &lt;container_id&gt;\nEncerra a execução de um container que está rodando (identificado pelo ID ou nome, visível no docker ps)."
+  },
+  {
+    "objectID": "aulas/11-pratica-docker-2.html#run-sempre-cria-um-novo-container",
+    "href": "aulas/11-pratica-docker-2.html#run-sempre-cria-um-novo-container",
+    "title": "Aula 11 — Prática Docker II",
+    "section": "run sempre cria um novo container?",
+    "text": "run sempre cria um novo container?\nPergunta reflexiva: todo docker run cria um container novo?\n\nSim — run sempre cria uma nova instância. Para reaproveitar um container que já existe (parado ou rodando), usamos docker start (para reiniciar) ou docker exec (para executar um comando dentro de um container já em execução)."
+  },
+  {
+    "objectID": "aulas/11-pratica-docker-2.html#docker-exec-em-detalhe",
+    "href": "aulas/11-pratica-docker-2.html#docker-exec-em-detalhe",
+    "title": "Aula 11 — Prática Docker II",
+    "section": "docker exec em detalhe",
+    "text": "docker exec em detalhe\ndocker exec [opções] &lt;container&gt; &lt;comando&gt; [argumentos]\nPrincipais flags:\n\n\n\n\n\n\n\nFlag\nSignificado\n\n\n\n\n-i / --interactive\nMantém entrada padrão (stdin) aberta\n\n\n-t / --tty\nAloca um terminal (tty)\n\n\n-it\nCombinação das duas — terminal interativo completo\n\n\n-d / --detach\nRoda em segundo plano\n\n\n-u / --user\nExecuta como um usuário específico\n\n\n-w / --workdir\nDefine o diretório de trabalho dentro do container"
+  },
+  {
+    "objectID": "aulas/11-pratica-docker-2.html#atividade-avaliativa-1-centos-sleep",
+    "href": "aulas/11-pratica-docker-2.html#atividade-avaliativa-1-centos-sleep",
+    "title": "Aula 11 — Prática Docker II",
+    "section": "Atividade avaliativa 1 — CentOS + sleep",
+    "text": "Atividade avaliativa 1 — CentOS + sleep\n\n\nCrie um container CentOS rodando sleep 2000\nEm outro terminal (ou nova aba), rode docker ps e verifique que ele está em execução\nPare o container com docker stop\nPrint de cada etapa\n\n\ndocker run -d centos sleep 2000"
+  },
+  {
+    "objectID": "aulas/11-pratica-docker-2.html#atividade-avaliativa-2-ubuntu-persistência",
+    "href": "aulas/11-pratica-docker-2.html#atividade-avaliativa-2-ubuntu-persistência",
+    "title": "Aula 11 — Prática Docker II",
+    "section": "Atividade avaliativa 2 — Ubuntu + persistência",
+    "text": "Atividade avaliativa 2 — Ubuntu + persistência\n\n\nCrie um container Ubuntu interativo (-it)\nDentro dele, crie um arquivo com touch meuarquivo.txt\nSaia do container (exit)\nTente reacessar o mesmo container (não criar um novo!) e liste os arquivos com ls para confirmar que meuarquivo.txt continua lá\nPrint de cada etapa, incluindo os comandos usados para reacessar o container correto\n\n\n\nDica para o aluno: usar docker ps -a para achar o ID do container parado, depois docker start &lt;id&gt; seguido de docker exec -it &lt;id&gt; bash."
+  },
+  {
+    "objectID": "aulas/11-pratica-docker-2.html#síntese-da-aula",
+    "href": "aulas/11-pratica-docker-2.html#síntese-da-aula",
+    "title": "Aula 11 — Prática Docker II",
+    "section": "Síntese da aula",
+    "text": "Síntese da aula\n\ndocker ps -a mostra containers parados também; docker ps só os ativos\nrun sempre cria um container novo; para reaproveitar, usa-se start/exec\nFlags importantes: -i, -t, -it, -d, -u, -w\nDados criados dentro de um container persistem enquanto o container não for removido (mesmo parado)"
+  },
+  {
+    "objectID": "aulas/11-pratica-docker-2.html#próxima-aula",
+    "href": "aulas/11-pratica-docker-2.html#próxima-aula",
+    "title": "Aula 11 — Prática Docker II",
+    "section": "Próxima aula",
+    "text": "Próxima aula\nModelos de Gerenciamento em Nuvem — voltando ao nível “operação de nuvem”: multicloud, IaC e Kubernetes"
+  },
+  {
+    "objectID": "aulas/11-pratica-docker-2.html#referências",
+    "href": "aulas/11-pratica-docker-2.html#referências",
+    "title": "Aula 11 — Prática Docker II",
+    "section": "Referências",
+    "text": "Referências\n\nDocumentação oficial: docs.docker.com/engine/reference/commandline/cli"
+  },
+  {
+    "objectID": "aulas/09-docker-conceitos.html#objetivos-da-aula",
+    "href": "aulas/09-docker-conceitos.html#objetivos-da-aula",
+    "title": "Aula 09 — Docker: Conceitos e Arquitetura",
+    "section": "Objetivos da aula",
+    "text": "Objetivos da aula\n\nEntender o que é um container e como difere de uma VM\nConhecer a arquitetura do Docker\nEntender imagens, camadas e o ecossistema Docker\n\n\nConectar com as Aulas 04/05: containers são “outra forma” de virtualizar, mais leve."
+  },
+  {
+    "objectID": "aulas/09-docker-conceitos.html#de-onde-vem-o-docker",
+    "href": "aulas/09-docker-conceitos.html#de-onde-vem-o-docker",
+    "title": "Aula 09 — Docker: Conceitos e Arquitetura",
+    "section": "De onde vem o Docker",
+    "text": "De onde vem o Docker\n\nLançado em 2013, baseado em tecnologias mais antigas do kernel Linux: cgroups e namespaces\n“Docker” tem vários significados: o projeto open source, o conjunto de ferramentas, e a empresa por trás dele"
+  },
+  {
+    "objectID": "aulas/09-docker-conceitos.html#como-funciona-por-baixo-dos-panos",
+    "href": "aulas/09-docker-conceitos.html#como-funciona-por-baixo-dos-panos",
+    "title": "Aula 09 — Docker: Conceitos e Arquitetura",
+    "section": "Como funciona por baixo dos panos",
+    "text": "Como funciona por baixo dos panos\n\ncgroups (control groups) — limitam quanto de CPU, memória e disco cada container pode usar\nnamespaces — isolam o que cada container “enxerga” (processos, rede, sistema de arquivos), mesmo compartilhando o mesmo kernel\nDiferente de uma VM, o container não emula hardware nem roda um SO completo — ele usa o kernel do sistema hospedeiro diretamente"
+  },
+  {
+    "objectID": "aulas/09-docker-conceitos.html#containers-x-máquinas-virtuais",
+    "href": "aulas/09-docker-conceitos.html#containers-x-máquinas-virtuais",
+    "title": "Aula 09 — Docker: Conceitos e Arquitetura",
+    "section": "Containers x Máquinas Virtuais",
+    "text": "Containers x Máquinas Virtuais\n\n\n\n\n\n\n\n\n\nVM\nContainer\n\n\n\n\nO que roda\nSO completo (guest)\nSó a aplicação + dependências\n\n\nIsolamento\nHipervisor (forte)\nKernel compartilhado (namespaces/cgroups)\n\n\nPeso\nPesado (GBs)\nLeve (MBs)\n\n\nBoot\nMinutos\nSegundos (ou menos)\n\n\nPortabilidade\nMédia\nAlta\n\n\n\n\n\n\n\n\n\nNota\n\n\nVMs e containers não são mutuamente exclusivos — é comum rodar containers dentro de uma VM (é exatamente assim que a maioria da nuvem pública funciona)."
+  },
+  {
+    "objectID": "aulas/09-docker-conceitos.html#limitação-importante-do-docker",
+    "href": "aulas/09-docker-conceitos.html#limitação-importante-do-docker",
+    "title": "Aula 09 — Docker: Conceitos e Arquitetura",
+    "section": "Limitação importante do Docker",
+    "text": "Limitação importante do Docker\n\nTodos os containers Docker em um host compartilham o mesmo kernel do sistema hospedeiro\nPor isso, todas as imagens Docker rodam sobre kernel Linux — não é possível rodar um container Windows sobre um host Linux (e vice-versa) sem uma camada extra de virtualização"
+  },
+  {
+    "objectID": "aulas/09-docker-conceitos.html#o-que-é-um-container-na-prática",
+    "href": "aulas/09-docker-conceitos.html#o-que-é-um-container-na-prática",
+    "title": "Aula 09 — Docker: Conceitos e Arquitetura",
+    "section": "O que é um container, na prática",
+    "text": "O que é um container, na prática\n\nUma unidade executável leve, empacotando código, bibliotecas e dependências — o sistema de arquivos completo necessário para a aplicação rodar, isolado do resto do sistema."
+  },
+  {
+    "objectID": "aulas/09-docker-conceitos.html#benefícios-dos-containers",
+    "href": "aulas/09-docker-conceitos.html#benefícios-dos-containers",
+    "title": "Aula 09 — Docker: Conceitos e Arquitetura",
+    "section": "Benefícios dos containers",
+    "text": "Benefícios dos containers\n\nLeveza — muito menor que uma VM, inicia quase instantaneamente\nPortabilidade — “funciona na minha máquina” deixa de ser problema: o container carrega tudo que precisa\nCompatibilidade com DevOps — essencial para integração/entrega contínua (CI/CD)\nBase de microsserviços e arquiteturas serverless modernas"
+  },
+  {
+    "objectID": "aulas/09-docker-conceitos.html#imagens-docker",
+    "href": "aulas/09-docker-conceitos.html#imagens-docker",
+    "title": "Aula 09 — Docker: Conceitos e Arquitetura",
+    "section": "Imagens Docker",
+    "text": "Imagens Docker\n\nUma imagem é o “molde” — read-only, contém tudo que o container precisa para rodar\nUm container é uma instância em execução dessa imagem (efêmero, pode ser destruído e recriado)\nImagens são construídas em camadas (layers): cada instrução do build adiciona uma camada\nSó a última camada (a do container em execução) é gravável — as camadas da imagem original permanecem read-only"
+  },
+  {
+    "objectID": "aulas/09-docker-conceitos.html#dockerfile",
+    "href": "aulas/09-docker-conceitos.html#dockerfile",
+    "title": "Aula 09 — Docker: Conceitos e Arquitetura",
+    "section": "Dockerfile",
+    "text": "Dockerfile\n\nArquivo de texto com as instruções para construir uma imagem\nCada linha do Dockerfile normalmente gera uma nova camada\nExemplo conceitual (não precisa decorar agora, veremos na prática):\n\nFROM python:3\nCOPY app.py /app.py\nRUN pip install flask\nCMD [\"python\", \"/app.py\"]"
+  },
+  {
+    "objectID": "aulas/09-docker-conceitos.html#arquitetura-do-docker-clienteservidor",
+    "href": "aulas/09-docker-conceitos.html#arquitetura-do-docker-clienteservidor",
+    "title": "Aula 09 — Docker: Conceitos e Arquitetura",
+    "section": "Arquitetura do Docker (cliente/servidor)",
+    "text": "Arquitetura do Docker (cliente/servidor)\n\nDocker Client — a interface de linha de comando (docker ...) que você usa\nDocker Daemon (dockerd) — processo que roda em segundo plano, gerencia containers, imagens, redes e volumes\nCliente e daemon se comunicam via API REST\nDocker Host — a máquina (física ou virtual) onde o daemon roda"
+  },
+  {
+    "objectID": "aulas/09-docker-conceitos.html#objetos-docker",
+    "href": "aulas/09-docker-conceitos.html#objetos-docker",
+    "title": "Aula 09 — Docker: Conceitos e Arquitetura",
+    "section": "Objetos Docker",
+    "text": "Objetos Docker\n\nImagens — os moldes read-only\nContainers — instâncias em execução\nRedes — conectividade entre containers\nVolumes — armazenamento persistente, que sobrevive mesmo se o container for destruído\nPlugins — extensões de funcionalidade"
+  },
+  {
+    "objectID": "aulas/09-docker-conceitos.html#o-ecossistema-docker",
+    "href": "aulas/09-docker-conceitos.html#o-ecossistema-docker",
+    "title": "Aula 09 — Docker: Conceitos e Arquitetura",
+    "section": "O ecossistema Docker",
+    "text": "O ecossistema Docker\n\nDocker Hub — repositório público com mais de 250 mil imagens prontas (mysql, python, nginx, ubuntu…)\nDocker Compose — define e roda múltiplos containers juntos via um arquivo YAML (ex.: app + banco de dados)\nDocker Swarm — orquestração nativa do Docker, para gerenciar containers em vários hosts\n\n\nNão aprofundar Compose/Swarm agora — só situar que existem, para quando o aluno for além do curso."
+  },
+  {
+    "objectID": "aulas/09-docker-conceitos.html#atividade-da-aula",
+    "href": "aulas/09-docker-conceitos.html#atividade-da-aula",
+    "title": "Aula 09 — Docker: Conceitos e Arquitetura",
+    "section": "Atividade da aula",
+    "text": "Atividade da aula\n\nDiscussão em grupos (8 min):\n\nPor que um container Docker inicia muito mais rápido que uma VM?\nSe vocês fossem hospedar um site simples, escolheriam VM ou container? E se fossem hospedar um sistema legado com um SO Windows Server antigo, mudaria a resposta? Por quê?"
+  },
+  {
+    "objectID": "aulas/09-docker-conceitos.html#síntese-da-aula",
+    "href": "aulas/09-docker-conceitos.html#síntese-da-aula",
+    "title": "Aula 09 — Docker: Conceitos e Arquitetura",
+    "section": "Síntese da aula",
+    "text": "Síntese da aula\n\nContainer = unidade leve baseada em cgroups + namespaces, compartilhando o kernel do host\nImagem (read-only, em camadas) x container (instância executável)\nArquitetura cliente/servidor: Docker Client ↔︎ API REST ↔︎ Docker Daemon\nEcossistema: Docker Hub, Compose, Swarm"
+  },
+  {
+    "objectID": "aulas/09-docker-conceitos.html#próxima-aula",
+    "href": "aulas/09-docker-conceitos.html#próxima-aula",
+    "title": "Aula 09 — Docker: Conceitos e Arquitetura",
+    "section": "Próxima aula",
+    "text": "Próxima aula\nPrática Docker I — vamos rodar nossos primeiros containers no Docker Playground"
+  },
+  {
+    "objectID": "aulas/09-docker-conceitos.html#referências",
+    "href": "aulas/09-docker-conceitos.html#referências",
+    "title": "Aula 09 — Docker: Conceitos e Arquitetura",
+    "section": "Referências",
+    "text": "Referências\n\nDocumentação oficial: docs.docker.com"
+  },
+  {
+    "objectID": "aulas/07-data-centers-armazenamento.html#objetivos-da-aula",
+    "href": "aulas/07-data-centers-armazenamento.html#objetivos-da-aula",
+    "title": "Aula 07 — Data Centers, Dispositivos e Consolidação de Serviços",
+    "section": "Objetivos da aula",
+    "text": "Objetivos da aula\n\nEntender a organização física e lógica de um data center\nConhecer os principais dispositivos de comunicação e armazenamento\nCompreender o conceito de consolidação de serviços"
+  },
+  {
+    "objectID": "aulas/07-data-centers-armazenamento.html#o-que-é-um-data-center",
+    "href": "aulas/07-data-centers-armazenamento.html#o-que-é-um-data-center",
+    "title": "Aula 07 — Data Centers, Dispositivos e Consolidação de Serviços",
+    "section": "O que é um data center?",
+    "text": "O que é um data center?\n\nInstalação física dedicada a abrigar servidores, equipamentos de rede e armazenamento, com infraestrutura de energia, refrigeração e segurança para mantê-los funcionando 24/7.\n\nÉ o “prédio” físico por trás de toda a nuvem que estudamos até aqui."
+  },
+  {
+    "objectID": "aulas/07-data-centers-armazenamento.html#organização-física-de-um-data-center",
+    "href": "aulas/07-data-centers-armazenamento.html#organização-física-de-um-data-center",
+    "title": "Aula 07 — Data Centers, Dispositivos e Consolidação de Serviços",
+    "section": "Organização física de um data center",
+    "text": "Organização física de um data center\n\nRacks — estruturas padronizadas (medidas em unidades “U”) onde servidores são empilhados verticalmente\nRefrigeração (cooling) — um dos maiores gastos energéticos; corredores quentes/frios organizados para otimizar o fluxo de ar\nEnergia redundante — geradores e nobreaks (UPS) para garantir funcionamento mesmo em queda de energia\nCabeamento estruturado — organização de cabos de rede e energia para facilitar manutenção\nSegurança física — controle de acesso, câmeras, biometria"
+  },
+  {
+    "objectID": "aulas/07-data-centers-armazenamento.html#tiers-de-data-center-classificação-de-confiabilidade",
+    "href": "aulas/07-data-centers-armazenamento.html#tiers-de-data-center-classificação-de-confiabilidade",
+    "title": "Aula 07 — Data Centers, Dispositivos e Consolidação de Serviços",
+    "section": "Tiers de data center (classificação de confiabilidade)",
+    "text": "Tiers de data center (classificação de confiabilidade)\n\n\n\nTier\nDisponibilidade\nRedundância\n\n\n\n\nI\n~99,67%\nNenhuma\n\n\nII\n~99,75%\nComponentes redundantes\n\n\nIII\n~99,98%\nManutenção sem parar o serviço\n\n\nIV\n~99,99%\nTolerante a falhas, tudo duplicado\n\n\n\n\nNão é preciso decorar os números — o importante é entender que existe uma escala formal de confiabilidade, usada por provedores de nuvem para classificar seus data centers."
+  },
+  {
+    "objectID": "aulas/07-data-centers-armazenamento.html#dispositivos-de-comunicação",
+    "href": "aulas/07-data-centers-armazenamento.html#dispositivos-de-comunicação",
+    "title": "Aula 07 — Data Centers, Dispositivos e Consolidação de Serviços",
+    "section": "Dispositivos de comunicação",
+    "text": "Dispositivos de comunicação\n\nSwitches — conectam os equipamentos dentro do data center (rede local de alta velocidade)\nRoteadores — conectam o data center a outras redes e à internet\nFirewalls — controlam e filtram o tráfego de entrada/saída por segurança\nLoad balancers — distribuem requisições entre vários servidores, evitando sobrecarga em um único ponto"
+  },
+  {
+    "objectID": "aulas/07-data-centers-armazenamento.html#dispositivos-de-armazenamento",
+    "href": "aulas/07-data-centers-armazenamento.html#dispositivos-de-armazenamento",
+    "title": "Aula 07 — Data Centers, Dispositivos e Consolidação de Serviços",
+    "section": "Dispositivos de armazenamento",
+    "text": "Dispositivos de armazenamento\n\nDAS (Direct-Attached Storage) — armazenamento conectado diretamente a um único servidor\nNAS (Network-Attached Storage) — armazenamento compartilhado via rede, acessível por vários servidores/usuários (arquivos)\nSAN (Storage Area Network) — rede dedicada de alta velocidade, exclusiva para tráfego de armazenamento em bloco, usada em ambientes de alta performance"
+  },
+  {
+    "objectID": "aulas/07-data-centers-armazenamento.html#das-x-nas-x-san",
+    "href": "aulas/07-data-centers-armazenamento.html#das-x-nas-x-san",
+    "title": "Aula 07 — Data Centers, Dispositivos e Consolidação de Serviços",
+    "section": "DAS x NAS x SAN",
+    "text": "DAS x NAS x SAN\n\n\n\n\n\n\n\n\n\n\nDAS\nNAS\nSAN\n\n\n\n\nConexão\nDireta a 1 servidor\nVia rede comum\nRede dedicada\n\n\nCompartilhamento\nNão\nSim (arquivos)\nSim (blocos)\n\n\nPerformance\nAlta (local)\nMédia\nMuito alta\n\n\nUso típico\nServidor único\nCompartilhamento de arquivos\nData centers/bancos de dados críticos"
+  },
+  {
+    "objectID": "aulas/07-data-centers-armazenamento.html#raid-redundância-de-disco",
+    "href": "aulas/07-data-centers-armazenamento.html#raid-redundância-de-disco",
+    "title": "Aula 07 — Data Centers, Dispositivos e Consolidação de Serviços",
+    "section": "RAID — redundância de disco",
+    "text": "RAID — redundância de disco\nRAID (Redundant Array of Independent Disks) combina vários discos físicos para ganhar performance e/ou tolerância a falhas:\n\nRAID 0 — divide dados entre discos (mais velocidade, zero redundância)\nRAID 1 — espelha os dados em dois discos (redundância total, menos espaço útil)\nRAID 5 — distribui dados + paridade entre 3+ discos (bom equilíbrio custo/segurança)\n\n\n\n\n\n\n\nNota\n\n\nData centers de nuvem usam RAID (ou tecnologias equivalentes) para garantir que a falha de um disco físico não derrube nenhum dado de clientes."
+  },
+  {
+    "objectID": "aulas/07-data-centers-armazenamento.html#consolidação-de-serviços",
+    "href": "aulas/07-data-centers-armazenamento.html#consolidação-de-serviços",
+    "title": "Aula 07 — Data Centers, Dispositivos e Consolidação de Serviços",
+    "section": "Consolidação de serviços",
+    "text": "Consolidação de serviços\n\nReunir várias cargas de trabalho (que antes rodavam em servidores físicos separados e subutilizados) em menos servidores físicos, usando virtualização."
+  },
+  {
+    "objectID": "aulas/07-data-centers-armazenamento.html#por-que-consolidar",
+    "href": "aulas/07-data-centers-armazenamento.html#por-que-consolidar",
+    "title": "Aula 07 — Data Centers, Dispositivos e Consolidação de Serviços",
+    "section": "Por que consolidar?",
+    "text": "Por que consolidar?\n\nA maioria dos servidores físicos tradicionais roda subutilizada (muitas vezes menos de 15% de uso médio de CPU)\nConsolidar via virtualização = mais VMs por servidor físico, aproveitando melhor o hardware\nResultado direto: menos hardware, menos energia, menos espaço, menos custo — reforça a conexão com TI verde vista na Aula 03"
+  },
+  {
+    "objectID": "aulas/07-data-centers-armazenamento.html#como-se-calcula-de-forma-simplificada",
+    "href": "aulas/07-data-centers-armazenamento.html#como-se-calcula-de-forma-simplificada",
+    "title": "Aula 07 — Data Centers, Dispositivos e Consolidação de Serviços",
+    "section": "Como se calcula (de forma simplificada)",
+    "text": "Como se calcula (de forma simplificada)\n\nMedir o uso médio de CPU/RAM de cada servidor físico atual\nSomar as necessidades reais de todos eles\nDimensionar um servidor físico novo, mais potente, capaz de rodar todos como VMs, com folga de segurança\nMigrar os serviços para VMs nesse novo servidor consolidado\n\n\nExemplo numérico simples: 8 servidores físicos usando em média 10% de CPU cada → provavelmente cabem todos como VMs em 1-2 servidores físicos modernos."
+  },
+  {
+    "objectID": "aulas/07-data-centers-armazenamento.html#atividade-da-aula",
+    "href": "aulas/07-data-centers-armazenamento.html#atividade-da-aula",
+    "title": "Aula 07 — Data Centers, Dispositivos e Consolidação de Serviços",
+    "section": "Atividade da aula",
+    "text": "Atividade da aula\n\nEm grupos (10 min):\nUma empresa tem 6 servidores físicos separados (e-mail, site, banco de dados, arquivos, backup, DNS), cada um usando em média 12% de CPU.\n\nProponham um plano de consolidação: quantos servidores físicos vocês manteriam?\nQue tipo de armazenamento (DAS/NAS/SAN) vocês recomendariam para os arquivos compartilhados da empresa?\nQue nível de RAID vocês usariam para o servidor de banco de dados crítico? Justifiquem."
+  },
+  {
+    "objectID": "aulas/07-data-centers-armazenamento.html#síntese-da-aula",
+    "href": "aulas/07-data-centers-armazenamento.html#síntese-da-aula",
+    "title": "Aula 07 — Data Centers, Dispositivos e Consolidação de Serviços",
+    "section": "Síntese da aula",
+    "text": "Síntese da aula\n\nData centers têm organização física (racks, refrigeração, energia) e são classificados por Tiers\nDispositivos de comunicação (switches, roteadores, firewalls, load balancers) e armazenamento (DAS, NAS, SAN) formam a infraestrutura\nRAID garante redundância de dados em disco\nConsolidação de serviços usa virtualização para reduzir hardware físico, custo e energia"
+  },
+  {
+    "objectID": "aulas/07-data-centers-armazenamento.html#próxima-aula",
+    "href": "aulas/07-data-centers-armazenamento.html#próxima-aula",
+    "title": "Aula 07 — Data Centers, Dispositivos e Consolidação de Serviços",
+    "section": "Próxima aula",
+    "text": "Próxima aula\nVMware x Xen — comparando dois dos principais hipervisores usados em data centers reais"
+  },
+  {
+    "objectID": "aulas/07-data-centers-armazenamento.html#referências",
+    "href": "aulas/07-data-centers-armazenamento.html#referências",
+    "title": "Aula 07 — Data Centers, Dispositivos e Consolidação de Serviços",
+    "section": "Referências",
+    "text": "Referências\n\nVERAS, M. Virtualização: componente central do datacenter. Brasport, 2011.\nUptime Institute — Tier Classification System"
+  },
+  {
+    "objectID": "aulas/05-maquinas-virtuais.html#objetivos-da-aula",
+    "href": "aulas/05-maquinas-virtuais.html#objetivos-da-aula",
+    "title": "Aula 05 — Máquinas Virtuais",
+    "section": "Objetivos da aula",
+    "text": "Objetivos da aula\n\nEntender formalmente o que é uma máquina virtual\nConhecer as funções do hipervisor (MMV)\nIdentificar os componentes virtuais de uma VM\nListar benefícios e desafios de usar VMs"
+  },
+  {
+    "objectID": "aulas/05-maquinas-virtuais.html#por-que-virtualizar",
+    "href": "aulas/05-maquinas-virtuais.html#por-que-virtualizar",
+    "title": "Aula 05 — Máquinas Virtuais",
+    "section": "Por que virtualizar?",
+    "text": "Por que virtualizar?\n\nDescentralização com controle centralizado\nUso pleno de recursos — hardware caro não fica ocioso\nIsolamento — problemas em uma VM não afetam as outras\nEconomia — menos servidores físicos, menos energia, menos espaço\nRecuperação de desastres e tolerância a falhas — uma VM pode ser movida ou recriada rapidamente"
+  },
+  {
+    "objectID": "aulas/05-maquinas-virtuais.html#o-conceito-formal-de-vm",
+    "href": "aulas/05-maquinas-virtuais.html#o-conceito-formal-de-vm",
+    "title": "Aula 05 — Máquinas Virtuais",
+    "section": "O conceito formal de VM",
+    "text": "O conceito formal de VM\n\n“Uma máquina virtual é uma cópia eficiente e isolada da máquina real.”\n— Popek & Goldberg, 1974\n\nEsse artigo de 1974 ainda é a referência formal usada até hoje para definir virtualização."
+  },
+  {
+    "objectID": "aulas/05-maquinas-virtuais.html#dois-tipos-de-vm",
+    "href": "aulas/05-maquinas-virtuais.html#dois-tipos-de-vm",
+    "title": "Aula 05 — Máquinas Virtuais",
+    "section": "Dois tipos de VM",
+    "text": "Dois tipos de VM\n\nVMs de processo — virtualizam a execução de um único processo/programa (ex.: a JVM — Java Virtual Machine — roda um programa Java isolado do SO real)\nVMs de sistema — virtualizam um computador inteiro, incluindo SO completo (ex.: uma VM no VirtualBox rodando Ubuntu)\n\n\nDistinguir bem: JVM não é o que estamos estudando como “VM” na disciplina — é outro conceito. Nosso foco são VMs de sistema."
+  },
+  {
+    "objectID": "aulas/05-maquinas-virtuais.html#o-mmv-hipervisor-condições-de-popek-goldberg",
+    "href": "aulas/05-maquinas-virtuais.html#o-mmv-hipervisor-condições-de-popek-goldberg",
+    "title": "Aula 05 — Máquinas Virtuais",
+    "section": "O MMV / Hipervisor — condições de Popek & Goldberg",
+    "text": "O MMV / Hipervisor — condições de Popek & Goldberg\nUm bom monitor de máquina virtual (MMV) deve garantir:\n\nEquivalência — o software rodando na VM se comporta como se estivesse na máquina real\nDesempenho — degradação mínima de performance comparado a rodar direto no hardware\nControle de recursos — o MMV tem controle total sobre os recursos alocados a cada VM"
+  },
+  {
+    "objectID": "aulas/05-maquinas-virtuais.html#principais-funções-do-mmv",
+    "href": "aulas/05-maquinas-virtuais.html#principais-funções-do-mmv",
+    "title": "Aula 05 — Máquinas Virtuais",
+    "section": "Principais funções do MMV",
+    "text": "Principais funções do MMV\n\nAlternar entre modo kernel e modo usuário\nEmular instruções de hardware que a VM tenta executar\nEscalonar CPU entre as VMs ativas\nGerenciar memória e disco virtuais\nGerenciar I/O (entrada/saída) virtual"
+  },
+  {
+    "objectID": "aulas/05-maquinas-virtuais.html#componentes-virtuais-de-uma-vm",
+    "href": "aulas/05-maquinas-virtuais.html#componentes-virtuais-de-uma-vm",
+    "title": "Aula 05 — Máquinas Virtuais",
+    "section": "Componentes virtuais de uma VM",
+    "text": "Componentes virtuais de uma VM"
+  },
+  {
+    "objectID": "aulas/05-maquinas-virtuais.html#vcpu-e-vram",
+    "href": "aulas/05-maquinas-virtuais.html#vcpu-e-vram",
+    "title": "Aula 05 — Máquinas Virtuais",
+    "section": "vCPU e vRAM",
+    "text": "vCPU e vRAM\n\nvCPU — processador virtual, mapeado (não necessariamente 1:1) para núcleos físicos reais\nvRAM — memória virtual, com técnicas como:\n\nmemory ballooning — o hipervisor “recupera” memória ociosa de uma VM para dar a outra que precisa mais\nmemory deduplication — páginas de memória idênticas entre VMs são compartilhadas, economizando RAM real"
+  },
+  {
+    "objectID": "aulas/05-maquinas-virtuais.html#disco-virtual",
+    "href": "aulas/05-maquinas-virtuais.html#disco-virtual",
+    "title": "Aula 05 — Máquinas Virtuais",
+    "section": "Disco virtual",
+    "text": "Disco virtual\n\nFormatos comuns: VMDK (VMware), VHD (Hyper-V), VDI (VirtualBox), QCOW2 (KVM/Xen)\nThick provisioning — todo o espaço é reservado de uma vez\nThin provisioning — o espaço cresce sob demanda, conforme a VM realmente usa"
+  },
+  {
+    "objectID": "aulas/05-maquinas-virtuais.html#rede-virtual",
+    "href": "aulas/05-maquinas-virtuais.html#rede-virtual",
+    "title": "Aula 05 — Máquinas Virtuais",
+    "section": "Rede virtual",
+    "text": "Rede virtual\n\nvNIC — placa de rede virtual da VM\nPermite que várias VMs compartilhem a mesma placa de rede física, com isolamento lógico"
+  },
+  {
+    "objectID": "aulas/05-maquinas-virtuais.html#benefícios-das-vms",
+    "href": "aulas/05-maquinas-virtuais.html#benefícios-das-vms",
+    "title": "Aula 05 — Máquinas Virtuais",
+    "section": "Benefícios das VMs",
+    "text": "Benefícios das VMs\n\nConsolidação de servidores — menos hardware físico fazendo o mesmo trabalho\nProvisionamento rápido — criar uma nova VM em minutos, sem comprar hardware\nPortabilidade e migração — mover uma VM entre servidores físicos com pouca ou nenhuma interrupção\nSnapshots e rollback — “fotografar” o estado da VM e voltar a ele se algo der errado\nSegurança e isolamento — VM comprometida não afeta as demais\nCompatibilidade com sistemas legados — rodar um SO antigo isolado, sem depender de hardware antigo"
+  },
+  {
+    "objectID": "aulas/05-maquinas-virtuais.html#desafios-das-vms",
+    "href": "aulas/05-maquinas-virtuais.html#desafios-das-vms",
+    "title": "Aula 05 — Máquinas Virtuais",
+    "section": "Desafios das VMs",
+    "text": "Desafios das VMs\n\nComplexidade de gerenciamento em ambientes grandes\nGargalos de I/O (disco e rede) quando muitas VMs disputam o mesmo hardware\nLicenciamento de software pode ficar complexo (por VM, por núcleo físico…)\nSegurança do próprio hipervisor vira um ponto crítico — se ele for comprometido, todas as VMs estão em risco\nCusto inicial de hardware potente para hospedar muitas VMs"
+  },
+  {
+    "objectID": "aulas/05-maquinas-virtuais.html#tipo-i-x-tipo-ii-revisão",
+    "href": "aulas/05-maquinas-virtuais.html#tipo-i-x-tipo-ii-revisão",
+    "title": "Aula 05 — Máquinas Virtuais",
+    "section": "Tipo I x Tipo II (revisão)",
+    "text": "Tipo I x Tipo II (revisão)\n\n\n\n\n\n\n\n\n\nTipo I (clássico)\nTipo II (hospedado)\n\n\n\n\nExemplos\nVMware ESXi, Hyper-V, Xen Server\nVMware Workstation, VirtualBox\n\n\nOnde roda\nDireto no hardware\nDentro de um SO\n\n\nUso\nProdução / data center\nTestes / uso pessoal"
+  },
+  {
+    "objectID": "aulas/05-maquinas-virtuais.html#virtualização-total-instruções-sensíveis-x-privilegiadas",
+    "href": "aulas/05-maquinas-virtuais.html#virtualização-total-instruções-sensíveis-x-privilegiadas",
+    "title": "Aula 05 — Máquinas Virtuais",
+    "section": "Virtualização total: instruções sensíveis x privilegiadas",
+    "text": "Virtualização total: instruções sensíveis x privilegiadas\n\nPara uma arquitetura ser totalmente virtualizável (condição de Popek-Goldberg), toda instrução “sensível” (que muda o estado do sistema) deve também ser “privilegiada” (só executável em modo kernel)\nO x86 clássico não cumpria essa condição perfeitamente — daí a necessidade de técnicas extras (tradução binária, paravirtualização, extensões de hardware como Intel VT-x/AMD-V) para virtualizar corretamente\n\n\nNão é preciso aprofundar a matemática — o importante é o aluno entender que nem toda arquitetura de processador é “virtualizável de graça”; foi um problema real de engenharia resolvido ao longo dos anos 2000."
+  },
+  {
+    "objectID": "aulas/05-maquinas-virtuais.html#o-futuro-vms-e-containers",
+    "href": "aulas/05-maquinas-virtuais.html#o-futuro-vms-e-containers",
+    "title": "Aula 05 — Máquinas Virtuais",
+    "section": "O futuro: VMs e containers",
+    "text": "O futuro: VMs e containers\n\nContainers (Docker/Kubernetes) não substituem VMs — complementam: são mais leves, mas compartilham o kernel do host\nTendências: NFV (virtualização de funções de rede), edge computing, serverless, VMs com GPU dedicada para IA\n\n\nGancho para as aulas de Docker mais adiante no curso."
+  },
+  {
+    "objectID": "aulas/05-maquinas-virtuais.html#atividade-da-aula",
+    "href": "aulas/05-maquinas-virtuais.html#atividade-da-aula",
+    "title": "Aula 05 — Máquinas Virtuais",
+    "section": "Atividade da aula",
+    "text": "Atividade da aula\n\nDiscussão em grupo (10 min):\nUma escola tem 1 servidor físico potente e quer oferecer a cada turma um “laboratório virtual” isolado (SO próprio, aplicações próprias).\n\nVocês usariam hipervisor Tipo 1 ou Tipo 2? Por quê?\nQue componente virtual (vCPU, vRAM, disco, rede) vocês acham que será o gargalo mais provável se muitas turmas usarem ao mesmo tempo?"
+  },
+  {
+    "objectID": "aulas/05-maquinas-virtuais.html#síntese-da-aula",
+    "href": "aulas/05-maquinas-virtuais.html#síntese-da-aula",
+    "title": "Aula 05 — Máquinas Virtuais",
+    "section": "Síntese da aula",
+    "text": "Síntese da aula\n\nVM = “cópia eficiente e isolada da máquina real” (Popek & Goldberg, 1974)\nO MMV/hipervisor gerencia CPU, memória, disco e I/O virtuais\nComponentes: vCPU, vRAM, disco virtual (VMDK/VHD/VDI/QCOW2), vNIC\nVMs trazem grandes benefícios, mas também desafios de gerenciamento e segurança do hipervisor"
+  },
+  {
+    "objectID": "aulas/05-maquinas-virtuais.html#próxima-aula",
+    "href": "aulas/05-maquinas-virtuais.html#próxima-aula",
+    "title": "Aula 05 — Máquinas Virtuais",
+    "section": "Próxima aula",
+    "text": "Próxima aula\nPrática: VirtualBox — vamos criar e explorar uma máquina virtual de verdade"
+  },
+  {
+    "objectID": "aulas/05-maquinas-virtuais.html#referências",
+    "href": "aulas/05-maquinas-virtuais.html#referências",
+    "title": "Aula 05 — Máquinas Virtuais",
+    "section": "Referências",
+    "text": "Referências\n\nPOPEK, G.; GOLDBERG, R. Formal Requirements for Virtualizable Third Generation Architectures. 1974.\nVERAS, M. Virtualização: componente central do datacenter. Brasport, 2011."
+  },
+  {
+    "objectID": "aulas/03-grades-computacionais-ti-verde.html#objetivos-da-aula",
+    "href": "aulas/03-grades-computacionais-ti-verde.html#objetivos-da-aula",
+    "title": "Aula 03 — Grades Computacionais e TI Verde",
+    "section": "Objetivos da aula",
+    "text": "Objetivos da aula\n\nEntender o que é grid computing e como se diferencia da nuvem\nCompreender os fundamentos de TI verde (Green IT)\nRelacionar sustentabilidade com o dia a dia de data centers e nuvem"
+  },
+  {
+    "objectID": "aulas/03-grades-computacionais-ti-verde.html#antes-da-nuvem-grades-computacionais",
+    "href": "aulas/03-grades-computacionais-ti-verde.html#antes-da-nuvem-grades-computacionais",
+    "title": "Aula 03 — Grades Computacionais e TI Verde",
+    "section": "Antes da nuvem: grades computacionais",
+    "text": "Antes da nuvem: grades computacionais\nGrid computing (computação em grade) — vários computadores independentes, muitas vezes geograficamente distantes, unem seu poder de processamento para resolver um problema grande em conjunto.\n\nSurgiu nos anos 1990, antes da nuvem comercial\nIdeia: “juntar” recursos ociosos espalhados, em vez de centralizar em um data center"
+  },
+  {
+    "objectID": "aulas/03-grades-computacionais-ti-verde.html#exemplos-de-grid-computing",
+    "href": "aulas/03-grades-computacionais-ti-verde.html#exemplos-de-grid-computing",
+    "title": "Aula 03 — Grades Computacionais e TI Verde",
+    "section": "Exemplos de grid computing",
+    "text": "Exemplos de grid computing\n\nSETI@home — computadores voluntários no mundo todo analisando sinais de rádio em busca de vida extraterrestre\nFolding@home — simulação de dobramento de proteínas, usado em pesquisa contra doenças (inclusive COVID-19)\nBOINC — plataforma que várias pesquisas científicas usam para computação voluntária distribuída\n\n\nPerguntar: “quem já deixou o PC ligado rodando algo assim, tipo minerar criptomoeda ou participar de alguma rede assim?” — gancho de curiosidade."
+  },
+  {
+    "objectID": "aulas/03-grades-computacionais-ti-verde.html#grid-computing-x-computação-em-nuvem",
+    "href": "aulas/03-grades-computacionais-ti-verde.html#grid-computing-x-computação-em-nuvem",
+    "title": "Aula 03 — Grades Computacionais e TI Verde",
+    "section": "Grid computing x Computação em nuvem",
+    "text": "Grid computing x Computação em nuvem\n\n\n\n\n\n\n\n\n\nGrid Computing\nComputação em Nuvem\n\n\n\n\nRecursos\nComputadores independentes, heterogêneos\nData centers centralizados e padronizados\n\n\nPropriedade\nDe várias organizações/voluntários\nDe um provedor único\n\n\nObjetivo típico\nProcessar 1 tarefa grande em paralelo\nFornecer serviços de TI sob demanda\n\n\nGerenciamento\nDescentralizado, complexo\nCentralizado pelo provedor\n\n\nElasticidade\nBaixa\nAlta\n\n\n\n\nA nuvem “venceu” comercialmente porque é mais fácil de gerenciar e consumir, mesmo grid computing ainda sendo usado em pesquisa científica."
+  },
+  {
+    "objectID": "aulas/03-grades-computacionais-ti-verde.html#ti-verde-green-it",
+    "href": "aulas/03-grades-computacionais-ti-verde.html#ti-verde-green-it",
+    "title": "Aula 03 — Grades Computacionais e TI Verde",
+    "section": "TI Verde (Green IT)",
+    "text": "TI Verde (Green IT)\nConjunto de práticas para reduzir o impacto ambiental da tecnologia da informação — desde a fabricação até o descarte de equipamentos."
+  },
+  {
+    "objectID": "aulas/03-grades-computacionais-ti-verde.html#por-que-isso-importa",
+    "href": "aulas/03-grades-computacionais-ti-verde.html#por-que-isso-importa",
+    "title": "Aula 03 — Grades Computacionais e TI Verde",
+    "section": "Por que isso importa?",
+    "text": "Por que isso importa?\n\nData centers consomem enormes quantidades de energia elétrica (estimativas: ~1-2% do consumo elétrico mundial)\nRefrigeração de servidores é um dos maiores gastos energéticos de um data center\nLixo eletrônico (e-waste) é um dos resíduos que mais cresce no mundo\nEmpresas de nuvem hoje competem também em eficiência energética e metas de carbono"
+  },
+  {
+    "objectID": "aulas/03-grades-computacionais-ti-verde.html#práticas-de-ti-verde",
+    "href": "aulas/03-grades-computacionais-ti-verde.html#práticas-de-ti-verde",
+    "title": "Aula 03 — Grades Computacionais e TI Verde",
+    "section": "Práticas de TI verde",
+    "text": "Práticas de TI verde\n\nVirtualização e consolidação — menos servidores físicos rodando, mais VMs por máquina real\nEficiência energética — hardware de baixo consumo, refrigeração eficiente (free cooling, data centers em regiões frias)\nPUE (Power Usage Effectiveness) — métrica que mede a eficiência energética de um data center (quanto mais próximo de 1.0, melhor)\nDescarte correto — reciclagem e reaproveitamento de equipamentos (logística reversa)\nNuvem como aliada — consolidar cargas de trabalho em data centers eficientes reduz o desperdício comparado a cada empresa manter seu próprio servidor subutilizado"
+  },
+  {
+    "objectID": "aulas/03-grades-computacionais-ti-verde.html#ti-verde-e-virtualização-a-conexão-direta",
+    "href": "aulas/03-grades-computacionais-ti-verde.html#ti-verde-e-virtualização-a-conexão-direta",
+    "title": "Aula 03 — Grades Computacionais e TI Verde",
+    "section": "TI verde e virtualização: a conexão direta",
+    "text": "TI verde e virtualização: a conexão direta\n\n\n\n\n\n\nNota\n\n\nUm único servidor físico rodando 20 VMs consome muito menos energia total do que 20 servidores físicos separados, cada um subutilizado. Por isso virtualização é, ao mesmo tempo, uma tecnologia de eficiência de custo e de sustentabilidade."
+  },
+  {
+    "objectID": "aulas/03-grades-computacionais-ti-verde.html#discussão-atividade",
+    "href": "aulas/03-grades-computacionais-ti-verde.html#discussão-atividade",
+    "title": "Aula 03 — Grades Computacionais e TI Verde",
+    "section": "Discussão / Atividade",
+    "text": "Discussão / Atividade\n\nEm grupos (10 min):\n\nPesquisem rapidamente: qual grande empresa de nuvem (AWS, Google, Microsoft) tem a meta de carbono mais ambiciosa hoje?\nDebate: virtualizar e migrar para nuvem pública é sempre mais sustentável do que manter servidor próprio? Em que situação isso pode não ser verdade?"
+  },
+  {
+    "objectID": "aulas/03-grades-computacionais-ti-verde.html#síntese-da-aula",
+    "href": "aulas/03-grades-computacionais-ti-verde.html#síntese-da-aula",
+    "title": "Aula 03 — Grades Computacionais e TI Verde",
+    "section": "Síntese da aula",
+    "text": "Síntese da aula\n\nGrid computing = juntar poder de processamento de várias máquinas independentes para 1 tarefa\nGrid é diferente de nuvem: menos centralizado, menos elástico, mais voltado à pesquisa\nTI verde busca reduzir impacto ambiental da TI (energia, refrigeração, e-waste)\nVirtualização é uma ponte direta entre eficiência de custo e sustentabilidade"
+  },
+  {
+    "objectID": "aulas/03-grades-computacionais-ti-verde.html#próxima-aula",
+    "href": "aulas/03-grades-computacionais-ti-verde.html#próxima-aula",
+    "title": "Aula 03 — Grades Computacionais e TI Verde",
+    "section": "Próxima aula",
+    "text": "Próxima aula\nVirtualização: Conceitos e Hipervisores — a tecnologia que sustenta tudo que vimos até aqui"
+  },
+  {
+    "objectID": "aulas/03-grades-computacionais-ti-verde.html#referências",
+    "href": "aulas/03-grades-computacionais-ti-verde.html#referências",
+    "title": "Aula 03 — Grades Computacionais e TI Verde",
+    "section": "Referências",
+    "text": "Referências\n\nCHEE, B.; FRANKLIN, C. Computação em Nuvem. M Books, 2013.\nVERAS, M. Virtualização: componente central do datacenter. Brasport, 2011."
+  },
+  {
+    "objectID": "aulas/01-introducao-computacao-nuvem.html#objetivos-da-aula",
+    "href": "aulas/01-introducao-computacao-nuvem.html#objetivos-da-aula",
+    "title": "Aula 01 — Introdução à Computação em Nuvem",
+    "section": "Objetivos da aula",
+    "text": "Objetivos da aula\n\nEntender o que é computação em nuvem e como ela funciona\nConhecer a evolução histórica que levou até a nuvem\nDiferenciar os modelos de implantação: pública, privada e híbrida\nDiscutir vantagens e desafios de usar nuvem\n\n\nAbrir perguntando: “quem aqui já usou Google Drive, Netflix ou WhatsApp hoje?” — todos usaram computação em nuvem sem perceber. Isso ancora a aula."
+  },
+  {
+    "objectID": "aulas/01-introducao-computacao-nuvem.html#o-que-é-computação-em-nuvem",
+    "href": "aulas/01-introducao-computacao-nuvem.html#o-que-é-computação-em-nuvem",
+    "title": "Aula 01 — Introdução à Computação em Nuvem",
+    "section": "O que é computação em nuvem?",
+    "text": "O que é computação em nuvem?\n\nEntrega de recursos de TI (servidores, armazenamento, banco de dados, rede, software) pela internet, sob demanda, geralmente com pagamento conforme o uso.\n\n\nEm vez de comprar e manter seus próprios servidores…\n…você aluga capacidade computacional de um provedor (AWS, Azure, Google Cloud etc.)"
+  },
+  {
+    "objectID": "aulas/01-introducao-computacao-nuvem.html#como-ela-funciona",
+    "href": "aulas/01-introducao-computacao-nuvem.html#como-ela-funciona",
+    "title": "Aula 01 — Introdução à Computação em Nuvem",
+    "section": "Como ela funciona?",
+    "text": "Como ela funciona?\n\nPor trás da nuvem existe uma rede global de data centers com milhares de servidores físicos\nA virtualização é a tecnologia habilitadora: permite dividir um servidor físico em várias “máquinas” lógicas independentes\nO usuário nunca vê o hardware — só consome o recurso final (uma VM, um banco de dados, um site no ar)\n\n\n\n\n\n\n\nNota\n\n\nVamos aprofundar virtualização daqui a algumas aulas — hoje o foco é entender o conceito de nuvem em si."
+  },
+  {
+    "objectID": "aulas/01-introducao-computacao-nuvem.html#linha-do-tempo-de-onde-viemos",
+    "href": "aulas/01-introducao-computacao-nuvem.html#linha-do-tempo-de-onde-viemos",
+    "title": "Aula 01 — Introdução à Computação em Nuvem",
+    "section": "Linha do tempo: de onde viemos",
+    "text": "Linha do tempo: de onde viemos\n\nAnos 1960–70 — Mainframes: um computador gigante, vários terminais “burros” compartilhando o mesmo processamento\nAnos 1980–90 — Computação pessoal e distribuída: cada um com seu próprio PC, poder de processamento descentralizado\n1999 — VMware lança software de virtualização comercial para x86\n2006 — Amazon lança o AWS (EC2/S3), marco comercial da computação em nuvem moderna\n2010s em diante — Azure, Google Cloud, containers, nuvem vira padrão de mercado"
+  },
+  {
+    "objectID": "aulas/01-introducao-computacao-nuvem.html#discussão-rápida",
+    "href": "aulas/01-introducao-computacao-nuvem.html#discussão-rápida",
+    "title": "Aula 01 — Introdução à Computação em Nuvem",
+    "section": "Discussão rápida",
+    "text": "Discussão rápida\nVocê já usa computação em nuvem sem saber?\n\nGoogle Drive / OneDrive\nNetflix / Spotify\nWhatsApp (backup na nuvem)\nJogos salvos na nuvem (Steam Cloud, Google Play Games)\n\n\nEm duplas: listem 3 exemplos de serviços em nuvem que vocês usam no dia a dia. (2 min)"
+  },
+  {
+    "objectID": "aulas/01-introducao-computacao-nuvem.html#modelos-de-implantação-deployment",
+    "href": "aulas/01-introducao-computacao-nuvem.html#modelos-de-implantação-deployment",
+    "title": "Aula 01 — Introdução à Computação em Nuvem",
+    "section": "Modelos de implantação (deployment)",
+    "text": "Modelos de implantação (deployment)\nOnde a infraestrutura de nuvem “mora” e quem tem acesso a ela."
+  },
+  {
+    "objectID": "aulas/01-introducao-computacao-nuvem.html#nuvem-pública",
+    "href": "aulas/01-introducao-computacao-nuvem.html#nuvem-pública",
+    "title": "Aula 01 — Introdução à Computação em Nuvem",
+    "section": "Nuvem pública",
+    "text": "Nuvem pública\n\nInfraestrutura pertence a um provedor terceirizado (AWS, Azure, GCP…)\nRecursos compartilhados entre múltiplos clientes (multi-tenancy)\nVantagens: custo baixo, escalabilidade praticamente ilimitada, sem manutenção própria\nDesvantagens: menos controle, dependência do provedor"
+  },
+  {
+    "objectID": "aulas/01-introducao-computacao-nuvem.html#nuvem-privada",
+    "href": "aulas/01-introducao-computacao-nuvem.html#nuvem-privada",
+    "title": "Aula 01 — Introdução à Computação em Nuvem",
+    "section": "Nuvem privada",
+    "text": "Nuvem privada\n\nInfraestrutura dedicada a uma única organização\nPode estar no próprio data center da empresa ou hospedada por terceiros, mas de uso exclusivo\nVantagens: mais controle, segurança e customização\nDesvantagens: custo mais alto, exige equipe própria de TI"
+  },
+  {
+    "objectID": "aulas/01-introducao-computacao-nuvem.html#nuvem-híbrida",
+    "href": "aulas/01-introducao-computacao-nuvem.html#nuvem-híbrida",
+    "title": "Aula 01 — Introdução à Computação em Nuvem",
+    "section": "Nuvem híbrida",
+    "text": "Nuvem híbrida\n\nCombina nuvem pública + privada, integradas\nEx.: dados sensíveis ficam na nuvem privada; picos de demanda “estouram” para a nuvem pública\nVantagens: flexibilidade, otimização de custo e segurança\nDesvantagens: complexidade de integração e gestão"
+  },
+  {
+    "objectID": "aulas/01-introducao-computacao-nuvem.html#comparativo",
+    "href": "aulas/01-introducao-computacao-nuvem.html#comparativo",
+    "title": "Aula 01 — Introdução à Computação em Nuvem",
+    "section": "Comparativo",
+    "text": "Comparativo\n\n\n\n\n\n\n\n\n\n\nPública\nPrivada\nHíbrida\n\n\n\n\nCusto inicial\nBaixo\nAlto\nMédio\n\n\nControle\nBaixo\nAlto\nMédio\n\n\nEscalabilidade\nMuito alta\nLimitada\nAlta\n\n\nUso típico\nStartups, apps web\nBancos, governo, saúde\nEmpresas em transição"
+  },
+  {
+    "objectID": "aulas/01-introducao-computacao-nuvem.html#vantagens-da-nuvem",
+    "href": "aulas/01-introducao-computacao-nuvem.html#vantagens-da-nuvem",
+    "title": "Aula 01 — Introdução à Computação em Nuvem",
+    "section": "Vantagens da nuvem",
+    "text": "Vantagens da nuvem\n\nEscalabilidade — aumentar ou reduzir recursos sob demanda\nCusto-benefício — paga-se pelo uso (OPEX em vez de CAPEX)\nAcessibilidade — acesso de qualquer lugar, qualquer dispositivo\nBackup e recuperação — redundância facilita recuperação de desastres\nInovação e agilidade — testar novas ideias sem investir em hardware"
+  },
+  {
+    "objectID": "aulas/01-introducao-computacao-nuvem.html#desafios-da-nuvem",
+    "href": "aulas/01-introducao-computacao-nuvem.html#desafios-da-nuvem",
+    "title": "Aula 01 — Introdução à Computação em Nuvem",
+    "section": "Desafios da nuvem",
+    "text": "Desafios da nuvem\n\nSegurança e privacidade — dados fora do seu controle físico\nDependência de conectividade — sem internet, sem acesso\nControle e gestão — menos visibilidade sobre a infraestrutura real\nCustos escaláveis — uso mal gerenciado pode sair caro (“bill shock”)"
+  },
+  {
+    "objectID": "aulas/01-introducao-computacao-nuvem.html#e-como-a-nuvem-é-vendida",
+    "href": "aulas/01-introducao-computacao-nuvem.html#e-como-a-nuvem-é-vendida",
+    "title": "Aula 01 — Introdução à Computação em Nuvem",
+    "section": "E como a nuvem é “vendida”?",
+    "text": "E como a nuvem é “vendida”?\nPrévia da próxima aula: os modelos de serviço\n\nIaaS — infraestrutura (servidores, storage, rede virtuais)\nPaaS — plataforma (ambiente pronto para desenvolver aplicações)\nSaaS — software (aplicação pronta, só usar)\n\n\nNão desenvolver aqui — é só o gancho para a Aula 02, que trata IaaS/PaaS/SaaS e o modelo de referência NIST formalmente."
+  },
+  {
+    "objectID": "aulas/01-introducao-computacao-nuvem.html#atividade-da-aula",
+    "href": "aulas/01-introducao-computacao-nuvem.html#atividade-da-aula",
+    "title": "Aula 01 — Introdução à Computação em Nuvem",
+    "section": "Atividade da aula",
+    "text": "Atividade da aula\n\nEm duplas (10 min):\n\nEscolham 1 serviço de nuvem que vocês usam (ex.: Google Drive, Netflix, Discord)\nClassifiquem: é nuvem pública, privada ou híbrida? Justifiquem.\nApontem 1 vantagem e 1 desafio real que vocês já perceberam usando esse serviço"
+  },
+  {
+    "objectID": "aulas/01-introducao-computacao-nuvem.html#síntese-da-aula",
+    "href": "aulas/01-introducao-computacao-nuvem.html#síntese-da-aula",
+    "title": "Aula 01 — Introdução à Computação em Nuvem",
+    "section": "Síntese da aula",
+    "text": "Síntese da aula\n\nComputação em nuvem = TI sob demanda, pela internet, habilitada por virtualização\nEvoluiu de mainframes → PCs distribuídos → nuvem (AWS 2006 em diante)\n3 modelos de implantação: pública, privada, híbrida\nVantagens (escala, custo, acesso) vêm com desafios (segurança, dependência, controle)"
+  },
+  {
+    "objectID": "aulas/01-introducao-computacao-nuvem.html#próxima-aula",
+    "href": "aulas/01-introducao-computacao-nuvem.html#próxima-aula",
+    "title": "Aula 01 — Introdução à Computação em Nuvem",
+    "section": "Próxima aula",
+    "text": "Próxima aula\nModelos de Serviço em Nuvem — IaaS, PaaS, SaaS e a Arquitetura de Referência NIST"
+  },
+  {
+    "objectID": "aulas/01-introducao-computacao-nuvem.html#referências",
+    "href": "aulas/01-introducao-computacao-nuvem.html#referências",
+    "title": "Aula 01 — Introdução à Computação em Nuvem",
+    "section": "Referências",
+    "text": "Referências\n\nCHEE, B.; FRANKLIN, C. Computação em Nuvem: cloud computing — tecnologias e estratégias. M Books, 2013.\nNIST — The NIST Definition of Cloud Computing (SP 800-145)"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Computação em Nuvem e Virtualização",
+    "section": "",
+    "text": "Curso: Técnico em Redes de Computadores Integrado ao Ensino Médio — 3º ano Câmpus: IFSP Boituva Professor: Ricardo Pasquati Pontarolli (pasquati@ifsp.edu.br)"
+  },
+  {
+    "objectID": "index.html#aulas",
+    "href": "index.html#aulas",
+    "title": "Computação em Nuvem e Virtualização",
+    "section": "Aulas",
+    "text": "Aulas\n\nIntrodução à Computação em Nuvem\nModelos de Serviço em Nuvem e Arquitetura NIST\nGrades Computacionais e TI Verde\nVirtualização: Conceitos e Hipervisores\nMáquinas Virtuais\nPrática: VirtualBox\nData Centers, Dispositivos e Consolidação de Serviços\nVMware x Xen\nDocker: Conceitos e Arquitetura\nPrática Docker I\nPrática Docker II\nModelos de Gerenciamento em Nuvem\nAWS, Azure, Google Cloud e OpenStack\nProjeto: Análise Comparativa de Soluções de Nuvem\nRevisão Geral\n\n\n\n\n\n\n\nNota\n\n\n\nNos slides, use as setas do teclado para navegar, S para abrir as notas do professor e O para visão geral dos slides."
+  },
+  {
+    "objectID": "aulas/02-modelos-servico-nist.html#objetivos-da-aula",
+    "href": "aulas/02-modelos-servico-nist.html#objetivos-da-aula",
+    "title": "Aula 02 — Modelos de Serviço em Nuvem e Arquitetura NIST",
+    "section": "Objetivos da aula",
+    "text": "Objetivos da aula\n\nDiferenciar IaaS, PaaS e SaaS com exemplos reais\nEntender quem gerencia o quê em cada modelo\nConhecer a Arquitetura de Referência NIST para computação em nuvem\n\n\nRetomar rapidamente a Aula 01: nuvem pública/privada/híbrida. Hoje é “o que se compra” na nuvem."
+  },
+  {
+    "objectID": "aulas/02-modelos-servico-nist.html#relembrando",
+    "href": "aulas/02-modelos-servico-nist.html#relembrando",
+    "title": "Aula 02 — Modelos de Serviço em Nuvem e Arquitetura NIST",
+    "section": "Relembrando",
+    "text": "Relembrando\nNa Aula 01 vimos onde a nuvem mora (pública/privada/híbrida).\nHoje: o que exatamente você está contratando quando usa nuvem."
+  },
+  {
+    "objectID": "aulas/02-modelos-servico-nist.html#responsabilidade-compartilhada",
+    "href": "aulas/02-modelos-servico-nist.html#responsabilidade-compartilhada",
+    "title": "Aula 02 — Modelos de Serviço em Nuvem e Arquitetura NIST",
+    "section": "Responsabilidade compartilhada",
+    "text": "Responsabilidade compartilhada\nEm toda nuvem, parte da pilha de TI é gerenciada pelo provedor, parte por você.\nQuanto mais “as a Service”, menos você gerencia — e menos controle você tem."
+  },
+  {
+    "objectID": "aulas/02-modelos-servico-nist.html#iaas-infrastructure-as-a-service",
+    "href": "aulas/02-modelos-servico-nist.html#iaas-infrastructure-as-a-service",
+    "title": "Aula 02 — Modelos de Serviço em Nuvem e Arquitetura NIST",
+    "section": "IaaS — Infrastructure as a Service",
+    "text": "IaaS — Infrastructure as a Service\n\nVocê aluga infraestrutura básica: servidores virtuais, armazenamento, rede\nVocê cuida do sistema operacional, aplicações e dados; o provedor cuida do hardware físico\nExemplos: AWS EC2, Azure Virtual Machines, Google Compute Engine\n\n\n✅ Escalabilidade, pagamento por uso, gerenciamento automatizado da infra física\n✅ Usos: hospedagem de sites, big data, ambientes de teste, backup/DR\n⚠️ Você ainda precisa administrar o SO e a segurança da aplicação"
+  },
+  {
+    "objectID": "aulas/02-modelos-servico-nist.html#paas-platform-as-a-service",
+    "href": "aulas/02-modelos-servico-nist.html#paas-platform-as-a-service",
+    "title": "Aula 02 — Modelos de Serviço em Nuvem e Arquitetura NIST",
+    "section": "PaaS — Platform as a Service",
+    "text": "PaaS — Platform as a Service\n\nVocê recebe uma plataforma pronta para desenvolver e publicar aplicações\nO provedor cuida do SO, servidor, runtime; você só cuida do código\nExemplos: Google App Engine, Azure App Services, AWS Elastic Beanstalk, Heroku\n\n\n✅ IDE integrada, deploy simplificado, multiplataforma\n✅ Usos: desenvolvimento ágil, apps web/mobile, integração de APIs\n⚠️ Menos controle sobre o ambiente de execução"
+  },
+  {
+    "objectID": "aulas/02-modelos-servico-nist.html#saas-software-as-a-service",
+    "href": "aulas/02-modelos-servico-nist.html#saas-software-as-a-service",
+    "title": "Aula 02 — Modelos de Serviço em Nuvem e Arquitetura NIST",
+    "section": "SaaS — Software as a Service",
+    "text": "SaaS — Software as a Service\n\nVocê usa um software pronto, via navegador ou app, sem instalar nada\nO provedor cuida de absolutamente tudo (infraestrutura, plataforma e aplicação)\nExemplos: Google Workspace, Microsoft 365, Netflix, Spotify, Salesforce\n\n\n✅ Acesso de qualquer lugar, atualização automática, modelo por assinatura\n✅ Usos: ERP/CRM, colaboração, e-commerce\n⚠️ Zero controle sobre a infraestrutura ou o código"
+  },
+  {
+    "objectID": "aulas/02-modelos-servico-nist.html#comparando-os-três-modelos",
+    "href": "aulas/02-modelos-servico-nist.html#comparando-os-três-modelos",
+    "title": "Aula 02 — Modelos de Serviço em Nuvem e Arquitetura NIST",
+    "section": "Comparando os três modelos",
+    "text": "Comparando os três modelos\n\n\n\n\nVocê gerencia\nProvedor gerencia\nExemplo\n\n\n\n\nIaaS\nSO, apps, dados\nServidores, rede, storage\nAWS EC2\n\n\nPaaS\nAplicação, dados\nSO, runtime, infraestrutura\nHeroku\n\n\nSaaS\nSó o uso\nTudo\nGmail\n\n\n\n\nQuanto mais à direita → menos trabalho técnico, menos controle."
+  },
+  {
+    "objectID": "aulas/02-modelos-servico-nist.html#e-além-dos-três-clássicos",
+    "href": "aulas/02-modelos-servico-nist.html#e-além-dos-três-clássicos",
+    "title": "Aula 02 — Modelos de Serviço em Nuvem e Arquitetura NIST",
+    "section": "E além dos três clássicos?",
+    "text": "E além dos três clássicos?\n\nFaaS (Function as a Service) — você só envia uma função, a nuvem executa sob demanda (ex.: AWS Lambda)\nCaaS (Container as a Service) — você gerencia containers, a nuvem cuida da orquestração (ex.: Azure Container Apps)"
+  },
+  {
+    "objectID": "aulas/02-modelos-servico-nist.html#discussão-rápida",
+    "href": "aulas/02-modelos-servico-nist.html#discussão-rápida",
+    "title": "Aula 02 — Modelos de Serviço em Nuvem e Arquitetura NIST",
+    "section": "Discussão rápida",
+    "text": "Discussão rápida\nPara cada serviço abaixo, classifiquem IaaS, PaaS ou SaaS:\n\nUma VM alugada na AWS para rodar seu próprio site\nO Heroku, onde você só envia seu código Python\nO Google Docs\nUma Google App Engine hospedando seu app"
+  },
+  {
+    "objectID": "aulas/02-modelos-servico-nist.html#a-arquitetura-de-referência-nist",
+    "href": "aulas/02-modelos-servico-nist.html#a-arquitetura-de-referência-nist",
+    "title": "Aula 02 — Modelos de Serviço em Nuvem e Arquitetura NIST",
+    "section": "A Arquitetura de Referência NIST",
+    "text": "A Arquitetura de Referência NIST\nO NIST (National Institute of Standards and Technology, EUA) publicou em 2011 a definição formal de computação em nuvem — hoje é a referência mundial (documento SP 800-145).\nEla define a nuvem por 5 características essenciais, 3 modelos de serviço e 4 modelos de implantação."
+  },
+  {
+    "objectID": "aulas/02-modelos-servico-nist.html#as-5-características-essenciais-nist",
+    "href": "aulas/02-modelos-servico-nist.html#as-5-características-essenciais-nist",
+    "title": "Aula 02 — Modelos de Serviço em Nuvem e Arquitetura NIST",
+    "section": "As 5 características essenciais (NIST)",
+    "text": "As 5 características essenciais (NIST)\n\nSelf-service sob demanda — o usuário provisiona recursos sozinho, sem intervenção humana do provedor\nAmplo acesso via rede — disponível pela internet, em qualquer dispositivo\nPool de recursos — recursos compartilhados dinamicamente entre múltiplos clientes (multi-tenancy)\nElasticidade rápida — recursos aumentam/diminuem automaticamente conforme a demanda\nServiço mensurável — uso é monitorado, controlado e cobrado de forma transparente (pay-per-use)"
+  },
+  {
+    "objectID": "aulas/02-modelos-servico-nist.html#os-3-modelos-de-serviço-nist",
+    "href": "aulas/02-modelos-servico-nist.html#os-3-modelos-de-serviço-nist",
+    "title": "Aula 02 — Modelos de Serviço em Nuvem e Arquitetura NIST",
+    "section": "Os 3 modelos de serviço (NIST)",
+    "text": "Os 3 modelos de serviço (NIST)\nExatamente o que já vimos: IaaS, PaaS e SaaS — o NIST formaliza essa mesma divisão."
+  },
+  {
+    "objectID": "aulas/02-modelos-servico-nist.html#os-4-modelos-de-implantação-nist",
+    "href": "aulas/02-modelos-servico-nist.html#os-4-modelos-de-implantação-nist",
+    "title": "Aula 02 — Modelos de Serviço em Nuvem e Arquitetura NIST",
+    "section": "Os 4 modelos de implantação (NIST)",
+    "text": "Os 4 modelos de implantação (NIST)\n\nNuvem pública e Nuvem privada (já vistos)\nNuvem híbrida (já vista)\nNuvem comunitária — infraestrutura compartilhada por várias organizações com interesses/requisitos em comum (ex.: hospitais de uma mesma rede pública, universidades de um consórcio)\n\n\n\n\n\n\n\nNota\n\n\nO NIST formaliza em normas o que o mercado já usa na prática — por isso é a referência citada em provas, certificações (AWS, Azure, CompTIA Cloud+) e documentos técnicos."
+  },
+  {
+    "objectID": "aulas/02-modelos-servico-nist.html#atividade-da-aula",
+    "href": "aulas/02-modelos-servico-nist.html#atividade-da-aula",
+    "title": "Aula 02 — Modelos de Serviço em Nuvem e Arquitetura NIST",
+    "section": "Atividade da aula",
+    "text": "Atividade da aula\n\nEm duplas (10 min):\nEscolham uma empresa (real ou fictícia) e desenhem, em texto, uma arquitetura de nuvem para ela usando os conceitos do NIST:\n\nQual modelo de implantação (público/privado/híbrido/comunitário)?\nQuais partes usam IaaS, PaaS ou SaaS?\nQual das 5 características essenciais é mais importante para essa empresa e por quê?"
+  },
+  {
+    "objectID": "aulas/02-modelos-servico-nist.html#síntese-da-aula",
+    "href": "aulas/02-modelos-servico-nist.html#síntese-da-aula",
+    "title": "Aula 02 — Modelos de Serviço em Nuvem e Arquitetura NIST",
+    "section": "Síntese da aula",
+    "text": "Síntese da aula\n\nIaaS / PaaS / SaaS — diferem em quanto você gerencia vs. quanto o provedor gerencia\nNIST SP 800-145 formaliza a nuvem em 5 características + 3 modelos de serviço + 4 modelos de implantação\nExiste uma 4ª modalidade de implantação além das 3 já vistas: comunitária"
+  },
+  {
+    "objectID": "aulas/02-modelos-servico-nist.html#próxima-aula",
+    "href": "aulas/02-modelos-servico-nist.html#próxima-aula",
+    "title": "Aula 02 — Modelos de Serviço em Nuvem e Arquitetura NIST",
+    "section": "Próxima aula",
+    "text": "Próxima aula\nNovos Modelos de Infraestrutura — Grades Computacionais e TI Verde"
+  },
+  {
+    "objectID": "aulas/02-modelos-servico-nist.html#referências",
+    "href": "aulas/02-modelos-servico-nist.html#referências",
+    "title": "Aula 02 — Modelos de Serviço em Nuvem e Arquitetura NIST",
+    "section": "Referências",
+    "text": "Referências\n\nNIST SP 800-145 — The NIST Definition of Cloud Computing\nCHEE, B.; FRANKLIN, C. Computação em Nuvem. M Books, 2013."
+  },
+  {
+    "objectID": "aulas/04-virtualizacao-conceitos-hipervisores.html#objetivos-da-aula",
+    "href": "aulas/04-virtualizacao-conceitos-hipervisores.html#objetivos-da-aula",
+    "title": "Aula 04 — Virtualização: Conceitos e Hipervisores",
+    "section": "Objetivos da aula",
+    "text": "Objetivos da aula\n\nDefinir virtualização e o papel do hipervisor\nDiferenciar hipervisores Tipo 1 e Tipo 2\nConhecer a taxonomia dos tipos de virtualização\nSituar a virtualização na linha do tempo da computação\n\n\nEsta é a aula-chave que conecta tudo que vimos: nuvem só existe na escala atual por causa da virtualização."
+  },
+  {
+    "objectID": "aulas/04-virtualizacao-conceitos-hipervisores.html#o-que-é-virtualização",
+    "href": "aulas/04-virtualizacao-conceitos-hipervisores.html#o-que-é-virtualização",
+    "title": "Aula 04 — Virtualização: Conceitos e Hipervisores",
+    "section": "O que é virtualização?",
+    "text": "O que é virtualização?\n\nCriar uma versão virtual (lógica) de algo que normalmente existiria fisicamente — um servidor, um disco, uma rede — permitindo rodar múltiplos ambientes isolados sobre o mesmo hardware físico."
+  },
+  {
+    "objectID": "aulas/04-virtualizacao-conceitos-hipervisores.html#o-hipervisor",
+    "href": "aulas/04-virtualizacao-conceitos-hipervisores.html#o-hipervisor",
+    "title": "Aula 04 — Virtualização: Conceitos e Hipervisores",
+    "section": "O hipervisor",
+    "text": "O hipervisor\n\nTambém chamado de VMM (Virtual Machine Monitor)\nCamada de software que gerencia e distribui os recursos físicos (CPU, memória, disco, rede) entre as máquinas virtuais\nÉ o hipervisor que garante isolamento: uma VM não “vê” nem interfere na outra"
+  },
+  {
+    "objectID": "aulas/04-virtualizacao-conceitos-hipervisores.html#hipervisor-tipo-1-bare-metal",
+    "href": "aulas/04-virtualizacao-conceitos-hipervisores.html#hipervisor-tipo-1-bare-metal",
+    "title": "Aula 04 — Virtualização: Conceitos e Hipervisores",
+    "section": "Hipervisor Tipo 1 (bare-metal)",
+    "text": "Hipervisor Tipo 1 (bare-metal)\n\nRoda diretamente sobre o hardware, sem sistema operacional hospedeiro por baixo\nMais eficiente, usado em produção/data centers\nExemplos: VMware ESXi, Microsoft Hyper-V, Citrix/Xen Server, KVM"
+  },
+  {
+    "objectID": "aulas/04-virtualizacao-conceitos-hipervisores.html#hipervisor-tipo-2-hosted",
+    "href": "aulas/04-virtualizacao-conceitos-hipervisores.html#hipervisor-tipo-2-hosted",
+    "title": "Aula 04 — Virtualização: Conceitos e Hipervisores",
+    "section": "Hipervisor Tipo 2 (hosted)",
+    "text": "Hipervisor Tipo 2 (hosted)\n\nRoda como um aplicativo dentro de um sistema operacional já existente\nMais simples de instalar, ideal para uso pessoal/testes\nExemplos: VMware Workstation, Oracle VirtualBox"
+  },
+  {
+    "objectID": "aulas/04-virtualizacao-conceitos-hipervisores.html#tipo-1-x-tipo-2",
+    "href": "aulas/04-virtualizacao-conceitos-hipervisores.html#tipo-1-x-tipo-2",
+    "title": "Aula 04 — Virtualização: Conceitos e Hipervisores",
+    "section": "Tipo 1 x Tipo 2",
+    "text": "Tipo 1 x Tipo 2\n\n\n\n\n\n\n\n\n\nTipo 1 (bare-metal)\nTipo 2 (hosted)\n\n\n\n\nOnde roda\nDireto no hardware\nDentro de um SO\n\n\nPerformance\nAlta\nMenor (overhead do SO hospedeiro)\n\n\nUso típico\nData centers, produção\nDesenvolvimento, testes, uso pessoal\n\n\nExemplos\nESXi, Hyper-V, Xen\nVirtualBox, VMware Workstation"
+  },
+  {
+    "objectID": "aulas/04-virtualizacao-conceitos-hipervisores.html#vantagens-gerais-da-virtualização",
+    "href": "aulas/04-virtualizacao-conceitos-hipervisores.html#vantagens-gerais-da-virtualização",
+    "title": "Aula 04 — Virtualização: Conceitos e Hipervisores",
+    "section": "Vantagens gerais da virtualização",
+    "text": "Vantagens gerais da virtualização\n\nAproveitamento de recursos — um servidor físico potente, várias VMs rodando nele\nRedução de custos — menos hardware físico, menos energia, menos espaço físico\nIsolamento — falha ou invasão em uma VM não afeta as demais\nEscalabilidade — criar/remover VMs rapidamente conforme a demanda\nFacilidade de gerenciamento — backups, clonagem e migração de VMs inteiras"
+  },
+  {
+    "objectID": "aulas/04-virtualizacao-conceitos-hipervisores.html#taxonomia-os-vários-tipos-de-virtualização",
+    "href": "aulas/04-virtualizacao-conceitos-hipervisores.html#taxonomia-os-vários-tipos-de-virtualização",
+    "title": "Aula 04 — Virtualização: Conceitos e Hipervisores",
+    "section": "Taxonomia: os vários tipos de virtualização",
+    "text": "Taxonomia: os vários tipos de virtualização\nVirtualização não é só “criar VMs” — o conceito se aplica a várias camadas de TI:"
+  },
+  {
+    "objectID": "aulas/04-virtualizacao-conceitos-hipervisores.html#virtualização-de-servidores",
+    "href": "aulas/04-virtualizacao-conceitos-hipervisores.html#virtualização-de-servidores",
+    "title": "Aula 04 — Virtualização: Conceitos e Hipervisores",
+    "section": "Virtualização de servidores",
+    "text": "Virtualização de servidores\nUm servidor físico dividido em vários servidores virtuais independentes — o caso mais clássico (o que vimos até agora)."
+  },
+  {
+    "objectID": "aulas/04-virtualizacao-conceitos-hipervisores.html#virtualização-de-desktop",
+    "href": "aulas/04-virtualizacao-conceitos-hipervisores.html#virtualização-de-desktop",
+    "title": "Aula 04 — Virtualização: Conceitos e Hipervisores",
+    "section": "Virtualização de desktop",
+    "text": "Virtualização de desktop\nÁrea de trabalho do usuário roda em um servidor central e é acessada remotamente (ex.: VDI — Virtual Desktop Infrastructure). Usada em laboratórios de TI e home office corporativo."
+  },
+  {
+    "objectID": "aulas/04-virtualizacao-conceitos-hipervisores.html#virtualização-de-aplicações",
+    "href": "aulas/04-virtualizacao-conceitos-hipervisores.html#virtualização-de-aplicações",
+    "title": "Aula 04 — Virtualização: Conceitos e Hipervisores",
+    "section": "Virtualização de aplicações",
+    "text": "Virtualização de aplicações\nA aplicação roda isolada do sistema operacional, sem precisar ser “instalada” tradicionalmente (ex.: um app empacotado que roda igual em qualquer Windows, sem conflitar com outros softwares)."
+  },
+  {
+    "objectID": "aulas/04-virtualizacao-conceitos-hipervisores.html#virtualização-de-armazenamento",
+    "href": "aulas/04-virtualizacao-conceitos-hipervisores.html#virtualização-de-armazenamento",
+    "title": "Aula 04 — Virtualização: Conceitos e Hipervisores",
+    "section": "Virtualização de armazenamento",
+    "text": "Virtualização de armazenamento\nVários dispositivos de armazenamento físico (HDs, SSDs) são agrupados e apresentados como um único pool lógico de armazenamento, independente do hardware por trás."
+  },
+  {
+    "objectID": "aulas/04-virtualizacao-conceitos-hipervisores.html#virtualização-de-rede",
+    "href": "aulas/04-virtualizacao-conceitos-hipervisores.html#virtualização-de-rede",
+    "title": "Aula 04 — Virtualização: Conceitos e Hipervisores",
+    "section": "Virtualização de rede",
+    "text": "Virtualização de rede\nRecursos de rede (switches, roteadores, firewalls) são recriados em software (SDN — Software-Defined Networking), permitindo reconfigurar a rede sem mexer em cabos ou equipamentos físicos."
+  },
+  {
+    "objectID": "aulas/04-virtualizacao-conceitos-hipervisores.html#virtualização-de-dados",
+    "href": "aulas/04-virtualizacao-conceitos-hipervisores.html#virtualização-de-dados",
+    "title": "Aula 04 — Virtualização: Conceitos e Hipervisores",
+    "section": "Virtualização de dados",
+    "text": "Virtualização de dados\nIntegra dados de fontes diferentes (bancos distintos, formatos distintos) em uma visão única, sem precisar mover ou duplicar fisicamente os dados."
+  },
+  {
+    "objectID": "aulas/04-virtualizacao-conceitos-hipervisores.html#linha-do-tempo-da-virtualização",
+    "href": "aulas/04-virtualizacao-conceitos-hipervisores.html#linha-do-tempo-da-virtualização",
+    "title": "Aula 04 — Virtualização: Conceitos e Hipervisores",
+    "section": "Linha do tempo da virtualização",
+    "text": "Linha do tempo da virtualização\n\nAnos 1960 — IBM cria os primeiros conceitos de virtualização em mainframes (compartilhar 1 mainframe caro entre vários usuários)\nAnos 1970-80 — “esquecida”: PCs baratos tornam virtualização desnecessária por um tempo\n1999 — VMware lança o Workstation, trazendo virtualização de volta para arquitetura x86\nAnos 2000 — Hyper-V, XenServer, KVM surgem; consolidação de servidores vira prática padrão em data centers\nAnos 2010 — Virtualização + nuvem + containers (Docker) se tornam a base da infraestrutura moderna\nAnos 2020 — Edge computing, NFV (virtualização de funções de rede), Kubernetes/cloud native"
+  },
+  {
+    "objectID": "aulas/04-virtualizacao-conceitos-hipervisores.html#atividade-da-aula",
+    "href": "aulas/04-virtualizacao-conceitos-hipervisores.html#atividade-da-aula",
+    "title": "Aula 04 — Virtualização: Conceitos e Hipervisores",
+    "section": "Atividade da aula",
+    "text": "Atividade da aula\n\nEm duplas (8 min):\nPara cada cenário, identifiquem que tipo de virtualização (servidor, desktop, aplicação, armazenamento, rede ou dados) é o mais adequado:\n\nUma escola quer que os alunos acessem o mesmo ambiente de trabalho de qualquer computador do laboratório\nUma empresa quer juntar 5 HDs antigos em um único espaço de armazenamento lógico\nUma empresa quer rodar 10 servidores lógicos em 1 servidor físico potente"
+  },
+  {
+    "objectID": "aulas/04-virtualizacao-conceitos-hipervisores.html#síntese-da-aula",
+    "href": "aulas/04-virtualizacao-conceitos-hipervisores.html#síntese-da-aula",
+    "title": "Aula 04 — Virtualização: Conceitos e Hipervisores",
+    "section": "Síntese da aula",
+    "text": "Síntese da aula\n\nVirtualização = criar versões lógicas de recursos físicos, gerenciadas por um hipervisor\nHipervisor Tipo 1 (bare-metal, produção) x Tipo 2 (hosted, uso pessoal/teste)\nVirtualização vai muito além de servidores: desktop, aplicação, armazenamento, rede, dados\nÉ a base tecnológica que tornou a computação em nuvem possível na escala atual"
+  },
+  {
+    "objectID": "aulas/04-virtualizacao-conceitos-hipervisores.html#próxima-aula",
+    "href": "aulas/04-virtualizacao-conceitos-hipervisores.html#próxima-aula",
+    "title": "Aula 04 — Virtualização: Conceitos e Hipervisores",
+    "section": "Próxima aula",
+    "text": "Próxima aula\nMáquinas Virtuais — vamos abrir a “caixa preta” de como uma VM funciona por dentro"
+  },
+  {
+    "objectID": "aulas/04-virtualizacao-conceitos-hipervisores.html#referências",
+    "href": "aulas/04-virtualizacao-conceitos-hipervisores.html#referências",
+    "title": "Aula 04 — Virtualização: Conceitos e Hipervisores",
+    "section": "Referências",
+    "text": "Referências\n\nVERAS, M. Virtualização: componente central do datacenter. Brasport, 2011.\nOLIVEIRA, R.; CARISSIMI, A.; TOSCANI, S. Sistemas Operacionais. 4. ed. Bookman, 2010."
+  },
+  {
+    "objectID": "aulas/06-pratica-virtualbox.html#objetivos-da-aula",
+    "href": "aulas/06-pratica-virtualbox.html#objetivos-da-aula",
+    "title": "Aula 06 — Prática: VirtualBox",
+    "section": "Objetivos da aula",
+    "text": "Objetivos da aula\n\nInstalar e configurar o Oracle VirtualBox\nCriar uma máquina virtual do zero\nInstalar um sistema operacional Linux (Ubuntu) na VM\nExplorar componentes virtuais na prática (vCPU, vRAM, disco virtual)\n\n\nAula 100% prática — reservar o laboratório de informática. Verificar com antecedência se as máquinas suportam virtualização por hardware (VT-x/AMD-V habilitado na BIOS)."
+  },
+  {
+    "objectID": "aulas/06-pratica-virtualbox.html#antes-de-começar",
+    "href": "aulas/06-pratica-virtualbox.html#antes-de-começar",
+    "title": "Aula 06 — Prática: VirtualBox",
+    "section": "Antes de começar",
+    "text": "Antes de começar\n\n\n\n\n\n\nNota\n\n\nChecklist:\n\nVirtualBox instalado (ou baixar de virtualbox.org)\nImagem .iso do Ubuntu Desktop baixada (ou Lubuntu/Xubuntu se o PC for mais fraco)\nPelo menos 25 GB de espaço livre em disco\nVirtualização por hardware habilitada na BIOS (VT-x / AMD-V)"
+  },
+  {
+    "objectID": "aulas/06-pratica-virtualbox.html#passo-1-criar-a-vm",
+    "href": "aulas/06-pratica-virtualbox.html#passo-1-criar-a-vm",
+    "title": "Aula 06 — Prática: VirtualBox",
+    "section": "Passo 1 — Criar a VM",
+    "text": "Passo 1 — Criar a VM\n\nAbrir o VirtualBox → Nova\nNome: ubuntu-lab | Tipo: Linux | Versão: Ubuntu (64-bit)\nMemória (vRAM): 2048 MB (mínimo recomendado)\nCriar um disco virtual agora → VDI → alocado dinamicamente (thin provisioning) → 20 GB\n\n\nRelacionar com a Aula 05: aqui o aluno está literalmente configurando vCPU, vRAM e disco virtual que acabou de estudar na teoria."
+  },
+  {
+    "objectID": "aulas/06-pratica-virtualbox.html#passo-2-ajustar-configurações-da-vm",
+    "href": "aulas/06-pratica-virtualbox.html#passo-2-ajustar-configurações-da-vm",
+    "title": "Aula 06 — Prática: VirtualBox",
+    "section": "Passo 2 — Ajustar configurações da VM",
+    "text": "Passo 2 — Ajustar configurações da VM\n\nSistema → Processador: definir 2 vCPUs (se o host tiver 4+ núcleos)\nSistema → Placa-mãe: habilitar EFI (opcional, para Ubuntu recente)\nArmazenamento: montar a .iso do Ubuntu na unidade óptica virtual\nRede: manter modo padrão (NAT) para ter acesso à internet dentro da VM"
+  },
+  {
+    "objectID": "aulas/06-pratica-virtualbox.html#passo-3-instalar-o-sistema-operacional",
+    "href": "aulas/06-pratica-virtualbox.html#passo-3-instalar-o-sistema-operacional",
+    "title": "Aula 06 — Prática: VirtualBox",
+    "section": "Passo 3 — Instalar o sistema operacional",
+    "text": "Passo 3 — Instalar o sistema operacional\n\nIniciar a VM → ela vai “bootar” a partir da .iso do Ubuntu\nSeguir o instalador gráfico do Ubuntu normalmente (idioma, teclado, usuário, senha)\nAguardar a instalação (pode levar alguns minutos)\nReiniciar a VM (ejetar a .iso quando solicitado)"
+  },
+  {
+    "objectID": "aulas/06-pratica-virtualbox.html#passo-4-explorar-a-vm",
+    "href": "aulas/06-pratica-virtualbox.html#passo-4-explorar-a-vm",
+    "title": "Aula 06 — Prática: VirtualBox",
+    "section": "Passo 4 — Explorar a VM",
+    "text": "Passo 4 — Explorar a VM\nDepois de instalado, dentro da VM:\n\nAbrir o terminal e rodar htop ou top — reparar que ele mostra “2 CPUs”, que são as vCPUs configuradas\nRodar free -h — conferir que a RAM mostrada é a vRAM configurada (2 GB), não a RAM real do computador físico\nRodar df -h — conferir que o disco mostrado é o disco virtual (20 GB), não o disco real\n\n\nIsso é a prova prática de que o sistema operacional “acredita” que está rodando em hardware real — mas está isolado, sobre um hipervisor Tipo 2."
+  },
+  {
+    "objectID": "aulas/06-pratica-virtualbox.html#passo-5-snapshot-fotografia-da-vm",
+    "href": "aulas/06-pratica-virtualbox.html#passo-5-snapshot-fotografia-da-vm",
+    "title": "Aula 06 — Prática: VirtualBox",
+    "section": "Passo 5 — Snapshot (fotografia da VM)",
+    "text": "Passo 5 — Snapshot (fotografia da VM)\n\nCom a VM ligada e o sistema já configurado, ir em Máquina → Fazer Snapshot\nDar um nome, ex.: ubuntu-limpo\nFazer alguma alteração na VM (instalar um programa, criar um arquivo)\nRestaurar o snapshot e verificar que a alteração desapareceu\n\n\nConecta diretamente com o conceito de “snapshot e rollback” visto na Aula 05 como benefício das VMs."
+  },
+  {
+    "objectID": "aulas/06-pratica-virtualbox.html#atividade-avaliativa",
+    "href": "aulas/06-pratica-virtualbox.html#atividade-avaliativa",
+    "title": "Aula 06 — Prática: VirtualBox",
+    "section": "Atividade avaliativa",
+    "text": "Atividade avaliativa\n\nIndividualmente, entregar com prints:\n\nPrint da tela de configuração da VM (vCPU, vRAM, disco)\nPrint do terminal dentro da VM rodando htop, free -h e df -h\nPrint do snapshot criado e da restauração funcionando\nUm parágrafo respondendo: qual a diferença entre o que o htop mostra dentro da VM e o Gerenciador de Tarefas do computador físico (host)?"
+  },
+  {
+    "objectID": "aulas/06-pratica-virtualbox.html#síntese-da-aula",
+    "href": "aulas/06-pratica-virtualbox.html#síntese-da-aula",
+    "title": "Aula 06 — Prática: VirtualBox",
+    "section": "Síntese da aula",
+    "text": "Síntese da aula\n\nCriamos uma VM real, configurando na prática vCPU, vRAM e disco virtual\nVimos que o SO dentro da VM enxerga apenas os recursos virtuais, isolados do hardware físico real\nSnapshots permitem voltar a um estado anterior da VM rapidamente"
+  },
+  {
+    "objectID": "aulas/06-pratica-virtualbox.html#próxima-aula",
+    "href": "aulas/06-pratica-virtualbox.html#próxima-aula",
+    "title": "Aula 06 — Prática: VirtualBox",
+    "section": "Próxima aula",
+    "text": "Próxima aula\nData Centers — organização física e lógica, dispositivos de armazenamento/rede e consolidação de serviços"
+  },
+  {
+    "objectID": "aulas/06-pratica-virtualbox.html#referências",
+    "href": "aulas/06-pratica-virtualbox.html#referências",
+    "title": "Aula 06 — Prática: VirtualBox",
+    "section": "Referências",
+    "text": "Referências\n\nDocumentação oficial: virtualbox.org/manual\nUbuntu Desktop: ubuntu.com/download/desktop"
+  },
+  {
+    "objectID": "aulas/08-vmware-xen.html#objetivos-da-aula",
+    "href": "aulas/08-vmware-xen.html#objetivos-da-aula",
+    "title": "Aula 08 — VMware x Xen",
+    "section": "Objetivos da aula",
+    "text": "Objetivos da aula\n\nConhecer a história e arquitetura da VMware\nConhecer a história e arquitetura do Xen\nComparar as duas soluções e entender quando cada uma é usada\n\n\nRetomar a Aula 04 (hipervisores Tipo 1/2) — hoje aprofundamos dois exemplos reais e importantes no mercado."
+  },
+  {
+    "objectID": "aulas/08-vmware-xen.html#vmware-visão-geral",
+    "href": "aulas/08-vmware-xen.html#vmware-visão-geral",
+    "title": "Aula 08 — VMware x Xen",
+    "section": "VMware — visão geral",
+    "text": "VMware — visão geral\n\nFundada em 1998, pioneira na virtualização comercial para x86\n1999 — lança o VMware Workstation (hipervisor Tipo 2)\nHoje é uma das maiores empresas de virtualização e nuvem híbrida do mundo (parte da Broadcom desde 2023)"
+  },
+  {
+    "objectID": "aulas/08-vmware-xen.html#arquitetura-vmware-esxi-tipo-1",
+    "href": "aulas/08-vmware-xen.html#arquitetura-vmware-esxi-tipo-1",
+    "title": "Aula 08 — VMware x Xen",
+    "section": "Arquitetura VMware — ESXi (Tipo 1)",
+    "text": "Arquitetura VMware — ESXi (Tipo 1)\n\nVMware ESXi — hipervisor bare-metal, instalado direto no hardware, sem sistema operacional hospedeiro\nKernel próprio (VMkernel), extremamente enxuto e otimizado só para rodar VMs\nGerenciado por vCenter Server, que administra múltiplos hosts ESXi como um único ambiente (cluster)"
+  },
+  {
+    "objectID": "aulas/08-vmware-xen.html#recursos-avançados-da-vmware",
+    "href": "aulas/08-vmware-xen.html#recursos-avançados-da-vmware",
+    "title": "Aula 08 — VMware x Xen",
+    "section": "Recursos avançados da VMware",
+    "text": "Recursos avançados da VMware\n\nvMotion — migrar uma VM em execução de um servidor físico para outro, sem desligar (zero downtime)\nHA (High Availability) — se um host físico falha, as VMs são reiniciadas automaticamente em outro host\nDRS (Distributed Resource Scheduler) — balanceia automaticamente a carga entre os hosts do cluster\n\n\n\n\n\n\n\nNota\n\n\nEsses recursos avançados são um dos motivos da VMware ser tradicionalmente adotada por grandes empresas, apesar do custo de licenciamento mais alto."
+  },
+  {
+    "objectID": "aulas/08-vmware-xen.html#xen-visão-geral",
+    "href": "aulas/08-vmware-xen.html#xen-visão-geral",
+    "title": "Aula 08 — VMware x Xen",
+    "section": "Xen — visão geral",
+    "text": "Xen — visão geral\n\nProjeto open source, criado na Universidade de Cambridge (2003)\nUm dos hipervisores mais usados historicamente — a AWS usou Xen como base do EC2 por muitos anos (antes de migrar parte da infraestrutura para o Nitro, próprio)\nHoje mantido pela Linux Foundation"
+  },
+  {
+    "objectID": "aulas/08-vmware-xen.html#arquitetura-xen-paravirtualização",
+    "href": "aulas/08-vmware-xen.html#arquitetura-xen-paravirtualização",
+    "title": "Aula 08 — VMware x Xen",
+    "section": "Arquitetura Xen — paravirtualização",
+    "text": "Arquitetura Xen — paravirtualização\n\nXen é um hipervisor Tipo 1, mas com uma abordagem diferente: paravirtualização\nDom0 (domínio 0) — uma VM privilegiada especial, que roda um SO modificado (geralmente Linux) e tem acesso direto ao hardware\nDomU (domínios de usuário) — as VMs “normais”, que podem ser paravirtualizadas (SO modificado, mais eficiente) ou com virtualização total (HVM, SO não modificado, usa extensões de hardware Intel VT-x/AMD-V)"
+  },
+  {
+    "objectID": "aulas/08-vmware-xen.html#paravirtualização-x-virtualização-total",
+    "href": "aulas/08-vmware-xen.html#paravirtualização-x-virtualização-total",
+    "title": "Aula 08 — VMware x Xen",
+    "section": "Paravirtualização x Virtualização total",
+    "text": "Paravirtualização x Virtualização total\n\n\n\n\n\n\n\n\n\nParavirtualização\nVirtualização total (HVM)\n\n\n\n\nSO convidado\nPrecisa ser modificado para “saber” que está virtualizado\nRoda sem modificação\n\n\nPerformance\nHistoricamente melhor (menos overhead)\nDepende de suporte de hardware (VT-x/AMD-V)\n\n\nCompatibilidade\nSó SOs que suportam (ex.: Linux adaptado)\nQualquer SO (Windows, Linux, etc.)\n\n\n\n\nRelacionar com a Aula 05: isso é exatamente a discussão de “instruções sensíveis x privilegiadas” e a condição de Popek-Goldberg — paravirtualização foi uma forma de contornar arquiteturas x86 antigas que não eram totalmente virtualizáveis."
+  },
+  {
+    "objectID": "aulas/08-vmware-xen.html#vmware-x-xen-comparativo-direto",
+    "href": "aulas/08-vmware-xen.html#vmware-x-xen-comparativo-direto",
+    "title": "Aula 08 — VMware x Xen",
+    "section": "VMware x Xen — comparativo direto",
+    "text": "VMware x Xen — comparativo direto\n\n\n\n\n\n\n\n\n\nVMware (ESXi)\nXen\n\n\n\n\nLicença\nProprietária (paga)\nOpen source (gratuita)\n\n\nModelo\nVirtualização total\nParavirtualização + HVM\n\n\nGerenciamento\nvCenter (robusto, gráfico)\nFerramentas variadas (XenServer/XCP-ng, ou próprias)\n\n\nUso típico\nGrandes empresas, ambientes corporativos\nProvedores de nuvem, projetos open source\n\n\nRecursos avançados\nvMotion, HA, DRS nativos\nDisponíveis via distribuições como XenServer/XCP-ng"
+  },
+  {
+    "objectID": "aulas/08-vmware-xen.html#quando-usar-cada-um",
+    "href": "aulas/08-vmware-xen.html#quando-usar-cada-um",
+    "title": "Aula 08 — VMware x Xen",
+    "section": "Quando usar cada um?",
+    "text": "Quando usar cada um?\n\nVMware — quando a empresa quer suporte comercial robusto, interface gráfica completa e não se importa com o custo de licenciamento\nXen — quando se busca uma solução gratuita/open source, flexível, e é usado historicamente em larga escala por provedores de nuvem\nAmbos provam o mesmo ponto: existem várias formas de implementar um hipervisor Tipo 1, com trade-offs diferentes de custo, performance e flexibilidade"
+  },
+  {
+    "objectID": "aulas/08-vmware-xen.html#atividade-da-aula",
+    "href": "aulas/08-vmware-xen.html#atividade-da-aula",
+    "title": "Aula 08 — VMware x Xen",
+    "section": "Atividade da aula",
+    "text": "Atividade da aula\n\nPesquisa rápida em grupos (10 min):\n\nPesquisem: a AWS ainda usa Xen hoje, ou migrou para outra tecnologia? O que mudou?\nDebate: para uma escola pública com orçamento limitado que quer montar um pequeno data center próprio, VMware ou Xen (via XCP-ng) seria mais indicado? Por quê?"
+  },
+  {
+    "objectID": "aulas/08-vmware-xen.html#síntese-da-aula",
+    "href": "aulas/08-vmware-xen.html#síntese-da-aula",
+    "title": "Aula 08 — VMware x Xen",
+    "section": "Síntese da aula",
+    "text": "Síntese da aula\n\nVMware ESXi — hipervisor Tipo 1 proprietário, robusto, com recursos avançados (vMotion, HA, DRS)\nXen — hipervisor Tipo 1 open source, pioneiro em paravirtualização, historicamente usado pela AWS\nA escolha entre eles envolve trade-offs de custo, performance, suporte e flexibilidade"
+  },
+  {
+    "objectID": "aulas/08-vmware-xen.html#próxima-aula",
+    "href": "aulas/08-vmware-xen.html#próxima-aula",
+    "title": "Aula 08 — VMware x Xen",
+    "section": "Próxima aula",
+    "text": "Próxima aula\nDocker: Conceitos e Arquitetura — saindo da virtualização tradicional para o mundo dos containers"
+  },
+  {
+    "objectID": "aulas/08-vmware-xen.html#referências",
+    "href": "aulas/08-vmware-xen.html#referências",
+    "title": "Aula 08 — VMware x Xen",
+    "section": "Referências",
+    "text": "Referências\n\nVERAS, M. Virtualização: componente central do datacenter. Brasport, 2011.\nDocumentação oficial: xenproject.org e vmware.com"
+  },
+  {
+    "objectID": "aulas/10-pratica-docker-1.html#objetivos-da-aula",
+    "href": "aulas/10-pratica-docker-1.html#objetivos-da-aula",
+    "title": "Aula 10 — Prática Docker I",
+    "section": "Objetivos da aula",
+    "text": "Objetivos da aula\n\nUsar o Docker Playground para praticar sem instalar nada\nRodar o primeiro container (MySQL)\nRodar um container Python interativo\n\n\nAula prática — garantir que todos tenham internet e consigam acessar labs.play-with-docker.com. Não precisa instalar Docker localmente."
+  },
+  {
+    "objectID": "aulas/10-pratica-docker-1.html#docker-playground",
+    "href": "aulas/10-pratica-docker-1.html#docker-playground",
+    "title": "Aula 10 — Prática Docker I",
+    "section": "Docker Playground",
+    "text": "Docker Playground\nPlay with Docker (labs.play-with-docker.com) — ambiente online e gratuito, baseado em Alpine Linux, com sessões de 4 horas.\n\nNão precisa instalar Docker no computador\nBasta uma conta Docker Hub gratuita\nCada instância criada já roda Docker “dentro” de um container — sandbox seguro para experimentar\nPermite criar várias instâncias, útil até para simular clusters (Swarm) mais adiante"
+  },
+  {
+    "objectID": "aulas/10-pratica-docker-1.html#passo-1-acessar-e-criar-instância",
+    "href": "aulas/10-pratica-docker-1.html#passo-1-acessar-e-criar-instância",
+    "title": "Aula 10 — Prática Docker I",
+    "section": "Passo 1 — Acessar e criar instância",
+    "text": "Passo 1 — Acessar e criar instância\n\nAcessar labs.play-with-docker.com e fazer login com conta Docker\nClicar em Start\nClicar em + ADD NEW INSTANCE\nUm terminal Linux aparece — pronto para usar docker"
+  },
+  {
+    "objectID": "aulas/10-pratica-docker-1.html#exemplo-1-container-mysql",
+    "href": "aulas/10-pratica-docker-1.html#exemplo-1-container-mysql",
+    "title": "Aula 10 — Prática Docker I",
+    "section": "Exemplo 1 — Container MySQL",
+    "text": "Exemplo 1 — Container MySQL\ndocker run --name mysql-db -e MYSQL_ROOT_PASSWORD=my-secret-pw -d mysql:5.7\n\n--name mysql-db → dá um nome ao container, para facilitar referenciá-lo depois\n-e MYSQL_ROOT_PASSWORD=... → define uma variável de ambiente (nesse caso, a senha do root do MySQL)\n-d → roda em modo detached (segundo plano)\nmysql:5.7 → nome da imagem e a tag de versão"
+  },
+  {
+    "objectID": "aulas/10-pratica-docker-1.html#verificando-e-acessando-o-container",
+    "href": "aulas/10-pratica-docker-1.html#verificando-e-acessando-o-container",
+    "title": "Aula 10 — Prática Docker I",
+    "section": "Verificando e acessando o container",
+    "text": "Verificando e acessando o container\ndocker ps\nMostra os containers em execução — confirmar que o mysql-db está rodando.\ndocker exec -it mysql-db bash\nAbre um terminal dentro do container (-it = interativo + terminal).\nmysql -u root -p\nConecta ao MySQL dentro do container (pedirá a senha definida antes).\n\n\n\n\n\n\nNota\n\n\nIsso é docker exec, não docker run — estamos entrando em um container que já existe, não criando um novo."
+  },
+  {
+    "objectID": "aulas/10-pratica-docker-1.html#exemplo-2-container-python",
+    "href": "aulas/10-pratica-docker-1.html#exemplo-2-container-python",
+    "title": "Aula 10 — Prática Docker I",
+    "section": "Exemplo 2 — Container Python",
+    "text": "Exemplo 2 — Container Python\ndocker pull python:3\nBaixa a imagem oficial do Python 3 (do Docker Hub) — separado do run para deixar claro o passo de download.\ndocker run -it python:3 bash\nCria e entra em um container Python, com terminal interativo."
+  },
+  {
+    "objectID": "aulas/10-pratica-docker-1.html#testando-o-python-dentro-do-container",
+    "href": "aulas/10-pratica-docker-1.html#testando-o-python-dentro-do-container",
+    "title": "Aula 10 — Prática Docker I",
+    "section": "Testando o Python dentro do container",
+    "text": "Testando o Python dentro do container\nDentro do container, digite:\npython\nE dentro do interpretador Python:\nprint(\"Hello from Docker Playground!\")\n\nTambém é possível criar um arquivo script.py e rodar com python script.py diretamente."
+  },
+  {
+    "objectID": "aulas/10-pratica-docker-1.html#atividade-avaliativa",
+    "href": "aulas/10-pratica-docker-1.html#atividade-avaliativa",
+    "title": "Aula 10 — Prática Docker I",
+    "section": "Atividade avaliativa",
+    "text": "Atividade avaliativa\n\nIndividual (entregar com prints de cada etapa):\n\nCriem uma instância no Docker Playground\nPesquisem a imagem oficial do PHP no Docker Hub\nFaçam o passo a passo completo para instalar e rodar um script PHP simples (echo \"Olá, Docker!\";) dentro de um container\nDocumentem cada comando usado, com print da tela mostrando o resultado"
+  },
+  {
+    "objectID": "aulas/10-pratica-docker-1.html#síntese-da-aula",
+    "href": "aulas/10-pratica-docker-1.html#síntese-da-aula",
+    "title": "Aula 10 — Prática Docker I",
+    "section": "Síntese da aula",
+    "text": "Síntese da aula\n\nDocker Playground permite praticar Docker sem instalar nada localmente\ndocker run cria e inicia um novo container; docker exec entra em um container já existente\nTestamos containers de MySQL (banco de dados) e Python (linguagem de script)"
+  },
+  {
+    "objectID": "aulas/10-pratica-docker-1.html#próxima-aula",
+    "href": "aulas/10-pratica-docker-1.html#próxima-aula",
+    "title": "Aula 10 — Prática Docker I",
+    "section": "Próxima aula",
+    "text": "Próxima aula\nPrática Docker II — mais comandos (ps, stop, exec) e a diferença entre criar e reaproveitar containers"
+  },
+  {
+    "objectID": "aulas/10-pratica-docker-1.html#referências",
+    "href": "aulas/10-pratica-docker-1.html#referências",
+    "title": "Aula 10 — Prática Docker I",
+    "section": "Referências",
+    "text": "Referências\n\nlabs.play-with-docker.com\nhub.docker.com"
+  },
+  {
+    "objectID": "aulas/12-gerenciamento-nuvem.html#objetivos-da-aula",
+    "href": "aulas/12-gerenciamento-nuvem.html#objetivos-da-aula",
+    "title": "Aula 12 — Modelos de Gerenciamento em Nuvem",
+    "section": "Objetivos da aula",
+    "text": "Objetivos da aula\n\nEntender o que significa gerenciar um ambiente de nuvem\nDiferenciar gerenciamento do provedor, híbrido e multicloud\nConhecer IaC, orquestração de containers (Kubernetes) e FinOps\n\n\nDepois de 3 aulas de Docker, voltamos ao nível “operação de nuvem madura” — como tudo isso é gerenciado no mundo real."
+  },
+  {
+    "objectID": "aulas/12-gerenciamento-nuvem.html#o-que-é-gerenciamento-em-nuvem",
+    "href": "aulas/12-gerenciamento-nuvem.html#o-que-é-gerenciamento-em-nuvem",
+    "title": "Aula 12 — Modelos de Gerenciamento em Nuvem",
+    "section": "O que é gerenciamento em nuvem?",
+    "text": "O que é gerenciamento em nuvem?\n\nConjunto de processos, ferramentas e políticas usados para controlar, otimizar e manter ambientes de nuvem."
+  },
+  {
+    "objectID": "aulas/12-gerenciamento-nuvem.html#por-que-gerenciar-bem-a-nuvem-importa",
+    "href": "aulas/12-gerenciamento-nuvem.html#por-que-gerenciar-bem-a-nuvem-importa",
+    "title": "Aula 12 — Modelos de Gerenciamento em Nuvem",
+    "section": "Por que gerenciar bem a nuvem importa?",
+    "text": "Por que gerenciar bem a nuvem importa?\n\nControle de custos — é fácil gastar mais do que o planejado na nuvem\nSegurança — configurações erradas são uma das maiores causas de vazamento de dados\nDesempenho — garantir que a aplicação responda bem sob demanda variável\nConformidade — atender normas e regulamentações (LGPD, por exemplo)\nEscalabilidade — crescer (ou reduzir) de forma controlada"
+  },
+  {
+    "objectID": "aulas/12-gerenciamento-nuvem.html#modelo-de-gerenciamento-do-provedor",
+    "href": "aulas/12-gerenciamento-nuvem.html#modelo-de-gerenciamento-do-provedor",
+    "title": "Aula 12 — Modelos de Gerenciamento em Nuvem",
+    "section": "Modelo de gerenciamento do provedor",
+    "text": "Modelo de gerenciamento do provedor\n\nO provedor de nuvem cuida de boa parte da operação (mais comum em SaaS/PaaS)\nVantagem: menos trabalho operacional para a empresa cliente\nDesvantagem: menos controle e customização"
+  },
+  {
+    "objectID": "aulas/12-gerenciamento-nuvem.html#gerenciamento-híbrido",
+    "href": "aulas/12-gerenciamento-nuvem.html#gerenciamento-híbrido",
+    "title": "Aula 12 — Modelos de Gerenciamento em Nuvem",
+    "section": "Gerenciamento híbrido",
+    "text": "Gerenciamento híbrido\n\nCombina data center privado + nuvem pública, gerenciados de forma unificada\nVantagem: flexibilidade — dados sensíveis ficam no ambiente privado, picos vão para a nuvem pública\nDesvantagem: complexidade de integrar ferramentas e processos diferentes"
+  },
+  {
+    "objectID": "aulas/12-gerenciamento-nuvem.html#gerenciamento-multicloud",
+    "href": "aulas/12-gerenciamento-nuvem.html#gerenciamento-multicloud",
+    "title": "Aula 12 — Modelos de Gerenciamento em Nuvem",
+    "section": "Gerenciamento multicloud",
+    "text": "Gerenciamento multicloud\n\nUsar mais de um provedor (ex.: AWS + Azure + GCP) ao mesmo tempo\nVantagem: evita depender de um único provedor, permite escolher o melhor serviço de cada um\nDesvantagem: maior complexidade operacional e risco de vendor lock-in parcial em cada plataforma\n\n\nEmpresas grandes cada vez mais adotam estratégias multicloud — mas isso exige ferramentas de gerenciamento mais sofisticadas."
+  },
+  {
+    "objectID": "aulas/12-gerenciamento-nuvem.html#infraestrutura-como-código-iac",
+    "href": "aulas/12-gerenciamento-nuvem.html#infraestrutura-como-código-iac",
+    "title": "Aula 12 — Modelos de Gerenciamento em Nuvem",
+    "section": "Infraestrutura como Código (IaC)",
+    "text": "Infraestrutura como Código (IaC)\n\nDefinir e provisionar infraestrutura (servidores, redes, storage) através de arquivos de código, em vez de configurar manualmente clique a clique.\n\n\nTerraform — ferramenta multicloud popular, usa arquivos de configuração próprios\nCloudFormation — nativo da AWS\nARM Templates — nativo do Azure"
+  },
+  {
+    "objectID": "aulas/12-gerenciamento-nuvem.html#por-que-iac-importa",
+    "href": "aulas/12-gerenciamento-nuvem.html#por-que-iac-importa",
+    "title": "Aula 12 — Modelos de Gerenciamento em Nuvem",
+    "section": "Por que IaC importa?",
+    "text": "Por que IaC importa?\n\nReprodutibilidade — recriar o mesmo ambiente exatamente igual, quantas vezes precisar\nVersionamento — a infraestrutura pode ser versionada junto com o código, como no Git\nAutomação — elimina erro humano de configuração manual repetitiva"
+  },
+  {
+    "objectID": "aulas/12-gerenciamento-nuvem.html#orquestração-de-containers-kubernetes",
+    "href": "aulas/12-gerenciamento-nuvem.html#orquestração-de-containers-kubernetes",
+    "title": "Aula 12 — Modelos de Gerenciamento em Nuvem",
+    "section": "Orquestração de containers: Kubernetes",
+    "text": "Orquestração de containers: Kubernetes\nDepois de aprender Docker, a pergunta natural é: como gerenciar centenas de containers em produção?\n\nKubernetes (K8s) — plataforma de orquestração de containers, hoje o padrão de mercado\nPrincipais funções:\n\nAgendamento — decide em qual servidor cada container roda\nBalanceamento de carga — distribui tráfego entre containers\nAutoescalabilidade — cria/remove containers conforme a demanda\nMonitoramento e recuperação — reinicia containers que falham automaticamente\nGerenciamento de configuração e segredos — centraliza senhas, chaves de API etc.\n\n\n\nNão é para ensinar comandos de Kubernetes agora — é só situar o conceito como “o próximo passo depois do Docker”."
+  },
+  {
+    "objectID": "aulas/12-gerenciamento-nuvem.html#monitoramento-de-desempenho-e-custo-observability",
+    "href": "aulas/12-gerenciamento-nuvem.html#monitoramento-de-desempenho-e-custo-observability",
+    "title": "Aula 12 — Modelos de Gerenciamento em Nuvem",
+    "section": "Monitoramento de desempenho e custo (Observability)",
+    "text": "Monitoramento de desempenho e custo (Observability)\n\nMétricas — números ao longo do tempo (uso de CPU, latência) — ex.: AWS CloudWatch, Azure Monitor\nLogs — registros detalhados de eventos do sistema\nTraces — rastreiam uma requisição através de vários serviços (útil em microsserviços)\nAlertas — notificações automáticas quando algo sai do esperado"
+  },
+  {
+    "objectID": "aulas/12-gerenciamento-nuvem.html#finops-gestão-financeira-de-nuvem",
+    "href": "aulas/12-gerenciamento-nuvem.html#finops-gestão-financeira-de-nuvem",
+    "title": "Aula 12 — Modelos de Gerenciamento em Nuvem",
+    "section": "FinOps — gestão financeira de nuvem",
+    "text": "FinOps — gestão financeira de nuvem\n\nPrática que une times de engenharia, financeiro e negócio para otimizar gastos em nuvem, sem travar a agilidade técnica.\n\n\nVisibilidade — saber exatamente quanto cada time/serviço está gastando\nOtimização — desligar recursos ociosos, escolher o tipo de instância certo\nOrçamento e alocação de custos — prever gastos e distribuir custos entre times/produtos"
+  },
+  {
+    "objectID": "aulas/12-gerenciamento-nuvem.html#atividade-da-aula",
+    "href": "aulas/12-gerenciamento-nuvem.html#atividade-da-aula",
+    "title": "Aula 12 — Modelos de Gerenciamento em Nuvem",
+    "section": "Atividade da aula",
+    "text": "Atividade da aula\n\nEm grupos (10 min):\nUma startup cresce rápido e está gastando cada vez mais em nuvem, sem controle.\n\nQue prática (das vistas hoje) vocês recomendariam primeiro para dar visibilidade de custos?\nA empresa deveria migrar para multicloud agora? Quais riscos vocês veem nesse momento de crescimento?"
+  },
+  {
+    "objectID": "aulas/12-gerenciamento-nuvem.html#síntese-da-aula",
+    "href": "aulas/12-gerenciamento-nuvem.html#síntese-da-aula",
+    "title": "Aula 12 — Modelos de Gerenciamento em Nuvem",
+    "section": "Síntese da aula",
+    "text": "Síntese da aula\n\nGerenciamento de nuvem pode ser do provedor, híbrido ou multicloud — cada um com trade-offs\nIaC (Terraform, CloudFormation) automatiza e versiona a infraestrutura\nKubernetes orquestra containers em escala, além do que Docker sozinho resolve\nFinOps e observability dão controle de custo e desempenho"
+  },
+  {
+    "objectID": "aulas/12-gerenciamento-nuvem.html#próxima-aula",
+    "href": "aulas/12-gerenciamento-nuvem.html#próxima-aula",
+    "title": "Aula 12 — Modelos de Gerenciamento em Nuvem",
+    "section": "Próxima aula",
+    "text": "Próxima aula\nAWS, Azure, GCP e OpenStack — conhecendo os principais provedores/plataformas de nuvem do mercado"
+  },
+  {
+    "objectID": "aulas/12-gerenciamento-nuvem.html#referências",
+    "href": "aulas/12-gerenciamento-nuvem.html#referências",
+    "title": "Aula 12 — Modelos de Gerenciamento em Nuvem",
+    "section": "Referências",
+    "text": "Referências\n\nDocumentação oficial: terraform.io, kubernetes.io\nFinOps Foundation — finops.org"
+  },
+  {
+    "objectID": "aulas/14-analise-solucoes-nuvem.html#objetivos-da-aula",
+    "href": "aulas/14-analise-solucoes-nuvem.html#objetivos-da-aula",
+    "title": "Aula 14 — Projeto: Análise Comparativa de Soluções de Nuvem",
+    "section": "Objetivos da aula",
+    "text": "Objetivos da aula\n\nAplicar todo o conteúdo do curso em um projeto prático\nComparar soluções de nuvem para um cenário real\nPraticar apresentação técnica de uma decisão de infraestrutura\n\n\nEsta aula é essencialmente o lançamento + trabalho orientado do projeto final. Ajustar o tempo de apresentação conforme o número de grupos."
+  },
+  {
+    "objectID": "aulas/14-analise-solucoes-nuvem.html#o-projeto",
+    "href": "aulas/14-analise-solucoes-nuvem.html#o-projeto",
+    "title": "Aula 14 — Projeto: Análise Comparativa de Soluções de Nuvem",
+    "section": "O projeto",
+    "text": "O projeto\n\nEm grupos, vocês vão planejar a infraestrutura de TI de uma empresa fictícia, escolhendo e justificando entre nuvem pública, privada, híbrida ou OpenStack — aplicando os conceitos vistos ao longo de todo o curso."
+  },
+  {
+    "objectID": "aulas/14-analise-solucoes-nuvem.html#formação-dos-grupos-e-escolha-do-cenário",
+    "href": "aulas/14-analise-solucoes-nuvem.html#formação-dos-grupos-e-escolha-do-cenário",
+    "title": "Aula 14 — Projeto: Análise Comparativa de Soluções de Nuvem",
+    "section": "Formação dos grupos e escolha do cenário",
+    "text": "Formação dos grupos e escolha do cenário\nEscolham (ou sorteiem) um cenário:\n\nEscola técnica — precisa de laboratórios virtuais para os alunos, orçamento limitado\nE-commerce em crescimento — picos de acesso em datas comemorativas, precisa escalar rápido\nHospital público — dados sensíveis de pacientes, exigências de LGPD\nStartup de aplicativo mobile — equipe pequena, precisa lançar rápido e testar ideias\nBanco regional — alta exigência de segurança e disponibilidade, mas com legado de sistemas antigos"
+  },
+  {
+    "objectID": "aulas/14-analise-solucoes-nuvem.html#o-que-o-projeto-deve-conter",
+    "href": "aulas/14-analise-solucoes-nuvem.html#o-que-o-projeto-deve-conter",
+    "title": "Aula 14 — Projeto: Análise Comparativa de Soluções de Nuvem",
+    "section": "O que o projeto deve conter",
+    "text": "O que o projeto deve conter\n\nEstrutura obrigatória do trabalho:\n\nContexto — descrição do cenário escolhido e suas necessidades específicas\nModelo de implantação — pública, privada, híbrida ou comunitária? Justificar com base no cenário (Aula 01)\nModelos de serviço — que partes serão IaaS, PaaS ou SaaS? (Aula 02)\nVirtualização — a solução usará VMs, containers, ou ambos? Por quê? (Aulas 04, 05, 09)\nInfraestrutura física ou provedor — data center próprio (com organização, storage, RAID) ou provedor de nuvem pública/OpenStack? (Aulas 07, 13)\nProvedor(es) escolhido(s) — AWS, Azure, GCP, OpenStack ou combinação — com pelo menos 3 serviços específicos citados\nSustentabilidade — como a escolha se relaciona com TI verde? (Aula 03)\nEstimativa de custo/gerenciamento — modelo de gerenciamento (provedor, híbrido, multicloud) e cuidados de FinOps (Aula 12)"
+  },
+  {
+    "objectID": "aulas/14-analise-solucoes-nuvem.html#formato-de-entrega",
+    "href": "aulas/14-analise-solucoes-nuvem.html#formato-de-entrega",
+    "title": "Aula 14 — Projeto: Análise Comparativa de Soluções de Nuvem",
+    "section": "Formato de entrega",
+    "text": "Formato de entrega\n\nApresentação de slides (pode ser feita em Quarto revealjs, como os slides desta disciplina!)\n10 minutos de apresentação por grupo + perguntas\nTodos os integrantes devem falar"
+  },
+  {
+    "objectID": "aulas/14-analise-solucoes-nuvem.html#critérios-de-avaliação",
+    "href": "aulas/14-analise-solucoes-nuvem.html#critérios-de-avaliação",
+    "title": "Aula 14 — Projeto: Análise Comparativa de Soluções de Nuvem",
+    "section": "Critérios de avaliação",
+    "text": "Critérios de avaliação\n\n\n\nCritério\nPeso\n\n\n\n\nJustificativa técnica coerente com o cenário\n30%\n\n\nCobertura dos 8 itens obrigatórios\n30%\n\n\nUso correto do vocabulário da disciplina\n20%\n\n\nClareza da apresentação\n20%"
+  },
+  {
+    "objectID": "aulas/14-analise-solucoes-nuvem.html#tempo-de-trabalho-em-aula",
+    "href": "aulas/14-analise-solucoes-nuvem.html#tempo-de-trabalho-em-aula",
+    "title": "Aula 14 — Projeto: Análise Comparativa de Soluções de Nuvem",
+    "section": "Tempo de trabalho em aula",
+    "text": "Tempo de trabalho em aula\n\nHoje (aula orientada):\n\nFormar grupos e escolher o cenário (5 min)\nRascunhar as respostas dos 8 itens obrigatórios em conjunto (restante da aula)\nProfessor circula entre os grupos tirando dúvidas\n\n\n\nAs apresentações podem ocorrer na Aula 15, ou em uma sessão extra, dependendo do calendário — ajustar conforme necessário."
+  },
+  {
+    "objectID": "aulas/14-analise-solucoes-nuvem.html#dica-final",
+    "href": "aulas/14-analise-solucoes-nuvem.html#dica-final",
+    "title": "Aula 14 — Projeto: Análise Comparativa de Soluções de Nuvem",
+    "section": "Dica final",
+    "text": "Dica final\n\n\n\n\n\n\nNota\n\n\nNão existe resposta “certa” única — o que será avaliado é a coerência entre o cenário escolhido e as decisões técnicas justificadas com o conteúdo do curso."
+  },
+  {
+    "objectID": "aulas/14-analise-solucoes-nuvem.html#próxima-aula",
+    "href": "aulas/14-analise-solucoes-nuvem.html#próxima-aula",
+    "title": "Aula 14 — Projeto: Análise Comparativa de Soluções de Nuvem",
+    "section": "Próxima aula",
+    "text": "Próxima aula\nRevisão Geral — véspera da apresentação/avaliação final, últimas dúvidas"
+  }
+]
