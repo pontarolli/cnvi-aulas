@@ -1,6 +1,5 @@
 ---
 title: "Aula 10 — Prática Docker I"
-date: last-modified
 ---
 
 ## Objetivos da aula

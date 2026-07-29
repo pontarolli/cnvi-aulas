@@ -1,6 +1,5 @@
 ---
 title: "Aula 02 — Modelos de Serviço em Nuvem e Arquitetura NIST"
-date: last-modified
 ---
 
 ## Objetivos da aula

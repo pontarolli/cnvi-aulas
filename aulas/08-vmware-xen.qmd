@@ -1,6 +1,5 @@
 ---
 title: "Aula 08 — VMware x Xen"
-date: last-modified
 ---
 
 ## Objetivos da aula

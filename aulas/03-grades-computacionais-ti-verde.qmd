@@ -1,6 +1,5 @@
 ---
 title: "Aula 03 — Grades Computacionais e TI Verde"
-date: last-modified
 ---
 
 ## Objetivos da aula

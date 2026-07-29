@@ -1,6 +1,5 @@
 ---
 title: "Aula 01 — Introdução à Computação em Nuvem"
-date: last-modified
 ---
 
 ## Objetivos da aula

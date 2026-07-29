@@ -1,6 +1,5 @@
 ---
 title: "Aula 14 — Projeto: Análise Comparativa de Soluções de Nuvem"
-date: last-modified
 ---
 
 ## Objetivos da aula

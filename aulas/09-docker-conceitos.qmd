@@ -1,6 +1,5 @@
 ---
 title: "Aula 09 — Docker: Conceitos e Arquitetura"
-date: last-modified
 ---
 
 ## Objetivos da aula
