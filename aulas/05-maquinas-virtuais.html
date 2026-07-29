@@ -141,7 +141,7 @@
 Ricardo Pasquati Pontarolli 
 </div>
         <p class="quarto-title-affiliation">
-            Técnico em Redes de Computadores · IFSP Boituva · pasquati@ifsp.edu.br · v19
+            Técnico em Redes de Computadores · IFSP Boituva · pasquati@ifsp.edu.br · v21
           </p>
     </div>
 </div>
@@ -306,6 +306,7 @@ Ricardo Pasquati Pontarolli
 <h2>Virtualização total: instruções sensíveis x privilegiadas</h2>
 <ul>
 <li>Para uma arquitetura ser <strong>totalmente virtualizável</strong> (condição de Popek-Goldberg), toda instrução “sensível” (que muda o estado do sistema) deve também ser “privilegiada” (só executável em modo kernel)</li>
+<li><strong>Exemplo histórico:</strong> o mainframe <strong>IBM System/370</strong> (anos 1970) foi projetado desde o início para cumprir essa condição — por isso já rodava múltiplas VMs de forma nativa e eficiente décadas antes do x86</li>
 <li>O x86 clássico <strong>não cumpria</strong> essa condição perfeitamente — daí a necessidade de técnicas extras (tradução binária, paravirtualização, extensões de hardware como Intel VT-x/AMD-V) para virtualizar corretamente</li>
 </ul>
 <aside class="notes">

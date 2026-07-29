@@ -141,7 +141,7 @@
 Ricardo Pasquati Pontarolli 
 </div>
         <p class="quarto-title-affiliation">
-            Técnico em Redes de Computadores · IFSP Boituva · pasquati@ifsp.edu.br · v19
+            Técnico em Redes de Computadores · IFSP Boituva · pasquati@ifsp.edu.br · v21
           </p>
     </div>
 </div>
@@ -154,6 +154,8 @@ Ricardo Pasquati Pontarolli
 <li>Conhecer a <strong>evolução histórica</strong> que levou até a nuvem</li>
 <li>Diferenciar os modelos de implantação: <strong>pública, privada e híbrida</strong></li>
 <li>Discutir <strong>vantagens e desafios</strong> de usar nuvem</li>
+<li>Conhecer os principais mecanismos de <strong>segurança na nuvem</strong></li>
+<li>Ter uma visão do <strong>futuro</strong> da computação em nuvem</li>
 </ul>
 <aside class="notes">
 <p>Abrir perguntando: “quem aqui já usou Google Drive, Netflix ou WhatsApp hoje?” — todos usaram computação em nuvem sem perceber. Isso ancora a aula.</p>
@@ -326,6 +328,47 @@ Ricardo Pasquati Pontarolli
 <li class="fragment"><strong>Custos escaláveis</strong> — uso mal gerenciado pode sair caro (“bill shock”)</li>
 </ul>
 </section>
+<section id="segurança-na-nuvem" class="slide level2">
+<h2>Segurança na nuvem</h2>
+<p>Compartilhar infraestrutura com outras empresas (multi-tenancy) exige mecanismos de segurança específicos. Alguns dos principais:</p>
+<ul>
+<li class="fragment"><strong>Multi-tenancy</strong> — vários clientes compartilham a mesma infraestrutura física, isolados logicamente uns dos outros</li>
+<li class="fragment"><strong>Criptografia</strong> — dados protegidos tanto “em repouso” (armazenados) quanto “em trânsito” (trafegando pela rede)</li>
+<li class="fragment"><strong>IAM (Identity and Access Management)</strong> — controla quem pode acessar o quê, com que permissões</li>
+</ul>
+</section>
+<section id="segurança-na-nuvem-continuação" class="slide level2">
+<h2>Segurança na nuvem (continuação)</h2>
+<ul>
+<li class="fragment"><strong>DLP (Data Loss Prevention)</strong> — detecta e bloqueia vazamento de dados sensíveis</li>
+<li class="fragment"><strong>SIEM (Security Information and Event Management)</strong> — centraliza e correlaciona logs de segurança para detectar ataques</li>
+<li class="fragment"><strong>ZTNA (Zero Trust Network Access)</strong> — “nunca confie, sempre verifique”: nenhum acesso é automaticamente confiável, mesmo vindo de dentro da rede</li>
+<li class="fragment"><strong>FWaaS (Firewall as a Service)</strong> — firewall entregue como serviço gerenciado na nuvem, sem hardware próprio</li>
+<li class="fragment"><strong>CASB (Cloud Access Security Broker)</strong> — camada de segurança entre usuários e provedores de nuvem, aplicando políticas da empresa</li>
+</ul>
+<aside class="notes">
+<p>Não é preciso decorar as siglas — o importante é o aluno perceber que “segurança na nuvem” é uma área extensa e especializada, não só “colocar uma senha forte”.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="o-futuro-da-nuvem" class="slide level2">
+<h2>O futuro da nuvem</h2>
+<ul>
+<li class="fragment"><strong>Computação quântica na nuvem</strong> — provedores já oferecem acesso a computadores quânticos como serviço (ex.: AWS Braket, Azure Quantum), sem precisar ter o hardware</li>
+<li class="fragment"><strong>Edge computing e IoT</strong> — processamento acontece mais perto de onde o dado é gerado (sensores, dispositivos), reduzindo latência, em vez de mandar tudo para um data center distante</li>
+<li class="fragment"><strong>SASE (Secure Access Service Edge)</strong> — converge rede e segurança em um único serviço entregue pela nuvem</li>
+<li class="fragment"><strong>Nuvem verde</strong> — sustentabilidade também é tendência (veremos em detalhe na Aula 03)</li>
+</ul>
+</section>
 <section id="e-como-a-nuvem-é-vendida" class="slide level2" data-background-color="#fff8e1">
 <h2>E como a nuvem é “vendida”?</h2>
 <p>Prévia da próxima aula: os <strong>modelos de serviço</strong></p>
@@ -366,6 +409,8 @@ Ricardo Pasquati Pontarolli
 <li>Evoluiu de mainframes → PCs distribuídos → nuvem (AWS 2006 em diante)</li>
 <li>3 modelos de implantação: <strong>pública, privada, híbrida</strong></li>
 <li>Vantagens (escala, custo, acesso) vêm com desafios (segurança, dependência, controle)</li>
+<li>Segurança na nuvem envolve mecanismos específicos: <strong>IAM, criptografia, DLP, SIEM, ZTNA, FWaaS, CASB</strong></li>
+<li>Tendências futuras: <strong>computação quântica, edge computing, SASE, nuvem verde</strong></li>
 </ul>
 </section>
 <section id="próxima-aula" class="slide level2">

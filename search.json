@@ -291,7 +291,7 @@
     "href": "aulas/09-docker-conceitos.html#de-onde-vem-o-docker",
     "title": "Aula 09 — Docker: Conceitos e Arquitetura",
     "section": "De onde vem o Docker",
-    "text": "De onde vem o Docker\n\n\nLançado em 2013, baseado em tecnologias mais antigas do kernel Linux: cgroups e namespaces\n“Docker” tem vários significados: o projeto open source, o conjunto de ferramentas, e a empresa por trás dele"
+    "text": "De onde vem o Docker\n\n\nLançado em 2013, baseado em tecnologias mais antigas do kernel Linux: cgroups, namespaces e o projeto LXC (Linux Containers), que já existia antes e inspirou o Docker\n“Docker” tem vários significados: o projeto open source, o conjunto de ferramentas, e a empresa por trás dele"
   },
   {
     "objectID": "aulas/09-docker-conceitos.html#como-funciona-por-baixo-dos-panos",
@@ -354,7 +354,7 @@
     "href": "aulas/09-docker-conceitos.html#imagens-docker",
     "title": "Aula 09 — Docker: Conceitos e Arquitetura",
     "section": "Imagens Docker",
-    "text": "Imagens Docker\n\nUma imagem é o “molde” — read-only, contém tudo que o container precisa para rodar\nUm container é uma instância em execução dessa imagem (efêmero, pode ser destruído e recriado)\nImagens são construídas em camadas (layers): cada instrução do build adiciona uma camada\nSó a última camada (a do container em execução) é gravável — as camadas da imagem original permanecem read-only"
+    "text": "Imagens Docker\n\nUma imagem é o “molde” — read-only, contém tudo que o container precisa para rodar\nUm container é uma instância em execução dessa imagem (efêmero, pode ser destruído e recriado)\nImagens são construídas em camadas (layers): cada instrução do build adiciona uma camada\nTecnicamente, isso é implementado com sistemas de arquivos como AUFS ou OverlayFS, que empilham as camadas de forma eficiente\nSó a última camada (a do container em execução) é gravável — as camadas da imagem original permanecem read-only"
   },
   {
     "objectID": "aulas/09-docker-conceitos.html#dockerfile",
@@ -382,7 +382,7 @@
     "href": "aulas/09-docker-conceitos.html#o-ecossistema-docker",
     "title": "Aula 09 — Docker: Conceitos e Arquitetura",
     "section": "O ecossistema Docker",
-    "text": "O ecossistema Docker\n\nDocker Hub — repositório público com mais de 250 mil imagens prontas (mysql, python, nginx, ubuntu…)\nDocker Compose — define e roda múltiplos containers juntos via um arquivo YAML (ex.: app + banco de dados)\nDocker Swarm — orquestração nativa do Docker, para gerenciar containers em vários hosts"
+    "text": "O ecossistema Docker\n\nDocker Hub — repositório público com mais de 250 mil imagens prontas (mysql, python, nginx, ubuntu…)\nDocker Desktop — aplicativo com interface gráfica para rodar Docker localmente no Windows/Mac, sem precisar da linha de comando para tudo\nDocker Compose — define e roda múltiplos containers juntos via um arquivo YAML (ex.: app + banco de dados)\nDocker Swarm — orquestração nativa do Docker, para gerenciar containers em vários hosts"
   },
   {
     "objectID": "aulas/09-docker-conceitos.html#docker-swarm-visão-geral",
@@ -627,7 +627,7 @@
     "href": "aulas/05-maquinas-virtuais.html#virtualização-total-instruções-sensíveis-x-privilegiadas",
     "title": "Aula 05 — Máquinas Virtuais",
     "section": "Virtualização total: instruções sensíveis x privilegiadas",
-    "text": "Virtualização total: instruções sensíveis x privilegiadas\n\nPara uma arquitetura ser totalmente virtualizável (condição de Popek-Goldberg), toda instrução “sensível” (que muda o estado do sistema) deve também ser “privilegiada” (só executável em modo kernel)\nO x86 clássico não cumpria essa condição perfeitamente — daí a necessidade de técnicas extras (tradução binária, paravirtualização, extensões de hardware como Intel VT-x/AMD-V) para virtualizar corretamente\n\n\nNão é preciso aprofundar a matemática — o importante é o aluno entender que nem toda arquitetura de processador é “virtualizável de graça”; foi um problema real de engenharia resolvido ao longo dos anos 2000."
+    "text": "Virtualização total: instruções sensíveis x privilegiadas\n\nPara uma arquitetura ser totalmente virtualizável (condição de Popek-Goldberg), toda instrução “sensível” (que muda o estado do sistema) deve também ser “privilegiada” (só executável em modo kernel)\nExemplo histórico: o mainframe IBM System/370 (anos 1970) foi projetado desde o início para cumprir essa condição — por isso já rodava múltiplas VMs de forma nativa e eficiente décadas antes do x86\nO x86 clássico não cumpria essa condição perfeitamente — daí a necessidade de técnicas extras (tradução binária, paravirtualização, extensões de hardware como Intel VT-x/AMD-V) para virtualizar corretamente\n\n\nNão é preciso aprofundar a matemática — o importante é o aluno entender que nem toda arquitetura de processador é “virtualizável de graça”; foi um problema real de engenharia resolvido ao longo dos anos 2000."
   },
   {
     "objectID": "aulas/05-maquinas-virtuais.html#o-futuro-vms-e-containers",
@@ -753,7 +753,7 @@
     "href": "aulas/01-introducao-computacao-nuvem.html#objetivos-da-aula",
     "title": "Aula 01 — Introdução à Computação em Nuvem",
     "section": "Objetivos da aula",
-    "text": "Objetivos da aula\n\nEntender o que é computação em nuvem e como ela funciona\nConhecer a evolução histórica que levou até a nuvem\nDiferenciar os modelos de implantação: pública, privada e híbrida\nDiscutir vantagens e desafios de usar nuvem\n\n\nAbrir perguntando: “quem aqui já usou Google Drive, Netflix ou WhatsApp hoje?” — todos usaram computação em nuvem sem perceber. Isso ancora a aula."
+    "text": "Objetivos da aula\n\nEntender o que é computação em nuvem e como ela funciona\nConhecer a evolução histórica que levou até a nuvem\nDiferenciar os modelos de implantação: pública, privada e híbrida\nDiscutir vantagens e desafios de usar nuvem\nConhecer os principais mecanismos de segurança na nuvem\nTer uma visão do futuro da computação em nuvem\n\n\nAbrir perguntando: “quem aqui já usou Google Drive, Netflix ou WhatsApp hoje?” — todos usaram computação em nuvem sem perceber. Isso ancora a aula."
   },
   {
     "objectID": "aulas/01-introducao-computacao-nuvem.html#o-que-é-computação-em-nuvem",
@@ -847,6 +847,27 @@
     "text": "Desafios da nuvem\n\nSegurança e privacidade — dados fora do seu controle físico\nDependência de conectividade — sem internet, sem acesso\nControle e gestão — menos visibilidade sobre a infraestrutura real\nCustos escaláveis — uso mal gerenciado pode sair caro (“bill shock”)"
   },
   {
+    "objectID": "aulas/01-introducao-computacao-nuvem.html#segurança-na-nuvem",
+    "href": "aulas/01-introducao-computacao-nuvem.html#segurança-na-nuvem",
+    "title": "Aula 01 — Introdução à Computação em Nuvem",
+    "section": "Segurança na nuvem",
+    "text": "Segurança na nuvem\nCompartilhar infraestrutura com outras empresas (multi-tenancy) exige mecanismos de segurança específicos. Alguns dos principais:\n\nMulti-tenancy — vários clientes compartilham a mesma infraestrutura física, isolados logicamente uns dos outros\nCriptografia — dados protegidos tanto “em repouso” (armazenados) quanto “em trânsito” (trafegando pela rede)\nIAM (Identity and Access Management) — controla quem pode acessar o quê, com que permissões"
+  },
+  {
+    "objectID": "aulas/01-introducao-computacao-nuvem.html#segurança-na-nuvem-continuação",
+    "href": "aulas/01-introducao-computacao-nuvem.html#segurança-na-nuvem-continuação",
+    "title": "Aula 01 — Introdução à Computação em Nuvem",
+    "section": "Segurança na nuvem (continuação)",
+    "text": "Segurança na nuvem (continuação)\n\nDLP (Data Loss Prevention) — detecta e bloqueia vazamento de dados sensíveis\nSIEM (Security Information and Event Management) — centraliza e correlaciona logs de segurança para detectar ataques\nZTNA (Zero Trust Network Access) — “nunca confie, sempre verifique”: nenhum acesso é automaticamente confiável, mesmo vindo de dentro da rede\nFWaaS (Firewall as a Service) — firewall entregue como serviço gerenciado na nuvem, sem hardware próprio\nCASB (Cloud Access Security Broker) — camada de segurança entre usuários e provedores de nuvem, aplicando políticas da empresa\n\n\nNão é preciso decorar as siglas — o importante é o aluno perceber que “segurança na nuvem” é uma área extensa e especializada, não só “colocar uma senha forte”."
+  },
+  {
+    "objectID": "aulas/01-introducao-computacao-nuvem.html#o-futuro-da-nuvem",
+    "href": "aulas/01-introducao-computacao-nuvem.html#o-futuro-da-nuvem",
+    "title": "Aula 01 — Introdução à Computação em Nuvem",
+    "section": "O futuro da nuvem",
+    "text": "O futuro da nuvem\n\nComputação quântica na nuvem — provedores já oferecem acesso a computadores quânticos como serviço (ex.: AWS Braket, Azure Quantum), sem precisar ter o hardware\nEdge computing e IoT — processamento acontece mais perto de onde o dado é gerado (sensores, dispositivos), reduzindo latência, em vez de mandar tudo para um data center distante\nSASE (Secure Access Service Edge) — converge rede e segurança em um único serviço entregue pela nuvem\nNuvem verde — sustentabilidade também é tendência (veremos em detalhe na Aula 03)"
+  },
+  {
     "objectID": "aulas/01-introducao-computacao-nuvem.html#e-como-a-nuvem-é-vendida",
     "href": "aulas/01-introducao-computacao-nuvem.html#e-como-a-nuvem-é-vendida",
     "title": "Aula 01 — Introdução à Computação em Nuvem",
@@ -865,7 +886,7 @@
     "href": "aulas/01-introducao-computacao-nuvem.html#síntese-da-aula",
     "title": "Aula 01 — Introdução à Computação em Nuvem",
     "section": "Síntese da aula",
-    "text": "Síntese da aula\n\nComputação em nuvem = TI sob demanda, pela internet, habilitada por virtualização\nEvoluiu de mainframes → PCs distribuídos → nuvem (AWS 2006 em diante)\n3 modelos de implantação: pública, privada, híbrida\nVantagens (escala, custo, acesso) vêm com desafios (segurança, dependência, controle)"
+    "text": "Síntese da aula\n\nComputação em nuvem = TI sob demanda, pela internet, habilitada por virtualização\nEvoluiu de mainframes → PCs distribuídos → nuvem (AWS 2006 em diante)\n3 modelos de implantação: pública, privada, híbrida\nVantagens (escala, custo, acesso) vêm com desafios (segurança, dependência, controle)\nSegurança na nuvem envolve mecanismos específicos: IAM, criptografia, DLP, SIEM, ZTNA, FWaaS, CASB\nTendências futuras: computação quântica, edge computing, SASE, nuvem verde"
   },
   {
     "objectID": "aulas/01-introducao-computacao-nuvem.html#próxima-aula",
@@ -984,7 +1005,7 @@
     "href": "aulas/02-modelos-servico-nist.html#iaas-infrastructure-as-a-service",
     "title": "Aula 02 — Modelos de Serviço em Nuvem e Arquitetura NIST",
     "section": "IaaS — Infrastructure as a Service",
-    "text": "IaaS — Infrastructure as a Service\n\nVocê aluga infraestrutura básica: servidores virtuais, armazenamento, rede\nVocê cuida do sistema operacional, aplicações e dados; o provedor cuida do hardware físico\nExemplos: AWS EC2, Azure Virtual Machines, Google Compute Engine\n\n\n✅ Escalabilidade, pagamento por uso, gerenciamento automatizado da infra física\n✅ Usos: hospedagem de sites, big data, ambientes de teste, backup/DR\n⚠️ Você ainda precisa administrar o SO e a segurança da aplicação"
+    "text": "IaaS — Infrastructure as a Service\n\nVocê aluga infraestrutura básica: servidores virtuais, armazenamento, rede\nVocê cuida do sistema operacional, aplicações e dados; o provedor cuida do hardware físico\nExemplos: AWS EC2, Azure Virtual Machines, Google Compute Engine, IBM Cloud\n\n\n✅ Escalabilidade, pagamento por uso, gerenciamento automatizado da infra física, acesso remoto\n✅ Usos: hospedagem de sites, big data, ambientes de teste, backup/DR, computação de alto desempenho (HPC)\n⚠️ Você ainda precisa administrar o SO e a segurança da aplicação"
   },
   {
     "objectID": "aulas/02-modelos-servico-nist.html#iaas-visualmente",
@@ -998,7 +1019,7 @@
     "href": "aulas/02-modelos-servico-nist.html#paas-platform-as-a-service",
     "title": "Aula 02 — Modelos de Serviço em Nuvem e Arquitetura NIST",
     "section": "PaaS — Platform as a Service",
-    "text": "PaaS — Platform as a Service\n\nVocê recebe uma plataforma pronta para desenvolver e publicar aplicações\nO provedor cuida do SO, servidor, runtime; você só cuida do código\nExemplos: Google App Engine, Azure App Services, AWS Elastic Beanstalk, Heroku\n\n\n✅ IDE integrada, deploy simplificado, multiplataforma\n✅ Usos: desenvolvimento ágil, apps web/mobile, integração de APIs\n⚠️ Menos controle sobre o ambiente de execução"
+    "text": "PaaS — Platform as a Service\n\nVocê recebe uma plataforma pronta para desenvolver e publicar aplicações\nO provedor cuida do SO, servidor, runtime; você só cuida do código\nExemplos: Google App Engine, Azure App Services, AWS Elastic Beanstalk, Heroku\n\n\n✅ IDE integrada, deploy simplificado, multiplataforma, integração facilitada com outros serviços\n✅ Usos: desenvolvimento ágil, apps web/mobile, integração de APIs, machine learning, automação de processos\n⚠️ Menos controle sobre o ambiente de execução"
   },
   {
     "objectID": "aulas/02-modelos-servico-nist.html#paas-visualmente",
@@ -1012,7 +1033,7 @@
     "href": "aulas/02-modelos-servico-nist.html#saas-software-as-a-service",
     "title": "Aula 02 — Modelos de Serviço em Nuvem e Arquitetura NIST",
     "section": "SaaS — Software as a Service",
-    "text": "SaaS — Software as a Service\n\nVocê usa um software pronto, via navegador ou app, sem instalar nada\nO provedor cuida de absolutamente tudo (infraestrutura, plataforma e aplicação)\nExemplos: Google Workspace, Microsoft 365, Netflix, Spotify, Salesforce\n\n\n✅ Acesso de qualquer lugar, atualização automática, modelo por assinatura\n✅ Usos: ERP/CRM, colaboração, e-commerce\n⚠️ Zero controle sobre a infraestrutura ou o código"
+    "text": "SaaS — Software as a Service\n\nVocê usa um software pronto, via navegador ou app, sem instalar nada\nO provedor cuida de absolutamente tudo (infraestrutura, plataforma e aplicação)\nExemplos: Google Workspace, Microsoft 365, Salesforce, Dropbox, Slack, Netflix, Spotify\n\n\n✅ Acesso de qualquer lugar, atualização automática, modelo por assinatura, escalabilidade automática\n✅ Usos: ERP/CRM, colaboração, e-commerce, marketing digital, backup\n⚠️ Zero controle sobre a infraestrutura ou o código"
   },
   {
     "objectID": "aulas/02-modelos-servico-nist.html#saas-visualmente",
@@ -1573,6 +1594,13 @@
     "title": "Aula 12 — Modelos de Gerenciamento em Nuvem",
     "section": "Gerenciamento multicloud",
     "text": "Gerenciamento multicloud\n\nUsar mais de um provedor (ex.: AWS + Azure + GCP) ao mesmo tempo\nVantagem: evita depender de um único provedor, permite escolher o melhor serviço de cada um\nDesvantagem: maior complexidade operacional e risco de vendor lock-in parcial em cada plataforma\n\n\nEmpresas grandes cada vez mais adotam estratégias multicloud — mas isso exige ferramentas de gerenciamento mais sofisticadas."
+  },
+  {
+    "objectID": "aulas/12-gerenciamento-nuvem.html#gerenciamento-de-recursos",
+    "href": "aulas/12-gerenciamento-nuvem.html#gerenciamento-de-recursos",
+    "title": "Aula 12 — Modelos de Gerenciamento em Nuvem",
+    "section": "Gerenciamento de recursos",
+    "text": "Gerenciamento de recursos\n\nProvisionamento e desprovisionamento automatizado — criar e remover recursos (VMs, storage, rede) sob demanda, sem intervenção manual\nIAM (Identity and Access Management) — controlar quem pode acessar e alterar cada recurso da nuvem\nNetworking — gerenciar redes virtuais, sub-redes e conectividade entre os recursos provisionados"
   },
   {
     "objectID": "aulas/12-gerenciamento-nuvem.html#infraestrutura-como-código-iac",

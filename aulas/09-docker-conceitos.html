@@ -207,7 +207,7 @@
 Ricardo Pasquati Pontarolli 
 </div>
         <p class="quarto-title-affiliation">
-            Técnico em Redes de Computadores · IFSP Boituva · pasquati@ifsp.edu.br · v19
+            Técnico em Redes de Computadores · IFSP Boituva · pasquati@ifsp.edu.br · v21
           </p>
     </div>
 </div>
@@ -238,7 +238,7 @@ Ricardo Pasquati Pontarolli
 <h2>De onde vem o Docker</h2>
 
 <img data-src="../images/aula09/docker-logo.svg" class="quarto-figure quarto-figure-center r-stretch" style="width:25.0%"><ul>
-<li>Lançado em <strong>2013</strong>, baseado em tecnologias mais antigas do kernel Linux: <strong>cgroups</strong> e <strong>namespaces</strong></li>
+<li>Lançado em <strong>2013</strong>, baseado em tecnologias mais antigas do kernel Linux: <strong>cgroups</strong>, <strong>namespaces</strong> e o projeto <strong>LXC (Linux Containers)</strong>, que já existia antes e inspirou o Docker</li>
 <li>“Docker” tem vários significados: o <strong>projeto open source</strong>, o <strong>conjunto de ferramentas</strong>, e a <strong>empresa</strong> por trás dele</li>
 </ul>
 </section>
@@ -347,6 +347,7 @@ Ricardo Pasquati Pontarolli
 <li>Uma <strong>imagem</strong> é o “molde” — read-only, contém tudo que o container precisa para rodar</li>
 <li>Um <strong>container</strong> é uma <strong>instância em execução</strong> dessa imagem (efêmero, pode ser destruído e recriado)</li>
 <li>Imagens são construídas em <strong>camadas</strong> (layers): cada instrução do build adiciona uma camada</li>
+<li>Tecnicamente, isso é implementado com sistemas de arquivos como <strong>AUFS</strong> ou <strong>OverlayFS</strong>, que empilham as camadas de forma eficiente</li>
 <li>Só a <strong>última camada</strong> (a do container em execução) é gravável — as camadas da imagem original permanecem read-only</li>
 </ul>
 </section>
@@ -385,6 +386,7 @@ Ricardo Pasquati Pontarolli
 <h2>O ecossistema Docker</h2>
 <ul>
 <li><strong>Docker Hub</strong> — repositório público com mais de 250 mil imagens prontas (<code>mysql</code>, <code>python</code>, <code>nginx</code>, <code>ubuntu</code>…)</li>
+<li><strong>Docker Desktop</strong> — aplicativo com interface gráfica para rodar Docker localmente no Windows/Mac, sem precisar da linha de comando para tudo</li>
 <li><strong>Docker Compose</strong> — define e roda <strong>múltiplos containers juntos</strong> via um arquivo YAML (ex.: app + banco de dados)</li>
 <li><strong>Docker Swarm</strong> — orquestração nativa do Docker, para gerenciar containers em vários hosts</li>
 </ul>
