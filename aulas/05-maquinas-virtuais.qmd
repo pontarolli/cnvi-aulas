@@ -1,0 +1,164 @@
+---
+title: "Aula 05 — Máquinas Virtuais"
+date: "DD/MM/AAAA"
+---
+
+## Objetivos da aula
+
+- Entender formalmente **o que é uma máquina virtual**
+- Conhecer as **funções do hipervisor (MMV)**
+- Identificar os **componentes virtuais** de uma VM
+- Listar **benefícios e desafios** de usar VMs
+
+---
+
+## Por que virtualizar?
+
+::: {.incremental}
+- **Descentralização** com controle centralizado
+- **Uso pleno de recursos** — hardware caro não fica ocioso
+- **Isolamento** — problemas em uma VM não afetam as outras
+- **Economia** — menos servidores físicos, menos energia, menos espaço
+- **Recuperação de desastres e tolerância a falhas** — uma VM pode ser movida ou recriada rapidamente
+:::
+
+## O conceito formal de VM
+
+> "Uma máquina virtual é uma **cópia eficiente e isolada** da máquina real."
+>
+> — Popek & Goldberg, 1974
+
+Esse artigo de 1974 ainda é a referência formal usada até hoje para definir virtualização.
+
+## Dois tipos de VM
+
+- **VMs de processo** — virtualizam a execução de **um único processo/programa** (ex.: a JVM — Java Virtual Machine — roda um programa Java isolado do SO real)
+- **VMs de sistema** — virtualizam **um computador inteiro**, incluindo SO completo (ex.: uma VM no VirtualBox rodando Ubuntu)
+
+::: {.notes}
+Distinguir bem: JVM não é o que estamos estudando como "VM" na disciplina — é outro conceito. Nosso foco são VMs de sistema.
+:::
+
+---
+
+## O MMV / Hipervisor — condições de Popek & Goldberg
+
+Um bom monitor de máquina virtual (MMV) deve garantir:
+
+::: {.incremental}
+1. **Equivalência** — o software rodando na VM se comporta como se estivesse na máquina real
+2. **Desempenho** — degradação mínima de performance comparado a rodar direto no hardware
+3. **Controle de recursos** — o MMV tem controle total sobre os recursos alocados a cada VM
+:::
+
+## Principais funções do MMV
+
+- Alternar entre **modo kernel** e **modo usuário**
+- **Emular instruções** de hardware que a VM tenta executar
+- **Escalonar CPU** entre as VMs ativas
+- Gerenciar **memória e disco** virtuais
+- Gerenciar **I/O** (entrada/saída) virtual
+
+---
+
+## Componentes virtuais de uma VM
+
+## vCPU e vRAM
+
+- **vCPU** — processador virtual, mapeado (não necessariamente 1:1) para núcleos físicos reais
+- **vRAM** — memória virtual, com técnicas como:
+  - *memory ballooning* — o hipervisor "recupera" memória ociosa de uma VM para dar a outra que precisa mais
+  - *memory deduplication* — páginas de memória idênticas entre VMs são compartilhadas, economizando RAM real
+
+## Disco virtual
+
+- Formatos comuns: **VMDK** (VMware), **VHD** (Hyper-V), **VDI** (VirtualBox), **QCOW2** (KVM/Xen)
+- **Thick provisioning** — todo o espaço é reservado de uma vez
+- **Thin provisioning** — o espaço cresce sob demanda, conforme a VM realmente usa
+
+## Rede virtual
+
+- **vNIC** — placa de rede virtual da VM
+- Permite que várias VMs compartilhem a mesma placa de rede física, com isolamento lógico
+
+---
+
+## Benefícios das VMs
+
+::: {.incremental}
+- **Consolidação de servidores** — menos hardware físico fazendo o mesmo trabalho
+- **Provisionamento rápido** — criar uma nova VM em minutos, sem comprar hardware
+- **Portabilidade e migração** — mover uma VM entre servidores físicos com pouca ou nenhuma interrupção
+- **Snapshots e rollback** — "fotografar" o estado da VM e voltar a ele se algo der errado
+- **Segurança e isolamento** — VM comprometida não afeta as demais
+- **Compatibilidade com sistemas legados** — rodar um SO antigo isolado, sem depender de hardware antigo
+:::
+
+## Desafios das VMs
+
+::: {.incremental}
+- Complexidade de gerenciamento em ambientes grandes
+- Gargalos de I/O (disco e rede) quando muitas VMs disputam o mesmo hardware
+- Licenciamento de software pode ficar complexo (por VM, por núcleo físico...)
+- Segurança do **próprio hipervisor** vira um ponto crítico — se ele for comprometido, todas as VMs estão em risco
+- Custo inicial de hardware potente para hospedar muitas VMs
+:::
+
+---
+
+## Tipo I x Tipo II (revisão)
+
+| | Tipo I (clássico) | Tipo II (hospedado) |
+|---|---|---|
+| Exemplos | VMware ESXi, Hyper-V, Xen Server | VMware Workstation, VirtualBox |
+| Onde roda | Direto no hardware | Dentro de um SO |
+| Uso | Produção / data center | Testes / uso pessoal |
+
+## Virtualização total: instruções sensíveis x privilegiadas
+
+- Para uma arquitetura ser **totalmente virtualizável** (condição de Popek-Goldberg), toda instrução "sensível" (que muda o estado do sistema) deve também ser "privilegiada" (só executável em modo kernel)
+- O x86 clássico **não cumpria** essa condição perfeitamente — daí a necessidade de técnicas extras (tradução binária, paravirtualização, extensões de hardware como Intel VT-x/AMD-V) para virtualizar corretamente
+
+::: {.notes}
+Não é preciso aprofundar a matemática — o importante é o aluno entender que nem toda arquitetura de processador é "virtualizável de graça"; foi um problema real de engenharia resolvido ao longo dos anos 2000.
+:::
+
+---
+
+## O futuro: VMs e containers
+
+- **Containers** (Docker/Kubernetes) não substituem VMs — **complementam**: são mais leves, mas compartilham o kernel do host
+- Tendências: **NFV** (virtualização de funções de rede), **edge computing**, **serverless**, VMs com **GPU dedicada** para IA
+
+::: {.notes}
+Gancho para as aulas de Docker mais adiante no curso.
+:::
+
+## Atividade da aula
+
+::: {.callout-lab}
+**Discussão em grupo (10 min):**
+
+Uma escola tem 1 servidor físico potente e quer oferecer a cada turma um "laboratório virtual" isolado (SO próprio, aplicações próprias).
+
+1. Vocês usariam hipervisor Tipo 1 ou Tipo 2? Por quê?
+2. Que componente virtual (vCPU, vRAM, disco, rede) vocês acham que será o gargalo mais provável se muitas turmas usarem ao mesmo tempo?
+:::
+
+## Síntese da aula
+
+- VM = "cópia eficiente e isolada da máquina real" (Popek & Goldberg, 1974)
+- O **MMV/hipervisor** gerencia CPU, memória, disco e I/O virtuais
+- Componentes: **vCPU, vRAM, disco virtual (VMDK/VHD/VDI/QCOW2), vNIC**
+- VMs trazem grandes benefícios, mas também desafios de gerenciamento e segurança do hipervisor
+
+## Próxima aula
+
+**Prática: VirtualBox** — vamos criar e explorar uma máquina virtual de verdade
+
+---
+
+## Referências
+
+- POPEK, G.; GOLDBERG, R. *Formal Requirements for Virtualizable Third Generation Architectures*. 1974.
+- VERAS, M. *Virtualização: componente central do datacenter*. Brasport, 2011.

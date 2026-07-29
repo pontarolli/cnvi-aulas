@@ -1,0 +1,23 @@
+project:
+  type: default
+  render:
+    - aulas/*.qmd
+  pre-render: scripts/set_version.py
+
+lang: pt
+
+format:
+  revealjs:
+    theme: [default, theme/ifsp.scss]
+    slide-number: c/t
+    transition: slide
+    background-transition: fade
+    incremental: false
+    center-title-slide: true
+    preview-links: auto
+    chalkboard: true
+    code-line-numbers: true
+    highlight-style: github
+    footer: "IFSP Boituva · Computação em Nuvem e Virtualização"
+    toc: false
+    embed-resources: false

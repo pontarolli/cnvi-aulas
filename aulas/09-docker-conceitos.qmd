@@ -1,0 +1,142 @@
+---
+title: "Aula 09 — Docker: Conceitos e Arquitetura"
+date: "DD/MM/AAAA"
+---
+
+## Objetivos da aula
+
+- Entender o que é um **container** e como difere de uma VM
+- Conhecer a **arquitetura do Docker**
+- Entender **imagens, camadas e o ecossistema** Docker
+
+::: {.notes}
+Conectar com as Aulas 04/05: containers são "outra forma" de virtualizar, mais leve.
+:::
+
+---
+
+## De onde vem o Docker
+
+- Lançado em **2013**, baseado em tecnologias mais antigas do kernel Linux: **cgroups** e **namespaces**
+- "Docker" tem vários significados: o **projeto open source**, o **conjunto de ferramentas**, e a **empresa** por trás dele
+
+## Como funciona por baixo dos panos
+
+- **cgroups (control groups)** — limitam quanto de CPU, memória e disco cada container pode usar
+- **namespaces** — isolam o que cada container "enxerga" (processos, rede, sistema de arquivos), mesmo compartilhando o mesmo kernel
+- Diferente de uma VM, o container **não emula hardware nem roda um SO completo** — ele usa o **kernel do sistema hospedeiro diretamente**
+
+---
+
+## Containers x Máquinas Virtuais
+
+| | VM | Container |
+|---|---|---|
+| O que roda | SO completo (guest) | Só a aplicação + dependências |
+| Isolamento | Hipervisor (forte) | Kernel compartilhado (namespaces/cgroups) |
+| Peso | Pesado (GBs) | Leve (MBs) |
+| Boot | Minutos | Segundos (ou menos) |
+| Portabilidade | Média | Alta |
+
+::: {.callout-note}
+VMs e containers **não são mutuamente exclusivos** — é comum rodar containers **dentro** de uma VM (é exatamente assim que a maioria da nuvem pública funciona).
+:::
+
+## Limitação importante do Docker
+
+- Todos os containers Docker em um host compartilham o **mesmo kernel** do sistema hospedeiro
+- Por isso, **todas as imagens Docker rodam sobre kernel Linux** — não é possível rodar um container Windows sobre um host Linux (e vice-versa) sem uma camada extra de virtualização
+
+---
+
+## O que é um container, na prática
+
+> Uma **unidade executável leve**, empacotando código, bibliotecas e dependências — o sistema de arquivos completo necessário para a aplicação rodar, isolado do resto do sistema.
+
+## Benefícios dos containers
+
+::: {.incremental}
+- **Leveza** — muito menor que uma VM, inicia quase instantaneamente
+- **Portabilidade** — "funciona na minha máquina" deixa de ser problema: o container carrega tudo que precisa
+- **Compatibilidade com DevOps** — essencial para integração/entrega contínua (CI/CD)
+- Base de **microsserviços** e arquiteturas serverless modernas
+:::
+
+---
+
+## Imagens Docker
+
+- Uma **imagem** é o "molde" — read-only, contém tudo que o container precisa para rodar
+- Um **container** é uma **instância em execução** dessa imagem (efêmero, pode ser destruído e recriado)
+- Imagens são construídas em **camadas** (layers): cada instrução do build adiciona uma camada
+- Só a **última camada** (a do container em execução) é gravável — as camadas da imagem original permanecem read-only
+
+## Dockerfile
+
+- Arquivo de texto com as **instruções para construir uma imagem**
+- Cada linha do Dockerfile normalmente gera **uma nova camada**
+- Exemplo conceitual (não precisa decorar agora, veremos na prática):
+
+```dockerfile
+FROM python:3
+COPY app.py /app.py
+RUN pip install flask
+CMD ["python", "/app.py"]
+```
+
+---
+
+## Arquitetura do Docker (cliente/servidor)
+
+- **Docker Client** — a interface de linha de comando (`docker ...`) que você usa
+- **Docker Daemon (`dockerd`)** — processo que roda em segundo plano, gerencia containers, imagens, redes e volumes
+- Cliente e daemon se comunicam via **API REST**
+- **Docker Host** — a máquina (física ou virtual) onde o daemon roda
+
+## Objetos Docker
+
+- **Imagens** — os moldes read-only
+- **Containers** — instâncias em execução
+- **Redes** — conectividade entre containers
+- **Volumes** — armazenamento persistente, que sobrevive mesmo se o container for destruído
+- **Plugins** — extensões de funcionalidade
+
+---
+
+## O ecossistema Docker
+
+- **Docker Hub** — repositório público com mais de 250 mil imagens prontas (`mysql`, `python`, `nginx`, `ubuntu`...)
+- **Docker Compose** — define e roda **múltiplos containers juntos** via um arquivo YAML (ex.: app + banco de dados)
+- **Docker Swarm** — orquestração nativa do Docker, para gerenciar containers em vários hosts
+
+::: {.notes}
+Não aprofundar Compose/Swarm agora — só situar que existem, para quando o aluno for além do curso.
+:::
+
+---
+
+## Atividade da aula
+
+::: {.callout-lab}
+**Discussão em grupos (8 min):**
+
+1. Por que um container Docker inicia muito mais rápido que uma VM?
+2. Se vocês fossem hospedar um site simples, escolheriam VM ou container? E se fossem hospedar um sistema legado com um SO Windows Server antigo, mudaria a resposta? Por quê?
+:::
+
+## Síntese da aula
+
+- Container = unidade leve baseada em **cgroups + namespaces**, compartilhando o kernel do host
+- **Imagem** (read-only, em camadas) x **container** (instância executável)
+- Arquitetura **cliente/servidor**: Docker Client ↔ API REST ↔ Docker Daemon
+- Ecossistema: **Docker Hub, Compose, Swarm**
+
+## Próxima aula
+
+**Prática Docker I** — vamos rodar nossos primeiros containers no Docker Playground
+
+---
+
+## Referências
+
+- Documentação oficial: [docs.docker.com](https://docs.docker.com)

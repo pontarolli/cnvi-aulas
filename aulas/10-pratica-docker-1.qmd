@@ -1,0 +1,130 @@
+---
+title: "Aula 10 — Prática Docker I"
+date: "DD/MM/AAAA"
+---
+
+## Objetivos da aula
+
+- Usar o **Docker Playground** para praticar sem instalar nada
+- Rodar o primeiro container (**MySQL**)
+- Rodar um container **Python** interativo
+
+::: {.notes}
+Aula prática — garantir que todos tenham internet e consigam acessar labs.play-with-docker.com. Não precisa instalar Docker localmente.
+:::
+
+---
+
+## Docker Playground
+
+**Play with Docker** ([labs.play-with-docker.com](https://labs.play-with-docker.com)) — ambiente **online e gratuito**, baseado em Alpine Linux, com sessões de 4 horas.
+
+::: {.incremental}
+- Não precisa instalar Docker no computador
+- Basta uma conta Docker Hub gratuita
+- Cada instância criada já roda Docker "dentro" de um container — sandbox seguro para experimentar
+- Permite criar **várias instâncias**, útil até para simular clusters (Swarm) mais adiante
+:::
+
+## Passo 1 — Acessar e criar instância
+
+1. Acessar [labs.play-with-docker.com](https://labs.play-with-docker.com) e fazer login com conta Docker
+2. Clicar em **Start**
+3. Clicar em **+ ADD NEW INSTANCE**
+4. Um terminal Linux aparece — pronto para usar `docker`
+
+---
+
+## Exemplo 1 — Container MySQL
+
+```bash
+docker run --name mysql-db -e MYSQL_ROOT_PASSWORD=my-secret-pw -d mysql:5.7
+```
+
+- `--name mysql-db` → dá um nome ao container, para facilitar referenciá-lo depois
+- `-e MYSQL_ROOT_PASSWORD=...` → define uma **variável de ambiente** (nesse caso, a senha do root do MySQL)
+- `-d` → roda em **modo detached** (segundo plano)
+- `mysql:5.7` → nome da imagem e a **tag** de versão
+
+## Verificando e acessando o container
+
+```bash
+docker ps
+```
+Mostra os containers **em execução** — confirmar que o `mysql-db` está rodando.
+
+```bash
+docker exec -it mysql-db bash
+```
+Abre um terminal **dentro** do container (`-it` = interativo + terminal).
+
+```bash
+mysql -u root -p
+```
+Conecta ao MySQL dentro do container (pedirá a senha definida antes).
+
+::: {.callout-note}
+Isso é `docker exec`, não `docker run` — estamos entrando em um container **que já existe**, não criando um novo.
+:::
+
+---
+
+## Exemplo 2 — Container Python
+
+```bash
+docker pull python:3
+```
+Baixa a imagem oficial do Python 3 (do Docker Hub) — separado do `run` para deixar claro o passo de download.
+
+```bash
+docker run -it python:3 bash
+```
+Cria e entra em um container Python, com terminal interativo.
+
+## Testando o Python dentro do container
+
+Dentro do container, digite:
+
+```bash
+python
+```
+
+E dentro do interpretador Python:
+
+```python
+print("Hello from Docker Playground!")
+```
+
+::: {.fragment}
+Também é possível criar um arquivo `script.py` e rodar com `python script.py` diretamente.
+:::
+
+---
+
+## Atividade avaliativa
+
+::: {.callout-lab}
+**Individual (entregar com prints de cada etapa):**
+
+1. Criem uma instância no Docker Playground
+2. Pesquisem a imagem oficial do **PHP** no Docker Hub
+3. Façam o passo a passo completo para instalar e rodar um script PHP simples (`echo "Olá, Docker!";`) dentro de um container
+4. Documentem cada comando usado, com print da tela mostrando o resultado
+:::
+
+## Síntese da aula
+
+- **Docker Playground** permite praticar Docker sem instalar nada localmente
+- `docker run` cria e inicia um novo container; `docker exec` entra em um container já existente
+- Testamos containers de **MySQL** (banco de dados) e **Python** (linguagem de script)
+
+## Próxima aula
+
+**Prática Docker II** — mais comandos (`ps`, `stop`, `exec`) e a diferença entre criar e reaproveitar containers
+
+---
+
+## Referências
+
+- [labs.play-with-docker.com](https://labs.play-with-docker.com)
+- [hub.docker.com](https://hub.docker.com)
