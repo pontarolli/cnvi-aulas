@@ -192,6 +192,9 @@
       margin-right: 0; 
     }
   </style>
+  <script src="../site_libs/quarto-diagram/mermaid.min.js"></script>
+  <script src="../site_libs/quarto-diagram/mermaid-init.js"></script>
+  <link href="../site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
 </head>
 <body class="quarto-light">
   <div class="reveal">
@@ -207,7 +210,7 @@
 Ricardo Pasquati Pontarolli 
 </div>
         <p class="quarto-title-affiliation">
-            Técnico em Redes de Computadores · IFSP Boituva · pasquati@ifsp.edu.br · v11
+            Técnico em Redes de Computadores · IFSP Boituva · pasquati@ifsp.edu.br · v13
           </p>
     </div>
 </div>
@@ -290,8 +293,28 @@ Ricardo Pasquati Pontarolli
 </section>
 <section id="o-fluxo-visualmente" class="slide level2">
 <h2>O fluxo, visualmente</h2>
-
-<img data-src="../images/aula11/docker-run-fluxo.png" class="quarto-figure quarto-figure-center r-stretch" style="width:80.0%"><aside class="notes">
+<div class="cell" data-reveal="true" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class=""><p></p>
+<div>
+<pre class="mermaid mermaid-js">sequenceDiagram
+  participant U as Usuário
+  participant D as Docker Host
+  participant H as Docker Hub
+  U-&gt;&gt;D: docker run hello-world
+  D-&gt;&gt;D: Verifica imagem local
+  D-&gt;&gt;H: docker pull hello-world (se não existir local)
+  H--&gt;&gt;D: Envia a imagem
+  D-&gt;&gt;D: docker start (cria e inicia o container)
+  D--&gt;&gt;U: Container em execução
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+<aside class="notes">
 <p>Reforçar: <code>docker pull</code> busca a imagem, <code>docker start</code>/<code>run</code> cria e inicia o container a partir dela.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
