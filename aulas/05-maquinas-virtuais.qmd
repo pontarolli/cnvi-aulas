@@ -53,6 +53,10 @@ flowchart TB
   MMV --> HW[Hardware]
 ```
 
+## Diagrama original de referência
+
+![](../images/aula05/diagrama-mmv-alt.png){fig-align="center" width="55%"}
+
 Um bom monitor de máquina virtual (MMV) deve garantir:
 
 ::: {.incremental}

@@ -43,6 +43,14 @@ Conectar com as Aulas 04/05: containers são "outra forma" de virtualizar, mais 
 VMs e containers **não são mutuamente exclusivos** — é comum rodar containers **dentro** de uma VM (é exatamente assim que a maioria da nuvem pública funciona).
 :::
 
+## VM x Container — diagrama original de referência
+
+![](../images/aula09/vm-x-container-original.png){fig-align="center" width="80%"}
+
+## Docker — logo original de referência
+
+![](../images/aula09/docker-logo-original.png){fig-align="center" width="45%"}
+
 ## Vários containers, um só kernel
 
 ```{mermaid}

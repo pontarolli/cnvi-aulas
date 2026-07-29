@@ -32,6 +32,10 @@ Abrir perguntando: "quem aqui já usou Google Drive, Netflix ou WhatsApp hoje?" 
 **Vamos aprofundar virtualização daqui a algumas aulas** — hoje o foco é entender o conceito de nuvem em si.
 :::
 
+## Computação em nuvem, visualmente
+
+![](../images/aula01/cloud-computing-icones.png){fig-align="center" width="70%"}
+
 ---
 
 ## Linha do tempo: de onde viemos
@@ -83,6 +87,10 @@ Onde a infraestrutura de nuvem "mora" e quem tem acesso a ela.
 - Ex.: dados sensíveis ficam na nuvem privada; picos de demanda "estouram" para a nuvem pública
 - **Vantagens:** flexibilidade, otimização de custo e segurança
 - **Desvantagens:** complexidade de integração e gestão
+
+## Pública, privada e híbrida — visualizando
+
+![](../images/aula01/hibrida-publica-privada.png){fig-align="center" width="65%"}
 
 ## Comparativo
 

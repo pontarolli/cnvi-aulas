@@ -46,6 +46,10 @@ Quanto mais "as a Service", menos você gerencia — e menos controle você tem.
 - ⚠️ Você ainda precisa administrar o SO e a segurança da aplicação
 :::
 
+## IaaS, visualmente
+
+![](../images/aula02/iaas-icones.png){fig-align="center" width="60%"}
+
 ## PaaS — Platform as a Service
 
 - Você recebe uma **plataforma pronta** para desenvolver e publicar aplicações
@@ -57,6 +61,10 @@ Quanto mais "as a Service", menos você gerencia — e menos controle você tem.
 - ✅ Usos: desenvolvimento ágil, apps web/mobile, integração de APIs
 - ⚠️ Menos controle sobre o ambiente de execução
 :::
+
+## PaaS, visualmente
+
+![](../images/aula02/paas-marketing.png){fig-align="center" width="70%"}
 
 ## SaaS — Software as a Service
 
@@ -70,6 +78,10 @@ Quanto mais "as a Service", menos você gerencia — e menos controle você tem.
 - ⚠️ Zero controle sobre a infraestrutura ou o código
 :::
 
+## SaaS, visualmente
+
+![](../images/aula02/saas-marketing.png){fig-align="center" width="55%"}
+
 ## Comparando os três modelos
 
 | | Você gerencia | Provedor gerencia | Exemplo |
@@ -81,6 +93,14 @@ Quanto mais "as a Service", menos você gerencia — e menos controle você tem.
 ::: {.fragment}
 Quanto mais à direita → **menos trabalho técnico, menos controle**.
 :::
+
+## A pirâmide IaaS / PaaS / SaaS
+
+![](../images/aula02/piramide-iaas-paas-saas.png){fig-align="center" width="55%"}
+
+## Tecnologias por camada
+
+![](../images/aula02/cloud-logos-tecnologias.png){fig-align="center" width="55%"}
 
 ## Visão detalhada por camada
 

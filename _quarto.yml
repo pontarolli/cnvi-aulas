@@ -27,6 +27,6 @@ format:
     chalkboard: true
     code-line-numbers: true
     highlight-style: github
-    footer: "IFSP Boituva · Computação em Nuvem e Virtualização"
+    footer: "[Início](../index.html) · IFSP Boituva · Computação em Nuvem e Virtualização"
     toc: false
     embed-resources: false

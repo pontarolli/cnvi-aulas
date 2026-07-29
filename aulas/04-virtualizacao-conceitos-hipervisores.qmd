@@ -70,6 +70,10 @@ flowchart TB
   end
 ```
 
+## Diagrama original de referência
+
+![](../images/aula04/tipo1-x-tipo2-original.png){fig-align="center" width="70%"}
+
 ## Principais hipervisores do mercado
 
 | Software | Tipo | Descrição breve |

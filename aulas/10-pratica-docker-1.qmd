@@ -111,6 +111,10 @@ Também é possível criar um arquivo `script.py` e rodar com `python script.py`
 4. Documentem cada comando usado, com print da tela mostrando o resultado
 :::
 
+## Exemplo de código PHP (referência)
+
+![](../images/aula10/exemplo-php.png){fig-align="center" width="60%"}
+
 ## Síntese da aula
 
 - **Docker Playground** permite praticar Docker sem instalar nada localmente
