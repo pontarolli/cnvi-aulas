@@ -126,9 +126,6 @@
       margin-right: 0; 
     }
   </style>
-  <script src="../site_libs/quarto-diagram/mermaid.min.js"></script>
-  <script src="../site_libs/quarto-diagram/mermaid-init.js"></script>
-  <link href="../site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
 </head>
 <body class="quarto-light">
   <div class="reveal">
@@ -144,7 +141,7 @@
 Ricardo Pasquati Pontarolli 
 </div>
         <p class="quarto-title-affiliation">
-            Técnico em Redes de Computadores · IFSP Boituva · pasquati@ifsp.edu.br · v17
+            Técnico em Redes de Computadores · IFSP Boituva · pasquati@ifsp.edu.br · v19
           </p>
     </div>
 </div>
@@ -199,28 +196,10 @@ Ricardo Pasquati Pontarolli
 </section>
 <section id="o-mmv-hipervisor-condições-de-popek-goldberg" class="slide level2">
 <h2>O MMV / Hipervisor — condições de Popek &amp; Goldberg</h2>
-<div class="cell" data-reveal="true" data-layout-align="default">
-<div class="cell-output-display">
-<div>
-<p></p><figure class=""><p></p>
-<div>
-<pre class="mermaid mermaid-js">flowchart TB
-  A1[Aplicações] --&gt; S1[Sistema Operacional]
-  A2[Aplicações] --&gt; S2[Sistema Operacional]
-  S1 --&gt; VM1["Máquina Virtual 1"]
-  S2 --&gt; VM2["Máquina Virtual n"]
-  VM1 --&gt; MMV["Virtual Machine Monitor (VMM)"]
-  VM2 --&gt; MMV
-  MMV --&gt; HW[Hardware]
-</pre>
-</div>
-<p></p></figure><p></p>
-</div>
-</div>
-</div>
-</section>
-<section id="diagrama-original-de-referência" class="slide level2">
-<h2>Diagrama original de referência</h2>
+
+<img data-src="../images/aula05/diagrama-mmv.png" class="quarto-figure quarto-figure-center r-stretch" style="width:55.0%"></section>
+<section id="diagrama-original-de-referência-variação" class="slide level2">
+<h2>Diagrama original de referência (variação)</h2>
 
 <img data-src="../images/aula05/diagrama-mmv-alt.png" class="quarto-figure quarto-figure-center r-stretch" style="width:55.0%"><p>Um bom monitor de máquina virtual (MMV) deve garantir:</p>
 <ol type="1">

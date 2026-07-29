@@ -126,9 +126,6 @@
       margin-right: 0; 
     }
   </style>
-  <script src="../site_libs/quarto-diagram/mermaid.min.js"></script>
-  <script src="../site_libs/quarto-diagram/mermaid-init.js"></script>
-  <link href="../site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
 </head>
 <body class="quarto-light">
   <div class="reveal">
@@ -144,7 +141,7 @@
 Ricardo Pasquati Pontarolli 
 </div>
         <p class="quarto-title-affiliation">
-            Técnico em Redes de Computadores · IFSP Boituva · pasquati@ifsp.edu.br · v17
+            Técnico em Redes de Computadores · IFSP Boituva · pasquati@ifsp.edu.br · v19
           </p>
     </div>
 </div>
@@ -243,85 +240,16 @@ Ricardo Pasquati Pontarolli
 </section>
 <section id="tipo-1-x-tipo-2-visualizando-as-camadas" class="slide level2">
 <h2>Tipo 1 x Tipo 2 — visualizando as camadas</h2>
-<div class="cell" data-reveal="true" data-layout-align="default">
-<div class="cell-output-display">
-<div>
-<p></p><figure class=""><p></p>
-<div>
-<pre class="mermaid mermaid-js">flowchart TB
-  subgraph T1["Tipo 1 — bare-metal"]
-    direction TB
-    A1[App] --&gt; O1[SO]
-    A2[App] --&gt; O2[SO]
-    O1 --&gt; HV1[Hypervisor]
-    O2 --&gt; HV1
-    HV1 --&gt; HW1[Hardware]
-  end
 
-  subgraph T2["Tipo 2 — hosted"]
-    direction TB
-    A3[App] --&gt; O3[SO]
-    A4[App] --&gt; O4[SO]
-    O3 --&gt; HV2[Hypervisor]
-    O4 --&gt; HV2
-    HV2 --&gt; SOH[Sistema Anfitrião]
-    SOH --&gt; HW2[Hardware]
-  end
-</pre>
-</div>
-<p></p></figure><p></p>
-</div>
-</div>
-</div>
-</section>
-<section id="diagrama-original-de-referência" class="slide level2">
-<h2>Diagrama original de referência</h2>
+<img data-src="../images/aula04/tipo1-x-tipo2.png" class="quarto-figure quarto-figure-center r-stretch" style="width:80.0%"></section>
+<section id="diagrama-original-de-referência-variação" class="slide level2">
+<h2>Diagrama original de referência (variação)</h2>
 
 <img data-src="../images/aula04/tipo1-x-tipo2-original.png" class="quarto-figure quarto-figure-center r-stretch" style="width:70.0%"></section>
 <section id="principais-hipervisores-do-mercado" class="slide level2">
 <h2>Principais hipervisores do mercado</h2>
-<table class="caption-top">
-<colgroup>
-<col style="width: 33%">
-<col style="width: 33%">
-<col style="width: 33%">
-</colgroup>
-<thead>
-<tr class="header">
-<th>Software</th>
-<th>Tipo</th>
-<th>Descrição breve</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>VMware ESXi</td>
-<td>Tipo 1</td>
-<td>Muito usado em datacenters, robusto e confiável</td>
-</tr>
-<tr class="even">
-<td>Microsoft Hyper-V</td>
-<td>Tipo 1</td>
-<td>Integrado ao Windows Server</td>
-</tr>
-<tr class="odd">
-<td>VirtualBox</td>
-<td>Tipo 2</td>
-<td>Gratuito, ideal para testes e ambientes de estudo</td>
-</tr>
-<tr class="even">
-<td>KVM</td>
-<td>Tipo 1</td>
-<td>Baseado em Linux, open-source e estável</td>
-</tr>
-<tr class="odd">
-<td>Docker</td>
-<td>Container</td>
-<td>Criação de containers para virtualização leve de apps</td>
-</tr>
-</tbody>
-</table>
-</section>
+
+<img data-src="../images/aula04/tabela-hipervisores.png" class="quarto-figure quarto-figure-center r-stretch" style="width:75.0%"></section>
 <section id="vantagens-gerais-da-virtualização" class="slide level2">
 <h2>Vantagens gerais da virtualização</h2>
 <ul>

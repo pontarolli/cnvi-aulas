@@ -193,7 +193,7 @@
     "href": "aulas/11-pratica-docker-2.html#o-fluxo-visualmente",
     "title": "Aula 11 — Prática Docker II",
     "section": "O fluxo, visualmente",
-    "text": "O fluxo, visualmente\n\n\n\n\n\nsequenceDiagram\n  participant U as Usuário\n  participant D as Docker Host\n  participant H as Docker Hub\n  U-&gt;&gt;D: docker run hello-world\n  D-&gt;&gt;D: Verifica imagem local\n  D-&gt;&gt;H: docker pull hello-world (se não existir local)\n  H--&gt;&gt;D: Envia a imagem\n  D-&gt;&gt;D: docker start (cria e inicia o container)\n  D--&gt;&gt;U: Container em execução\n\n\n\n\n\n\n\nReforçar: docker pull busca a imagem, docker start/run cria e inicia o container a partir dela."
+    "text": "O fluxo, visualmente\n\n\nReforçar: docker pull busca a imagem, docker start/run cria e inicia o container a partir dela."
   },
   {
     "objectID": "aulas/11-pratica-docker-2.html#testando-com-imagens-simples",
@@ -326,7 +326,7 @@
     "href": "aulas/09-docker-conceitos.html#vários-containers-um-só-kernel",
     "title": "Aula 09 — Docker: Conceitos e Arquitetura",
     "section": "Vários containers, um só kernel",
-    "text": "Vários containers, um só kernel\n\n\n\n\n\nflowchart TB\n  subgraph C1[\"Container\"]\n    Tomcat --&gt; Java --&gt; Debian\n  end\n  subgraph C2[\"Container\"]\n    SQLServer[\"SQL Server\"] --&gt; DotNet[\".NET\"] --&gt; Ubuntu\n  end\n  subgraph C3[\"Container\"]\n    StaticBinary[\"Static Binary\"] --&gt; Alpine\n  end\n  C1 --&gt; K[Kernel]\n  C2 --&gt; K\n  C3 --&gt; K"
+    "text": "Vários containers, um só kernel"
   },
   {
     "objectID": "aulas/09-docker-conceitos.html#limitação-importante-do-docker",
@@ -389,7 +389,7 @@
     "href": "aulas/09-docker-conceitos.html#docker-swarm-visão-geral",
     "title": "Aula 09 — Docker: Conceitos e Arquitetura",
     "section": "Docker Swarm — visão geral",
-    "text": "Docker Swarm — visão geral\n\n\n\n\n\nflowchart TB\n  Manager[\"Docker Swarm Manager&lt;br/&gt;192.168.10.1\"]\n  Manager --&gt; W1[\"Worker 1&lt;br/&gt;192.168.10.2\"]\n  Manager --&gt; W2[\"Worker 2&lt;br/&gt;192.168.10.3\"]\n  Manager --&gt; W3[\"Worker 3&lt;br/&gt;192.168.10.4\"]\n\n\n\n\n\n\n\nNão aprofundar Compose/Swarm agora — só situar que existem, para quando o aluno for além do curso."
+    "text": "Docker Swarm — visão geral\n\n\nNão aprofundar Compose/Swarm agora — só situar que existem, para quando o aluno for além do curso."
   },
   {
     "objectID": "aulas/09-docker-conceitos.html#atividade-da-aula",
@@ -557,14 +557,14 @@
     "href": "aulas/05-maquinas-virtuais.html#o-mmv-hipervisor-condições-de-popek-goldberg",
     "title": "Aula 05 — Máquinas Virtuais",
     "section": "O MMV / Hipervisor — condições de Popek & Goldberg",
-    "text": "O MMV / Hipervisor — condições de Popek & Goldberg\n\n\n\n\n\nflowchart TB\n  A1[Aplicações] --&gt; S1[Sistema Operacional]\n  A2[Aplicações] --&gt; S2[Sistema Operacional]\n  S1 --&gt; VM1[\"Máquina Virtual 1\"]\n  S2 --&gt; VM2[\"Máquina Virtual n\"]\n  VM1 --&gt; MMV[\"Virtual Machine Monitor (VMM)\"]\n  VM2 --&gt; MMV\n  MMV --&gt; HW[Hardware]"
+    "text": "O MMV / Hipervisor — condições de Popek & Goldberg"
   },
   {
-    "objectID": "aulas/05-maquinas-virtuais.html#diagrama-original-de-referência",
-    "href": "aulas/05-maquinas-virtuais.html#diagrama-original-de-referência",
+    "objectID": "aulas/05-maquinas-virtuais.html#diagrama-original-de-referência-variação",
+    "href": "aulas/05-maquinas-virtuais.html#diagrama-original-de-referência-variação",
     "title": "Aula 05 — Máquinas Virtuais",
-    "section": "Diagrama original de referência",
-    "text": "Diagrama original de referência\n\nUm bom monitor de máquina virtual (MMV) deve garantir:\n\nEquivalência — o software rodando na VM se comporta como se estivesse na máquina real\nDesempenho — degradação mínima de performance comparado a rodar direto no hardware\nControle de recursos — o MMV tem controle total sobre os recursos alocados a cada VM"
+    "section": "Diagrama original de referência (variação)",
+    "text": "Diagrama original de referência (variação)\n\nUm bom monitor de máquina virtual (MMV) deve garantir:\n\nEquivalência — o software rodando na VM se comporta como se estivesse na máquina real\nDesempenho — degradação mínima de performance comparado a rodar direto no hardware\nControle de recursos — o MMV tem controle total sobre os recursos alocados a cada VM"
   },
   {
     "objectID": "aulas/05-maquinas-virtuais.html#principais-funções-do-mmv",
@@ -977,7 +977,7 @@
     "href": "aulas/02-modelos-servico-nist.html#responsabilidade-compartilhada",
     "title": "Aula 02 — Modelos de Serviço em Nuvem e Arquitetura NIST",
     "section": "Responsabilidade compartilhada",
-    "text": "Responsabilidade compartilhada\nEm toda nuvem, parte da pilha de TI é gerenciada pelo provedor, parte por você.\nQuanto mais “as a Service”, menos você gerencia — e menos controle você tem.\n\n\n\n\n\n\n\n\n\nCaracterística\nIaaS\nPaaS\nSaaS\n\n\n\n\nControle sobre infraestrutura\nAlto\nMédio\nBaixo\n\n\nFacilidade de uso\nBaixa\nMédia\nAlta\n\n\nCasos de uso comuns\nDesenvolvimento, hospedagem\nDesenvolvimento de software\nAplicativos para usuários finais"
+    "text": "Responsabilidade compartilhada\nEm toda nuvem, parte da pilha de TI é gerenciada pelo provedor, parte por você.\nQuanto mais “as a Service”, menos você gerencia — e menos controle você tem."
   },
   {
     "objectID": "aulas/02-modelos-servico-nist.html#iaas-infrastructure-as-a-service",
@@ -1047,7 +1047,7 @@
     "href": "aulas/02-modelos-servico-nist.html#visão-detalhada-por-camada",
     "title": "Aula 02 — Modelos de Serviço em Nuvem e Arquitetura NIST",
     "section": "Visão detalhada por camada",
-    "text": "Visão detalhada por camada\n\n\n\nCamada\nNuvem Privada\nIaaS\nPaaS\nSaaS\n\n\n\n\nAplicações\ncliente\ncliente\ncliente\nprovedor\n\n\nRuntimes\ncliente\ncliente\nprovedor\nprovedor\n\n\nSegurança e integração\ncliente\ncliente\nprovedor\nprovedor\n\n\nBancos de dados\ncliente\ncliente\nprovedor\nprovedor\n\n\nServidores\ncliente\ncliente\nprovedor\nprovedor\n\n\nVirtualização\ncliente\nprovedor\nprovedor\nprovedor\n\n\nHardware\ncliente\nprovedor\nprovedor\nprovedor\n\n\nArmazenamento\ncliente\nprovedor\nprovedor\nprovedor\n\n\nRede\ncliente\nprovedor\nprovedor\nprovedor"
+    "text": "Visão detalhada por camada"
   },
   {
     "objectID": "aulas/02-modelos-servico-nist.html#e-além-dos-três-clássicos",
@@ -1166,21 +1166,21 @@
     "href": "aulas/04-virtualizacao-conceitos-hipervisores.html#tipo-1-x-tipo-2-visualizando-as-camadas",
     "title": "Aula 04 — Virtualização: Conceitos e Hipervisores",
     "section": "Tipo 1 x Tipo 2 — visualizando as camadas",
-    "text": "Tipo 1 x Tipo 2 — visualizando as camadas\n\n\n\n\n\nflowchart TB\n  subgraph T1[\"Tipo 1 — bare-metal\"]\n    direction TB\n    A1[App] --&gt; O1[SO]\n    A2[App] --&gt; O2[SO]\n    O1 --&gt; HV1[Hypervisor]\n    O2 --&gt; HV1\n    HV1 --&gt; HW1[Hardware]\n  end\n\n  subgraph T2[\"Tipo 2 — hosted\"]\n    direction TB\n    A3[App] --&gt; O3[SO]\n    A4[App] --&gt; O4[SO]\n    O3 --&gt; HV2[Hypervisor]\n    O4 --&gt; HV2\n    HV2 --&gt; SOH[Sistema Anfitrião]\n    SOH --&gt; HW2[Hardware]\n  end"
+    "text": "Tipo 1 x Tipo 2 — visualizando as camadas"
   },
   {
-    "objectID": "aulas/04-virtualizacao-conceitos-hipervisores.html#diagrama-original-de-referência",
-    "href": "aulas/04-virtualizacao-conceitos-hipervisores.html#diagrama-original-de-referência",
+    "objectID": "aulas/04-virtualizacao-conceitos-hipervisores.html#diagrama-original-de-referência-variação",
+    "href": "aulas/04-virtualizacao-conceitos-hipervisores.html#diagrama-original-de-referência-variação",
     "title": "Aula 04 — Virtualização: Conceitos e Hipervisores",
-    "section": "Diagrama original de referência",
-    "text": "Diagrama original de referência"
+    "section": "Diagrama original de referência (variação)",
+    "text": "Diagrama original de referência (variação)"
   },
   {
     "objectID": "aulas/04-virtualizacao-conceitos-hipervisores.html#principais-hipervisores-do-mercado",
     "href": "aulas/04-virtualizacao-conceitos-hipervisores.html#principais-hipervisores-do-mercado",
     "title": "Aula 04 — Virtualização: Conceitos e Hipervisores",
     "section": "Principais hipervisores do mercado",
-    "text": "Principais hipervisores do mercado\n\n\n\n\n\n\n\n\nSoftware\nTipo\nDescrição breve\n\n\n\n\nVMware ESXi\nTipo 1\nMuito usado em datacenters, robusto e confiável\n\n\nMicrosoft Hyper-V\nTipo 1\nIntegrado ao Windows Server\n\n\nVirtualBox\nTipo 2\nGratuito, ideal para testes e ambientes de estudo\n\n\nKVM\nTipo 1\nBaseado em Linux, open-source e estável\n\n\nDocker\nContainer\nCriação de containers para virtualização leve de apps"
+    "text": "Principais hipervisores do mercado"
   },
   {
     "objectID": "aulas/04-virtualizacao-conceitos-hipervisores.html#vantagens-gerais-da-virtualização",
@@ -1379,18 +1379,11 @@
     "text": "Recursos avançados da VMware\n\nvMotion — migrar uma VM em execução de um servidor físico para outro, sem desligar (zero downtime)\nHA (High Availability) — se um host físico falha, as VMs são reiniciadas automaticamente em outro host\nDRS (Distributed Resource Scheduler) — balanceia automaticamente a carga entre os hosts do cluster"
   },
   {
-    "objectID": "aulas/08-vmware-xen.html#ha-na-prática-funcionamento-normal",
-    "href": "aulas/08-vmware-xen.html#ha-na-prática-funcionamento-normal",
+    "objectID": "aulas/08-vmware-xen.html#ha-na-prática",
+    "href": "aulas/08-vmware-xen.html#ha-na-prática",
     "title": "Aula 08 — VMware x Xen",
-    "section": "HA na prática — funcionamento normal",
-    "text": "HA na prática — funcionamento normal\n\n\n\n\n\nflowchart LR\n  subgraph S1[\"Servidor 1\"]\n    VM1[VM1]\n    VM2[VM2]\n    VM3[VM3]\n  end\n  subgraph S2[\"Servidor 2\"]\n    VM4[VM4]\n    VM5[VM5]\n    VM6[VM6]\n  end\n  subgraph S3[\"Servidor 3\"]\n    VM7[VM7]\n    VM8[VM8]\n    VM9[VM9]\n  end\n  subgraph S4[\"Servidor 4\"]\n    VM10[VM10]\n    VM11[VM11]\n    VM12[VM12]\n  end"
-  },
-  {
-    "objectID": "aulas/08-vmware-xen.html#ha-na-prática-servidor-1-falha",
-    "href": "aulas/08-vmware-xen.html#ha-na-prática-servidor-1-falha",
-    "title": "Aula 08 — VMware x Xen",
-    "section": "HA na prática — Servidor 1 falha",
-    "text": "HA na prática — Servidor 1 falha\n\n\n\n\n\nflowchart LR\n  subgraph S1[\"Servidor 1 (falhou)\"]\n    X[\"✕\"]\n  end\n  subgraph S2[\"Servidor 2\"]\n    VM4b[VM4]\n    VM5b[VM5]\n    VM6b[VM6]\n    VM1b[VM1]\n  end\n  subgraph S3[\"Servidor 3\"]\n    VM7b[VM7]\n    VM8b[VM8]\n    VM9b[VM9]\n    VM2b[VM2]\n  end\n  subgraph S4[\"Servidor 4\"]\n    VM10b[VM10]\n    VM11b[VM11]\n    VM12b[VM12]\n    VM3b[VM3]\n  end\n  S1 -.VM1.-&gt; S2\n  S1 -.VM2.-&gt; S3\n  S1 -.VM3.-&gt; S4\n\n\n\n\n\n\n\n\n\n\n\n\nNota\n\n\nEsses recursos avançados são um dos motivos da VMware ser tradicionalmente adotada por grandes empresas, apesar do custo de licenciamento mais alto."
+    "section": "HA na prática",
+    "text": "HA na prática\n\n\n\n\n\n\nFuncionamento normal\n\n\n\n\n\n\n\nServidor 1 falha — VMs redistribuídas\n\n\n\n\n\n\n\n\n\n\n\nNota\n\n\nEsses recursos avançados são um dos motivos da VMware ser tradicionalmente adotada por grandes empresas, apesar do custo de licenciamento mais alto."
   },
   {
     "objectID": "aulas/08-vmware-xen.html#xen-visão-geral",

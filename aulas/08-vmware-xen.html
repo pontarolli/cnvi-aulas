@@ -126,9 +126,6 @@
       margin-right: 0; 
     }
   </style>
-  <script src="../site_libs/quarto-diagram/mermaid.min.js"></script>
-  <script src="../site_libs/quarto-diagram/mermaid-init.js"></script>
-  <link href="../site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
 </head>
 <body class="quarto-light">
   <div class="reveal">
@@ -144,7 +141,7 @@
 Ricardo Pasquati Pontarolli 
 </div>
         <p class="quarto-title-affiliation">
-            Técnico em Redes de Computadores · IFSP Boituva · pasquati@ifsp.edu.br · v17
+            Técnico em Redes de Computadores · IFSP Boituva · pasquati@ifsp.edu.br · v19
           </p>
     </div>
 </div>
@@ -195,76 +192,25 @@ Ricardo Pasquati Pontarolli
 <li><strong>DRS (Distributed Resource Scheduler)</strong> — balanceia automaticamente a carga entre os hosts do cluster</li>
 </ul>
 </section>
-<section id="ha-na-prática-funcionamento-normal" class="slide level2">
-<h2>HA na prática — funcionamento normal</h2>
-<div class="cell" data-reveal="true" data-layout-align="default">
-<div class="cell-output-display">
-<div>
-<p></p><figure class=""><p></p>
-<div>
-<pre class="mermaid mermaid-js">flowchart LR
-  subgraph S1["Servidor 1"]
-    VM1[VM1]
-    VM2[VM2]
-    VM3[VM3]
-  end
-  subgraph S2["Servidor 2"]
-    VM4[VM4]
-    VM5[VM5]
-    VM6[VM6]
-  end
-  subgraph S3["Servidor 3"]
-    VM7[VM7]
-    VM8[VM8]
-    VM9[VM9]
-  end
-  subgraph S4["Servidor 4"]
-    VM10[VM10]
-    VM11[VM11]
-    VM12[VM12]
-  end
-</pre>
-</div>
-<p></p></figure><p></p>
+<section id="ha-na-prática" class="slide level2">
+<h2>HA na prática</h2>
+<div class="quarto-layout-panel" data-layout-ncol="2">
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="../images/aula08/ha-funcionamento-normal.png"></p>
+<figcaption>Funcionamento normal</figcaption>
+</figure>
 </div>
 </div>
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="../images/aula08/ha-funcionamento-falha.png"></p>
+<figcaption>Servidor 1 falha — VMs redistribuídas</figcaption>
+</figure>
 </div>
-</section>
-<section id="ha-na-prática-servidor-1-falha" class="slide level2">
-<h2>HA na prática — Servidor 1 falha</h2>
-<div class="cell" data-reveal="true" data-layout-align="default">
-<div class="cell-output-display">
-<div>
-<p></p><figure class=""><p></p>
-<div>
-<pre class="mermaid mermaid-js">flowchart LR
-  subgraph S1["Servidor 1 (falhou)"]
-    X["✕"]
-  end
-  subgraph S2["Servidor 2"]
-    VM4b[VM4]
-    VM5b[VM5]
-    VM6b[VM6]
-    VM1b[VM1]
-  end
-  subgraph S3["Servidor 3"]
-    VM7b[VM7]
-    VM8b[VM8]
-    VM9b[VM9]
-    VM2b[VM2]
-  end
-  subgraph S4["Servidor 4"]
-    VM10b[VM10]
-    VM11b[VM11]
-    VM12b[VM12]
-    VM3b[VM3]
-  end
-  S1 -.VM1.-&gt; S2
-  S1 -.VM2.-&gt; S3
-  S1 -.VM3.-&gt; S4
-</pre>
-</div>
-<p></p></figure><p></p>
 </div>
 </div>
 </div>

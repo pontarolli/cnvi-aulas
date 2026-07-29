@@ -192,9 +192,6 @@
       margin-right: 0; 
     }
   </style>
-  <script src="../site_libs/quarto-diagram/mermaid.min.js"></script>
-  <script src="../site_libs/quarto-diagram/mermaid-init.js"></script>
-  <link href="../site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
 </head>
 <body class="quarto-light">
   <div class="reveal">
@@ -210,7 +207,7 @@
 Ricardo Pasquati Pontarolli 
 </div>
         <p class="quarto-title-affiliation">
-            Técnico em Redes de Computadores · IFSP Boituva · pasquati@ifsp.edu.br · v17
+            Técnico em Redes de Computadores · IFSP Boituva · pasquati@ifsp.edu.br · v19
           </p>
     </div>
 </div>
@@ -320,31 +317,8 @@ Ricardo Pasquati Pontarolli
 <img data-src="../images/aula09/docker-logo-original.png" class="quarto-figure quarto-figure-center r-stretch" style="width:45.0%"></section>
 <section id="vários-containers-um-só-kernel" class="slide level2">
 <h2>Vários containers, um só kernel</h2>
-<div class="cell" data-reveal="true" data-layout-align="default">
-<div class="cell-output-display">
-<div>
-<p></p><figure class=""><p></p>
-<div>
-<pre class="mermaid mermaid-js">flowchart TB
-  subgraph C1["Container"]
-    Tomcat --&gt; Java --&gt; Debian
-  end
-  subgraph C2["Container"]
-    SQLServer["SQL Server"] --&gt; DotNet[".NET"] --&gt; Ubuntu
-  end
-  subgraph C3["Container"]
-    StaticBinary["Static Binary"] --&gt; Alpine
-  end
-  C1 --&gt; K[Kernel]
-  C2 --&gt; K
-  C3 --&gt; K
-</pre>
-</div>
-<p></p></figure><p></p>
-</div>
-</div>
-</div>
-</section>
+
+<img data-src="../images/aula09/containers-kernel.png" class="quarto-figure quarto-figure-center r-stretch" style="width:60.0%"></section>
 <section id="limitação-importante-do-docker" class="slide level2">
 <h2>Limitação importante do Docker</h2>
 <ul>
@@ -417,23 +391,8 @@ Ricardo Pasquati Pontarolli
 </section>
 <section id="docker-swarm-visão-geral" class="slide level2">
 <h2>Docker Swarm — visão geral</h2>
-<div class="cell" data-reveal="true" data-layout-align="default">
-<div class="cell-output-display">
-<div>
-<p></p><figure class=""><p></p>
-<div>
-<pre class="mermaid mermaid-js">flowchart TB
-  Manager["Docker Swarm Manager&lt;br/&gt;192.168.10.1"]
-  Manager --&gt; W1["Worker 1&lt;br/&gt;192.168.10.2"]
-  Manager --&gt; W2["Worker 2&lt;br/&gt;192.168.10.3"]
-  Manager --&gt; W3["Worker 3&lt;br/&gt;192.168.10.4"]
-</pre>
-</div>
-<p></p></figure><p></p>
-</div>
-</div>
-</div>
-<aside class="notes">
+
+<img data-src="../images/aula09/docker-swarm.png" class="quarto-figure quarto-figure-center r-stretch" style="width:60.0%"><aside class="notes">
 <p>Não aprofundar Compose/Swarm agora — só situar que existem, para quando o aluno for além do curso.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
