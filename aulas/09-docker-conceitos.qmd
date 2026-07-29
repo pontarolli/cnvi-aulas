@@ -53,21 +53,7 @@ VMs e containers **não são mutuamente exclusivos** — é comum rodar containe
 
 ## Vários containers, um só kernel
 
-```{mermaid}
-flowchart TB
-  subgraph C1["Container"]
-    Tomcat --> Java --> Debian
-  end
-  subgraph C2["Container"]
-    SQLServer["SQL Server"] --> DotNet[".NET"] --> Ubuntu
-  end
-  subgraph C3["Container"]
-    StaticBinary["Static Binary"] --> Alpine
-  end
-  C1 --> K[Kernel]
-  C2 --> K
-  C3 --> K
-```
+![](../images/aula09/containers-kernel.png){fig-align="center" width="60%"}
 
 ## Limitação importante do Docker
 
@@ -138,13 +124,7 @@ CMD ["python", "/app.py"]
 
 ## Docker Swarm — visão geral
 
-```{mermaid}
-flowchart TB
-  Manager["Docker Swarm Manager<br/>192.168.10.1"]
-  Manager --> W1["Worker 1<br/>192.168.10.2"]
-  Manager --> W2["Worker 2<br/>192.168.10.3"]
-  Manager --> W3["Worker 3<br/>192.168.10.4"]
-```
+![](../images/aula09/docker-swarm.png){fig-align="center" width="60%"}
 
 ::: {.notes}
 Não aprofundar Compose/Swarm agora — só situar que existem, para quando o aluno for além do curso.

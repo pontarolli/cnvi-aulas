@@ -48,41 +48,15 @@ Esta é a aula-chave que conecta tudo que vimos: nuvem só existe na escala atua
 
 ## Tipo 1 x Tipo 2 — visualizando as camadas
 
-```{mermaid}
-flowchart TB
-  subgraph T1["Tipo 1 — bare-metal"]
-    direction TB
-    A1[App] --> O1[SO]
-    A2[App] --> O2[SO]
-    O1 --> HV1[Hypervisor]
-    O2 --> HV1
-    HV1 --> HW1[Hardware]
-  end
+![](../images/aula04/tipo1-x-tipo2.png){fig-align="center" width="80%"}
 
-  subgraph T2["Tipo 2 — hosted"]
-    direction TB
-    A3[App] --> O3[SO]
-    A4[App] --> O4[SO]
-    O3 --> HV2[Hypervisor]
-    O4 --> HV2
-    HV2 --> SOH[Sistema Anfitrião]
-    SOH --> HW2[Hardware]
-  end
-```
-
-## Diagrama original de referência
+## Diagrama original de referência (variação)
 
 ![](../images/aula04/tipo1-x-tipo2-original.png){fig-align="center" width="70%"}
 
 ## Principais hipervisores do mercado
 
-| Software | Tipo | Descrição breve |
-|---|---|---|
-| VMware ESXi | Tipo 1 | Muito usado em datacenters, robusto e confiável |
-| Microsoft Hyper-V | Tipo 1 | Integrado ao Windows Server |
-| VirtualBox | Tipo 2 | Gratuito, ideal para testes e ambientes de estudo |
-| KVM | Tipo 1 | Baseado em Linux, open-source e estável |
-| Docker | Container | Criação de containers para virtualização leve de apps |
+![](../images/aula04/tabela-hipervisores.png){fig-align="center" width="75%"}
 
 ---
 
