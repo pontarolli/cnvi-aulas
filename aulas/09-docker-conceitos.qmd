@@ -16,7 +16,7 @@ Conectar com as Aulas 04/05: containers são "outra forma" de virtualizar, mais 
 
 ## De onde vem o Docker
 
-![](../images/aula09/docker-logo.png){fig-align="center" width="35%"}
+![](../images/aula09/docker-logo.svg){fig-align="center" width="25%"}
 
 - Lançado em **2013**, baseado em tecnologias mais antigas do kernel Linux: **cgroups** e **namespaces**
 - "Docker" tem vários significados: o **projeto open source**, o **conjunto de ferramentas**, e a **empresa** por trás dele
