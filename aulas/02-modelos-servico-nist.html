@@ -10,7 +10,7 @@
   <meta name="generator" content="quarto-1.9.38">
 
   <meta name="author" content="Ricardo Pasquati Pontarolli">
-  <title>Computação em Nuvem e Virtualização – Aula 02 — Modelos de Serviço em Nuvem e Arquitetura NIST</title>
+  <title>Computação em Nuvem e Virtualização – Aula 02 — Modelos de Serviços em Nuvem</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -132,7 +132,7 @@
     <div class="slides">
 
 <section id="title-slide" class="quarto-title-block center">
-  <h1 class="title">Aula 02 — Modelos de Serviço em Nuvem e Arquitetura NIST</h1>
+  <h1 class="title">Aula 02 — Modelos de Serviços em Nuvem</h1>
   <p class="subtitle">Computação em Nuvem e Virtualização</p>
 
 <div class="quarto-title-authors">
@@ -141,21 +141,595 @@
 Ricardo Pasquati Pontarolli 
 </div>
         <p class="quarto-title-affiliation">
-            Técnico em Redes de Computadores · IFSP Boituva · pasquati@ifsp.edu.br · v29
+            Técnico em Redes de Computadores · IFSP Boituva · pasquati@ifsp.edu.br · v31
           </p>
     </div>
 </div>
 
 </section>
-<section id="objetivos-da-aula" class="slide level2">
-<h2>Objetivos da aula</h2>
+<section id="introdução" class="slide level2">
+<h2>Introdução</h2>
 <ul>
-<li>Diferenciar <strong>IaaS, PaaS e SaaS</strong> com exemplos reais</li>
-<li>Entender <strong>quem gerencia o quê</strong> em cada modelo</li>
-<li>Conhecer a <strong>Arquitetura de Referência NIST</strong> para computação em nuvem</li>
+<li>A computação em nuvem revolucionou a forma como empresas e indivíduos utilizam a tecnologia.</li>
+<li>Os modelos de serviço em nuvem são categorizações que definem como os recursos de computação são fornecidos e gerenciados na nuvem.</li>
+<li>Eles são classificados em três principais tipos:
+<ul>
+<li>IaaS (Infrastructure as a Service),</li>
+<li>PaaS (Platform as a Service) e</li>
+<li>SaaS (Software as a Service).</li>
+</ul></li>
+<li>Cada um desses modelos oferece diferentes níveis de controle, flexibilidade e gerenciamento para os usuários.</li>
 </ul>
+</section>
+<section id="iaas---introdução" class="slide level2">
+<h2>IaaS - Introdução</h2>
+<ul>
+<li>Infrastructure as a Service (IaaS) é um modelo de computação em nuvem que fornece infraestrutura de TI virtualizada por meio da internet.</li>
+<li>Esse modelo permite que empresas e desenvolvedores acessem recursos como:
+<ul>
+<li>servidores,</li>
+<li>armazenamento,</li>
+<li>redes e</li>
+<li>sistemas operacionais sob demanda.</li>
+</ul></li>
+<li>A IaaS permite utilização destes recursos sem a necessidade de investir em hardware físico.</li>
+</ul>
+</section>
+<section id="iaas---introdução-1" class="slide level2">
+<h2>IaaS - Introdução</h2>
+<ul>
+<li>No modelo IaaS, a infraestrutura de TI é fornecida como um serviço.</li>
+<li>Isso inclui servidores, armazenamento, redes e virtualização.</li>
+<li>As empresas podem alocar e gerenciar esses recursos conforme a demanda, sem a necessidade de investir em hardware físico.</li>
+<li>Exemplos de provedores de IaaS incluem Amazon Web Services (AWS), Microsoft Azure e Google Cloud Platform (GCP).</li>
+</ul>
+</section>
+<section id="iaas---introdução-2" class="slide level2 smaller">
+<h2>IaaS - Introdução</h2>
+
+<img data-src="../images/aula02/iaas-icones.png" class="quarto-figure quarto-figure-center r-stretch" style="width:55.0%"></section>
+<section id="iaas---características" class="slide level2 smaller">
+<h2>IaaS - Características</h2>
+<ul>
+<li>O IaaS se diferencia por diversas características essenciais:
+<ul>
+<li>Escalabilidade:
+<ul>
+<li>Os recursos podem ser ajustados conforme a demanda, garantindo eficiência operacional e redução de custos.</li>
+</ul></li>
+<li>Pay-as-you-go:
+<ul>
+<li>O modelo de pagamento é baseado no uso, permitindo que as empresas paguem apenas pelos recursos consumidos.</li>
+</ul></li>
+<li>Gerenciamento Automatizado:
+<ul>
+<li>Muitos provedores oferecem ferramentas para automação e orquestração, facilitando a administração da infraestrutura.</li>
+</ul></li>
+</ul></li>
+</ul>
+</section>
+<section id="iaas---características-1" class="slide level2">
+<h2>IaaS - Características</h2>
+<ul>
+<li>O IaaS se diferencia por diversas características essenciais:
+<ul>
+<li>Acesso Remoto:
+<ul>
+<li>Todos os recursos podem ser acessados via internet, permitindo maior flexibilidade para as equipes de TI.</li>
+</ul></li>
+<li>Segurança:
+<ul>
+<li>Os provedores de IaaS investem em segurança robusta, oferecendo criptografia de dados, firewalls e controle de acesso.</li>
+</ul></li>
+</ul></li>
+</ul>
+</section>
+<section id="iaas---provedores" class="slide level2 smaller">
+<h2>IaaS - Provedores</h2>
+<ul>
+<li>Atualmente, várias empresas oferecem serviços de IaaS, incluindo:
+<ul>
+<li>Amazon Web Services (AWS) EC2:
+<ul>
+<li>Oferece servidores virtuais sob demanda, permitindo que empresas escalem suas aplicações com facilidade.</li>
+</ul></li>
+<li>Microsoft Azure Virtual Machines:
+<ul>
+<li>Proporciona máquinas virtuais com diversas configurações para atender a diferentes necessidades de negócios.</li>
+</ul></li>
+<li>Google Cloud Compute Engine:
+<ul>
+<li>Serviço de máquinas virtuais altamente configuráveis para cargas de trabalho variadas.</li>
+</ul></li>
+<li>IBM Cloud Infrastructure:
+<ul>
+<li>Fornece servidores bare metal e virtuais para aplicações empresariais exigentes.</li>
+</ul></li>
+</ul></li>
+</ul>
+</section>
+<section id="iaas---aplicações" class="slide level2 smaller">
+<h2>IaaS - Aplicações</h2>
+<ul>
+<li>O IaaS é amplamente utilizado em diversos setores e cenários:
+<ul>
+<li>Hospedagem de Aplicações e Websites:
+<ul>
+<li>Empresas podem utilizar servidores virtuais para hospedar aplicações sem a necessidade de manter servidores físicos.</li>
+</ul></li>
+<li>Análise de Dados e Big Data:
+<ul>
+<li>O processamento de grandes volumes de dados é facilitado pela infraestrutura escalável do IaaS.</li>
+</ul></li>
+<li>Desenvolvimento e Testes:
+<ul>
+<li>Ambientes de desenvolvimento podem ser criados rapidamente e descartados após o uso.</li>
+</ul></li>
+</ul></li>
+</ul>
+</section>
+<section id="iaas---aplicações-1" class="slide level2 smaller">
+<h2>IaaS - Aplicações</h2>
+<ul>
+<li>O IaaS é amplamente utilizado em diversos setores e cenários:
+<ul>
+<li>Backup e Recuperação de Desastres:
+<ul>
+<li>A infraestrutura em nuvem garante a continuidade dos negócios em caso de falhas.</li>
+</ul></li>
+<li>Computação de Alto Desempenho:
+<ul>
+<li>Aplicações que exigem grande capacidade de processamento, como inteligência artificial e modelagem científica, podem ser executadas em ambientes IaaS.</li>
+</ul></li>
+</ul></li>
+</ul>
+</section>
+<section id="iaas---vantagens" class="slide level2 smaller">
+<h2>IaaS - Vantagens</h2>
+<ul>
+<li>Entre os principais benefícios do IaaS, destacam-se:
+<ul>
+<li>Redução de Custos:
+<ul>
+<li>Não há necessidade de investir em hardware físico.</li>
+</ul></li>
+<li>Agilidade e Flexibilidade:
+<ul>
+<li>Implantação rápida de novos serviços e ajustes dinâmicos na infraestrutura.</li>
+</ul></li>
+<li>Alta Disponibilidade:
+<ul>
+<li>Infraestrutura robusta e redundante para garantir a continuidade das operações.</li>
+</ul></li>
+<li>Foco no Core Business:
+<ul>
+<li>Empresas podem se concentrar no desenvolvimento de produtos e serviços sem se preocupar com a gestão de infraestrutura.</li>
+</ul></li>
+</ul></li>
+</ul>
+</section>
+<section id="iaas---desafios-e-considerações" class="slide level2 smaller">
+<h2>IaaS - Desafios e Considerações</h2>
+<ul>
+<li>Apesar dos inúmeros benefícios, o uso de IaaS apresenta desafios como:
+<ul>
+<li>Gerenciamento de Custos:
+<ul>
+<li>Sem monitoramento adequado, os custos podem aumentar rapidamente.</li>
+</ul></li>
+<li>Dependência do Provedor:
+<ul>
+<li>A empresa pode ficar dependente da infraestrutura e das políticas do provedor escolhido.</li>
+</ul></li>
+<li>Segurança e Conformidade:
+<ul>
+<li>Garantir a proteção dos dados e atender a regulamentações pode ser um desafio para algumas organizações.</li>
+</ul></li>
+</ul></li>
+</ul>
+</section>
+<section id="paas---introdução" class="slide level2">
+<h2>PaaS - Introdução</h2>
+<ul>
+<li>Platform as a Service (PaaS) é um modelo de computação em nuvem que fornece uma plataforma completa para desenvolvimento, execução e gerenciamento de aplicações.</li>
+<li>Diferente do Infrastructure as a Service (IaaS), que oferece apenas infraestrutura, o PaaS inclui ferramentas de desenvolvimento, sistemas operacionais, banco de dados e outros serviços.</li>
+<li>PaaS oferece todo tipo de serviços necessários para criar e implantar softwares sem se preocupar com a administração de hardware e redes.</li>
+</ul>
+</section>
+<section id="paas---introdução-1" class="slide level2">
+<h2>PaaS - Introdução</h2>
+<ul>
+<li>O PaaS oferece uma plataforma completa para o desenvolvimento, execução e gerenciamento de aplicações.</li>
+<li>Ele inclui sistemas operacionais, bancos de dados, servidores web e ferramentas de desenvolvimento.</li>
+<li>Esse modelo permite que os desenvolvedores se concentrem na criação de software sem se preocupar com a infraestrutura subjacente.</li>
+<li>Exemplos de PaaS incluem Google App Engine, Microsoft Azure App Services e Heroku.</li>
+</ul>
+</section>
+<section id="paas---introdução-2" class="slide level2">
+<h2>PaaS - Introdução</h2>
+
+<img data-src="../images/aula02/paas-marketing.png" class="quarto-figure quarto-figure-center r-stretch" style="width:65.0%"></section>
+<section id="paas---características" class="slide level2 smaller">
+<h2>PaaS - Características</h2>
+<ul>
+<li>O PaaS apresenta diversas características que o tornam uma solução eficiente para desenvolvedores e empresas:
+<ul>
+<li>Ambiente de Desenvolvimento Integrado (IDE):
+<ul>
+<li>Plataformas PaaS oferecem ambientes de programação prontos para uso.</li>
+</ul></li>
+<li>Gerenciamento Automatizado:
+<ul>
+<li>Atualizações, segurança e escalabilidade são gerenciados pelo provedor.</li>
+</ul></li>
+<li>Escalabilidade:
+<ul>
+<li>Suporte a crescimento de aplicações conforme a demanda.</li>
+</ul></li>
+</ul></li>
+</ul>
+</section>
+<section id="paas---características-1" class="slide level2">
+<h2>PaaS - Características</h2>
+<ul>
+<li>O PaaS apresenta diversas características que o tornam uma solução eficiente para desenvolvedores e empresas:
+<ul>
+<li>Multiplataforma:
+<ul>
+<li>Compatível com diferentes linguagens e frameworks de desenvolvimento.</li>
+</ul></li>
+<li>Facilidade de Integração:
+<ul>
+<li>Possibilidade de conectar serviços como banco de dados, APIs e inteligência artificial.</li>
+</ul></li>
+</ul></li>
+</ul>
+</section>
+<section id="paas---provedores" class="slide level2 smaller">
+<h2>PaaS - Provedores</h2>
+<ul>
+<li>Diversos provedores de nuvem oferecem soluções PaaS, incluindo:
+<ul>
+<li>Google App Engine:
+<ul>
+<li>Permite criar e hospedar aplicações sem necessidade de gerenciar infraestrutura.</li>
+</ul></li>
+<li>Microsoft Azure App Services:
+<ul>
+<li>Oferece suporte para desenvolvimento de aplicações web e móveis.</li>
+</ul></li>
+<li>AWS Elastic Beanstalk:
+<ul>
+<li>Serviço que facilita a implantação e o gerenciamento de aplicações na AWS.</li>
+</ul></li>
+<li>Heroku:
+<ul>
+<li>Plataforma baseada em contêineres para implantação e gerenciamento de aplicações na nuvem.</li>
+</ul></li>
+</ul></li>
+</ul>
+</section>
+<section id="paas---aplicações" class="slide level2 smaller">
+<h2>PaaS - Aplicações</h2>
+<ul>
+<li>O PaaS é utilizado em diversos cenários, incluindo:
+<ul>
+<li>Desenvolvimento Ágil:
+<ul>
+<li>Equipes podem criar e testar aplicações rapidamente sem configurar servidores.</li>
+</ul></li>
+<li>Aplicações Web e Móveis:
+<ul>
+<li>Suporte à criação de aplicativos escaláveis e de alta disponibilidade.</li>
+</ul></li>
+<li>Análise de Dados e Machine Learning:
+<ul>
+<li>Plataformas PaaS oferecem ferramentas para análise e inteligência artificial.</li>
+</ul></li>
+</ul></li>
+</ul>
+</section>
+<section id="paas---aplicações-1" class="slide level2">
+<h2>PaaS - Aplicações</h2>
+<ul>
+<li>O PaaS é utilizado em diversos cenários, incluindo:
+<ul>
+<li>Integração de APIs e Serviços:
+<ul>
+<li>Facilita a conexão entre diferentes sistemas e serviços.</li>
+</ul></li>
+<li>Automação de Processos de Negócios:
+<ul>
+<li>Empresas utilizam PaaS para desenvolver aplicações que otimizam processos internos.</li>
+</ul></li>
+</ul></li>
+</ul>
+</section>
+<section id="paas---vantagens" class="slide level2 smaller">
+<h2>PaaS - Vantagens</h2>
+<ul>
+<li>As principais vantagens do PaaS incluem:
+<ul>
+<li>Redução de Custos:
+<ul>
+<li>Diminui a necessidade de infraestrutura e gerenciamento.</li>
+</ul></li>
+<li>Rapidez no Desenvolvimento:
+<ul>
+<li>Acelera a criação de aplicações com ferramentas pré-configuradas.</li>
+</ul></li>
+<li>Maior Foco no Produto:
+<ul>
+<li>Desenvolvedores podem se concentrar no código, sem se preocupar com infraestrutura.</li>
+</ul></li>
+</ul></li>
+</ul>
+</section>
+<section id="paas---vantagens-1" class="slide level2">
+<h2>PaaS - Vantagens</h2>
+<ul>
+<li>As principais vantagens do PaaS incluem:
+<ul>
+<li>Facilidade de Colaboração:
+<ul>
+<li>Equipes podem trabalhar simultaneamente no desenvolvimento de software.</li>
+</ul></li>
+<li>Atualizações e Manutenção:
+<ul>
+<li>O provedor de PaaS gerencia atualizações e segurança.</li>
+</ul></li>
+</ul></li>
+</ul>
+</section>
+<section id="paas---desafios-e-considerações" class="slide level2 smaller">
+<h2>PaaS - Desafios e Considerações</h2>
+<ul>
+<li>Apesar dos benefícios, o PaaS apresenta desafios como:
+<ul>
+<li>Dependência do Provedor:
+<ul>
+<li>Empresas podem ficar presas a um único fornecedor.</li>
+</ul></li>
+<li>Limitações de Configuração:
+<ul>
+<li>Algumas plataformas podem ter restrições quanto a personalizações avançadas.</li>
+</ul></li>
+<li>Segurança:
+<ul>
+<li>Garantir conformidade com regulamentações pode ser um desafio para algumas organizações.</li>
+</ul></li>
+</ul></li>
+</ul>
+</section>
+<section id="saas---introdução" class="slide level2">
+<h2>SaaS - Introdução</h2>
+<ul>
+<li>Software as a Service (SaaS) é um modelo de computação em nuvem que fornece software sob demanda através da internet.</li>
+<li>Os usuários acessam aplicações sem a necessidade de instalar ou manter infraestrutura local, uma vez que todo o gerenciamento, manutenção e segurança ficam a cargo do provedor do serviço.</li>
+<li>O SaaS é amplamente adotado em diversos setores, facilitando o acesso a ferramentas essenciais para empresas e usuários finais.</li>
+</ul>
+</section>
+<section id="saas---introdução-1" class="slide level2 smaller">
+<h2>SaaS - Introdução</h2>
+<ul>
+<li>No modelo SaaS, o software é entregue aos usuários finais como um serviço acessado pela internet.</li>
+<li>Os provedores de SaaS gerenciam toda a infraestrutura, manutenção e segurança, permitindo que os usuários utilizem as aplicações sem necessidade de instalação ou gerenciamento local.</li>
+<li>Exemplos de SaaS incluem Google Workspace, Microsoft 365, Dropbox e Salesforce.</li>
+</ul>
+</section>
+<section id="saas---introdução-2" class="slide level2">
+<h2>SaaS - Introdução</h2>
+
+<img data-src="../images/aula02/saas-marketing.png" class="quarto-figure quarto-figure-center r-stretch" style="width:55.0%"></section>
+<section id="saas---características" class="slide level2 smaller">
+<h2>SaaS - Características</h2>
+<ul>
+<li>O SaaS apresenta diversas características que o tornam um modelo eficiente para distribuição de software:
+<ul>
+<li>Acesso via Internet:
+<ul>
+<li>Os usuários acessam o software através de navegadores, eliminando a necessidade de instalação local.</li>
+</ul></li>
+<li>Gerenciamento Centralizado:
+<ul>
+<li>As atualizações, patches de segurança e manutenções são realizadas pelo provedor.</li>
+</ul></li>
+<li>Modelo de Assinatura:
+<ul>
+<li>Geralmente, os usuários pagam uma taxa mensal ou anual pelo uso do serviço.</li>
+</ul></li>
+</ul></li>
+</ul>
+</section>
+<section id="saas---características-1" class="slide level2">
+<h2>SaaS - Características</h2>
+<ul>
+<li>O SaaS apresenta diversas características que o tornam um modelo eficiente para distribuição de software:
+<ul>
+<li>Escalabilidade:
+<ul>
+<li>Pode ser facilmente ajustado conforme a demanda da empresa.</li>
+</ul></li>
+<li>Multiplataforma:
+<ul>
+<li>Compatível com diversos dispositivos e sistemas operacionais.</li>
+</ul></li>
+</ul></li>
+</ul>
+</section>
+<section id="saas---provedores" class="slide level2 smaller">
+<h2>SaaS - Provedores</h2>
+<ul>
+<li>Muitas empresas oferecem soluções SaaS para diferentes necessidades, incluindo:
+<ul>
+<li>Google Workspace:
+<ul>
+<li>Ferramentas como Gmail, Google Drive e Google Docs permitem colaboração em tempo real.</li>
+</ul></li>
+<li>Microsoft 365:
+<ul>
+<li>Conjunto de aplicativos como Word, Excel, Teams e Outlook baseados na nuvem.</li>
+</ul></li>
+<li>Salesforce:
+<ul>
+<li>Plataforma de CRM (Customer Relationship Management) usada para gerenciar clientes e vendas.</li>
+</ul></li>
+</ul></li>
+</ul>
+</section>
+<section id="saas---provedores-1" class="slide level2">
+<h2>SaaS - Provedores</h2>
+<ul>
+<li>Muitas empresas oferecem soluções SaaS para diferentes necessidades, incluindo:
+<ul>
+<li>Dropbox:
+<ul>
+<li>Serviço de armazenamento e compartilhamento de arquivos na nuvem.</li>
+</ul></li>
+<li>Slack:
+<ul>
+<li>Ferramenta de comunicação e colaboração para equipes empresariais.</li>
+</ul></li>
+</ul></li>
+</ul>
+</section>
+<section id="saas---aplicações" class="slide level2 smaller">
+<h2>SaaS - Aplicações</h2>
+<ul>
+<li>O SaaS é amplamente utilizado em diferentes áreas, incluindo:
+<ul>
+<li>Gestão Empresarial:
+<ul>
+<li>Softwares de ERP e CRM ajudam empresas a gerenciar processos e clientes.</li>
+</ul></li>
+<li>Colaboração e Comunicação:
+<ul>
+<li>Aplicações como Zoom e Microsoft Teams permitem reuniões e colaboração online.</li>
+</ul></li>
+<li>E-commerce:
+<ul>
+<li>Plataformas como Shopify e Magento facilitam a criação de lojas virtuais.</li>
+</ul></li>
+</ul></li>
+</ul>
+</section>
+<section id="saas---aplicações-1" class="slide level2">
+<h2>SaaS - Aplicações</h2>
+<ul>
+<li>O SaaS é amplamente utilizado em diferentes áreas, incluindo:
+<ul>
+<li>Marketing Digital:
+<ul>
+<li>Ferramentas como HubSpot e Mailchimp ajudam na automação de campanhas de marketing.</li>
+</ul></li>
+<li>Armazenamento e Backup:
+<ul>
+<li>Serviços como Google Drive e OneDrive permitem armazenar e compartilhar arquivos com segurança.</li>
+</ul></li>
+</ul></li>
+</ul>
+</section>
+<section id="saas---vantagens" class="slide level2 smaller">
+<h2>SaaS - Vantagens</h2>
+<ul>
+<li>Entre os principais benefícios do SaaS, destacam-se:
+<ul>
+<li>Redução de Custos:
+<ul>
+<li>Elimina a necessidade de comprar licenças e servidores.</li>
+</ul></li>
+<li>Fácil Adoção:
+<ul>
+<li>Não exige instalação complexa, permitindo uso imediato.</li>
+</ul></li>
+<li>Atualizações Automáticas:
+<ul>
+<li>O provedor garante que a versão mais recente do software esteja sempre disponível.</li>
+</ul></li>
+</ul></li>
+</ul>
+</section>
+<section id="saas---vantagens-1" class="slide level2">
+<h2>SaaS - Vantagens</h2>
+<ul>
+<li>Entre os principais benefícios do SaaS, destacam-se:
+<ul>
+<li>Acesso Remoto:
+<ul>
+<li>Usuários podem acessar o software de qualquer lugar, facilitando o trabalho remoto.</li>
+</ul></li>
+<li>Segurança e Backup:
+<ul>
+<li>Dados são armazenados na nuvem com proteção e redundância.</li>
+</ul></li>
+</ul></li>
+</ul>
+</section>
+<section id="saas---desafios-e-considerações" class="slide level2 smaller">
+<h2>SaaS - Desafios e Considerações</h2>
+<ul>
+<li>Apesar das vantagens, o SaaS também apresenta desafios:
+<ul>
+<li>Dependência de Internet:
+<ul>
+<li>O acesso ao software depende de uma conexão estável.</li>
+</ul></li>
+<li>Risco de Privacidade:
+<ul>
+<li>Os dados são armazenados em servidores externos, exigindo atenção à segurança.</li>
+</ul></li>
+<li>Customização Limitada:
+<ul>
+<li>Algumas plataformas podem não permitir personalizações avançadas.</li>
+</ul></li>
+<li>Modelo de Assinatura:
+<ul>
+<li>O custo pode se tornar elevado a longo prazo dependendo do número de usuários.</li>
+</ul></li>
+</ul></li>
+</ul>
+</section>
+<section id="modelos---comparativo-entre-os-modelos" class="slide level2">
+<h2>Modelos - Comparativo entre os Modelos</h2>
+
+<img data-src="../images/aula02/comparativo-iaas-paas-saas.png" class="quarto-figure quarto-figure-center r-stretch" style="width:70.0%"></section>
+<section id="modelos---benefícios" class="slide level2">
+<h2>Modelos - Benefícios</h2>
+<ul>
+<li>Os modelos de serviço em nuvem oferecem diversos benefícios:
+<ul>
+<li>escalabilidade,</li>
+<li>redução de custos com infraestrutura,</li>
+<li>acessibilidade remota,</li>
+<li>segurança aprimorada e</li>
+<li>atualizações automáticas.</li>
+</ul></li>
+</ul>
+</section>
+<section id="modelos---benefícios-1" class="slide level2 smaller">
+<h2>Modelos - Benefícios</h2>
+<ul>
+<li>Cada organização pode escolher o modelo mais adequado conforme suas necessidades específicas, permitindo maior eficiência e inovação.</li>
+<li>Com a evolução das tecnologias em nuvem, surgem também modelos híbridos e novas abordagens, como:
+<ul>
+<li>FaaS (Function as a Service)</li>
+<li>CaaS (Container as a Service)</li>
+</ul></li>
+<li>Estes outros modelos podem ampliar ainda mais as possibilidades e flexibilidade para empresas e desenvolvedores.</li>
+</ul>
+</section>
+<section id="modelos" class="slide level2">
+<h2>Modelos</h2>
+
+<img data-src="../images/aula02/piramide-iaas-paas-saas.png" class="quarto-figure quarto-figure-center r-stretch" style="width:55.0%"></section>
+<section id="modelos-1" class="slide level2">
+<h2>Modelos</h2>
+
+<img data-src="../images/aula02/cloud-logos-tecnologias.png" class="quarto-figure quarto-figure-center r-stretch" style="width:50.0%"></section>
+<section id="obrigado" class="slide level2">
+<h2>Obrigado!</h2>
 <aside class="notes">
-<p>Retomar rapidamente a Aula 01: nuvem pública/privada/híbrida. Hoje é “o que se compra” na nuvem.</p>
+<p>Fim da Aula 02 — conteúdo fiel ao material de referência do professor anterior (PDF de 41 slides), com autoria atualizada.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -167,204 +741,6 @@ Ricardo Pasquati Pontarolli
           overflow: hidden!important;
           display:block!important;
       }</style></aside>
-</section>
-<section id="relembrando" class="slide level2">
-<h2>Relembrando</h2>
-<p>Na Aula 01 vimos <strong>onde</strong> a nuvem mora (pública/privada/híbrida).</p>
-<p>Hoje: <strong>o que exatamente você está contratando</strong> quando usa nuvem.</p>
-</section>
-<section id="responsabilidade-compartilhada" class="slide level2">
-<h2>Responsabilidade compartilhada</h2>
-<p>Em toda nuvem, parte da pilha de TI é gerenciada <strong>pelo provedor</strong>, parte <strong>por você</strong>.</p>
-<p>Quanto mais “as a Service”, menos você gerencia — e menos controle você tem.</p>
-
-<img data-src="../images/aula02/comparativo-iaas-paas-saas.png" class="quarto-figure quarto-figure-center r-stretch" style="width:70.0%"></section>
-<section id="iaas-infrastructure-as-a-service" class="slide level2">
-<h2>IaaS — Infrastructure as a Service</h2>
-<ul>
-<li>Você aluga <strong>infraestrutura básica</strong>: servidores virtuais, armazenamento, rede</li>
-<li>Você cuida do sistema operacional, aplicações e dados; o provedor cuida do hardware físico</li>
-<li><strong>Exemplos:</strong> AWS EC2, Azure Virtual Machines, Google Compute Engine, <strong>IBM Cloud</strong></li>
-</ul>
-<ul>
-<li class="fragment">✅ Escalabilidade, pagamento por uso, gerenciamento automatizado da infra física, <strong>acesso remoto</strong></li>
-<li class="fragment">✅ Usos: hospedagem de sites, big data, ambientes de teste, backup/DR, <strong>computação de alto desempenho (HPC)</strong></li>
-<li class="fragment">⚠️ Você ainda precisa administrar o SO e a segurança da aplicação</li>
-</ul>
-</section>
-<section id="iaas-visualmente" class="slide level2">
-<h2>IaaS, visualmente</h2>
-
-<img data-src="../images/aula02/iaas-icones.png" class="quarto-figure quarto-figure-center r-stretch" style="width:60.0%"></section>
-<section id="paas-platform-as-a-service" class="slide level2">
-<h2>PaaS — Platform as a Service</h2>
-<ul>
-<li>Você recebe uma <strong>plataforma pronta</strong> para desenvolver e publicar aplicações</li>
-<li>O provedor cuida do SO, servidor, runtime; você só cuida do <strong>código</strong></li>
-<li><strong>Exemplos:</strong> Google App Engine, Azure App Services, AWS Elastic Beanstalk, Heroku</li>
-</ul>
-<ul>
-<li class="fragment">✅ IDE integrada, deploy simplificado, multiplataforma, <strong>integração facilitada com outros serviços</strong></li>
-<li class="fragment">✅ Usos: desenvolvimento ágil, apps web/mobile, integração de APIs, <strong>machine learning</strong>, <strong>automação de processos</strong></li>
-<li class="fragment">⚠️ Menos controle sobre o ambiente de execução</li>
-</ul>
-</section>
-<section id="paas-visualmente" class="slide level2">
-<h2>PaaS, visualmente</h2>
-
-<img data-src="../images/aula02/paas-marketing.png" class="quarto-figure quarto-figure-center r-stretch" style="width:70.0%"></section>
-<section id="saas-software-as-a-service" class="slide level2">
-<h2>SaaS — Software as a Service</h2>
-<ul>
-<li>Você usa um <strong>software pronto</strong>, via navegador ou app, sem instalar nada</li>
-<li>O provedor cuida de absolutamente tudo (infraestrutura, plataforma e aplicação)</li>
-<li><strong>Exemplos:</strong> Google Workspace, Microsoft 365, Salesforce, Dropbox, Slack, Netflix, Spotify</li>
-</ul>
-<ul>
-<li class="fragment">✅ Acesso de qualquer lugar, atualização automática, modelo por assinatura, <strong>escalabilidade automática</strong></li>
-<li class="fragment">✅ Usos: ERP/CRM, colaboração, e-commerce, <strong>marketing digital</strong>, <strong>backup</strong></li>
-<li class="fragment">⚠️ Zero controle sobre a infraestrutura ou o código</li>
-</ul>
-</section>
-<section id="saas-visualmente" class="slide level2">
-<h2>SaaS, visualmente</h2>
-
-<img data-src="../images/aula02/saas-marketing.png" class="quarto-figure quarto-figure-center r-stretch" style="width:55.0%"></section>
-<section id="comparando-os-três-modelos" class="slide level2">
-<h2>Comparando os três modelos</h2>
-<table class="caption-top">
-<thead>
-<tr class="header">
-<th></th>
-<th>Você gerencia</th>
-<th>Provedor gerencia</th>
-<th>Exemplo</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><strong>IaaS</strong></td>
-<td>SO, apps, dados</td>
-<td>Servidores, rede, storage</td>
-<td>AWS EC2</td>
-</tr>
-<tr class="even">
-<td><strong>PaaS</strong></td>
-<td>Aplicação, dados</td>
-<td>SO, runtime, infraestrutura</td>
-<td>Heroku</td>
-</tr>
-<tr class="odd">
-<td><strong>SaaS</strong></td>
-<td>Só o uso</td>
-<td>Tudo</td>
-<td>Gmail</td>
-</tr>
-</tbody>
-</table>
-<div class="fragment">
-<p>Quanto mais à direita → <strong>menos trabalho técnico, menos controle</strong>.</p>
-</div>
-</section>
-<section id="a-pirâmide-iaas-paas-saas" class="slide level2">
-<h2>A pirâmide IaaS / PaaS / SaaS</h2>
-
-<img data-src="../images/aula02/piramide-iaas-paas-saas.png" class="quarto-figure quarto-figure-center r-stretch" style="width:55.0%"></section>
-<section id="tecnologias-por-camada" class="slide level2">
-<h2>Tecnologias por camada</h2>
-
-<img data-src="../images/aula02/cloud-logos-tecnologias.png" class="quarto-figure quarto-figure-center r-stretch" style="width:55.0%"></section>
-<section id="visão-detalhada-por-camada" class="slide level2">
-<h2>Visão detalhada por camada</h2>
-
-<img data-src="../images/aula02/nist-responsabilidade-compartilhada.png" class="quarto-figure quarto-figure-center r-stretch" style="width:85.0%"></section>
-<section id="e-além-dos-três-clássicos" class="slide level2">
-<h2>E além dos três clássicos?</h2>
-<ul>
-<li><strong>FaaS</strong> (Function as a Service) — você só envia uma função, a nuvem executa sob demanda (ex.: AWS Lambda)</li>
-<li><strong>CaaS</strong> (Container as a Service) — você gerencia containers, a nuvem cuida da orquestração (ex.: Azure Container Apps)</li>
-</ul>
-</section>
-<section id="discussão-rápida" class="slide level2" data-background-color="#eaf5ec">
-<h2>Discussão rápida</h2>
-<p>Para cada serviço abaixo, classifiquem <strong>IaaS, PaaS ou SaaS</strong>:</p>
-<ol type="1">
-<li>Uma VM alugada na AWS para rodar seu próprio site</li>
-<li>O Heroku, onde você só envia seu código Python</li>
-<li>O Google Docs</li>
-<li>Uma Google App Engine hospedando seu app</li>
-</ol>
-</section>
-<section id="a-arquitetura-de-referência-nist" class="slide level2">
-<h2>A Arquitetura de Referência NIST</h2>
-<p>O <strong>NIST</strong> (National Institute of Standards and Technology, EUA) publicou em 2011 a definição formal de computação em nuvem — hoje é a referência mundial (documento SP 800-145).</p>
-<p>Ela define a nuvem por <strong>5 características essenciais, 3 modelos de serviço e 4 modelos de implantação</strong>.</p>
-</section>
-<section id="as-5-características-essenciais-nist" class="slide level2">
-<h2>As 5 características essenciais (NIST)</h2>
-<ol type="1">
-<li class="fragment"><strong>Self-service sob demanda</strong> — o usuário provisiona recursos sozinho, sem intervenção humana do provedor</li>
-<li class="fragment"><strong>Amplo acesso via rede</strong> — disponível pela internet, em qualquer dispositivo</li>
-<li class="fragment"><strong>Pool de recursos</strong> — recursos compartilhados dinamicamente entre múltiplos clientes (multi-tenancy)</li>
-<li class="fragment"><strong>Elasticidade rápida</strong> — recursos aumentam/diminuem automaticamente conforme a demanda</li>
-<li class="fragment"><strong>Serviço mensurável</strong> — uso é monitorado, controlado e cobrado de forma transparente (pay-per-use)</li>
-</ol>
-</section>
-<section id="os-3-modelos-de-serviço-nist" class="slide level2">
-<h2>Os 3 modelos de serviço (NIST)</h2>
-<p>Exatamente o que já vimos: <strong>IaaS, PaaS e SaaS</strong> — o NIST formaliza essa mesma divisão.</p>
-</section>
-<section id="os-4-modelos-de-implantação-nist" class="slide level2">
-<h2>Os 4 modelos de implantação (NIST)</h2>
-<ul>
-<li><strong>Nuvem pública</strong> e <strong>Nuvem privada</strong> (já vistos)</li>
-<li><strong>Nuvem híbrida</strong> (já vista)</li>
-<li><strong>Nuvem comunitária</strong> — infraestrutura compartilhada por várias organizações com interesses/requisitos em comum (ex.: hospitais de uma mesma rede pública, universidades de um consórcio)</li>
-</ul>
-<div class="callout callout-note callout-titled callout-style-default">
-<div class="callout-body">
-<div class="callout-title">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<p><strong>Nota</strong></p>
-</div>
-<div class="callout-content">
-<p>O NIST formaliza em normas o que o mercado já usa na prática — por isso é a referência citada em provas, certificações (AWS, Azure, CompTIA Cloud+) e documentos técnicos.</p>
-</div>
-</div>
-</div>
-</section>
-<section id="atividade-da-aula" class="slide level2">
-<h2>Atividade da aula</h2>
-<div class="callout-lab">
-<p><strong>Em duplas (10 min):</strong></p>
-<p>Escolham uma empresa (real ou fictícia) e desenhem, em texto, uma arquitetura de nuvem para ela usando os conceitos do NIST:</p>
-<ol type="1">
-<li>Qual modelo de implantação (público/privado/híbrido/comunitário)?</li>
-<li>Quais partes usam IaaS, PaaS ou SaaS?</li>
-<li>Qual das 5 características essenciais é mais importante para essa empresa e por quê?</li>
-</ol>
-</div>
-</section>
-<section id="síntese-da-aula" class="slide level2">
-<h2>Síntese da aula</h2>
-<ul>
-<li><strong>IaaS / PaaS / SaaS</strong> — diferem em quanto você gerencia vs.&nbsp;quanto o provedor gerencia</li>
-<li><strong>NIST SP 800-145</strong> formaliza a nuvem em <strong>5 características + 3 modelos de serviço + 4 modelos de implantação</strong></li>
-<li>Existe uma 4ª modalidade de implantação além das 3 já vistas: <strong>comunitária</strong></li>
-</ul>
-</section>
-<section id="próxima-aula" class="slide level2">
-<h2>Próxima aula</h2>
-<p><strong>Novos Modelos de Infraestrutura</strong> — Grades Computacionais e TI Verde</p>
-</section>
-<section id="referências" class="slide level2">
-<h2>Referências</h2>
-<ul>
-<li>NIST SP 800-145 — <em>The NIST Definition of Cloud Computing</em></li>
-<li>CHEE, B.; FRANKLIN, C. <em>Computação em Nuvem</em>. M Books, 2013.</li>
-</ul>
 
 
 </section>

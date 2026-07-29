@@ -10,7 +10,7 @@
   <meta name="generator" content="quarto-1.9.38">
 
   <meta name="author" content="Ricardo Pasquati Pontarolli">
-  <title>Computação em Nuvem e Virtualização – Aula 09 — Docker: Conceitos e Arquitetura</title>
+  <title>Computação em Nuvem e Virtualização – Aula 09 — Docker</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -31,72 +31,6 @@
       margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
       vertical-align: middle;
     }
-    /* CSS for syntax highlighting */
-    html { -webkit-text-size-adjust: 100%; }
-    pre > code.sourceCode { white-space: pre; position: relative; }
-    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-    pre > code.sourceCode > span:empty { height: 1.2em; }
-    .sourceCode { overflow: visible; }
-    code.sourceCode > span { color: inherit; text-decoration: inherit; }
-    div.sourceCode { margin: 1em 0; }
-    pre.sourceCode { margin: 0; }
-    @media screen {
-    div.sourceCode { overflow: auto; }
-    }
-    @media print {
-    pre > code.sourceCode { white-space: pre-wrap; }
-    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-    }
-    pre.numberSource code
-      { counter-reset: source-line 0; }
-    pre.numberSource code > span
-      { position: relative; left: -4em; counter-increment: source-line; }
-    pre.numberSource code > span > a:first-child::before
-      { content: counter(source-line);
-        position: relative; left: -1em; text-align: right; vertical-align: baseline;
-        border: none; display: inline-block;
-        -webkit-touch-callout: none; -webkit-user-select: none;
-        -khtml-user-select: none; -moz-user-select: none;
-        -ms-user-select: none; user-select: none;
-        padding: 0 4px; width: 4em;
-      }
-    pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-    div.sourceCode
-      { color: #24292e;  }
-    @media screen {
-    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-    }
-    code span { color: #24292e; } /* Normal */
-    code span.al { color: #ff5555; font-weight: bold; } /* Alert */
-    code span.an { color: #6a737d; } /* Annotation */
-    code span.at { color: #d73a49; } /* Attribute */
-    code span.bn { color: #005cc5; } /* BaseN */
-    code span.bu { color: #d73a49; } /* BuiltIn */
-    code span.cf { color: #d73a49; } /* ControlFlow */
-    code span.ch { color: #032f62; } /* Char */
-    code span.cn { color: #005cc5; } /* Constant */
-    code span.co { color: #6a737d; } /* Comment */
-    code span.cv { color: #6a737d; } /* CommentVar */
-    code span.do { color: #6a737d; } /* Documentation */
-    code span.dt { color: #d73a49; } /* DataType */
-    code span.dv { color: #005cc5; } /* DecVal */
-    code span.er { color: #ff5555; text-decoration: underline; } /* Error */
-    code span.ex { color: #d73a49; font-weight: bold; } /* Extension */
-    code span.fl { color: #005cc5; } /* Float */
-    code span.fu { color: #6f42c1; } /* Function */
-    code span.im { color: #032f62; } /* Import */
-    code span.in { color: #6a737d; } /* Information */
-    code span.kw { color: #d73a49; } /* Keyword */
-    code span.op { color: #24292e; } /* Operator */
-    code span.ot { color: #6f42c1; } /* Other */
-    code span.pp { color: #d73a49; } /* Preprocessor */
-    code span.re { color: #6a737d; } /* RegionMarker */
-    code span.sc { color: #005cc5; } /* SpecialChar */
-    code span.ss { color: #032f62; } /* SpecialString */
-    code span.st { color: #032f62; } /* String */
-    code span.va { color: #e36209; } /* Variable */
-    code span.vs { color: #032f62; } /* VerbatimString */
-    code span.wa { color: #ff5555; } /* Warning */
   </style>
   <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-cb2d768d0ea881c528f2cf8dea13150b.css">
   <link href="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
@@ -198,7 +132,7 @@
     <div class="slides">
 
 <section id="title-slide" class="quarto-title-block center">
-  <h1 class="title">Aula 09 — Docker: Conceitos e Arquitetura</h1>
+  <h1 class="title">Aula 09 — Docker</h1>
   <p class="subtitle">Computação em Nuvem e Virtualização</p>
 
 <div class="quarto-title-authors">
@@ -207,195 +141,356 @@
 Ricardo Pasquati Pontarolli 
 </div>
         <p class="quarto-title-affiliation">
-            Técnico em Redes de Computadores · IFSP Boituva · pasquati@ifsp.edu.br · v29
+            Técnico em Redes de Computadores · IFSP Boituva · pasquati@ifsp.edu.br · v31
           </p>
     </div>
 </div>
 
 </section>
-<section id="objetivos-da-aula" class="slide level2">
-<h2>Objetivos da aula</h2>
+<section id="introdução---docker" class="slide level2">
+<h2>Introdução - Docker</h2>
 <ul>
-<li>Entender o que é um <strong>container</strong> e como difere de uma VM</li>
-<li>Conhecer a <strong>arquitetura do Docker</strong></li>
-<li>Entender <strong>imagens, camadas e o ecossistema</strong> Docker</li>
+<li>É uma ferramenta que se apoia em recursos existentes no kernel, inicialmente Linux, para isolar a execução de processos.</li>
+<li>As ferramentas que o Docker traz são basicamente uma camada de administração de containers, baseado originalmente no LXC.</li>
+<li>O Docker é uma plataforma de código aberto que permite aos desenvolvedores construir, implementar, executar, atualizar e gerenciar containers.</li>
 </ul>
-<aside class="notes">
-<p>Conectar com as Aulas 04/05: containers são “outra forma” de virtualizar, mais leve.</p>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
 </section>
-<section id="de-onde-vem-o-docker" class="slide level2">
-<h2>De onde vem o Docker</h2>
+<section id="introdução---docker-1" class="slide level2">
+<h2>Introdução - Docker</h2>
+<ul>
+<li>A palavra “Docker” possui várias definições:
+<ul>
+<li>um projeto da comunidade open source;</li>
+<li>as ferramentas resultantes desse projeto;</li>
+<li>a empresa Docker Inc., principal apoiadora do projeto;</li>
+<li>e as ferramentas compatíveis formalmente com a empresa.</li>
+</ul></li>
+<li>O fato da empresa e das tecnologias terem o mesmo nome pode causar alguma confusão.</li>
+</ul>
+</section>
+<section id="introdução---docker-2" class="slide level2">
+<h2>Introdução - Docker</h2>
+<ul>
+<li>O software de TI “Docker” é uma tecnologia de conteinerização para criação e uso de containers Linux.</li>
+<li>A comunidade open source do Docker trabalha gratuitamente para melhorar essas tecnologias para todos os usuários.</li>
+<li>A empresa Docker Inc.&nbsp;se baseia no trabalho realizado pela comunidade do Docker, tornando-o mais seguro, e compartilha os avanços com a comunidade em geral.</li>
+<li>Depois, ela oferece aos clientes empresariais o suporte necessário para as tecnologias, que foram aprimoradas e fortalecidas.</li>
+</ul>
+</section>
+<section id="introdução---docker-3" class="slide level2">
+<h2>Introdução - Docker</h2>
+<ul>
+<li>Com o Docker, é possível lidar com os containers como se fossem máquinas virtuais modulares e extremamente lightweight.</li>
+<li>Além disso, os containers oferecem maior flexibilidade para você criar, implantar, copiar e migrar um container de um ambiente para outro.</li>
+</ul>
+</section>
+<section id="introdução---docker---como-funciona" class="slide level2">
+<h2>Introdução - Docker - Como funciona</h2>
+<ul>
+<li>A tecnologia Docker usa o kernel do Linux e funcionalidades do kernel, como cGroups e namespaces, para segregar processos.</li>
+<li>Assim, eles podem ser executados de maneira independente.</li>
+<li>O objetivo dos containers é criar independência:
+<ul>
+<li>a habilidade de executar diversos processos e apps separadamente para utilizar melhor a infraestrutura e,</li>
+<li>ao mesmo tempo, manter a segurança que você teria em sistemas separados.</li>
+</ul></li>
+</ul>
+</section>
+<section id="introdução---docker---como-funciona-1" class="slide level2">
+<h2>Introdução - Docker - Como funciona</h2>
+<ul>
+<li>As ferramentas de container, incluindo o Docker, incluem um modelo de implantação com base em imagem.</li>
+<li>Isso facilita o compartilhamento de uma aplicação ou conjunto de serviços, incluindo todas as dependências deles em vários ambientes.</li>
+<li>O Docker também automatiza a implantação da aplicação (ou de conjuntos de processos que constituem uma app) dentro desse ambiente de containers.</li>
+</ul>
+</section>
+<section id="containers" class="slide level2">
+<h2>Containers</h2>
+<ul>
+<li>Contêineres são unidades executáveis de software que empacotam o código da aplicação juntamente com suas bibliotecas e dependências.</li>
+<li>Eles permitem que o código seja executado em qualquer ambiente de computação, seja desktop, TI tradicional ou infraestrutura de nuvem.</li>
+<li>Os contêineres aproveitam uma forma de virtualização do sistema operacional (SO) na qual os recursos do kernel do SO podem ser usados para isolar processos e controlar a quantidade de CPU, memória e disco que esses processos podem acessar.</li>
+</ul>
+</section>
+<section id="containers-1" class="slide level2">
+<h2>Containers</h2>
+<ul>
+<li>Mais portáteis e eficientes em termos de recursos do que as máquinas virtuais (VMs), os contêineres se tornaram as unidades de computação de fato de aplicações nativas da nuvem modernas.</li>
+<li>Uma forma de entender melhor um contêiner é examinar como ele difere de uma máquina virtual (VM) tradicional,</li>
+<li>Uma VM é geralmente chamada de “convidado”, enquanto a máquina física em que ela é executada é chamada de “hospedeira”.</li>
+</ul>
+</section>
+<section id="containers-2" class="slide level2">
+<h2>Containers</h2>
+<ul>
+<li>Em vez de virtualizar o hardware subjacente, a tecnologia de contêiner virtualiza o SO para que cada contêiner contenha somente a aplicação e suas bibliotecas, arquivos de configuração e dependências.</li>
+<li>A ausência do sistema operacional convidado é o motivo pelo qual os contêineres são tão leves e, portanto, mais rápidos e mais portáteis do que as máquinas virtuais.</li>
+<li>Contêineres e máquinas virtuais não são mutuamente exclusivos.
+<ul>
+<li>Ex: uma organização pode aproveitar as duas tecnologias executando contêineres nas VMs para aumentar o isolamento e a segurança e aproveitar as ferramentas já instaladas para automação, backup e monitoramento.</li>
+</ul></li>
+</ul>
+</section>
+<section id="containers---benefícios" class="slide level2">
+<h2>Containers - Benefícios</h2>
+<ul>
+<li>A principal vantagem dos contêineres, especialmente em comparação com uma VM, é que eles fornecem um nível de abstração que os torna leves e portáteis.</li>
+<li>Seus principais benefícios incluem:
+<ul>
+<li>Leve:
+<ul>
+<li>Os contêineres compartilham o kernel do sistema operacional da máquina.</li>
+<li>O tamanho menor de um contêiner significa que ele pode ser executado rapidamente e oferecer melhor suporte a aplicações nativas da nuvem que escalam horizontalmente.</li>
+</ul></li>
+</ul></li>
+</ul>
+</section>
+<section id="containers---benefícios-1" class="slide level2">
+<h2>Containers - Benefícios</h2>
+<ul>
+<li>Seus principais benefícios incluem:
+<ul>
+<li>Portátil e independente de plataforma
+<ul>
+<li>Os contêineres carregam todas as suas dependências com eles, o que significa que o software pode ser escrito uma única vez e depois executado sem precisar ser reconfigurado em ambientes de computação.</li>
+</ul></li>
+<li>Compatíveis com desenvolvimento e arquitetura modernos
+<ul>
+<li>Os contêineres são ideais para padrões de desenvolvimento e aplicações modernos, como DevOps, serverless e microsserviços.</li>
+</ul></li>
+</ul></li>
+</ul>
+</section>
+<section id="docker" class="slide level2">
+<h2>Docker</h2>
+<ul>
+<li>Definição oficial
+<ul>
+<li>Containers Docker empacotam componentes de software em um sistema de arquivos completo, que contêm tudo necessário para a execução: código, runtime, ferramentas de sistema - qualquer coisa que possa ser instalada em um servidor.</li>
+<li>Isto garante que o software sempre irá executar da mesma forma, independente do seu ambiente.</li>
+</ul></li>
+</ul>
 
-<img data-src="../images/aula09/docker-logo.svg" class="quarto-figure quarto-figure-center r-stretch" style="width:25.0%"><ul>
-<li>Lançado em <strong>2013</strong>, baseado em tecnologias mais antigas do kernel Linux: <strong>cgroups</strong>, <strong>namespaces</strong> e o projeto <strong>LXC (Linux Containers)</strong>, que já existia antes e inspirou o Docker</li>
-<li>“Docker” tem vários significados: o <strong>projeto open source</strong>, o <strong>conjunto de ferramentas</strong>, e a <strong>empresa</strong> por trás dele</li>
-</ul>
-</section>
-<section id="como-funciona-por-baixo-dos-panos" class="slide level2">
-<h2>Como funciona por baixo dos panos</h2>
+<img data-src="../images/aula09/docker-logo.svg" class="quarto-figure quarto-figure-center r-stretch" style="width:30.0%"></section>
+<section id="docker-1" class="slide level2">
+<h2>Docker</h2>
 <ul>
-<li><strong>cgroups (control groups)</strong> — limitam quanto de CPU, memória e disco cada container pode usar</li>
-<li><strong>namespaces</strong> — isolam o que cada container “enxerga” (processos, rede, sistema de arquivos), mesmo compartilhando o mesmo kernel</li>
-<li>Diferente de uma VM, o container <strong>não emula hardware nem roda um SO completo</strong> — ele usa o <strong>kernel do sistema hospedeiro diretamente</strong></li>
+<li>O Docker tende a utilizar menos recursos que uma VM tradicional, um dos motivos é não precisar de uma pilha completa como vemos em Comparação VMs x Containers.</li>
+<li>O Docker utiliza o mesmo kernel do host, e ainda pode compartilhar bibliotecas.</li>
+<li>Mesmo utilizando o mesmo kernel é possível utilizar outra distribuição com versões diferentes das bibliotecas e aplicativos.</li>
 </ul>
 </section>
-<section id="containers-x-máquinas-virtuais" class="slide level2">
-<h2>Containers x Máquinas Virtuais</h2>
-<table class="caption-top">
-<colgroup>
-<col style="width: 33%">
-<col style="width: 33%">
-<col style="width: 33%">
-</colgroup>
-<thead>
-<tr class="header">
-<th></th>
-<th>VM</th>
-<th>Container</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>O que roda</td>
-<td>SO completo (guest)</td>
-<td>Só a aplicação + dependências</td>
-</tr>
-<tr class="even">
-<td>Isolamento</td>
-<td>Hipervisor (forte)</td>
-<td>Kernel compartilhado (namespaces/cgroups)</td>
-</tr>
-<tr class="odd">
-<td>Peso</td>
-<td>Pesado (GBs)</td>
-<td>Leve (MBs)</td>
-</tr>
-<tr class="even">
-<td>Boot</td>
-<td>Minutos</td>
-<td>Segundos (ou menos)</td>
-</tr>
-<tr class="odd">
-<td>Portabilidade</td>
-<td>Média</td>
-<td>Alta</td>
-</tr>
-</tbody>
-</table>
-<div class="callout callout-note callout-titled callout-style-default">
-<div class="callout-body">
-<div class="callout-title">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<p><strong>Nota</strong></p>
-</div>
-<div class="callout-content">
-<p>VMs e containers <strong>não são mutuamente exclusivos</strong> — é comum rodar containers <strong>dentro</strong> de uma VM (é exatamente assim que a maioria da nuvem pública funciona).</p>
-</div>
-</div>
-</div>
-</section>
-<section id="vm-x-container-diagrama-original-de-referência" class="slide level2">
-<h2>VM x Container — diagrama original de referência</h2>
+<section id="docker-2" class="slide level2">
+<h2>Docker</h2>
 
 <img data-src="../images/aula09/vm-x-container-original.png" class="quarto-figure quarto-figure-center r-stretch" style="width:80.0%"></section>
-<section id="docker-logo-original-de-referência" class="slide level2">
-<h2>Docker — logo original de referência</h2>
-
-<img data-src="../images/aula09/docker-logo-original.png" class="quarto-figure quarto-figure-center r-stretch" style="width:45.0%"></section>
-<section id="vários-containers-um-só-kernel" class="slide level2">
-<h2>Vários containers, um só kernel</h2>
+<section id="docker-3" class="slide level2">
+<h2>Docker</h2>
+<ul>
+<li>Devo trocar então minha VM por um container?
+<ul>
+<li>Nem sempre, os containers Docker possuem algumas limitações em relação as VMs:</li>
+</ul></li>
+<li>Limitações:
+<ul>
+<li>Todas as imagens são linux, apesar do host poder ser qualquer SO que use ou emule um kernel linux, as imagens em si serão baseadas em linux.</li>
+<li>Não é possível usar um kernel diferente do host, o Docker Engine estará executando sob uma determinada versão (ou emulação) do kernel linux, e não é possível executar uma versão diferente, pois as imagens não possuem kernel.</li>
+</ul></li>
+</ul>
+</section>
+<section id="docker---container" class="slide level2">
+<h2>Docker - Container</h2>
+<ul>
+<li>Container é o nome dado para a segregação de processos no mesmo kernel, de forma que o processo seja isolado o máximo possível de todo o resto do ambiente.</li>
+<li>Em termos práticos são File Systems, criados a partir de uma “imagem” e que podem possuir também algumas características próprias.</li>
+</ul>
+</section>
+<section id="docker---container-1" class="slide level2">
+<h2>Docker - Container</h2>
 
 <img data-src="../images/aula09/containers-kernel.png" class="quarto-figure quarto-figure-center r-stretch" style="width:60.0%"></section>
-<section id="limitação-importante-do-docker" class="slide level2">
-<h2>Limitação importante do Docker</h2>
+<section id="docker---imagens-docker" class="slide level2">
+<h2>Docker - Imagens Docker</h2>
 <ul>
-<li>Todos os containers Docker em um host compartilham o <strong>mesmo kernel</strong> do sistema hospedeiro</li>
-<li>Por isso, <strong>todas as imagens Docker rodam sobre kernel Linux</strong> — não é possível rodar um container Windows sobre um host Linux (e vice-versa) sem uma camada extra de virtualização</li>
+<li>Uma imagem Docker é a materialização de um modelo de um sistema de arquivos, modelo este produzido através de um processo chamado build.</li>
+<li>Esta imagem é representada por um ou mais arquivos e pode ser armazenada em um repositório.</li>
+<li>Docker File Systems
+<ul>
+<li>O Docker utiliza file systems especiais para otimizar o uso, transferência e armazenamento das imagens, containers e volumes.</li>
+<li>O principal é o AUFS, que armazena os dados em camadas sobrepostas, e somente a camada mais recente é gravável.</li>
+</ul></li>
 </ul>
 </section>
-<section id="o-que-é-um-container-na-prática" class="slide level2">
-<h2>O que é um container, na prática</h2>
-<blockquote>
-<p>Uma <strong>unidade executável leve</strong>, empacotando código, bibliotecas e dependências — o sistema de arquivos completo necessário para a aplicação rodar, isolado do resto do sistema.</p>
-</blockquote>
-</section>
-<section id="benefícios-dos-containers" class="slide level2">
-<h2>Benefícios dos containers</h2>
+<section id="docker---tecnologias" class="slide level2">
+<h2>Docker - Tecnologias</h2>
 <ul>
-<li class="fragment"><strong>Leveza</strong> — muito menor que uma VM, inicia quase instantaneamente</li>
-<li class="fragment"><strong>Portabilidade</strong> — “funciona na minha máquina” deixa de ser problema: o container carrega tudo que precisa</li>
-<li class="fragment"><strong>Compatibilidade com DevOps</strong> — essencial para integração/entrega contínua (CI/CD)</li>
-<li class="fragment">Base de <strong>microsserviços</strong> e arquiteturas serverless modernas</li>
+<li>Docker Compose:
+<ul>
+<li>Uma ferramenta para definir e executar aplicativos Docker a partir de vários contêineres.</li>
+</ul></li>
+<li>Docker Hub:
+<ul>
+<li>Um repositório com mais de 250 mil imagens diferentes para os seus containers.</li>
+</ul></li>
+<li>Docker Swarm:
+<ul>
+<li>Ferramenta nativa de orquestração do docker.</li>
+<li>Permite que containers executem distribuídos em em um cluster, controlando a quantidade de containers, registro, deploy e update de serviços.</li>
+</ul></li>
 </ul>
 </section>
-<section id="imagens-docker" class="slide level2">
-<h2>Imagens Docker</h2>
-<ul>
-<li>Uma <strong>imagem</strong> é o “molde” — read-only, contém tudo que o container precisa para rodar</li>
-<li>Um <strong>container</strong> é uma <strong>instância em execução</strong> dessa imagem (efêmero, pode ser destruído e recriado)</li>
-<li>Imagens são construídas em <strong>camadas</strong> (layers): cada instrução do build adiciona uma camada</li>
-<li>Tecnicamente, isso é implementado com sistemas de arquivos como <strong>AUFS</strong> ou <strong>OverlayFS</strong>, que empilham as camadas de forma eficiente</li>
-<li>Só a <strong>última camada</strong> (a do container em execução) é gravável — as camadas da imagem original permanecem read-only</li>
-</ul>
-</section>
-<section id="dockerfile" class="slide level2">
-<h2>Dockerfile</h2>
-<ul>
-<li>Arquivo de texto com as <strong>instruções para construir uma imagem</strong></li>
-<li>Cada linha do Dockerfile normalmente gera <strong>uma nova camada</strong></li>
-<li>Exemplo conceitual (não precisa decorar agora, veremos na prática):</li>
-</ul>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode numberSource dockerfile number-lines code-with-copy"><code class="sourceCode dockerfile"><span id="cb1-1"><a></a><span class="kw">FROM</span> python:3</span>
-<span id="cb1-2"><a></a><span class="kw">COPY</span> app.py /app.py</span>
-<span id="cb1-3"><a></a><span class="kw">RUN</span> <span class="ex">pip</span> install flask</span>
-<span id="cb1-4"><a></a><span class="kw">CMD</span> [<span class="st">"python"</span>, <span class="st">"/app.py"</span>]</span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
-</section>
-<section id="arquitetura-do-docker-clienteservidor" class="slide level2">
-<h2>Arquitetura do Docker (cliente/servidor)</h2>
-<ul>
-<li><strong>Docker Client</strong> — a interface de linha de comando (<code>docker ...</code>) que você usa</li>
-<li><strong>Docker Daemon (<code>dockerd</code>)</strong> — processo que roda em segundo plano, gerencia containers, imagens, redes e volumes</li>
-<li>Cliente e daemon se comunicam via <strong>API REST</strong></li>
-<li><strong>Docker Host</strong> — a máquina (física ou virtual) onde o daemon roda</li>
-</ul>
-</section>
-<section id="objetos-docker" class="slide level2">
-<h2>Objetos Docker</h2>
-<ul>
-<li><strong>Imagens</strong> — os moldes read-only</li>
-<li><strong>Containers</strong> — instâncias em execução</li>
-<li><strong>Redes</strong> — conectividade entre containers</li>
-<li><strong>Volumes</strong> — armazenamento persistente, que sobrevive mesmo se o container for destruído</li>
-<li><strong>Plugins</strong> — extensões de funcionalidade</li>
-</ul>
-</section>
-<section id="o-ecossistema-docker" class="slide level2">
-<h2>O ecossistema Docker</h2>
-<ul>
-<li><strong>Docker Hub</strong> — repositório público com mais de 250 mil imagens prontas (<code>mysql</code>, <code>python</code>, <code>nginx</code>, <code>ubuntu</code>…)</li>
-<li><strong>Docker Desktop</strong> — aplicativo com interface gráfica para rodar Docker localmente no Windows/Mac, sem precisar da linha de comando para tudo</li>
-<li><strong>Docker Compose</strong> — define e roda <strong>múltiplos containers juntos</strong> via um arquivo YAML (ex.: app + banco de dados)</li>
-<li><strong>Docker Swarm</strong> — orquestração nativa do Docker, para gerenciar containers em vários hosts</li>
-</ul>
-</section>
-<section id="docker-swarm-visão-geral" class="slide level2">
-<h2>Docker Swarm — visão geral</h2>
+<section id="docker---tecnologias-1" class="slide level2">
+<h2>Docker - Tecnologias</h2>
 
-<img data-src="../images/aula09/docker-swarm.png" class="quarto-figure quarto-figure-center r-stretch" style="width:60.0%"><aside class="notes">
-<p>Não aprofundar Compose/Swarm agora — só situar que existem, para quando o aluno for além do curso.</p>
+<img data-src="../images/aula09/docker-swarm.png" class="quarto-figure quarto-figure-center r-stretch" style="width:55.0%"></section>
+<section id="docker---arquitetura" class="slide level2">
+<h2>Docker - Arquitetura</h2>
+<ul>
+<li>O Docker usa uma arquitetura cliente/servidor.</li>
+<li>A seguir encontra-se um detalhamento dos principais componentes associados ao Docker, juntamente com com outros termos e ferramentas do Docker.</li>
+<li>Host do Docker:
+<ul>
+<li>É uma máquina física ou virtual que executa o sistema operacional compatível.</li>
+</ul></li>
+<li>Docker Engine:
+<ul>
+<li>É a aplicação cliente/servidor que consiste no daemon do Docker, uma API do Docker que interage com o daemon e uma interface de linha de comando (CLI) que se comunica com o daemon.</li>
+</ul></li>
+</ul>
+</section>
+<section id="docker---arquitetura-1" class="slide level2">
+<h2>Docker - Arquitetura</h2>
+<ul>
+<li>Daemon do Docker:
+<ul>
+<li>É um serviço que cria e gerencia imagens do Docker usando os comandos do cliente.</li>
+<li>Essencialmente, serve como o centro de controle para a implementação do Docker.</li>
+</ul></li>
+<li>Cliente do Docker:
+<ul>
+<li>Fornece a CLI que acessa a API do Docker (uma API REST) para se comunicar com o daemon do Docker por meio de soquetes Unix ou de uma interface de rede.</li>
+<li>Pode ser conectado a um daemon remotamente, ou um desenvolvedor pode executar o daemon e o cliente no mesmo sistema de computador.</li>
+</ul></li>
+</ul>
+</section>
+<section id="docker---arquitetura-2" class="slide level2">
+<h2>Docker - Arquitetura</h2>
+<ul>
+<li>Objetos do Docker:
+<ul>
+<li>São componentes de uma implementação do Docker que ajudam a empacotar e distribuir aplicações.</li>
+<li>Eles incluem imagens, contêineres, redes, volumes, plug-ins e muito mais.</li>
+</ul></li>
+<li>Contêineres do Docker:
+<ul>
+<li>São instâncias ativas e em execução de imagens do Docker.</li>
+<li>Enquanto as imagens do Docker são arquivos somente leitura, os contêineres são conteúdos executáveis e efêmeros.</li>
+<li>Os usuários podem interagir com eles, e os administradores podem ajustar suas configurações e condições usando comandos do Docker.</li>
+</ul></li>
+</ul>
+</section>
+<section id="docker---arquitetura-3" class="slide level2">
+<h2>Docker - Arquitetura</h2>
+<ul>
+<li>Imagens do Docker:
+<ul>
+<li>Contêm código fonte executável da aplicação e todas as ferramentas, bibliotecas e dependências de que o código da aplicação precisa para ser executado como um contêiner.</li>
+<li>Quando um desenvolvedor executa a imagem do Docker, ela se torna uma instância (ou várias instâncias) do contêiner.</li>
+<li>É possível criar imagens do Docker do zero, mas a maioria dos desenvolvedores as extrai de repositórios comuns.</li>
+<li>Os desenvolvedores podem criar várias imagens do Docker a partir de uma única imagem de base e compartilharão os pontos em comum de sua stack.</li>
+</ul></li>
+</ul>
+</section>
+<section id="docker---arquitetura-4" class="slide level2">
+<h2>Docker - Arquitetura</h2>
+<ul>
+<li>Imagens do Docker:
+<ul>
+<li>As imagens do Docker são compostas por camadas, e cada camada corresponde a uma versão da imagem.</li>
+<li>Sempre que um desenvolvedor faz alterações na imagem, uma nova camada superior é criada, substituindo a camada superior anterior como a versão atual da imagem.</li>
+<li>Camadas anteriores são salvas para reversões ou para serem reutilizadas em outros projetos.</li>
+<li>Cada vez que um contêiner é criado a partir de uma imagem do Docker, outra nova camada é criada.</li>
+<li>As alterações feitas no contêiner, como adicionar ou excluir arquivos, são salvas na camada do contêiner, e essas alterações só existem enquanto o contêiner está em execução.</li>
+</ul></li>
+</ul>
+</section>
+<section id="docker---arquitetura-5" class="slide level2">
+<h2>Docker - Arquitetura</h2>
+<ul>
+<li>Docker build:
+<ul>
+<li>É um comando que possui ferramentas e recursos para criar imagens do Docker.</li>
+</ul></li>
+<li>Dockerfile:
+<ul>
+<li>Todo contêiner do Docker começa com um arquivo de texto simples contendo instruções sobre como construir a imagem do contêiner do Docker.</li>
+<li>O Dockerfile automatiza o processo de criação de imagens do Docker.</li>
+<li>É essencialmente uma lista de instruções CLI que o Docker Engine executará para montar a imagem.</li>
+</ul></li>
+</ul>
+</section>
+<section id="docker---arquitetura-6" class="slide level2">
+<h2>Docker - Arquitetura</h2>
+<ul>
+<li>Documentação do Docker:
+<ul>
+<li>Refere-se à biblioteca oficial de recursos, manuais e guias do Docker para criar aplicações conteinerizadas.</li>
+</ul></li>
+<li>Docker Hub:
+<ul>
+<li>É o repositório público de imagens do Docker, que se autodenomina a maior biblioteca do mundo para imagens de contêineres.</li>
+<li>Ele contém mais de 100.000 imagens de contêineres provenientes de fornecedores de software comerciais, projetos de código aberto e desenvolvedores individuais.</li>
+<li>O Docker Hub inclui imagens produzidas pela Docker, Inc., imagens certificadas pertencentes ao Docker Trusted Registry e milhares de outras imagens.</li>
+</ul></li>
+</ul>
+</section>
+<section id="docker---arquitetura-7" class="slide level2">
+<h2>Docker - Arquitetura</h2>
+<ul>
+<li>Docker Desktop:
+<ul>
+<li>É uma aplicação para Mac ou Windows que inclui o Docker Engine, cliente Docker CLI, Docker Compose, Kubernetes e outros.</li>
+<li>Ele também fornece acesso ao Docker Hub.</li>
+</ul></li>
+<li>Registro do Docker:
+<ul>
+<li>É um sistema de armazenamento e distribuição escalável e de código aberto para imagens do Docker.</li>
+<li>Ele permite que os desenvolvedores rastreiem versões de imagens em repositórios usando marcação para identificação.</li>
+<li>Esse rastreamento e identificação são realizados usando o Git, uma ferramenta de controle de versões.</li>
+</ul></li>
+</ul>
+</section>
+<section id="docker---arquitetura-8" class="slide level2">
+<h2>Docker - Arquitetura</h2>
+<ul>
+<li>Plug-ins do Docker:
+<ul>
+<li>Os desenvolvedores usam plug-ins para tornar o Docker Engine ainda mais funcional.</li>
+<li>Vários plug-ins do Docker compatíveis com autorização, volume e rede estão incluídos no sistema de plug-in do Docker Engine; plug-ins de terceiros também podem ser carregados.</li>
+</ul></li>
+<li>Extensões do Docker:
+<ul>
+<li>Permitem que os desenvolvedores usem ferramentas de terceiros no Docker Desktop para estender suas funções.</li>
+<li>As extensões para developer tools incluem desenvolvimento de aplicativos Kubernetes, segurança, observabilidade e muito mais.</li>
+</ul></li>
+</ul>
+</section>
+<section id="docker---arquitetura-9" class="slide level2">
+<h2>Docker - Arquitetura</h2>
+<ul>
+<li>Docker Compose:
+<ul>
+<li>Os desenvolvedores podem usar o Docker Compose para gerenciar aplicações multicontêineres, onde todos os contêineres são executados no mesmo host do Docker.</li>
+<li>O Docker Compose cria um arquivo YAML (.YML) que especifica quais serviços estão incluídos na aplicação e pode implementar e executar contêineres com um único comando.</li>
+<li>Como a sintaxe YAML é indiferente em relação à linguagem, arquivos YAML podem ser usados em programas desenvolvidos em Java, Python, Ruby e muitas outras linguagens.</li>
+<li>Os desenvolvedores também podem utilizar o Docker Compose para definir volumes persistentes para armazenamento, especificar nós base e documentar e configurar dependências de serviços.</li>
+</ul></li>
+</ul>
+</section>
+<section id="obrigado" class="slide level2">
+<h2>Obrigado!</h2>
+<aside class="notes">
+<p>Fim da Aula 09 — conteúdo fiel ao material de referência do professor anterior (PDF de 32 slides), com autoria atualizada.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -407,35 +502,6 @@ Ricardo Pasquati Pontarolli
           overflow: hidden!important;
           display:block!important;
       }</style></aside>
-</section>
-<section id="atividade-da-aula" class="slide level2">
-<h2>Atividade da aula</h2>
-<div class="callout-lab">
-<p><strong>Discussão em grupos (8 min):</strong></p>
-<ol type="1">
-<li>Por que um container Docker inicia muito mais rápido que uma VM?</li>
-<li>Se vocês fossem hospedar um site simples, escolheriam VM ou container? E se fossem hospedar um sistema legado com um SO Windows Server antigo, mudaria a resposta? Por quê?</li>
-</ol>
-</div>
-</section>
-<section id="síntese-da-aula" class="slide level2">
-<h2>Síntese da aula</h2>
-<ul>
-<li>Container = unidade leve baseada em <strong>cgroups + namespaces</strong>, compartilhando o kernel do host</li>
-<li><strong>Imagem</strong> (read-only, em camadas) x <strong>container</strong> (instância executável)</li>
-<li>Arquitetura <strong>cliente/servidor</strong>: Docker Client ↔︎ API REST ↔︎ Docker Daemon</li>
-<li>Ecossistema: <strong>Docker Hub, Compose, Swarm</strong></li>
-</ul>
-</section>
-<section id="próxima-aula" class="slide level2">
-<h2>Próxima aula</h2>
-<p><strong>Prática Docker I</strong> — vamos rodar nossos primeiros containers no Docker Playground</p>
-</section>
-<section id="referências" class="slide level2">
-<h2>Referências</h2>
-<ul>
-<li>Documentação oficial: <a href="https://docs.docker.com">docs.docker.com</a></li>
-</ul>
 
 
 </section>

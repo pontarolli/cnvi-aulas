@@ -10,7 +10,7 @@
   <meta name="generator" content="quarto-1.9.38">
 
   <meta name="author" content="Ricardo Pasquati Pontarolli">
-  <title>Computação em Nuvem e Virtualização – Aula 11 — Prática Docker II</title>
+  <title>Computação em Nuvem e Virtualização – Aula 11 — Docker</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -31,72 +31,6 @@
       margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
       vertical-align: middle;
     }
-    /* CSS for syntax highlighting */
-    html { -webkit-text-size-adjust: 100%; }
-    pre > code.sourceCode { white-space: pre; position: relative; }
-    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-    pre > code.sourceCode > span:empty { height: 1.2em; }
-    .sourceCode { overflow: visible; }
-    code.sourceCode > span { color: inherit; text-decoration: inherit; }
-    div.sourceCode { margin: 1em 0; }
-    pre.sourceCode { margin: 0; }
-    @media screen {
-    div.sourceCode { overflow: auto; }
-    }
-    @media print {
-    pre > code.sourceCode { white-space: pre-wrap; }
-    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-    }
-    pre.numberSource code
-      { counter-reset: source-line 0; }
-    pre.numberSource code > span
-      { position: relative; left: -4em; counter-increment: source-line; }
-    pre.numberSource code > span > a:first-child::before
-      { content: counter(source-line);
-        position: relative; left: -1em; text-align: right; vertical-align: baseline;
-        border: none; display: inline-block;
-        -webkit-touch-callout: none; -webkit-user-select: none;
-        -khtml-user-select: none; -moz-user-select: none;
-        -ms-user-select: none; user-select: none;
-        padding: 0 4px; width: 4em;
-      }
-    pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-    div.sourceCode
-      { color: #24292e;  }
-    @media screen {
-    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-    }
-    code span { color: #24292e; } /* Normal */
-    code span.al { color: #ff5555; font-weight: bold; } /* Alert */
-    code span.an { color: #6a737d; } /* Annotation */
-    code span.at { color: #d73a49; } /* Attribute */
-    code span.bn { color: #005cc5; } /* BaseN */
-    code span.bu { color: #d73a49; } /* BuiltIn */
-    code span.cf { color: #d73a49; } /* ControlFlow */
-    code span.ch { color: #032f62; } /* Char */
-    code span.cn { color: #005cc5; } /* Constant */
-    code span.co { color: #6a737d; } /* Comment */
-    code span.cv { color: #6a737d; } /* CommentVar */
-    code span.do { color: #6a737d; } /* Documentation */
-    code span.dt { color: #d73a49; } /* DataType */
-    code span.dv { color: #005cc5; } /* DecVal */
-    code span.er { color: #ff5555; text-decoration: underline; } /* Error */
-    code span.ex { color: #d73a49; font-weight: bold; } /* Extension */
-    code span.fl { color: #005cc5; } /* Float */
-    code span.fu { color: #6f42c1; } /* Function */
-    code span.im { color: #032f62; } /* Import */
-    code span.in { color: #6a737d; } /* Information */
-    code span.kw { color: #d73a49; } /* Keyword */
-    code span.op { color: #24292e; } /* Operator */
-    code span.ot { color: #6f42c1; } /* Other */
-    code span.pp { color: #d73a49; } /* Preprocessor */
-    code span.re { color: #6a737d; } /* RegionMarker */
-    code span.sc { color: #005cc5; } /* SpecialChar */
-    code span.ss { color: #032f62; } /* SpecialString */
-    code span.st { color: #032f62; } /* String */
-    code span.va { color: #e36209; } /* Variable */
-    code span.vs { color: #032f62; } /* VerbatimString */
-    code span.wa { color: #ff5555; } /* Warning */
   </style>
   <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-cb2d768d0ea881c528f2cf8dea13150b.css">
   <link href="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
@@ -198,7 +132,7 @@
     <div class="slides">
 
 <section id="title-slide" class="quarto-title-block center">
-  <h1 class="title">Aula 11 — Prática Docker II</h1>
+  <h1 class="title">Aula 11 — Docker</h1>
   <p class="subtitle">Computação em Nuvem e Virtualização</p>
 
 <div class="quarto-title-authors">
@@ -207,228 +141,217 @@
 Ricardo Pasquati Pontarolli 
 </div>
         <p class="quarto-title-affiliation">
-            Técnico em Redes de Computadores · IFSP Boituva · pasquati@ifsp.edu.br · v29
+            Técnico em Redes de Computadores · IFSP Boituva · pasquati@ifsp.edu.br · v31
           </p>
     </div>
 </div>
 
 </section>
-<section id="objetivos-da-aula" class="slide level2">
-<h2>Objetivos da aula</h2>
+<section id="introdução" class="slide level2">
+<h2>Introdução</h2>
 <ul>
-<li>Consolidar vocabulário Docker (imagem, container, volume, tag, registro)</li>
-<li>Praticar mais comandos: <code>ps</code>, <code>stop</code>, <code>exec</code>, flags</li>
-<li>Entender a diferença entre <strong>criar</strong> e <strong>reaproveitar</strong> um container</li>
+<li>Outras definições
+<ul>
+<li><strong>Imagem</strong>: pacote com todas as dependências e informações necessárias para criar um contêiner.</li>
+<li><strong>Dockerfile</strong>: arquivo de texto que contém instruções sobre como criar uma imagem.</li>
+<li><strong>Build</strong>: Ação de criação de uma imagem.</li>
+<li><strong>Contêiner</strong>: Instância de uma imagem do Docker.</li>
+<li><strong>Volume</strong>: Oferece um sistema de arquivos gravável que pode ser usado pelo contêiner.</li>
+</ul></li>
 </ul>
-<aside class="notes">
-<p>Continuação direta da Aula 10 — mesmo ambiente (Play with Docker).</p>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
 </section>
-<section id="glossário-rápido" class="slide level2">
-<h2>Glossário rápido</h2>
-<table class="caption-top">
-<thead>
-<tr class="header">
-<th>Termo</th>
-<th>Significado</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><strong>Imagem</strong></td>
-<td>Molde read-only para criar containers</td>
-</tr>
-<tr class="even">
-<td><strong>Dockerfile</strong></td>
-<td>Receita para construir uma imagem</td>
-</tr>
-<tr class="odd">
-<td><strong>Build</strong></td>
-<td>Processo de gerar a imagem a partir do Dockerfile</td>
-</tr>
-<tr class="even">
-<td><strong>Container</strong></td>
-<td>Instância em execução de uma imagem</td>
-</tr>
-<tr class="odd">
-<td><strong>Volume</strong></td>
-<td>Armazenamento persistente, sobrevive ao container</td>
-</tr>
-<tr class="even">
-<td><strong>Tag</strong></td>
-<td>Versão da imagem (ex.: <code>python:3</code>, <code>ubuntu:18.04</code>)</td>
-</tr>
-<tr class="odd">
-<td><strong>Registro</strong></td>
-<td>Onde imagens ficam armazenadas (ex.: Docker Hub)</td>
-</tr>
-</tbody>
-</table>
+<section id="introdução-1" class="slide level2">
+<h2>Introdução</h2>
+<ul>
+<li>Outras definições
+<ul>
+<li>Tag: rótulo que pode ser aplicado a imagens, de modo que as diferentes imagens ou versões da mesma imagem possam ser identificadas.</li>
+<li>Repositório: coleção de imagens relacionadas, rotuladas com uma tag que indica a versão da imagem.</li>
+<li>Registro: Serviço que fornece acesso aos repositórios.
+<ul>
+<li>O registro padrão para as imagens públicas é o Docker Hub.</li>
+<li>Um registro geralmente contém repositórios de várias equipes.</li>
+<li>As empresas geralmente têm registros privados para armazenar e gerenciar as imagens que criaram.</li>
+</ul></li>
+</ul></li>
+</ul>
 </section>
-<section id="o-que-acontece-quando-você-roda-docker-run" class="slide level2">
-<h2>O que acontece quando você roda <code>docker run</code>?</h2>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a></a><span class="ex">docker</span> run php</span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
-<p><strong>Pergunta:</strong> o que vocês acham que acontece aqui?</p>
-<div class="fragment">
-<ol type="1">
-<li>Docker verifica se a imagem <code>php</code> existe <strong>localmente</strong></li>
-<li>Se não existir, baixa automaticamente do <strong>Docker Hub</strong></li>
-<li>Cria um novo container a partir da imagem</li>
-<li>Executa o container</li>
-</ol>
-</div>
+<section id="comandos---outros-comandos" class="slide level2">
+<h2>Comandos - Outros Comandos</h2>
+<ul>
+<li>Outros comandos Docker para utilizar no Docker Playground</li>
+<li>Abra o Docker Playground Link Aqui</li>
+<li>Mais alguns exemplos de códigos:
+<ul>
+<li>Adicione mais uma instância</li>
+<li>Comando: docker version</li>
+<li>Comando: docker run php</li>
+<li>O que aconteceu??</li>
+</ul></li>
+</ul>
 </section>
-<section id="o-fluxo-visualmente" class="slide level2">
-<h2>O fluxo, visualmente</h2>
+<section id="comandos---outros-comandos-1" class="slide level2">
+<h2>Comandos - Outros Comandos</h2>
+<ul>
+<li>Ao executar esse comando (docker run), o Docker:
+<ul>
+<li>Verifica se temos a imagem localmente.</li>
+<li>Caso contrário, busca e faz o download no Docker Store!</li>
+</ul></li>
+<li>A imagem do Docker é, basicamente, uma série de instruções que o Docker seguirá para criar um contêiner.</li>
+<li>Em seguida, com o contêiner criado, o Docker irá executá-lo.</li>
+</ul>
+</section>
+<section id="comandos---diferença" class="slide level2">
+<h2>Comandos - Diferença</h2>
 
-<img data-src="../images/aula11/docker-run-fluxo.png" class="quarto-figure quarto-figure-center r-stretch" style="width:80.0%"><aside class="notes">
-<p>Reforçar: <code>docker pull</code> busca a imagem, <code>docker start</code>/<code>run</code> cria e inicia o container a partir dela.</p>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
-</section>
-<section id="testando-com-imagens-simples" class="slide level2">
-<h2>Testando com imagens simples</h2>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a></a><span class="ex">docker</span> run alpine</span>
-<span id="cb2-2"><a></a><span class="ex">docker</span> run ubuntu</span>
-<span id="cb2-3"><a></a><span class="ex">docker</span> run debian</span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
+<img data-src="../images/aula11/docker-run-fluxo.png" class="quarto-figure quarto-figure-center r-stretch" style="width:75.0%"></section>
+<section id="comandos---outros-comandos-2" class="slide level2">
+<h2>Comandos - Outros Comandos</h2>
 <ul>
-<li>Essas imagens não têm um processo “de longa duração” por padrão → o container <strong>inicia e para imediatamente</strong></li>
-<li>Ver todas as imagens já baixadas localmente:</li>
-</ul>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a></a><span class="ex">docker</span> images</span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
-</section>
-<section id="docker-ps-x-docker-ps--a" class="slide level2">
-<h2><code>docker ps</code> x <code>docker ps -a</code></h2>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a></a><span class="ex">docker</span> ps</span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
-<p>Mostra só os containers <strong>em execução</strong> no momento.</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a></a><span class="ex">docker</span> ps <span class="at">-a</span></span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
-<p>Mostra <strong>todos</strong> os containers, incluindo os que já pararam.</p>
-<div class="callout callout-note callout-titled callout-style-default">
-<div class="callout-body">
-<div class="callout-title">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<p><strong>Nota</strong></p>
-</div>
-<div class="callout-content">
-<p>Um container “parado” <strong>não é destruído</strong> — ele continua existindo até ser removido explicitamente com <code>docker rm</code>.</p>
-</div>
-</div>
-</div>
-</section>
-<section id="passando-um-comando-ao-criar-o-container" class="slide level2">
-<h2>Passando um comando ao criar o container</h2>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a></a><span class="ex">docker</span> run alpine echo <span class="st">"Ola Mundo"</span></span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
-<p>O container é criado, executa o comando (<code>echo "Ola Mundo"</code>) e termina.</p>
-</section>
-<section id="tags-de-versão" class="slide level2">
-<h2>Tags de versão</h2>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb7-1"><a></a><span class="ex">docker</span> run ubuntu:18.04 cat /etc/issue</span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
+<li>Execute os comandos abaixo:
 <ul>
-<li>A tag (<code>18.04</code>) define <strong>qual versão</strong> da imagem usar</li>
-<li>Se a tag for omitida, o Docker assume <code>latest</code> por padrão</li>
+<li>docker run alpine</li>
+<li>docker run ubuntu</li>
+<li>docker run debian</li>
+<li>docker images</li>
+</ul></li>
 </ul>
 </section>
-<section id="parando-um-container" class="slide level2">
-<h2>Parando um container</h2>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb8-1"><a></a><span class="ex">docker</span> stop <span class="op">&lt;</span>container_id<span class="op">&gt;</span></span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
-<p>Encerra a execução de um container que está rodando (identificado pelo ID ou nome, visível no <code>docker ps</code>).</p>
+<section id="comandos---outros-comandos-3" class="slide level2">
+<h2>Comandos - Outros Comandos</h2>
+<ul>
+<li>Comando: docker ps
+<ul>
+<li>Utilizado para verificar quais os contêineres que estão sendo executados.</li>
+<li>Quando um contêiner não está sendo executado, ele fica parado (stopped)!</li>
+</ul></li>
+<li>Para verificarmos todos os contêineres (parados e em execução), utilizamos a flag -a.
+<ul>
+<li>docker ps -a</li>
+</ul></li>
+</ul>
 </section>
-<section id="run-sempre-cria-um-novo-container" class="slide level2">
-<h2><code>run</code> sempre cria um novo container?</h2>
-<p><strong>Pergunta reflexiva:</strong> todo <code>docker run</code> cria um container novo?</p>
-<div class="fragment">
-<p><strong>Sim</strong> — <code>run</code> sempre cria uma <strong>nova instância</strong>. Para <strong>reaproveitar</strong> um container que já existe (parado ou rodando), usamos <code>docker start</code> (para reiniciar) ou <code>docker exec</code> (para executar um comando dentro de um container <strong>já em execução</strong>).</p>
-</div>
+<section id="comandos---outros-comandos-4" class="slide level2">
+<h2>Comandos - Outros Comandos</h2>
+<ul>
+<li>Para que o contêiner criado realize alguma atividade, precisamos informar junto do comando de execução o que ele deverá fazer.
+<ul>
+<li>docker run alpine echo “Ola Mundo”</li>
+</ul></li>
+</ul>
 </section>
-<section id="docker-exec-em-detalhe" class="slide level2">
-<h2><code>docker exec</code> em detalhe</h2>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb9-1"><a></a><span class="ex">docker</span> exec <span class="pp">[</span><span class="ss">opções</span><span class="pp">]</span> <span class="op">&lt;</span>container<span class="op">&gt;</span> <span class="op">&lt;</span>comando<span class="op">&gt;</span> <span class="pp">[</span><span class="ss">argumentos</span><span class="pp">]</span></span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
-<p>Principais flags:</p>
-<table class="caption-top">
-<colgroup>
-<col style="width: 50%">
-<col style="width: 50%">
-</colgroup>
-<thead>
-<tr class="header">
-<th>Flag</th>
-<th>Significado</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><code>-i</code> / <code>--interactive</code></td>
-<td>Mantém entrada padrão (stdin) aberta</td>
-</tr>
-<tr class="even">
-<td><code>-t</code> / <code>--tty</code></td>
-<td>Aloca um terminal (tty)</td>
-</tr>
-<tr class="odd">
-<td><code>-it</code></td>
-<td>Combinação das duas — terminal interativo completo</td>
-</tr>
-<tr class="even">
-<td><code>-d</code> / <code>--detach</code></td>
-<td>Roda em segundo plano</td>
-</tr>
-<tr class="odd">
-<td><code>-u</code> / <code>--user</code></td>
-<td>Executa como um usuário específico</td>
-</tr>
-<tr class="even">
-<td><code>-w</code> / <code>--workdir</code></td>
-<td>Define o diretório de trabalho dentro do container</td>
-</tr>
-</tbody>
-</table>
+<section id="comandos---outros-comandos-5" class="slide level2">
+<h2>Comandos - Outros Comandos</h2>
+<ul>
+<li>O comando run aceita a informação de qual versão de uma determinada imagem gostaríamos de utilizar.</li>
+<li>Para isso, basta informarmos através de uma tag.</li>
+<li>Se nenhuma tag for informada, o Docker irá utilizar sempre a versão latest.
+<ul>
+<li>docker run ubuntu:18.04 cat /etc/issue</li>
+</ul></li>
+</ul>
 </section>
-<section id="atividade-avaliativa-1-centos-sleep" class="slide level2">
-<h2>Atividade avaliativa 1 — CentOS + sleep</h2>
-<div class="callout-lab">
+<section id="comandos---outros-comandos-6" class="slide level2">
+<h2>Comandos - Outros Comandos</h2>
+<ul>
+<li>Da mesma forma que podemos instanciar e executar um comando dentro de um contêiner, podemos pará-lo.
+<ul>
+<li>docker stop “contêiner ID”</li>
+<li>docker stop 3hg567caz645</li>
+</ul></li>
+</ul>
+</section>
+<section id="comandos---outros-comandos-7" class="slide level2">
+<h2>Comandos - Outros Comandos</h2>
+<ul>
+<li>Pergunta: o comando run sempre cria novos contêineres?</li>
+</ul>
+</section>
+<section id="comandos---outros-comandos-8" class="slide level2">
+<h2>Comandos - Outros Comandos</h2>
+<ul>
+<li>Caso queiramos executar comandos adicionais em um contêiner que já está em execução, podemos utilizar o comando exec.
+<ul>
+<li>docker exec [opções] &lt;contêiner&gt; &lt;comando&gt; [argumentos…]</li>
+</ul></li>
+</ul>
+</section>
+<section id="comandos---outros-comandos-9" class="slide level2">
+<h2>Comandos - Outros Comandos</h2>
+<ul>
+<li><strong>[opções]</strong>: Flags que modificam o comportamento do comando.</li>
+<li><strong>&lt;contêiner&gt;</strong>: O identificador do contêiner onde o comando será executado. Usar nomes (–name) é sempre mais prático.</li>
+<li><strong>&lt;comando&gt;</strong>: O programa ou script que você quer rodar dentro do contêiner (ex: bash, ls, psql).</li>
+<li><strong>[argumentos…]</strong>: Argumentos para o comando que você está executando (ex: ls -l /app).</li>
+</ul>
+</section>
+<section id="comandos---outros-comandos-10" class="slide level2">
+<h2>Comandos - Outros Comandos</h2>
+<ul>
+<li>Flags
+<ul>
+<li><strong>-i</strong> ou <strong>–interactive</strong>: Mantém a entrada padrão aberta.
+<ul>
+<li>O comando que você executar poderá receber input do seu terminal.</li>
+</ul></li>
+<li><strong>-t</strong> ou <strong>–tty</strong>: Aloca uma “pseudo-TTY” ou, um terminal.
+<ul>
+<li>Conecta o seu terminal ao terminal do contêiner.</li>
+</ul></li>
+<li><strong>-it</strong>: A combinação para obter um shell interativo dentro do contêiner.
+<ul>
+<li>Você está dizendo ao Docker: “Quero executar um comando interativo e quero um terminal para fazer isso”.</li>
+</ul></li>
+</ul></li>
+</ul>
+</section>
+<section id="comandos---outros-comandos-11" class="slide level2">
+<h2>Comandos - Outros Comandos</h2>
+<ul>
+<li>Flags
+<ul>
+<li><strong>-d</strong> ou <strong>–detach</strong>: Executa o comando em segundo plano.
+<ul>
+<li>O comando é iniciado dentro do contêiner, mas o seu terminal é liberado imediatamente. Útil para iniciar processos longos.</li>
+</ul></li>
+<li><strong>-u</strong> ou <strong>–user</strong>: Permite especificar o nome de usuário com o qual o comando será executado dentro do contêiner. Útil para testar permissões.</li>
+<li><strong>-w</strong> ou <strong>–workdir</strong>: Define o diretório de trabalho onde o comando será executado dentro do contêiner.
+<ul>
+<li>Exemplo: docker exec -w /app/migrations …</li>
+</ul></li>
+</ul></li>
+</ul>
+</section>
+<section id="comandos---atividade-prática" class="slide level2">
+<h2>Comandos - Atividade Prática</h2>
 <ol type="1">
-<li>Crie um container CentOS rodando <code>sleep 2000</code></li>
-<li>Em outro terminal (ou nova aba), rode <code>docker ps</code> e verifique que ele está em execução</li>
-<li>Pare o container com <code>docker stop</code></li>
-<li>Print de cada etapa</li>
-</ol>
-</div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb10"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb10-1"><a></a><span class="ex">docker</span> run <span class="at">-d</span> centos sleep 2000</span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
-</section>
-<section id="atividade-avaliativa-2-ubuntu-persistência" class="slide level2">
-<h2>Atividade avaliativa 2 — Ubuntu + persistência</h2>
-<div class="callout-lab">
+<li>Contêiner 1
 <ol type="1">
-<li>Crie um container Ubuntu <strong>interativo</strong> (<code>-it</code>)</li>
-<li>Dentro dele, crie um arquivo com <code>touch meuarquivo.txt</code></li>
-<li>Saia do container (<code>exit</code>)</li>
-<li>Tente reacessar o <strong>mesmo</strong> container (não criar um novo!) e liste os arquivos com <code>ls</code> para confirmar que <code>meuarquivo.txt</code> continua lá</li>
-<li>Print de cada etapa, incluindo os comandos usados para reacessar o container correto</li>
+<li>Crie um contêiner CentOS.</li>
+<li>Execute o comando sleep e suspenda o SO por 2000 segundos.</li>
+<li>Verifique os contêineres em execução.</li>
+<li>Pare o contêiner que está executando o comando sleep.</li>
+</ol></li>
 </ol>
-</div>
+</section>
+<section id="comandos---atividade-prática-1" class="slide level2">
+<h2>Comandos - Atividade Prática</h2>
+<ol start="2" type="1">
+<li>Contêiner 2
+<ol type="1">
+<li>Crie um contêiner Ubuntu no modo iterativo,</li>
+<li>Crie um arquivo de texto dentro do contêiner com o comando touch</li>
+<li>Saia do contêiner</li>
+<li>Utilize o comando run novamente para tentar “acessar” o contêiner passado</li>
+<li>Busque pelo arquivo criado anteriormente com o comando ls</li>
+</ol></li>
+</ol>
+</section>
+<section id="obrigado" class="slide level2">
+<h2>Obrigado!</h2>
 <aside class="notes">
-<p>Dica para o aluno: usar <code>docker ps -a</code> para achar o ID do container parado, depois <code>docker start &lt;id&gt;</code> seguido de <code>docker exec -it &lt;id&gt; bash</code>.</p>
+<p>Fim da Aula 11 — conteúdo fiel ao material de referência do professor anterior (PDF de 19 slides), com autoria atualizada.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -440,25 +363,6 @@ Ricardo Pasquati Pontarolli
           overflow: hidden!important;
           display:block!important;
       }</style></aside>
-</section>
-<section id="síntese-da-aula" class="slide level2">
-<h2>Síntese da aula</h2>
-<ul>
-<li><code>docker ps -a</code> mostra containers parados também; <code>docker ps</code> só os ativos</li>
-<li><code>run</code> sempre cria um container <strong>novo</strong>; para reaproveitar, usa-se <code>start</code>/<code>exec</code></li>
-<li>Flags importantes: <code>-i</code>, <code>-t</code>, <code>-it</code>, <code>-d</code>, <code>-u</code>, <code>-w</code></li>
-<li>Dados criados dentro de um container <strong>persistem</strong> enquanto o container não for removido (mesmo parado)</li>
-</ul>
-</section>
-<section id="próxima-aula" class="slide level2">
-<h2>Próxima aula</h2>
-<p><strong>Modelos de Gerenciamento em Nuvem</strong> — voltando ao nível “operação de nuvem”: multicloud, IaC e Kubernetes</p>
-</section>
-<section id="referências" class="slide level2">
-<h2>Referências</h2>
-<ul>
-<li>Documentação oficial: <a href="https://docs.docker.com/engine/reference/commandline/cli">docs.docker.com/engine/reference/commandline/cli</a></li>
-</ul>
 
 
 </section>

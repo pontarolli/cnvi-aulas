@@ -10,7 +10,7 @@
   <meta name="generator" content="quarto-1.9.38">
 
   <meta name="author" content="Ricardo Pasquati Pontarolli">
-  <title>Computação em Nuvem e Virtualização – Aula 03 — Grades Computacionais e TI Verde</title>
+  <title>Computação em Nuvem e Virtualização – Aula 03 — Grades Computacionais, TI Verde e Arquitetura NIST</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -132,7 +132,7 @@
     <div class="slides">
 
 <section id="title-slide" class="quarto-title-block center">
-  <h1 class="title">Aula 03 — Grades Computacionais e TI Verde</h1>
+  <h1 class="title">Aula 03 — Grades Computacionais, TI Verde e Arquitetura NIST</h1>
   <p class="subtitle">Computação em Nuvem e Virtualização</p>
 
 <div class="quarto-title-authors">
@@ -141,7 +141,7 @@
 Ricardo Pasquati Pontarolli 
 </div>
         <p class="quarto-title-affiliation">
-            Técnico em Redes de Computadores · IFSP Boituva · pasquati@ifsp.edu.br · v29
+            Técnico em Redes de Computadores · IFSP Boituva · pasquati@ifsp.edu.br · v31
           </p>
     </div>
 </div>
@@ -153,6 +153,7 @@ Ricardo Pasquati Pontarolli
 <li>Entender o que é <strong>grid computing</strong> e como se diferencia da nuvem</li>
 <li>Compreender os fundamentos de <strong>TI verde (Green IT)</strong></li>
 <li>Relacionar sustentabilidade com o dia a dia de data centers e nuvem</li>
+<li>Conhecer a <strong>Arquitetura de Referência NIST</strong> para computação em nuvem</li>
 </ul>
 </section>
 <section id="antes-da-nuvem-grades-computacionais" class="slide level2">
@@ -266,6 +267,41 @@ Ricardo Pasquati Pontarolli
 </div>
 <div class="callout-content">
 <p>Um único servidor físico rodando <strong>20 VMs</strong> consome muito menos energia total do que <strong>20 servidores físicos</strong> separados, cada um subutilizado. Por isso virtualização é, ao mesmo tempo, uma tecnologia de eficiência de custo <strong>e</strong> de sustentabilidade.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="a-arquitetura-de-referência-nist" class="slide level2">
+<h2>A Arquitetura de Referência NIST</h2>
+<p>O <strong>NIST</strong> (National Institute of Standards and Technology, EUA) publicou em 2011 a definição formal de computação em nuvem — hoje é a referência mundial (documento SP 800-145).</p>
+<p>Ela define a nuvem por <strong>5 características essenciais, 3 modelos de serviço e 4 modelos de implantação</strong>.</p>
+</section>
+<section id="as-5-características-essenciais-nist" class="slide level2">
+<h2>As 5 características essenciais (NIST)</h2>
+<ol type="1">
+<li class="fragment"><strong>Self-service sob demanda</strong> — o usuário provisiona recursos sozinho, sem intervenção humana do provedor</li>
+<li class="fragment"><strong>Amplo acesso via rede</strong> — disponível pela internet, em qualquer dispositivo</li>
+<li class="fragment"><strong>Pool de recursos</strong> — recursos compartilhados dinamicamente entre múltiplos clientes (multi-tenancy)</li>
+<li class="fragment"><strong>Elasticidade rápida</strong> — recursos aumentam/diminuem automaticamente conforme a demanda</li>
+<li class="fragment"><strong>Serviço mensurável</strong> — uso é monitorado, controlado e cobrado de forma transparente (pay-per-use)</li>
+</ol>
+</section>
+<section id="os-3-modelos-de-serviço-e-os-4-modelos-de-implantação-nist" class="slide level2">
+<h2>Os 3 modelos de serviço e os 4 modelos de implantação (NIST)</h2>
+<ul>
+<li><strong>3 modelos de serviço</strong> — IaaS, PaaS e SaaS (vistos na Aula 02) — o NIST formaliza essa mesma divisão</li>
+<li><strong>4 modelos de implantação</strong> — pública, privada e híbrida (vistas na Aula 01), mais a <strong>nuvem comunitária</strong>: infraestrutura compartilhada por várias organizações com interesses/requisitos em comum (ex.: hospitais de uma mesma rede pública, universidades de um consórcio)</li>
+</ul>
+<div class="callout callout-note callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Nota</strong></p>
+</div>
+<div class="callout-content">
+<p>O NIST formaliza em normas o que o mercado já usa na prática — por isso é a referência citada em provas, certificações (AWS, Azure, CompTIA Cloud+) e documentos técnicos.</p>
 </div>
 </div>
 </div>

@@ -10,7 +10,7 @@
   <meta name="generator" content="quarto-1.9.38">
 
   <meta name="author" content="Ricardo Pasquati Pontarolli">
-  <title>Computação em Nuvem e Virtualização – Aula 04 — Virtualização: Conceitos e Hipervisores</title>
+  <title>Computação em Nuvem e Virtualização – Aula 04 — Virtualização e suas Tecnologias</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -132,7 +132,7 @@
     <div class="slides">
 
 <section id="title-slide" class="quarto-title-block center">
-  <h1 class="title">Aula 04 — Virtualização: Conceitos e Hipervisores</h1>
+  <h1 class="title">Aula 04 — Virtualização e suas Tecnologias</h1>
   <p class="subtitle">Computação em Nuvem e Virtualização</p>
 
 <div class="quarto-title-authors">
@@ -141,22 +141,365 @@
 Ricardo Pasquati Pontarolli 
 </div>
         <p class="quarto-title-affiliation">
-            Técnico em Redes de Computadores · IFSP Boituva · pasquati@ifsp.edu.br · v29
+            Técnico em Redes de Computadores · IFSP Boituva · pasquati@ifsp.edu.br · v31
           </p>
     </div>
 </div>
 
 </section>
-<section id="objetivos-da-aula" class="slide level2">
-<h2>Objetivos da aula</h2>
+<section id="virtualização---introdução" class="slide level2">
+<h2>Virtualização - Introdução</h2>
 <ul>
-<li>Definir <strong>virtualização</strong> e o papel do <strong>hipervisor</strong></li>
-<li>Diferenciar hipervisores <strong>Tipo 1</strong> e <strong>Tipo 2</strong></li>
-<li>Conhecer a <strong>taxonomia dos tipos de virtualização</strong></li>
-<li>Situar a virtualização na <strong>linha do tempo da computação</strong></li>
+<li>Virtualização
+<ul>
+<li>É a técnica de criar uma versão virtual de algo, como hardware, sistema operacional, armazenamento ou recursos de rede.</li>
+<li>Em vez de utilizar recursos físicos de forma direta e isolada, a virtualização permite que eles sejam particionados e gerenciados de forma mais eficiente, criando múltiplas instâncias virtuais que compartilham os mesmos recursos físicos.</li>
+</ul></li>
+</ul>
+</section>
+<section id="virtualização---introdução-1" class="slide level2">
+<h2>Virtualização - Introdução</h2>
+<ul>
+<li>A base da virtualização está em um software chamado hipervisor (ou hypervisor, em inglês), que atua como uma camada intermediária entre o hardware físico e os sistemas operacionais.</li>
+<li>Este software gerencia os recursos da máquina física e os distribui entre as máquinas virtuais (VMs).</li>
+<li>Cada máquina virtual opera de forma independente, com seu próprio sistema operacional e aplicações, como se fosse um computador físico completo.</li>
+</ul>
+</section>
+<section id="virtualização---aplicações" class="slide level2">
+<h2>Virtualização - Aplicações</h2>
+<ul>
+<li>A virtualização é amplamente utilizada em ambientes corporativos, especialmente em data centers e infraestruturas de nuvem.</li>
+<li>Ela também é comum em ambientes de teste e desenvolvimento de software, onde é possível simular diferentes sistemas operacionais e configurações sem necessidade de múltiplas máquinas físicas.</li>
+</ul>
+</section>
+<section id="virtualização---tipos-de-hipervisores" class="slide level2">
+<h2>Virtualização - Tipos de hipervisores</h2>
+<ul>
+<li>Existem dois tipos principais de hipervisores:
+<ul>
+<li>Tipo 1 (bare-metal):
+<ul>
+<li>Instalado diretamente no hardware físico, sem um sistema operacional intermediário. Exemplos: VMware ESXi, Microsoft Hyper-V.</li>
+</ul></li>
+<li>Tipo 2 (hosted):
+<ul>
+<li>Instalado sobre um sistema operacional tradicional, como um aplicativo. Exemplos: VMware Workstation, Oracle VirtualBox.</li>
+</ul></li>
+</ul></li>
+</ul>
+</section>
+<section id="virtualização---vantagens" class="slide level2">
+<h2>Virtualização - Vantagens</h2>
+<ul>
+<li>Melhor aproveitamento dos recursos:
+<ul>
+<li>Um único servidor físico pode hospedar várias VMs, evitando desperdício de capacidade computacional.</li>
+</ul></li>
+<li>Redução de custos:
+<ul>
+<li>Menor necessidade de hardware físico, menor consumo de energia e espaço físico.</li>
+</ul></li>
+<li>Isolamento:
+<ul>
+<li>Problemas em uma máquina virtual não afetam as outras.</li>
+</ul></li>
+</ul>
+</section>
+<section id="virtualização---vantagens-1" class="slide level2">
+<h2>Virtualização - Vantagens</h2>
+<ul>
+<li>Escalabilidade e flexibilidade:
+<ul>
+<li>É possível criar, modificar ou excluir VMs conforme a demanda.</li>
+</ul></li>
+<li>Facilidade de gerenciamento e manutenção:
+<ul>
+<li>Backups, migrações e recuperação de falhas são mais simples e rápidos.</li>
+</ul></li>
+</ul>
+</section>
+<section id="virtualização---tipos-de-virtualização" class="slide level2">
+<h2>Virtualização - Tipos de Virtualização</h2>
+<ul>
+<li>Virtualização de Servidores</li>
+<li>Virtualização de Desktop</li>
+<li>Virtualização de Aplicações</li>
+<li>Virtualização de Armazenamento</li>
+<li>Virtualização de Rede</li>
+<li>Virtualização de Dados</li>
+<li>Virtualização de Hardware</li>
+</ul>
+</section>
+<section id="virtualização---virtualização-de-servidores" class="slide level2">
+<h2>Virtualização - Virtualização de Servidores</h2>
+<ul>
+<li>A virtualização de servidores é o tipo mais comum e amplamente utilizado.</li>
+<li>Ela permite que vários sistemas operacionais sejam executados em um único servidor físico, por meio de máquinas virtuais (VMs).</li>
+<li>Cada VM tem seu próprio sistema operacional, aplicativos e recursos isolados.</li>
+</ul>
+</section>
+<section id="virtualização---virtualização-de-servidores-1" class="slide level2">
+<h2>Virtualização - Virtualização de Servidores</h2>
+<ul>
+<li>Benefícios:
+<ul>
+<li>Redução de custos com hardware</li>
+<li>Maior aproveitamento dos recursos do servidor</li>
+<li>Facilidade na criação e replicação de ambientes</li>
+<li>Isolamento entre sistemas</li>
+</ul></li>
+<li>Exemplos de uso: data centers, ambientes de testes, hospedagem de múltiplos sites ou serviços em um único servidor físico.</li>
+</ul>
+</section>
+<section id="virtualização---virtualização-de-desktop" class="slide level2">
+<h2>Virtualização - Virtualização de Desktop</h2>
+<ul>
+<li>O sistema operacional do usuário (geralmente Windows ou Linux) é executado em um servidor central,</li>
+<li>os usuários acessam esse ambiente remoto por meio de qualquer dispositivo (PC, tablet, thin client etc.).</li>
+<li>Benefícios:
+<ul>
+<li>Centralização da administração e segurança</li>
+<li>Facilidade de backup e recuperação</li>
+<li>Flexibilidade de acesso (trabalho remoto)</li>
+<li>Redução de custos com manutenção de hardware</li>
+</ul></li>
+<li>Exemplos de uso: empresas com equipes remotas, escolas com laboratórios de informática, call centers.</li>
+</ul>
+</section>
+<section id="virtualização---virtualização-de-aplicações" class="slide level2">
+<h2>Virtualização - Virtualização de Aplicações</h2>
+<ul>
+<li>Esse tipo de virtualização permite que um aplicativo seja executado em um ambiente virtualizado, sem estar diretamente instalado no sistema operacional do usuário.</li>
+<li>Ele é isolado do restante do sistema, o que reduz conflitos e facilita a distribuição.</li>
+</ul>
+</section>
+<section id="virtualização---virtualização-de-aplicações-1" class="slide level2">
+<h2>Virtualização - Virtualização de Aplicações</h2>
+<ul>
+<li>Benefícios:
+<ul>
+<li>Evita conflitos entre aplicativos</li>
+<li>Facilidade de atualização e manutenção</li>
+<li>Compatibilidade com diferentes sistemas</li>
+<li>Execução em dispositivos com recursos limitados</li>
+</ul></li>
+<li>Exemplos de uso: softwares legados que precisam rodar em novos sistemas, ambientes controlados para testes de aplicativos, soluções como Microsoft App-V ou Citrix Virtual Apps.</li>
+</ul>
+</section>
+<section id="virtualização---virtualização-de-armazenamento" class="slide level2">
+<h2>Virtualização - Virtualização de Armazenamento</h2>
+<ul>
+<li>A virtualização de armazenamento reúne diversos dispositivos de armazenamento físico (HDs, SSDs, storages) e os apresenta como uma única unidade lógica para os usuários ou sistemas.</li>
+<li>Isso é feito por meio de software especializado ou controladores dedicados.</li>
+</ul>
+</section>
+<section id="virtualização---virtualização-de-armazenamento-1" class="slide level2">
+<h2>Virtualização - Virtualização de Armazenamento</h2>
+<ul>
+<li>Benefícios:
+<ul>
+<li>Maior flexibilidade na alocação de espaço</li>
+<li>Otimização do desempenho e disponibilidade</li>
+<li>Facilidade de expansão</li>
+<li>Redução da complexidade da infraestrutura</li>
+</ul></li>
+<li>Exemplos de uso: ambientes corporativos com grandes volumes de dados, sistemas de backup e recuperação, nuvens privadas.</li>
+</ul>
+</section>
+<section id="virtualização---virtualização-de-rede" class="slide level2">
+<h2>Virtualização - Virtualização de Rede</h2>
+<ul>
+<li>A virtualização de rede cria redes virtuais independentes da estrutura física.</li>
+<li>Isso permite configurar, segmentar e gerenciar redes de forma dinâmica e automatizada, sem a necessidade de alterar fisicamente os cabos ou dispositivos.</li>
+</ul>
+</section>
+<section id="virtualização---virtualização-de-rede-1" class="slide level2">
+<h2>Virtualização - Virtualização de Rede</h2>
+<ul>
+<li>Benefícios:
+<ul>
+<li>Maior segurança (isolamento de redes)</li>
+<li>Agilidade no provisionamento de serviços</li>
+<li>Redução da complexidade física</li>
+<li>Facilidade na criação de redes personalizadas para testes</li>
+</ul></li>
+<li>Exemplos de uso: data centers com redes definidas por software (SDN), ambientes multiusuário, testes de segurança e simulação de tráfego.</li>
+</ul>
+</section>
+<section id="virtualização---virtualização-de-dados" class="slide level2">
+<h2>Virtualização - Virtualização de Dados</h2>
+<ul>
+<li>A virtualização de dados permite o acesso e manipulação de dados sem saber onde eles estão fisicamente armazenados.</li>
+<li>Ela cria uma camada de abstração entre os sistemas de dados e as aplicações, permitindo consultas unificadas a múltiplas fontes (bancos de dados, arquivos, APIs).</li>
+<li>Benefícios:
+<ul>
+<li>Acesso rápido a dados de diferentes fontes</li>
+<li>Redução da redundância e complexidade</li>
+<li>Melhor integração entre sistemas</li>
+</ul></li>
+<li>Exemplos de uso: Business Intelligence (BI), integrações entre sistemas corporativos, ambientes com múltiplos bancos de dados.</li>
+</ul>
+</section>
+<section id="virtualização---virtualização-de-hardware" class="slide level2">
+<h2>Virtualização - Virtualização de Hardware</h2>
+<ul>
+<li>Permite criar uma versão virtual de um hardware físico (como uma placa de vídeo, um dispositivo USB, ou até mesmo a CPU).</li>
+<li>É o princípio básico usado em máquinas virtuais, onde um software simula o funcionamento do hardware real.</li>
+<li>Benefícios:
+<ul>
+<li>Execução de sistemas operacionais incompatíveis com o hardware original</li>
+<li>Criação de ambientes de testes realistas</li>
+<li>Emulação de dispositivos antigos</li>
+</ul></li>
+<li>Exemplos de uso: emuladores, simuladores, testes de sistemas embarcados.</li>
+</ul>
+</section>
+<section id="história-e-evolução" class="slide level2">
+<h2>História e Evolução</h2>
+<ul>
+<li>A virtualização, embora pareça uma tecnologia moderna, tem raízes que remontam à década de 1960.</li>
+<li>Ao longo dos anos, ela evoluiu de uma ferramenta usada em ambientes altamente especializados para uma peça fundamental da computação moderna, presente em servidores, desktops, dispositivos móveis e, principalmente, na computação em nuvem.</li>
+</ul>
+</section>
+<section id="história-e-evolução---anos-1960" class="slide level2">
+<h2>História e Evolução - Anos 1960</h2>
+<ul>
+<li>A virtualização nasceu nos laboratórios da IBM durante os anos 1960.</li>
+<li>Na época, os computadores eram grandes, caros e usados por várias pessoas em diferentes momentos.</li>
+<li>A IBM, buscando uma forma de tornar o uso desses sistemas mais eficiente e interativo, criou sistemas que permitiam a execução simultânea de vários sistemas operacionais em um único computador central.</li>
+<li>Esse conceito era revolucionário:
+<ul>
+<li>Introduziu a ideia de máquinas virtuais (VMs), permitindo isolar usuários e processos, melhorar o uso de recursos e testar novos softwares em ambientes seguros.</li>
+</ul></li>
+</ul>
+</section>
+<section id="história-e-evolução---anos-1970-a-1980" class="slide level2">
+<h2>História e Evolução - Anos 1970 a 1980</h2>
+<ul>
+<li>Durante essas décadas, a virtualização permaneceu fortemente ligada aos mainframes da IBM.</li>
+<li>Ela era usada principalmente em ambientes corporativos e acadêmicos, onde grandes organizações podiam investir em computadores caros.</li>
+<li>Com o surgimento dos microcomputadores (PCs), o foco da indústria mudou para máquinas mais acessíveis, e o interesse pela virtualização diminuiu temporariamente.</li>
+</ul>
+</section>
+<section id="história-e-evolução---anos-1990" class="slide level2">
+<h2>História e Evolução - Anos 1990</h2>
+<ul>
+<li>Com o crescimento da infraestrutura de TI nas empresas e a multiplicação de servidores físicos, começou a surgir o problema da subutilização dos recursos.</li>
+<li>Muitos servidores eram usados abaixo de sua capacidade, gerando altos custos de manutenção, energia e espaço físico.</li>
+<li>Nesse contexto, a virtualização voltou à cena, agora voltada para servidores x86 (arquitetura de PCs).</li>
+</ul>
+</section>
+<section id="história-e-evolução---anos-1990-1" class="slide level2">
+<h2>História e Evolução - Anos 1990</h2>
+<ul>
+<li>Em 1999, a empresa VMware lançou o VMware Workstation, permitindo que múltiplos sistemas operacionais fossem executados simultaneamente em um único PC.</li>
+<li>Logo depois, veio o VMware ESX Server, um dos primeiros hipervisores para servidores x86, que marcou o início da virtualização moderna nos data centers.</li>
+</ul>
+</section>
+<section id="história-e-evolução---anos-2000" class="slide level2">
+<h2>História e Evolução - Anos 2000</h2>
+<ul>
+<li>A virtualização se popularizou rapidamente.</li>
+<li>Grandes empresas adotaram a tecnologia para reduzir custos e melhorar a flexibilidade de suas infraestruturas de TI.</li>
+<li>Surgiram outras soluções além da VMware, como Microsoft Hyper-V, Citrix XenServer e KVM (Kernel-based Virtual Machine) para Linux.</li>
+</ul>
+</section>
+<section id="história-e-evolução---anos-2000-1" class="slide level2">
+<h2>História e Evolução - Anos 2000</h2>
+<ul>
+<li>Nessa fase, a virtualização começou a ser usada para:
+<ul>
+<li>Consolidar servidores</li>
+<li>Criar ambientes de teste e desenvolvimento</li>
+<li>Garantir alta disponibilidade</li>
+<li>Automatizar o provisionamento de recursos</li>
+</ul></li>
+<li>Além disso, a virtualização começou a ser aplicada também a desktops, armazenamento e redes, expandindo sua utilidade.</li>
+</ul>
+</section>
+<section id="história-e-evolução---anos-2010" class="slide level2">
+<h2>História e Evolução - Anos 2010</h2>
+<ul>
+<li>Com o crescimento da computação em nuvem, a virtualização se tornou um pilar essencial.</li>
+<li>Serviços como Amazon Web Services (AWS), Microsoft Azure e Google Cloud Platform usam virtualização para oferecer infraestrutura como serviço (IaaS), permitindo que empresas criem servidores virtuais sob demanda.</li>
+<li>Surgiram novas formas de virtualização, como os contêineres, liderados pelo Docker.</li>
+<li>Diferente das VMs tradicionais, os contêineres compartilham o mesmo sistema operacional e são mais leves e rápidos, permitindo uma abordagem mais ágil e escalável para desenvolvimento e implantação de aplicações.</li>
+</ul>
+</section>
+<section id="história-e-evolução---anos-2020" class="slide level2 smaller">
+<h2>História e Evolução - Anos 2020</h2>
+<ul>
+<li>Mais recentemente, a virtualização tem se expandido para novas áreas, como:
+<ul>
+<li>Edge Computing:
+<ul>
+<li>virtualização em dispositivos próximos ao usuário, como roteadores, sensores e gateways IoT.</li>
+</ul></li>
+<li>Virtualização de Funções de Rede (NFV):
+<ul>
+<li>usada em telecomunicações para substituir equipamentos físicos por soluções virtualizadas.</li>
+</ul></li>
+<li>Cloud nativa e Kubernetes:
+<ul>
+<li>ambientes altamente escaláveis, baseados em contêineres e orquestração automatizada.</li>
+</ul></li>
+</ul></li>
+<li>A virtualização continua evoluindo com foco em segurança, desempenho e integração com tecnologias como inteligência artificial, automação e infraestrutura como código.</li>
+</ul>
+</section>
+<section id="tecnologias---tecnologias-e-softwares-de-virtualização" class="slide level2">
+<h2>Tecnologias - Tecnologias e Softwares de Virtualização</h2>
+<ul>
+<li>Hypervisores
+<ul>
+<li>São softwares que criam e gerenciam máquinas virtuais. Existem dois tipos:
+<ul>
+<li>Tipo 1 (Bare Metal): Executam diretamente no hardware (ex: VMware ESXi, Microsoft Hyper-V).</li>
+<li>Tipo 2 (Hosteados): Executam sobre um sistema operacional (ex: VirtualBox, VMware Workstation).</li>
+</ul></li>
+</ul></li>
+</ul>
+</section>
+<section id="tecnologias---tecnologias-e-softwares-de-virtualização-1" class="slide level2">
+<h2>Tecnologias - Tecnologias e Softwares de Virtualização</h2>
+
+<img data-src="../images/aula04/tipo1-x-tipo2-original.png" class="quarto-figure quarto-figure-center r-stretch" style="width:70.0%"></section>
+<section id="tecnologias---tecnologias-e-softwares-populares" class="slide level2">
+<h2>Tecnologias - Tecnologias e Softwares Populares</h2>
+
+<img data-src="../images/aula04/tabela-hipervisores.png" class="quarto-figure quarto-figure-center r-stretch" style="width:75.0%"></section>
+<section id="vantagens-e-desvantagens---vantagens" class="slide level2">
+<h2>Vantagens e Desvantagens - Vantagens</h2>
+<ul>
+<li>Redução de custos (menos hardware físico).</li>
+<li>Melhor uso dos recursos (alta densidade de VMs).</li>
+<li>Escalabilidade e flexibilidade.</li>
+<li>Ambientes isolados para testes e desenvolvimento.</li>
+<li>Facilidade de backup e recuperação.</li>
+</ul>
+</section>
+<section id="vantagens-e-desvantagens---desvantagens" class="slide level2">
+<h2>Vantagens e Desvantagens - Desvantagens</h2>
+<ul>
+<li>Desempenho inferior comparado ao hardware físico.</li>
+<li>Complexidade na administração.</li>
+<li>Dependência de software de virtualização.</li>
+<li>Custo de licenciamento (em algumas soluções).</li>
+</ul>
+</section>
+<section id="prática" class="slide level2">
+<h2>Prática</h2>
+<ul>
+<li>Objetivo: Criar e gerenciar uma VM.</li>
+<li>Instruções:
+<ul>
+<li>Baixe o VirtualBox.</li>
+<li>Crie uma VM com Linux (Ubuntu, por exemplo).</li>
+<li>Instale e explore o sistema.</li>
+</ul></li>
 </ul>
 <aside class="notes">
-<p>Esta é a aula-chave que conecta tudo que vimos: nuvem só existe na escala atual por causa da virtualização.</p>
+<p>Roteiro completo e expandido desse laboratório na Aula 06.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -169,167 +512,21 @@ Ricardo Pasquati Pontarolli
           display:block!important;
       }</style></aside>
 </section>
-<section id="o-que-é-virtualização" class="slide level2">
-<h2>O que é virtualização?</h2>
-<blockquote>
-<p>Criar uma <strong>versão virtual (lógica)</strong> de algo que normalmente existiria fisicamente — um servidor, um disco, uma rede — permitindo rodar múltiplos ambientes isolados sobre o mesmo hardware físico.</p>
-</blockquote>
-</section>
-<section id="o-hipervisor" class="slide level2">
-<h2>O hipervisor</h2>
-<ul>
-<li>Também chamado de <strong>VMM (Virtual Machine Monitor)</strong></li>
-<li>Camada de software que <strong>gerencia e distribui</strong> os recursos físicos (CPU, memória, disco, rede) entre as máquinas virtuais</li>
-<li>É o hipervisor que garante <strong>isolamento</strong>: uma VM não “vê” nem interfere na outra</li>
-</ul>
-</section>
-<section id="hipervisor-tipo-1-bare-metal" class="slide level2">
-<h2>Hipervisor Tipo 1 (bare-metal)</h2>
-<ul>
-<li>Roda <strong>diretamente sobre o hardware</strong>, sem sistema operacional hospedeiro por baixo</li>
-<li>Mais eficiente, usado em produção/data centers</li>
-<li><strong>Exemplos:</strong> VMware ESXi, Microsoft Hyper-V, Citrix/Xen Server, KVM</li>
-</ul>
-</section>
-<section id="hipervisor-tipo-2-hosted" class="slide level2">
-<h2>Hipervisor Tipo 2 (hosted)</h2>
-<ul>
-<li>Roda <strong>como um aplicativo dentro de um sistema operacional</strong> já existente</li>
-<li>Mais simples de instalar, ideal para uso pessoal/testes</li>
-<li><strong>Exemplos:</strong> VMware Workstation, Oracle VirtualBox</li>
-</ul>
-</section>
-<section id="tipo-1-x-tipo-2" class="slide level2">
-<h2>Tipo 1 x Tipo 2</h2>
-<table class="caption-top">
-<colgroup>
-<col style="width: 33%">
-<col style="width: 33%">
-<col style="width: 33%">
-</colgroup>
-<thead>
-<tr class="header">
-<th></th>
-<th>Tipo 1 (bare-metal)</th>
-<th>Tipo 2 (hosted)</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Onde roda</td>
-<td>Direto no hardware</td>
-<td>Dentro de um SO</td>
-</tr>
-<tr class="even">
-<td>Performance</td>
-<td>Alta</td>
-<td>Menor (overhead do SO hospedeiro)</td>
-</tr>
-<tr class="odd">
-<td>Uso típico</td>
-<td>Data centers, produção</td>
-<td>Desenvolvimento, testes, uso pessoal</td>
-</tr>
-<tr class="even">
-<td>Exemplos</td>
-<td>ESXi, Hyper-V, Xen</td>
-<td>VirtualBox, VMware Workstation</td>
-</tr>
-</tbody>
-</table>
-</section>
-<section id="tipo-1-x-tipo-2-visualizando-as-camadas" class="slide level2">
-<h2>Tipo 1 x Tipo 2 — visualizando as camadas</h2>
-
-<img data-src="../images/aula04/tipo1-x-tipo2.png" class="quarto-figure quarto-figure-center r-stretch" style="width:80.0%"></section>
-<section id="diagrama-original-de-referência-variação" class="slide level2">
-<h2>Diagrama original de referência (variação)</h2>
-
-<img data-src="../images/aula04/tipo1-x-tipo2-original.png" class="quarto-figure quarto-figure-center r-stretch" style="width:70.0%"></section>
-<section id="principais-hipervisores-do-mercado" class="slide level2">
-<h2>Principais hipervisores do mercado</h2>
-
-<img data-src="../images/aula04/tabela-hipervisores.png" class="quarto-figure quarto-figure-center r-stretch" style="width:75.0%"></section>
-<section id="vantagens-gerais-da-virtualização" class="slide level2">
-<h2>Vantagens gerais da virtualização</h2>
-<ul>
-<li class="fragment"><strong>Aproveitamento de recursos</strong> — um servidor físico potente, várias VMs rodando nele</li>
-<li class="fragment"><strong>Redução de custos</strong> — menos hardware físico, menos energia, menos espaço físico</li>
-<li class="fragment"><strong>Isolamento</strong> — falha ou invasão em uma VM não afeta as demais</li>
-<li class="fragment"><strong>Escalabilidade</strong> — criar/remover VMs rapidamente conforme a demanda</li>
-<li class="fragment"><strong>Facilidade de gerenciamento</strong> — backups, clonagem e migração de VMs inteiras</li>
-</ul>
-</section>
-<section id="taxonomia-os-vários-tipos-de-virtualização" class="slide level2">
-<h2>Taxonomia: os vários tipos de virtualização</h2>
-<p>Virtualização não é só “criar VMs” — o conceito se aplica a várias camadas de TI:</p>
-</section>
-<section id="virtualização-de-servidores" class="slide level2">
-<h2>Virtualização de servidores</h2>
-<p>Um servidor físico dividido em vários servidores virtuais independentes — o caso mais clássico (o que vimos até agora).</p>
-</section>
-<section id="virtualização-de-desktop" class="slide level2">
-<h2>Virtualização de desktop</h2>
-<p>Área de trabalho do usuário roda em um servidor central e é acessada remotamente (ex.: VDI — Virtual Desktop Infrastructure). Usada em laboratórios de TI e home office corporativo.</p>
-</section>
-<section id="virtualização-de-aplicações" class="slide level2">
-<h2>Virtualização de aplicações</h2>
-<p>A aplicação roda isolada do sistema operacional, sem precisar ser “instalada” tradicionalmente (ex.: um app empacotado que roda igual em qualquer Windows, sem conflitar com outros softwares).</p>
-</section>
-<section id="virtualização-de-armazenamento" class="slide level2">
-<h2>Virtualização de armazenamento</h2>
-<p>Vários dispositivos de armazenamento físico (HDs, SSDs) são agrupados e apresentados como <strong>um único pool lógico</strong> de armazenamento, independente do hardware por trás.</p>
-</section>
-<section id="virtualização-de-rede" class="slide level2">
-<h2>Virtualização de rede</h2>
-<p>Recursos de rede (switches, roteadores, firewalls) são recriados em software (SDN — Software-Defined Networking), permitindo reconfigurar a rede sem mexer em cabos ou equipamentos físicos.</p>
-</section>
-<section id="virtualização-de-dados" class="slide level2">
-<h2>Virtualização de dados</h2>
-<p>Integra dados de fontes diferentes (bancos distintos, formatos distintos) em uma <strong>visão única</strong>, sem precisar mover ou duplicar fisicamente os dados.</p>
-</section>
-<section id="linha-do-tempo-da-virtualização" class="slide level2">
-<h2>Linha do tempo da virtualização</h2>
-<ul>
-<li class="fragment"><strong>Anos 1960</strong> — IBM cria os primeiros conceitos de virtualização em mainframes (compartilhar 1 mainframe caro entre vários usuários)</li>
-<li class="fragment"><strong>Anos 1970-80</strong> — “esquecida”: PCs baratos tornam virtualização desnecessária por um tempo</li>
-<li class="fragment"><strong>1999</strong> — VMware lança o Workstation, trazendo virtualização de volta para arquitetura x86</li>
-<li class="fragment"><strong>Anos 2000</strong> — Hyper-V, XenServer, KVM surgem; <strong>consolidação de servidores</strong> vira prática padrão em data centers</li>
-<li class="fragment"><strong>Anos 2010</strong> — Virtualização + nuvem + containers (Docker) se tornam a base da infraestrutura moderna</li>
-<li class="fragment"><strong>Anos 2020</strong> — Edge computing, NFV (virtualização de funções de rede), Kubernetes/cloud native</li>
-</ul>
-</section>
-<section id="atividade-da-aula" class="slide level2">
-<h2>Atividade da aula</h2>
-<div class="callout-lab">
-<p><strong>Em duplas (8 min):</strong></p>
-<p>Para cada cenário, identifiquem que <strong>tipo de virtualização</strong> (servidor, desktop, aplicação, armazenamento, rede ou dados) é o mais adequado:</p>
-<ol type="1">
-<li>Uma escola quer que os alunos acessem o mesmo ambiente de trabalho de qualquer computador do laboratório</li>
-<li>Uma empresa quer juntar 5 HDs antigos em um único espaço de armazenamento lógico</li>
-<li>Uma empresa quer rodar 10 servidores lógicos em 1 servidor físico potente</li>
-</ol>
-</div>
-</section>
-<section id="síntese-da-aula" class="slide level2">
-<h2>Síntese da aula</h2>
-<ul>
-<li><strong>Virtualização</strong> = criar versões lógicas de recursos físicos, gerenciadas por um <strong>hipervisor</strong></li>
-<li>Hipervisor <strong>Tipo 1</strong> (bare-metal, produção) x <strong>Tipo 2</strong> (hosted, uso pessoal/teste)</li>
-<li>Virtualização vai muito além de servidores: <strong>desktop, aplicação, armazenamento, rede, dados</strong></li>
-<li>É a base tecnológica que tornou a computação em nuvem possível na escala atual</li>
-</ul>
-</section>
-<section id="próxima-aula" class="slide level2">
-<h2>Próxima aula</h2>
-<p><strong>Máquinas Virtuais</strong> — vamos abrir a “caixa preta” de como uma VM funciona por dentro</p>
-</section>
-<section id="referências" class="slide level2">
-<h2>Referências</h2>
-<ul>
-<li>VERAS, M. <em>Virtualização: componente central do datacenter</em>. Brasport, 2011.</li>
-<li>OLIVEIRA, R.; CARISSIMI, A.; TOSCANI, S. <em>Sistemas Operacionais</em>. 4. ed.&nbsp;Bookman, 2010.</li>
-</ul>
+<section id="obrigado" class="slide level2">
+<h2>Obrigado!</h2>
+<aside class="notes">
+<p>Fim da Aula 04 — conteúdo fiel ao material de referência do professor anterior (PDF de 35 slides), com autoria atualizada.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 
 
 </section>

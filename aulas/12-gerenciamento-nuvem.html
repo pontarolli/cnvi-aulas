@@ -141,119 +141,268 @@
 Ricardo Pasquati Pontarolli 
 </div>
         <p class="quarto-title-affiliation">
-            Técnico em Redes de Computadores · IFSP Boituva · pasquati@ifsp.edu.br · v29
+            Técnico em Redes de Computadores · IFSP Boituva · pasquati@ifsp.edu.br · v31
           </p>
     </div>
 </div>
 
 </section>
-<section id="objetivos-da-aula" class="slide level2">
-<h2>Objetivos da aula</h2>
+<section id="introdução---definição" class="slide level2">
+<h2>Introdução - Definição</h2>
 <ul>
-<li>Entender o que significa <strong>gerenciar</strong> um ambiente de nuvem</li>
-<li>Diferenciar gerenciamento <strong>do provedor, híbrido e multicloud</strong></li>
-<li>Conhecer <strong>IaC, orquestração de containers (Kubernetes) e FinOps</strong></li>
-</ul>
-<aside class="notes">
-<p>Depois de 3 aulas de Docker, voltamos ao nível “operação de nuvem madura” — como tudo isso é gerenciado no mundo real.</p>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
-</section>
-<section id="o-que-é-gerenciamento-em-nuvem" class="slide level2">
-<h2>O que é gerenciamento em nuvem?</h2>
-<blockquote>
-<p>Conjunto de <strong>processos, ferramentas e políticas</strong> usados para controlar, otimizar e manter ambientes de nuvem.</p>
-</blockquote>
-</section>
-<section id="por-que-gerenciar-bem-a-nuvem-importa" class="slide level2">
-<h2>Por que gerenciar bem a nuvem importa?</h2>
-<ul>
-<li class="fragment"><strong>Controle de custos</strong> — é fácil gastar mais do que o planejado na nuvem</li>
-<li class="fragment"><strong>Segurança</strong> — configurações erradas são uma das maiores causas de vazamento de dados</li>
-<li class="fragment"><strong>Desempenho</strong> — garantir que a aplicação responda bem sob demanda variável</li>
-<li class="fragment"><strong>Conformidade</strong> — atender normas e regulamentações (LGPD, por exemplo)</li>
-<li class="fragment"><strong>Escalabilidade</strong> — crescer (ou reduzir) de forma controlada</li>
+<li>Em essência, gerenciamento em nuvem é o conjunto de processos, ferramentas e políticas que garantem que seus serviços e aplicações na nuvem funcionem de forma eficiente, segura e em conformidade com as suas necessidades.</li>
+<li>Isso inclui desde o provisionamento de recursos até o monitoramento de desempenho e a gestão de custos.</li>
 </ul>
 </section>
-<section id="modelo-de-gerenciamento-do-provedor" class="slide level2">
-<h2>Modelo de gerenciamento do provedor</h2>
+<section id="introdução---importância" class="slide level2">
+<h2>Introdução - Importância</h2>
 <ul>
-<li>O <strong>provedor de nuvem</strong> cuida de boa parte da operação (mais comum em SaaS/PaaS)</li>
-<li><strong>Vantagem:</strong> menos trabalho operacional para a empresa cliente</li>
-<li><strong>Desvantagem:</strong> menos controle e customização</li>
+<li>Gerenciar a nuvem é crucial por vários motivos:
+<ul>
+<li>Controle de Custos:
+<ul>
+<li>A nuvem pode ser uma faca de dois gumes.</li>
+<li>Sem gerenciamento adequado, os custos podem disparar.</li>
+</ul></li>
+<li>Segurança:
+<ul>
+<li>Proteger seus dados e aplicações é primordial,</li>
+<li>O gerenciamento eficaz garante a implementação de políticas de segurança.</li>
+</ul></li>
+</ul></li>
+</ul>
+</section>
+<section id="introdução---importância-1" class="slide level2">
+<h2>Introdução - Importância</h2>
+<ul>
+<li>Gerenciar a nuvem é crucial por vários motivos:
+<ul>
+<li>Desempenho:
+<ul>
+<li>Garantir que suas aplicações tenham a performance esperada e que os recursos estejam otimizados.</li>
+</ul></li>
+<li>Conformidade:
+<ul>
+<li>Atender às regulamentações e padrões do setor.</li>
+</ul></li>
+<li>Escalabilidade:
+<ul>
+<li>Aproveitar a flexibilidade da nuvem para escalar recursos de forma eficiente.</li>
+</ul></li>
+</ul></li>
+</ul>
+</section>
+<section id="gerenciamento-do-provedor-de-nuvem" class="slide level2">
+<h2>Gerenciamento do Provedor de Nuvem</h2>
+<ul>
+<li>Nesse modelo, o provedor de nuvem (AWS, Azure, Google Cloud, etc.) assume a maior parte ou a totalidade da responsabilidade pelo gerenciamento da infraestrutura subjacente.</li>
+<li>O cliente se concentra em suas aplicações e dados.</li>
+</ul>
+</section>
+<section id="gerenciamento-do-provedor-de-nuvem-1" class="slide level2">
+<h2>Gerenciamento do Provedor de Nuvem</h2>
+<ul>
+<li>Exemplos de Serviços:
+<ul>
+<li>SaaS (Software as a Service):
+<ul>
+<li>Onde o software é entregue como um serviço pronto para uso (ex: Gmail, Salesforce).</li>
+<li>Você não se preocupa com nada da infraestrutura.</li>
+</ul></li>
+<li>PaaS (Platform as a Service):
+<ul>
+<li>Oferece um ambiente de desenvolvimento e implantação completo (ex: Heroku, AWS Elastic Beanstalk).</li>
+<li>Você gerencia seu código, o provedor cuida do sistema operacional, middleware, etc.</li>
+</ul></li>
+<li>Serviços Sem Servidor (Serverless):
+<ul>
+<li>O provedor gerencia toda a infraestrutura e o provisionamento (ex: AWS Lambda, Azure Functions).</li>
+<li>Você paga apenas pelo tempo de execução do seu código.</li>
+</ul></li>
+</ul></li>
+</ul>
+</section>
+<section id="gerenciamento-do-provedor-de-nuvem-2" class="slide level2">
+<h2>Gerenciamento do Provedor de Nuvem</h2>
+<ul>
+<li>Vantagens:
+<ul>
+<li>Menor carga operacional para sua equipe, foco no desenvolvimento de negócios, maior escalabilidade e agilidade, custos variáveis (OPEX).</li>
+</ul></li>
+<li>Desvantagens:
+<ul>
+<li>Menos controle sobre a infraestrutura, dependência do provedor, potenciais desafios de integração.</li>
+</ul></li>
 </ul>
 </section>
 <section id="gerenciamento-híbrido" class="slide level2">
-<h2>Gerenciamento híbrido</h2>
+<h2>Gerenciamento Híbrido</h2>
 <ul>
-<li>Combina <strong>data center privado + nuvem pública</strong>, gerenciados de forma unificada</li>
-<li><strong>Vantagem:</strong> flexibilidade — dados sensíveis ficam no ambiente privado, picos vão para a nuvem pública</li>
-<li><strong>Desvantagem:</strong> complexidade de integrar ferramentas e processos diferentes</li>
+<li>O gerenciamento híbrido combina o melhor dos dois mundos:
+<ul>
+<li>Você utiliza recursos tanto em um datacenter privado quanto na nuvem pública, gerenciando-os como um ambiente unificado.</li>
+<li>Isso é muito comum para empresas que precisam manter certas aplicações ou dados no local por motivos de conformidade ou latência.</li>
+</ul></li>
+</ul>
+</section>
+<section id="gerenciamento-híbrido-1" class="slide level2">
+<h2>Gerenciamento Híbrido</h2>
+<ul>
+<li>Vantagens:
+<ul>
+<li>Flexibilidade para escolher onde cada workload roda, aproveitamento de investimentos existentes, maior resiliência.</li>
+</ul></li>
+<li>Desvantagens:
+<ul>
+<li>Maior complexidade de gerenciamento, necessidade de ferramentas de integração, desafios de segurança e conformidade entre os ambientes.</li>
+</ul></li>
 </ul>
 </section>
 <section id="gerenciamento-multicloud" class="slide level2">
-<h2>Gerenciamento multicloud</h2>
+<h2>Gerenciamento Multicloud</h2>
 <ul>
-<li>Usar <strong>mais de um provedor</strong> (ex.: AWS + Azure + GCP) ao mesmo tempo</li>
-<li><strong>Vantagem:</strong> evita depender de um único provedor, permite escolher o melhor serviço de cada um</li>
-<li><strong>Desvantagem:</strong> maior complexidade operacional e risco de <strong>vendor lock-in parcial</strong> em cada plataforma</li>
-</ul>
-<div class="fragment">
-<p>Empresas grandes cada vez mais adotam estratégias multicloud — mas isso exige ferramentas de gerenciamento mais sofisticadas.</p>
-</div>
-</section>
-<section id="gerenciamento-de-recursos" class="slide level2">
-<h2>Gerenciamento de recursos</h2>
-<ul>
-<li><strong>Provisionamento e desprovisionamento automatizado</strong> — criar e remover recursos (VMs, storage, rede) sob demanda, sem intervenção manual</li>
-<li><strong>IAM (Identity and Access Management)</strong> — controlar quem pode acessar e alterar cada recurso da nuvem</li>
-<li><strong>Networking</strong> — gerenciar redes virtuais, sub-redes e conectividade entre os recursos provisionados</li>
+<li>No modelo multicloud, uma organização utiliza serviços de múltiplos provedores de nuvem pública simultaneamente (ex: AWS para um workload, Azure para outro, Google Cloud para um terceiro).</li>
+<li>Vantagens: Redução do risco de dependência de um único provedor (vendor lock-in), aproveitamento dos melhores serviços de cada provedor, maior resiliência e disponibilidade.</li>
+<li>Desvantagens: Complexidade de gerenciamento muito alta, necessidade de ferramentas de orquestração e automação, desafios de segurança e integração.</li>
 </ul>
 </section>
-<section id="infraestrutura-como-código-iac" class="slide level2">
-<h2>Infraestrutura como Código (IaC)</h2>
-<blockquote>
-<p>Definir e provisionar infraestrutura (servidores, redes, storage) através de <strong>arquivos de código</strong>, em vez de configurar manualmente clique a clique.</p>
-</blockquote>
+<section id="tópicos-avançados---gerenciamento-de-recursos-em-nuvem" class="slide level2">
+<h2>Tópicos Avançados - Gerenciamento de Recursos em Nuvem</h2>
 <ul>
-<li><strong>Terraform</strong> — ferramenta multicloud popular, usa arquivos de configuração próprios</li>
-<li><strong>CloudFormation</strong> — nativo da AWS</li>
-<li><strong>ARM Templates</strong> — nativo do Azure</li>
-</ul>
-</section>
-<section id="por-que-iac-importa" class="slide level2">
-<h2>Por que IaC importa?</h2>
+<li>Gerenciar recursos em nuvem vai além de simplesmente provisionar servidores.</li>
+<li>Envolve otimizar o uso, controlar o acesso e garantir que cada serviço esteja configurado da melhor forma possível.
 <ul>
-<li class="fragment"><strong>Reprodutibilidade</strong> — recriar o mesmo ambiente exatamente igual, quantas vezes precisar</li>
-<li class="fragment"><strong>Versionamento</strong> — a infraestrutura pode ser versionada junto com o código, como no Git</li>
-<li class="fragment"><strong>Automação</strong> — elimina erro humano de configuração manual repetitiva</li>
-</ul>
-</section>
-<section id="orquestração-de-containers-kubernetes" class="slide level2">
-<h2>Orquestração de containers: Kubernetes</h2>
-<p>Depois de aprender Docker, a pergunta natural é: <strong>como gerenciar centenas de containers em produção?</strong></p>
+<li>Provisionamento e Desprovisionamento:
 <ul>
-<li><strong>Kubernetes (K8s)</strong> — plataforma de orquestração de containers, hoje o padrão de mercado</li>
-<li>Principais funções:
+<li>Automatizar a criação e exclusão de instâncias, bancos de dados, redes e outros serviços conforme a demanda.</li>
+</ul></li>
+<li>Otimização de Custos:
 <ul>
-<li><strong>Agendamento</strong> — decide em qual servidor cada container roda</li>
-<li><strong>Balanceamento de carga</strong> — distribui tráfego entre containers</li>
-<li><strong>Autoescalabilidade</strong> — cria/remove containers conforme a demanda</li>
-<li><strong>Monitoramento e recuperação</strong> — reinicia containers que falham automaticamente</li>
-<li><strong>Gerenciamento de configuração e segredos</strong> — centraliza senhas, chaves de API etc.</li>
+<li>Identificar e desligar recursos ociosos, escolher tipos de instâncias adequados e aproveitar opções de compra com desconto (reservadas, spot).</li>
+</ul></li>
 </ul></li>
 </ul>
+</section>
+<section id="tópicos-avançados---gerenciamento-de-recursos-em-nuvem-1" class="slide level2">
+<h2>Tópicos Avançados - Gerenciamento de Recursos em Nuvem</h2>
+<ul>
+<li>Envolve otimizar o uso, controlar o acesso e garantir que cada serviço esteja configurado da melhor forma possível.
+<ul>
+<li>Gerenciamento de Identidade e Acesso (IAM):
+<ul>
+<li>Definir políticas de permissões granulares para usuários e serviços, garantindo o princípio do menor privilégio.</li>
+</ul></li>
+<li>Configuração e Automação:
+<ul>
+<li>Usar ferramentas como Terraform, CloudFormation (AWS) ou ARM Templates (Azure) para definir a infraestrutura como código (IaC), permitindo consistência e reprodutibilidade.</li>
+</ul></li>
+<li>Networking:
+<ul>
+<li>Gerenciar redes virtuais, sub-redes, roteamento, firewalls e gateways para garantir conectividade e segurança.</li>
+</ul></li>
+</ul></li>
+</ul>
+</section>
+<section id="tópicos-avançados---orquestração-de-contêineres" class="slide level2">
+<h2>Tópicos Avançados - Orquestração de Contêineres</h2>
+<ul>
+<li>A ascensão dos contêineres revolucionou a forma como as aplicações são empacotadas e implantadas na nuvem.</li>
+<li>Benefícios:
+<ul>
+<li>Maior portabilidade de aplicações,</li>
+<li>utilização mais eficiente dos recursos,</li>
+<li>implantações mais rápidas e confiáveis,</li>
+<li>e a capacidade de construir arquiteturas de microsserviços.</li>
+</ul></li>
+</ul>
+</section>
+<section id="tópicos-avançados---orquestração-de-contêineres-1" class="slide level2">
+<h2>Tópicos Avançados - Orquestração de Contêineres</h2>
+<ul>
+<li>Ferramentas de orquestração são essenciais para gerenciar esses ambientes complexos.
+<ul>
+<li>Docker:
+<ul>
+<li>É uma plataforma para empacotar aplicações e suas dependências em contêineres leves e portáteis.</li>
+<li>Isso garante que a aplicação funcione de forma consistente em diferentes ambientes.</li>
+</ul></li>
+</ul></li>
+</ul>
+</section>
+<section id="tópicos-avançados---orquestração-de-contêineres-2" class="slide level2 smaller">
+<h2>Tópicos Avançados - Orquestração de Contêineres</h2>
+<ul>
+<li>Ferramentas de orquestração são essenciais para gerenciar esses ambientes complexos.
+<ul>
+<li>Kubernetes: É um sistema de orquestração de contêineres de código aberto, que automatiza a implantação, o escalonamento e o gerenciamento de aplicações em contêineres. Ele resolve desafios como:
+<ul>
+<li>Agendamento: Onde e quando um contêiner deve rodar.</li>
+<li>Balanceamento de Carga: Distribuir o tráfego entre múltiplas instâncias de um aplicativo.</li>
+<li>Autoescalabilidade: Aumentar ou diminuir o número de contêineres conforme a demanda.</li>
+<li>Monitoramento e Recuperação: Detectar falhas e reiniciar contêineres.</li>
+<li>Gerenciamento de Configuração e Segredos: Injetar configurações e credenciais de forma segura nos contêineres.</li>
+</ul></li>
+</ul></li>
+</ul>
+</section>
+<section id="tópicos-avançados---monitoramento-de-desempenho-e-custo" class="slide level2">
+<h2>Tópicos Avançados - Monitoramento de Desempenho e Custo</h2>
+<ul>
+<li>Monitorar é fundamental para garantir que seus serviços de nuvem funcionem conforme o esperado e que você esteja otimizando seus gastos.</li>
+<li>Tipos:
+<ul>
+<li>Monitoramento de Desempenho (Observability):
+<ul>
+<li>Métricas: Coletar dados sobre CPU, memória, I/O de disco, tráfego de rede, latência de requisições, etc. (ex: AWS CloudWatch, Azure Monitor, Google Cloud Monitoring).</li>
+<li>Logs: Coletar e analisar logs de aplicações, sistemas e serviços para identificar erros, depurar problemas e entender o comportamento do sistema.</li>
+</ul></li>
+</ul></li>
+</ul>
+</section>
+<section id="tópicos-avançados---monitoramento-de-desempenho-e-custo-1" class="slide level2">
+<h2>Tópicos Avançados - Monitoramento de Desempenho e Custo</h2>
+<ul>
+<li>Tipos:
+<ul>
+<li>Monitoramento de Desempenho (Observability):
+<ul>
+<li>Traces: Rastrear o fluxo de uma requisição através de múltiplos serviços (especialmente em arquiteturas de microsserviços) para identificar gargalos.</li>
+<li>Alertas: Configurar notificações automáticas quando métricas ou logs indicam um problema (ex: uso de CPU acima de 80%, erros em logs).</li>
+</ul></li>
+</ul></li>
+</ul>
+</section>
+<section id="tópicos-avançados---monitoramento-de-desempenho-e-custo-2" class="slide level2">
+<h2>Tópicos Avançados - Monitoramento de Desempenho e Custo</h2>
+<ul>
+<li>Tipos:
+<ul>
+<li>Monitoramento de Custo (FinOps):
+<ul>
+<li>Visibilidade: Ter uma visão clara de onde os custos estão sendo gerados.</li>
+<li>Otimização: Identificar desperdícios (recursos ociosos, mal dimensionados), aproveitar instâncias reservadas ou spot, e otimizar o uso de serviços.</li>
+<li>Orçamento e Previsão: Definir orçamentos e prever gastos futuros para evitar surpresas.</li>
+</ul></li>
+</ul></li>
+</ul>
+</section>
+<section id="tópicos-avançados---monitoramento-de-desempenho-e-custo-3" class="slide level2">
+<h2>Tópicos Avançados - Monitoramento de Desempenho e Custo</h2>
+<ul>
+<li>Tipos:
+<ul>
+<li>Monitoramento de Custo (FinOps):
+<ul>
+<li>Alocação de Custos: Atribuir custos a equipes, projetos ou centros de custo específicos para maior responsabilidade.</li>
+<li>Ferramentas: Os próprios provedores de nuvem oferecem painéis de custo, além de ferramentas de terceiros focadas em FinOps.</li>
+</ul></li>
+</ul></li>
+</ul>
+</section>
+<section id="obrigado" class="slide level2">
+<h2>Obrigado!</h2>
 <aside class="notes">
-<p>Não é para ensinar comandos de Kubernetes agora — é só situar o conceito como “o próximo passo depois do Docker”.</p>
+<p>Fim da Aula 12 — conteúdo fiel ao material de referência do professor anterior (PDF de 20 slides), com autoria atualizada.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -265,57 +414,6 @@ Ricardo Pasquati Pontarolli
           overflow: hidden!important;
           display:block!important;
       }</style></aside>
-</section>
-<section id="monitoramento-de-desempenho-e-custo-observability" class="slide level2">
-<h2>Monitoramento de desempenho e custo (Observability)</h2>
-<ul>
-<li><strong>Métricas</strong> — números ao longo do tempo (uso de CPU, latência) — ex.: AWS CloudWatch, Azure Monitor</li>
-<li><strong>Logs</strong> — registros detalhados de eventos do sistema</li>
-<li><strong>Traces</strong> — rastreiam uma requisição através de vários serviços (útil em microsserviços)</li>
-<li><strong>Alertas</strong> — notificações automáticas quando algo sai do esperado</li>
-</ul>
-</section>
-<section id="finops-gestão-financeira-de-nuvem" class="slide level2">
-<h2>FinOps — gestão financeira de nuvem</h2>
-<blockquote>
-<p>Prática que une <strong>times de engenharia, financeiro e negócio</strong> para otimizar gastos em nuvem, sem travar a agilidade técnica.</p>
-</blockquote>
-<ul>
-<li><strong>Visibilidade</strong> — saber exatamente quanto cada time/serviço está gastando</li>
-<li><strong>Otimização</strong> — desligar recursos ociosos, escolher o tipo de instância certo</li>
-<li><strong>Orçamento e alocação de custos</strong> — prever gastos e distribuir custos entre times/produtos</li>
-</ul>
-</section>
-<section id="atividade-da-aula" class="slide level2">
-<h2>Atividade da aula</h2>
-<div class="callout-lab">
-<p><strong>Em grupos (10 min):</strong></p>
-<p>Uma startup cresce rápido e está gastando cada vez mais em nuvem, sem controle.</p>
-<ol type="1">
-<li>Que prática (das vistas hoje) vocês recomendariam primeiro para dar visibilidade de custos?</li>
-<li>A empresa deveria migrar para multicloud agora? Quais riscos vocês veem nesse momento de crescimento?</li>
-</ol>
-</div>
-</section>
-<section id="síntese-da-aula" class="slide level2">
-<h2>Síntese da aula</h2>
-<ul>
-<li>Gerenciamento de nuvem pode ser <strong>do provedor, híbrido ou multicloud</strong> — cada um com trade-offs</li>
-<li><strong>IaC</strong> (Terraform, CloudFormation) automatiza e versiona a infraestrutura</li>
-<li><strong>Kubernetes</strong> orquestra containers em escala, além do que Docker sozinho resolve</li>
-<li><strong>FinOps</strong> e observability dão controle de custo e desempenho</li>
-</ul>
-</section>
-<section id="próxima-aula" class="slide level2">
-<h2>Próxima aula</h2>
-<p><strong>AWS, Azure, GCP e OpenStack</strong> — conhecendo os principais provedores/plataformas de nuvem do mercado</p>
-</section>
-<section id="referências" class="slide level2">
-<h2>Referências</h2>
-<ul>
-<li>Documentação oficial: <a href="https://terraform.io">terraform.io</a>, <a href="https://kubernetes.io">kubernetes.io</a></li>
-<li>FinOps Foundation — <a href="https://finops.org">finops.org</a></li>
-</ul>
 
 
 </section>
