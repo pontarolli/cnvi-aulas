@@ -858,7 +858,70 @@
     "href": "index.html#aulas",
     "title": "Computação em Nuvem e Virtualização",
     "section": "Aulas",
-    "text": "Aulas\n\nIntrodução à Computação em Nuvem\nModelos de Serviço em Nuvem e Arquitetura NIST\nGrades Computacionais e TI Verde\nVirtualização: Conceitos e Hipervisores\nMáquinas Virtuais\nPrática: VirtualBox\nData Centers, Dispositivos e Consolidação de Serviços\nVMware x Xen\nDocker: Conceitos e Arquitetura\nPrática Docker I\nPrática Docker II\nModelos de Gerenciamento em Nuvem\nAWS, Azure, Google Cloud e OpenStack\nProjeto: Análise Comparativa de Soluções de Nuvem\nRevisão Geral\n\n\n\n\n\n\n\nNota\n\n\n\nNos slides, use as setas do teclado para navegar, S para abrir as notas do professor e O para visão geral dos slides."
+    "text": "Aulas\n\nApresentação da Disciplina e Critérios de Avaliação\nIntrodução à Computação em Nuvem\nModelos de Serviço em Nuvem e Arquitetura NIST\nGrades Computacionais e TI Verde\nVirtualização: Conceitos e Hipervisores\nMáquinas Virtuais\nPrática: VirtualBox\nData Centers, Dispositivos e Consolidação de Serviços\nVMware x Xen\nDocker: Conceitos e Arquitetura\nPrática Docker I\nPrática Docker II\nModelos de Gerenciamento em Nuvem\nAWS, Azure, Google Cloud e OpenStack\nProjeto: Análise Comparativa de Soluções de Nuvem\nRevisão Geral\n\n\n\n\n\n\n\nNota\n\n\n\nNos slides, use as setas do teclado para navegar, S para abrir as notas do professor e O para visão geral dos slides."
+  },
+  {
+    "objectID": "aulas/00-apresentacao-avaliacao.html#objetivos-desta-aula",
+    "href": "aulas/00-apresentacao-avaliacao.html#objetivos-desta-aula",
+    "title": "Aula 0 — Apresentação da Disciplina e Critérios de Avaliação",
+    "section": "Objetivos desta aula",
+    "text": "Objetivos desta aula\n\nApresentar a disciplina Computação em Nuvem e Virtualização\nExplicar como funciona a avaliação ao longo do curso\nAlinhar expectativas de participação, prazos e conduta"
+  },
+  {
+    "objectID": "aulas/00-apresentacao-avaliacao.html#sobre-a-disciplina",
+    "href": "aulas/00-apresentacao-avaliacao.html#sobre-a-disciplina",
+    "title": "Aula 0 — Apresentação da Disciplina e Critérios de Avaliação",
+    "section": "Sobre a disciplina",
+    "text": "Sobre a disciplina\n\nCurso: Técnico em Redes de Computadores Integrado ao Ensino Médio\nComponente curricular: Computação em Nuvem e Virtualização (BTVCNVI)\nVamos percorrer: fundamentos de nuvem, virtualização e máquinas virtuais, data centers, containers/Docker, gerenciamento e provedores de nuvem — terminando em um projeto prático comparando soluções reais\n\n\nMostrar rapidamente o índice de todas as aulas (o portal do curso) para os alunos terem noção do caminho completo."
+  },
+  {
+    "objectID": "aulas/00-apresentacao-avaliacao.html#como-a-nota-é-composta",
+    "href": "aulas/00-apresentacao-avaliacao.html#como-a-nota-é-composta",
+    "title": "Aula 0 — Apresentação da Disciplina e Critérios de Avaliação",
+    "section": "Como a nota é composta",
+    "text": "Como a nota é composta\n\n\n\nInstrumento\nPeso\n\n\n\n\nProva P1\n20%\n\n\nProva P2\n20%\n\n\n5 Atividades avaliativas (8% cada)\n40%\n\n\nProjeto final (Aula 14)\n20%\n\n\n\n\n\n\n\n\n\nNota\n\n\nDistribuição de referência — ajustar conforme o regimento vigente do câmpus, caso haja critério institucional específico já definido."
+  },
+  {
+    "objectID": "aulas/00-apresentacao-avaliacao.html#as-provas",
+    "href": "aulas/00-apresentacao-avaliacao.html#as-provas",
+    "title": "Aula 0 — Apresentação da Disciplina e Critérios de Avaliação",
+    "section": "As provas",
+    "text": "As provas\n\nP1 — cobre as Aulas 01 a 07 (fundamentos de nuvem, NIST, grades computacionais, TI verde, virtualização, máquinas virtuais, data centers)\nP2 — cobre as Aulas 08 a 13 (VMware x Xen, Docker, gerenciamento em nuvem, provedores de nuvem)\nFormato: 10 questões de múltipla escolha (a-e) cada"
+  },
+  {
+    "objectID": "aulas/00-apresentacao-avaliacao.html#as-atividades-avaliativas",
+    "href": "aulas/00-apresentacao-avaliacao.html#as-atividades-avaliativas",
+    "title": "Aula 0 — Apresentação da Disciplina e Critérios de Avaliação",
+    "section": "As atividades avaliativas",
+    "text": "As atividades avaliativas\n\nEstudo de caso — Modelos de Nuvem (após Aula 02)\nRelatório de laboratório — VirtualBox (após Aula 06)\nComparativo VMware x Xen (após Aula 08)\nDesafio de comandos Docker (após Aula 11)\nDimensionamento de solução de nuvem (após Aula 13)\n\nCada atividade vale 10,0 pontos, com critérios de correção detalhados divulgados junto ao enunciado."
+  },
+  {
+    "objectID": "aulas/00-apresentacao-avaliacao.html#o-projeto-final",
+    "href": "aulas/00-apresentacao-avaliacao.html#o-projeto-final",
+    "title": "Aula 0 — Apresentação da Disciplina e Critérios de Avaliação",
+    "section": "O projeto final",
+    "text": "O projeto final\nNa Aula 14, vocês vão planejar a infraestrutura de TI de uma empresa fictícia, aplicando todo o conteúdo do curso — modelos de nuvem, virtualização, provedores, sustentabilidade e gerenciamento. Apresentação em grupo, com defesa oral."
+  },
+  {
+    "objectID": "aulas/00-apresentacao-avaliacao.html#critério-de-aprovação",
+    "href": "aulas/00-apresentacao-avaliacao.html#critério-de-aprovação",
+    "title": "Aula 0 — Apresentação da Disciplina e Critérios de Avaliação",
+    "section": "Critério de aprovação",
+    "text": "Critério de aprovação\n\nMédia final ≥ 6,0\nAbaixo disso: recuperação, conforme calendário e regras do câmpus\n\n\n\n\n\n\n\nNota\n\n\nConfirmar o critério exato (nota de corte, formato da recuperação) com a coordenação/regimento do IFSP Boituva antes de comunicar oficialmente aos alunos."
+  },
+  {
+    "objectID": "aulas/00-apresentacao-avaliacao.html#prazos-e-conduta",
+    "href": "aulas/00-apresentacao-avaliacao.html#prazos-e-conduta",
+    "title": "Aula 0 — Apresentação da Disciplina e Critérios de Avaliação",
+    "section": "Prazos e conduta",
+    "text": "Prazos e conduta\n\nAtividades entregues fora do prazo: combinar critério (ex.: desconto por dia de atraso, ou não aceitar sem justificativa) — defina e comunique no primeiro dia de aula\nTrabalhos em dupla/grupo: espera-se contribuição equilibrada de todos os integrantes\nCópia integral entre colegas será tratada conforme o regimento disciplinar do câmpus"
+  },
+  {
+    "objectID": "aulas/00-apresentacao-avaliacao.html#dúvidas",
+    "href": "aulas/00-apresentacao-avaliacao.html#dúvidas",
+    "title": "Aula 0 — Apresentação da Disciplina e Critérios de Avaliação",
+    "section": "Dúvidas",
+    "text": "Dúvidas\nProfessor: Ricardo Pasquati Pontarolli E-mail: pasquati@ifsp.edu.br\nPerguntas sobre notas, prazos ou conteúdo — procurem pelo e-mail institucional ou no horário de atendimento definido em sala."
   },
   {
     "objectID": "aulas/02-modelos-servico-nist.html#objetivos-da-aula",
