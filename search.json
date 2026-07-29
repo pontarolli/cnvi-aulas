@@ -308,6 +308,20 @@
     "text": "Containers x Máquinas Virtuais\n\n\n\n\n\n\n\n\n\nVM\nContainer\n\n\n\n\nO que roda\nSO completo (guest)\nSó a aplicação + dependências\n\n\nIsolamento\nHipervisor (forte)\nKernel compartilhado (namespaces/cgroups)\n\n\nPeso\nPesado (GBs)\nLeve (MBs)\n\n\nBoot\nMinutos\nSegundos (ou menos)\n\n\nPortabilidade\nMédia\nAlta\n\n\n\n\n\n\n\n\n\nNota\n\n\nVMs e containers não são mutuamente exclusivos — é comum rodar containers dentro de uma VM (é exatamente assim que a maioria da nuvem pública funciona)."
   },
   {
+    "objectID": "aulas/09-docker-conceitos.html#vm-x-container-diagrama-original-de-referência",
+    "href": "aulas/09-docker-conceitos.html#vm-x-container-diagrama-original-de-referência",
+    "title": "Aula 09 — Docker: Conceitos e Arquitetura",
+    "section": "VM x Container — diagrama original de referência",
+    "text": "VM x Container — diagrama original de referência"
+  },
+  {
+    "objectID": "aulas/09-docker-conceitos.html#docker-logo-original-de-referência",
+    "href": "aulas/09-docker-conceitos.html#docker-logo-original-de-referência",
+    "title": "Aula 09 — Docker: Conceitos e Arquitetura",
+    "section": "Docker — logo original de referência",
+    "text": "Docker — logo original de referência"
+  },
+  {
     "objectID": "aulas/09-docker-conceitos.html#vários-containers-um-só-kernel",
     "href": "aulas/09-docker-conceitos.html#vários-containers-um-só-kernel",
     "title": "Aula 09 — Docker: Conceitos e Arquitetura",
@@ -543,7 +557,14 @@
     "href": "aulas/05-maquinas-virtuais.html#o-mmv-hipervisor-condições-de-popek-goldberg",
     "title": "Aula 05 — Máquinas Virtuais",
     "section": "O MMV / Hipervisor — condições de Popek & Goldberg",
-    "text": "O MMV / Hipervisor — condições de Popek & Goldberg\n\n\n\n\n\nflowchart TB\n  A1[Aplicações] --&gt; S1[Sistema Operacional]\n  A2[Aplicações] --&gt; S2[Sistema Operacional]\n  S1 --&gt; VM1[\"Máquina Virtual 1\"]\n  S2 --&gt; VM2[\"Máquina Virtual n\"]\n  VM1 --&gt; MMV[\"Virtual Machine Monitor (VMM)\"]\n  VM2 --&gt; MMV\n  MMV --&gt; HW[Hardware]\n\n\n\n\n\n\nUm bom monitor de máquina virtual (MMV) deve garantir:\n\nEquivalência — o software rodando na VM se comporta como se estivesse na máquina real\nDesempenho — degradação mínima de performance comparado a rodar direto no hardware\nControle de recursos — o MMV tem controle total sobre os recursos alocados a cada VM"
+    "text": "O MMV / Hipervisor — condições de Popek & Goldberg\n\n\n\n\n\nflowchart TB\n  A1[Aplicações] --&gt; S1[Sistema Operacional]\n  A2[Aplicações] --&gt; S2[Sistema Operacional]\n  S1 --&gt; VM1[\"Máquina Virtual 1\"]\n  S2 --&gt; VM2[\"Máquina Virtual n\"]\n  VM1 --&gt; MMV[\"Virtual Machine Monitor (VMM)\"]\n  VM2 --&gt; MMV\n  MMV --&gt; HW[Hardware]"
+  },
+  {
+    "objectID": "aulas/05-maquinas-virtuais.html#diagrama-original-de-referência",
+    "href": "aulas/05-maquinas-virtuais.html#diagrama-original-de-referência",
+    "title": "Aula 05 — Máquinas Virtuais",
+    "section": "Diagrama original de referência",
+    "text": "Diagrama original de referência\n\nUm bom monitor de máquina virtual (MMV) deve garantir:\n\nEquivalência — o software rodando na VM se comporta como se estivesse na máquina real\nDesempenho — degradação mínima de performance comparado a rodar direto no hardware\nControle de recursos — o MMV tem controle total sobre os recursos alocados a cada VM"
   },
   {
     "objectID": "aulas/05-maquinas-virtuais.html#principais-funções-do-mmv",
@@ -749,6 +770,13 @@
     "text": "Como ela funciona?\n\nPor trás da nuvem existe uma rede global de data centers com milhares de servidores físicos\nA virtualização é a tecnologia habilitadora: permite dividir um servidor físico em várias “máquinas” lógicas independentes\nO usuário nunca vê o hardware — só consome o recurso final (uma VM, um banco de dados, um site no ar)\n\n\n\n\n\n\n\nNota\n\n\nVamos aprofundar virtualização daqui a algumas aulas — hoje o foco é entender o conceito de nuvem em si."
   },
   {
+    "objectID": "aulas/01-introducao-computacao-nuvem.html#computação-em-nuvem-visualmente",
+    "href": "aulas/01-introducao-computacao-nuvem.html#computação-em-nuvem-visualmente",
+    "title": "Aula 01 — Introdução à Computação em Nuvem",
+    "section": "Computação em nuvem, visualmente",
+    "text": "Computação em nuvem, visualmente"
+  },
+  {
     "objectID": "aulas/01-introducao-computacao-nuvem.html#linha-do-tempo-de-onde-viemos",
     "href": "aulas/01-introducao-computacao-nuvem.html#linha-do-tempo-de-onde-viemos",
     "title": "Aula 01 — Introdução à Computação em Nuvem",
@@ -789,6 +817,13 @@
     "title": "Aula 01 — Introdução à Computação em Nuvem",
     "section": "Nuvem híbrida",
     "text": "Nuvem híbrida\n\nCombina nuvem pública + privada, integradas\nEx.: dados sensíveis ficam na nuvem privada; picos de demanda “estouram” para a nuvem pública\nVantagens: flexibilidade, otimização de custo e segurança\nDesvantagens: complexidade de integração e gestão"
+  },
+  {
+    "objectID": "aulas/01-introducao-computacao-nuvem.html#pública-privada-e-híbrida-visualizando",
+    "href": "aulas/01-introducao-computacao-nuvem.html#pública-privada-e-híbrida-visualizando",
+    "title": "Aula 01 — Introdução à Computação em Nuvem",
+    "section": "Pública, privada e híbrida — visualizando",
+    "text": "Pública, privada e híbrida — visualizando"
   },
   {
     "objectID": "aulas/01-introducao-computacao-nuvem.html#comparativo",
@@ -952,11 +987,25 @@
     "text": "IaaS — Infrastructure as a Service\n\nVocê aluga infraestrutura básica: servidores virtuais, armazenamento, rede\nVocê cuida do sistema operacional, aplicações e dados; o provedor cuida do hardware físico\nExemplos: AWS EC2, Azure Virtual Machines, Google Compute Engine\n\n\n✅ Escalabilidade, pagamento por uso, gerenciamento automatizado da infra física\n✅ Usos: hospedagem de sites, big data, ambientes de teste, backup/DR\n⚠️ Você ainda precisa administrar o SO e a segurança da aplicação"
   },
   {
+    "objectID": "aulas/02-modelos-servico-nist.html#iaas-visualmente",
+    "href": "aulas/02-modelos-servico-nist.html#iaas-visualmente",
+    "title": "Aula 02 — Modelos de Serviço em Nuvem e Arquitetura NIST",
+    "section": "IaaS, visualmente",
+    "text": "IaaS, visualmente"
+  },
+  {
     "objectID": "aulas/02-modelos-servico-nist.html#paas-platform-as-a-service",
     "href": "aulas/02-modelos-servico-nist.html#paas-platform-as-a-service",
     "title": "Aula 02 — Modelos de Serviço em Nuvem e Arquitetura NIST",
     "section": "PaaS — Platform as a Service",
     "text": "PaaS — Platform as a Service\n\nVocê recebe uma plataforma pronta para desenvolver e publicar aplicações\nO provedor cuida do SO, servidor, runtime; você só cuida do código\nExemplos: Google App Engine, Azure App Services, AWS Elastic Beanstalk, Heroku\n\n\n✅ IDE integrada, deploy simplificado, multiplataforma\n✅ Usos: desenvolvimento ágil, apps web/mobile, integração de APIs\n⚠️ Menos controle sobre o ambiente de execução"
+  },
+  {
+    "objectID": "aulas/02-modelos-servico-nist.html#paas-visualmente",
+    "href": "aulas/02-modelos-servico-nist.html#paas-visualmente",
+    "title": "Aula 02 — Modelos de Serviço em Nuvem e Arquitetura NIST",
+    "section": "PaaS, visualmente",
+    "text": "PaaS, visualmente"
   },
   {
     "objectID": "aulas/02-modelos-servico-nist.html#saas-software-as-a-service",
@@ -966,11 +1015,32 @@
     "text": "SaaS — Software as a Service\n\nVocê usa um software pronto, via navegador ou app, sem instalar nada\nO provedor cuida de absolutamente tudo (infraestrutura, plataforma e aplicação)\nExemplos: Google Workspace, Microsoft 365, Netflix, Spotify, Salesforce\n\n\n✅ Acesso de qualquer lugar, atualização automática, modelo por assinatura\n✅ Usos: ERP/CRM, colaboração, e-commerce\n⚠️ Zero controle sobre a infraestrutura ou o código"
   },
   {
+    "objectID": "aulas/02-modelos-servico-nist.html#saas-visualmente",
+    "href": "aulas/02-modelos-servico-nist.html#saas-visualmente",
+    "title": "Aula 02 — Modelos de Serviço em Nuvem e Arquitetura NIST",
+    "section": "SaaS, visualmente",
+    "text": "SaaS, visualmente"
+  },
+  {
     "objectID": "aulas/02-modelos-servico-nist.html#comparando-os-três-modelos",
     "href": "aulas/02-modelos-servico-nist.html#comparando-os-três-modelos",
     "title": "Aula 02 — Modelos de Serviço em Nuvem e Arquitetura NIST",
     "section": "Comparando os três modelos",
     "text": "Comparando os três modelos\n\n\n\n\nVocê gerencia\nProvedor gerencia\nExemplo\n\n\n\n\nIaaS\nSO, apps, dados\nServidores, rede, storage\nAWS EC2\n\n\nPaaS\nAplicação, dados\nSO, runtime, infraestrutura\nHeroku\n\n\nSaaS\nSó o uso\nTudo\nGmail\n\n\n\n\nQuanto mais à direita → menos trabalho técnico, menos controle."
+  },
+  {
+    "objectID": "aulas/02-modelos-servico-nist.html#a-pirâmide-iaas-paas-saas",
+    "href": "aulas/02-modelos-servico-nist.html#a-pirâmide-iaas-paas-saas",
+    "title": "Aula 02 — Modelos de Serviço em Nuvem e Arquitetura NIST",
+    "section": "A pirâmide IaaS / PaaS / SaaS",
+    "text": "A pirâmide IaaS / PaaS / SaaS"
+  },
+  {
+    "objectID": "aulas/02-modelos-servico-nist.html#tecnologias-por-camada",
+    "href": "aulas/02-modelos-servico-nist.html#tecnologias-por-camada",
+    "title": "Aula 02 — Modelos de Serviço em Nuvem e Arquitetura NIST",
+    "section": "Tecnologias por camada",
+    "text": "Tecnologias por camada"
   },
   {
     "objectID": "aulas/02-modelos-servico-nist.html#visão-detalhada-por-camada",
@@ -1097,6 +1167,13 @@
     "title": "Aula 04 — Virtualização: Conceitos e Hipervisores",
     "section": "Tipo 1 x Tipo 2 — visualizando as camadas",
     "text": "Tipo 1 x Tipo 2 — visualizando as camadas\n\n\n\n\n\nflowchart TB\n  subgraph T1[\"Tipo 1 — bare-metal\"]\n    direction TB\n    A1[App] --&gt; O1[SO]\n    A2[App] --&gt; O2[SO]\n    O1 --&gt; HV1[Hypervisor]\n    O2 --&gt; HV1\n    HV1 --&gt; HW1[Hardware]\n  end\n\n  subgraph T2[\"Tipo 2 — hosted\"]\n    direction TB\n    A3[App] --&gt; O3[SO]\n    A4[App] --&gt; O4[SO]\n    O3 --&gt; HV2[Hypervisor]\n    O4 --&gt; HV2\n    HV2 --&gt; SOH[Sistema Anfitrião]\n    SOH --&gt; HW2[Hardware]\n  end"
+  },
+  {
+    "objectID": "aulas/04-virtualizacao-conceitos-hipervisores.html#diagrama-original-de-referência",
+    "href": "aulas/04-virtualizacao-conceitos-hipervisores.html#diagrama-original-de-referência",
+    "title": "Aula 04 — Virtualização: Conceitos e Hipervisores",
+    "section": "Diagrama original de referência",
+    "text": "Diagrama original de referência"
   },
   {
     "objectID": "aulas/04-virtualizacao-conceitos-hipervisores.html#principais-hipervisores-do-mercado",
@@ -1433,6 +1510,13 @@
     "title": "Aula 10 — Prática Docker I",
     "section": "Atividade avaliativa",
     "text": "Atividade avaliativa\n\nIndividual (entregar com prints de cada etapa):\n\nCriem uma instância no Docker Playground\nPesquisem a imagem oficial do PHP no Docker Hub\nFaçam o passo a passo completo para instalar e rodar um script PHP simples (echo \"Olá, Docker!\";) dentro de um container\nDocumentem cada comando usado, com print da tela mostrando o resultado"
+  },
+  {
+    "objectID": "aulas/10-pratica-docker-1.html#exemplo-de-código-php-referência",
+    "href": "aulas/10-pratica-docker-1.html#exemplo-de-código-php-referência",
+    "title": "Aula 10 — Prática Docker I",
+    "section": "Exemplo de código PHP (referência)",
+    "text": "Exemplo de código PHP (referência)"
   },
   {
     "objectID": "aulas/10-pratica-docker-1.html#síntese-da-aula",
