@@ -24,15 +24,19 @@ Abrir perguntando: "quem aqui já usou Google Drive, Netflix ou WhatsApp hoje?" 
 - Em vez de comprar e manter seus próprios servidores...
 - ...você **aluga capacidade computacional** de um provedor (AWS, Azure, Google Cloud etc.)
 
-## Como ela funciona?
+## Como ela funciona? (infraestrutura)
 
 - Por trás da nuvem existe uma **rede global de data centers** com milhares de servidores físicos
 - A **virtualização** é a tecnologia habilitadora: permite dividir um servidor físico em várias "máquinas" lógicas independentes
-- O usuário nunca vê o hardware — só consome o recurso final (uma VM, um banco de dados, um site no ar)
 
 ::: {.callout-note}
 **Vamos aprofundar virtualização daqui a algumas aulas** — hoje o foco é entender o conceito de nuvem em si.
 :::
+
+## Como ela funciona? (para o usuário)
+
+- O usuário nunca vê o hardware — só consome o recurso final (uma VM, um banco de dados, um site no ar)
+- Tudo o que acontece "por baixo dos panos" (servidor físico, refrigeração, rede) é responsabilidade do provedor
 
 ## Computação em nuvem, visualmente
 
@@ -40,12 +44,17 @@ Abrir perguntando: "quem aqui já usou Google Drive, Netflix ou WhatsApp hoje?" 
 
 ---
 
-## Linha do tempo: de onde viemos
+## Linha do tempo: dos mainframes ao x86
 
 ::: {.incremental}
 - **Anos 1960–70** — Mainframes: um computador gigante, vários terminais "burros" compartilhando o mesmo processamento
 - **Anos 1980–90** — Computação pessoal e distribuída: cada um com seu próprio PC, poder de processamento descentralizado
 - **1999** — VMware lança software de virtualização comercial para x86
+:::
+
+## Linha do tempo: a era da nuvem comercial
+
+::: {.incremental}
 - **2006** — Amazon lança o **AWS (EC2/S3)**, marco comercial da computação em nuvem moderna
 - **2010s em diante** — Azure, Google Cloud, containers, nuvem vira padrão de mercado
 :::
@@ -73,6 +82,9 @@ Onde a infraestrutura de nuvem "mora" e quem tem acesso a ela.
 
 - Infraestrutura pertence a um **provedor terceirizado** (AWS, Azure, GCP...)
 - Recursos compartilhados entre **múltiplos clientes** (multi-tenancy)
+
+## Nuvem pública — vantagens e desvantagens
+
 - **Vantagens:** custo baixo, escalabilidade praticamente ilimitada, sem manutenção própria
 - **Desvantagens:** menos controle, dependência do provedor
 
@@ -80,6 +92,9 @@ Onde a infraestrutura de nuvem "mora" e quem tem acesso a ela.
 
 - Infraestrutura dedicada a **uma única organização**
 - Pode estar no próprio data center da empresa ou hospedada por terceiros, mas de uso exclusivo
+
+## Nuvem privada — vantagens e desvantagens
+
 - **Vantagens:** mais controle, segurança e customização
 - **Desvantagens:** custo mais alto, exige equipe própria de TI
 
@@ -87,6 +102,9 @@ Onde a infraestrutura de nuvem "mora" e quem tem acesso a ela.
 
 - Combina nuvem **pública + privada**, integradas
 - Ex.: dados sensíveis ficam na nuvem privada; picos de demanda "estouram" para a nuvem pública
+
+## Nuvem híbrida — vantagens e desvantagens
+
 - **Vantagens:** flexibilidade, otimização de custo e segurança
 - **Desvantagens:** complexidade de integração e gestão
 
@@ -105,21 +123,31 @@ Onde a infraestrutura de nuvem "mora" e quem tem acesso a ela.
 
 ---
 
-## Vantagens da nuvem
+## Vantagens da nuvem (parte 1)
 
 ::: {.incremental}
 - **Escalabilidade** — aumentar ou reduzir recursos sob demanda
 - **Custo-benefício** — paga-se pelo uso (OPEX em vez de CAPEX)
 - **Acessibilidade** — acesso de qualquer lugar, qualquer dispositivo
+:::
+
+## Vantagens da nuvem (parte 2)
+
+::: {.incremental}
 - **Backup e recuperação** — redundância facilita recuperação de desastres
 - **Inovação e agilidade** — testar novas ideias sem investir em hardware
 :::
 
-## Desafios da nuvem
+## Desafios da nuvem (parte 1)
 
 ::: {.incremental}
 - **Segurança e privacidade** — dados fora do seu controle físico
 - **Dependência de conectividade** — sem internet, sem acesso
+:::
+
+## Desafios da nuvem (parte 2)
+
+::: {.incremental}
 - **Controle e gestão** — menos visibilidade sobre a infraestrutura real
 - **Custos escaláveis** — uso mal gerenciado pode sair caro ("bill shock")
 :::
@@ -128,23 +156,37 @@ Onde a infraestrutura de nuvem "mora" e quem tem acesso a ela.
 
 ## Segurança na nuvem
 
-Compartilhar infraestrutura com outras empresas (multi-tenancy) exige mecanismos de segurança específicos. Alguns dos principais:
+Compartilhar infraestrutura com outras empresas exige mecanismos de segurança específicos.
 
-::: {.incremental}
 - **Multi-tenancy** — vários clientes compartilham a mesma infraestrutura física, isolados logicamente uns dos outros
-- **Criptografia** — dados protegidos tanto "em repouso" (armazenados) quanto "em trânsito" (trafegando pela rede)
-- **IAM (Identity and Access Management)** — controla quem pode acessar o quê, com que permissões
-:::
 
-## Segurança na nuvem (continuação)
+## Criptografia
 
-::: {.incremental}
-- **DLP (Data Loss Prevention)** — detecta e bloqueia vazamento de dados sensíveis
-- **SIEM (Security Information and Event Management)** — centraliza e correlaciona logs de segurança para detectar ataques
-- **ZTNA (Zero Trust Network Access)** — "nunca confie, sempre verifique": nenhum acesso é automaticamente confiável, mesmo vindo de dentro da rede
-- **FWaaS (Firewall as a Service)** — firewall entregue como serviço gerenciado na nuvem, sem hardware próprio
-- **CASB (Cloud Access Security Broker)** — camada de segurança entre usuários e provedores de nuvem, aplicando políticas da empresa
-:::
+Dados protegidos tanto **em repouso** (armazenados) quanto **em trânsito** (trafegando pela rede).
+
+## IAM (Identity and Access Management)
+
+Controla **quem pode acessar o quê**, com que permissões — a base de qualquer política de segurança em nuvem.
+
+## DLP (Data Loss Prevention)
+
+Detecta e bloqueia **vazamento de dados sensíveis**, antes que saiam da organização.
+
+## SIEM (Security Information and Event Management)
+
+Centraliza e correlaciona **logs de segurança** de toda a infraestrutura para detectar ataques em andamento.
+
+## ZTNA (Zero Trust Network Access)
+
+"**Nunca confie, sempre verifique**": nenhum acesso é automaticamente confiável, mesmo vindo de dentro da rede.
+
+## FWaaS (Firewall as a Service)
+
+Firewall entregue **como serviço gerenciado** na nuvem, sem precisar de hardware próprio.
+
+## CASB (Cloud Access Security Broker)
+
+Camada de segurança entre usuários e provedores de nuvem, **aplicando as políticas da empresa**.
 
 ::: {.notes}
 Não é preciso decorar as siglas — o importante é o aluno perceber que "segurança na nuvem" é uma área extensa e especializada, não só "colocar uma senha forte".
@@ -152,14 +194,21 @@ Não é preciso decorar as siglas — o importante é o aluno perceber que "segu
 
 ---
 
-## O futuro da nuvem
+## O futuro da nuvem: computação quântica
 
-::: {.incremental}
-- **Computação quântica na nuvem** — provedores já oferecem acesso a computadores quânticos como serviço (ex.: AWS Braket, Azure Quantum), sem precisar ter o hardware
-- **Edge computing e IoT** — processamento acontece mais perto de onde o dado é gerado (sensores, dispositivos), reduzindo latência, em vez de mandar tudo para um data center distante
-- **SASE (Secure Access Service Edge)** — converge rede e segurança em um único serviço entregue pela nuvem
-- **Nuvem verde** — sustentabilidade também é tendência (veremos em detalhe na Aula 03)
-:::
+Provedores já oferecem **acesso a computadores quânticos como serviço** (ex.: AWS Braket, Azure Quantum), sem precisar ter o hardware.
+
+## O futuro da nuvem: edge computing e IoT
+
+Processamento acontece **mais perto de onde o dado é gerado** (sensores, dispositivos), reduzindo latência, em vez de mandar tudo para um data center distante.
+
+## O futuro da nuvem: SASE
+
+**SASE (Secure Access Service Edge)** converge rede e segurança em um único serviço entregue pela nuvem.
+
+## O futuro da nuvem: nuvem verde
+
+Sustentabilidade também é tendência — veremos em detalhe na **Aula 03**.
 
 ---
 
@@ -168,7 +217,13 @@ Não é preciso decorar as siglas — o importante é o aluno perceber que "segu
 Prévia da próxima aula: os **modelos de serviço**
 
 - **IaaS** — infraestrutura (servidores, storage, rede virtuais)
+
+## PaaS (prévia)
+
 - **PaaS** — plataforma (ambiente pronto para desenvolver aplicações)
+
+## SaaS (prévia)
+
 - **SaaS** — software (aplicação pronta, só usar)
 
 ::: {.notes}
