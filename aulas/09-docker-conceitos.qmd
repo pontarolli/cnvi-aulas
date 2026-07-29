@@ -16,6 +16,8 @@ Conectar com as Aulas 04/05: containers são "outra forma" de virtualizar, mais 
 
 ## De onde vem o Docker
 
+![](../images/aula09/docker-logo.png){fig-align="center" width="35%"}
+
 - Lançado em **2013**, baseado em tecnologias mais antigas do kernel Linux: **cgroups** e **namespaces**
 - "Docker" tem vários significados: o **projeto open source**, o **conjunto de ferramentas**, e a **empresa** por trás dele
 
@@ -40,6 +42,10 @@ Conectar com as Aulas 04/05: containers são "outra forma" de virtualizar, mais 
 ::: {.callout-note}
 VMs e containers **não são mutuamente exclusivos** — é comum rodar containers **dentro** de uma VM (é exatamente assim que a maioria da nuvem pública funciona).
 :::
+
+## Vários containers, um só kernel
+
+![](../images/aula09/containers-kernel.png){fig-align="center" width="60%"}
 
 ## Limitação importante do Docker
 
@@ -107,6 +113,10 @@ CMD ["python", "/app.py"]
 - **Docker Hub** — repositório público com mais de 250 mil imagens prontas (`mysql`, `python`, `nginx`, `ubuntu`...)
 - **Docker Compose** — define e roda **múltiplos containers juntos** via um arquivo YAML (ex.: app + banco de dados)
 - **Docker Swarm** — orquestração nativa do Docker, para gerenciar containers em vários hosts
+
+## Docker Swarm — visão geral
+
+![](../images/aula09/docker-swarm.png){fig-align="center" width="60%"}
 
 ::: {.notes}
 Não aprofundar Compose/Swarm agora — só situar que existem, para quando o aluno for além do curso.

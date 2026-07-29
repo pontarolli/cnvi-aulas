@@ -30,6 +30,14 @@ Retomar a Aula 04 (hipervisores Tipo 1/2) — hoje aprofundamos dois exemplos re
 
 - **vMotion** — migrar uma VM em execução de um servidor físico para outro, **sem desligar** (zero downtime)
 - **HA (High Availability)** — se um host físico falha, as VMs são reiniciadas automaticamente em outro host
+
+## HA na prática
+
+::: {layout-ncol=2}
+![Funcionamento normal](../images/aula08/ha-funcionamento-normal.png)
+
+![Servidor 1 falha — VMs redistribuídas](../images/aula08/ha-funcionamento-falha.png)
+:::
 - **DRS (Distributed Resource Scheduler)** — balanceia automaticamente a carga entre os hosts do cluster
 
 ::: {.callout-note}

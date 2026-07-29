@@ -42,6 +42,8 @@ Distinguir bem: JVM não é o que estamos estudando como "VM" na disciplina — 
 
 ## O MMV / Hipervisor — condições de Popek & Goldberg
 
+![](../images/aula05/diagrama-mmv.png){fig-align="center" width="65%"}
+
 Um bom monitor de máquina virtual (MMV) deve garantir:
 
 ::: {.incremental}

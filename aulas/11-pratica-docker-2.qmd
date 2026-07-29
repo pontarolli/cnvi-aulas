@@ -43,6 +43,14 @@ docker run php
 4. Executa o container
 :::
 
+## O fluxo, visualmente
+
+![](../images/aula11/docker-run-fluxo.png){fig-align="center" width="80%"}
+
+::: {.notes}
+Reforçar: `docker pull` busca a imagem, `docker start`/`run` cria e inicia o container a partir dela.
+:::
+
 ## Testando com imagens simples
 
 ```bash

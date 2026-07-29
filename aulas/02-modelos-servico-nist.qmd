@@ -26,6 +26,8 @@ Em toda nuvem, parte da pilha de TI é gerenciada **pelo provedor**, parte **por
 
 Quanto mais "as a Service", menos você gerencia — e menos controle você tem.
 
+![](../images/aula02/comparativo-iaas-paas-saas.png){fig-align="center" width="70%"}
+
 ---
 
 ## IaaS — Infrastructure as a Service
@@ -75,6 +77,10 @@ Quanto mais "as a Service", menos você gerencia — e menos controle você tem.
 ::: {.fragment}
 Quanto mais à direita → **menos trabalho técnico, menos controle**.
 :::
+
+## Visão detalhada por camada
+
+![](../images/aula02/nist-responsabilidade-compartilhada.png){fig-align="center" width="85%"}
 
 ## E além dos três clássicos?
 

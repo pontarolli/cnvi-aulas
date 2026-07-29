@@ -46,6 +46,14 @@ Esta é a aula-chave que conecta tudo que vimos: nuvem só existe na escala atua
 | Uso típico | Data centers, produção | Desenvolvimento, testes, uso pessoal |
 | Exemplos | ESXi, Hyper-V, Xen | VirtualBox, VMware Workstation |
 
+## Tipo 1 x Tipo 2 — visualizando as camadas
+
+![](../images/aula04/tipo1-x-tipo2.png){fig-align="center" width="80%"}
+
+## Principais hipervisores do mercado
+
+![](../images/aula04/tabela-hipervisores.png){fig-align="center" width="75%"}
+
 ---
 
 ## Vantagens gerais da virtualização
