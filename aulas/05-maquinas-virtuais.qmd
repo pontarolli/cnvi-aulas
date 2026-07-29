@@ -1,6 +1,6 @@
 ---
 title: "Aula 05 — Máquinas Virtuais"
-date: "DD/MM/AAAA"
+date: last-modified
 ---
 
 ## Objetivos da aula

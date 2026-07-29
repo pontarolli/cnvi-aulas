@@ -1,6 +1,6 @@
 ---
 title: "Aula 13 — AWS, Azure, Google Cloud e OpenStack"
-date: "DD/MM/AAAA"
+date: last-modified
 ---
 
 ## Objetivos da aula

@@ -1,6 +1,6 @@
 ---
 title: "Aula 12 — Modelos de Gerenciamento em Nuvem"
-date: "DD/MM/AAAA"
+date: last-modified
 ---
 
 ## Objetivos da aula

@@ -1,6 +1,6 @@
 ---
 title: "Aula 07 — Data Centers, Dispositivos e Consolidação de Serviços"
-date: "DD/MM/AAAA"
+date: last-modified
 ---
 
 ## Objetivos da aula

@@ -1,6 +1,6 @@
 ---
 title: "Aula 06 — Prática: VirtualBox"
-date: "DD/MM/AAAA"
+date: last-modified
 ---
 
 ## Objetivos da aula

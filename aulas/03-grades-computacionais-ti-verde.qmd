@@ -1,6 +1,6 @@
 ---
 title: "Aula 03 — Grades Computacionais e TI Verde"
-date: "DD/MM/AAAA"
+date: last-modified
 ---
 
 ## Objetivos da aula

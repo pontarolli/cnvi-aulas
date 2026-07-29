@@ -1,6 +1,6 @@
 ---
 title: "Aula 01 — Introdução à Computação em Nuvem"
-date: "DD/MM/AAAA"
+date: last-modified
 ---
 
 ## Objetivos da aula

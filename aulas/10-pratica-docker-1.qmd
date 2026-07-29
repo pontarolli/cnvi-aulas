@@ -1,6 +1,6 @@
 ---
 title: "Aula 10 — Prática Docker I"
-date: "DD/MM/AAAA"
+date: last-modified
 ---
 
 ## Objetivos da aula
