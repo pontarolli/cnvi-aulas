@@ -189,6 +189,13 @@
     "text": "O que acontece quando você roda docker run?\ndocker run php\nPergunta: o que vocês acham que acontece aqui?\n\n\nDocker verifica se a imagem php existe localmente\nSe não existir, baixa automaticamente do Docker Hub\nCria um novo container a partir da imagem\nExecuta o container"
   },
   {
+    "objectID": "aulas/11-pratica-docker-2.html#o-fluxo-visualmente",
+    "href": "aulas/11-pratica-docker-2.html#o-fluxo-visualmente",
+    "title": "Aula 11 — Prática Docker II",
+    "section": "O fluxo, visualmente",
+    "text": "O fluxo, visualmente\n\n\nReforçar: docker pull busca a imagem, docker start/run cria e inicia o container a partir dela."
+  },
+  {
     "objectID": "aulas/11-pratica-docker-2.html#testando-com-imagens-simples",
     "href": "aulas/11-pratica-docker-2.html#testando-com-imagens-simples",
     "title": "Aula 11 — Prática Docker II",
@@ -284,7 +291,7 @@
     "href": "aulas/09-docker-conceitos.html#de-onde-vem-o-docker",
     "title": "Aula 09 — Docker: Conceitos e Arquitetura",
     "section": "De onde vem o Docker",
-    "text": "De onde vem o Docker\n\nLançado em 2013, baseado em tecnologias mais antigas do kernel Linux: cgroups e namespaces\n“Docker” tem vários significados: o projeto open source, o conjunto de ferramentas, e a empresa por trás dele"
+    "text": "De onde vem o Docker\n\n\nLançado em 2013, baseado em tecnologias mais antigas do kernel Linux: cgroups e namespaces\n“Docker” tem vários significados: o projeto open source, o conjunto de ferramentas, e a empresa por trás dele"
   },
   {
     "objectID": "aulas/09-docker-conceitos.html#como-funciona-por-baixo-dos-panos",
@@ -299,6 +306,13 @@
     "title": "Aula 09 — Docker: Conceitos e Arquitetura",
     "section": "Containers x Máquinas Virtuais",
     "text": "Containers x Máquinas Virtuais\n\n\n\n\n\n\n\n\n\nVM\nContainer\n\n\n\n\nO que roda\nSO completo (guest)\nSó a aplicação + dependências\n\n\nIsolamento\nHipervisor (forte)\nKernel compartilhado (namespaces/cgroups)\n\n\nPeso\nPesado (GBs)\nLeve (MBs)\n\n\nBoot\nMinutos\nSegundos (ou menos)\n\n\nPortabilidade\nMédia\nAlta\n\n\n\n\n\n\n\n\n\nNota\n\n\nVMs e containers não são mutuamente exclusivos — é comum rodar containers dentro de uma VM (é exatamente assim que a maioria da nuvem pública funciona)."
+  },
+  {
+    "objectID": "aulas/09-docker-conceitos.html#vários-containers-um-só-kernel",
+    "href": "aulas/09-docker-conceitos.html#vários-containers-um-só-kernel",
+    "title": "Aula 09 — Docker: Conceitos e Arquitetura",
+    "section": "Vários containers, um só kernel",
+    "text": "Vários containers, um só kernel"
   },
   {
     "objectID": "aulas/09-docker-conceitos.html#limitação-importante-do-docker",
@@ -354,7 +368,14 @@
     "href": "aulas/09-docker-conceitos.html#o-ecossistema-docker",
     "title": "Aula 09 — Docker: Conceitos e Arquitetura",
     "section": "O ecossistema Docker",
-    "text": "O ecossistema Docker\n\nDocker Hub — repositório público com mais de 250 mil imagens prontas (mysql, python, nginx, ubuntu…)\nDocker Compose — define e roda múltiplos containers juntos via um arquivo YAML (ex.: app + banco de dados)\nDocker Swarm — orquestração nativa do Docker, para gerenciar containers em vários hosts\n\n\nNão aprofundar Compose/Swarm agora — só situar que existem, para quando o aluno for além do curso."
+    "text": "O ecossistema Docker\n\nDocker Hub — repositório público com mais de 250 mil imagens prontas (mysql, python, nginx, ubuntu…)\nDocker Compose — define e roda múltiplos containers juntos via um arquivo YAML (ex.: app + banco de dados)\nDocker Swarm — orquestração nativa do Docker, para gerenciar containers em vários hosts"
+  },
+  {
+    "objectID": "aulas/09-docker-conceitos.html#docker-swarm-visão-geral",
+    "href": "aulas/09-docker-conceitos.html#docker-swarm-visão-geral",
+    "title": "Aula 09 — Docker: Conceitos e Arquitetura",
+    "section": "Docker Swarm — visão geral",
+    "text": "Docker Swarm — visão geral\n\n\nNão aprofundar Compose/Swarm agora — só situar que existem, para quando o aluno for além do curso."
   },
   {
     "objectID": "aulas/09-docker-conceitos.html#atividade-da-aula",
@@ -522,7 +543,7 @@
     "href": "aulas/05-maquinas-virtuais.html#o-mmv-hipervisor-condições-de-popek-goldberg",
     "title": "Aula 05 — Máquinas Virtuais",
     "section": "O MMV / Hipervisor — condições de Popek & Goldberg",
-    "text": "O MMV / Hipervisor — condições de Popek & Goldberg\nUm bom monitor de máquina virtual (MMV) deve garantir:\n\nEquivalência — o software rodando na VM se comporta como se estivesse na máquina real\nDesempenho — degradação mínima de performance comparado a rodar direto no hardware\nControle de recursos — o MMV tem controle total sobre os recursos alocados a cada VM"
+    "text": "O MMV / Hipervisor — condições de Popek & Goldberg\n\nUm bom monitor de máquina virtual (MMV) deve garantir:\n\nEquivalência — o software rodando na VM se comporta como se estivesse na máquina real\nDesempenho — degradação mínima de performance comparado a rodar direto no hardware\nControle de recursos — o MMV tem controle total sobre os recursos alocados a cada VM"
   },
   {
     "objectID": "aulas/05-maquinas-virtuais.html#principais-funções-do-mmv",
@@ -889,6 +910,13 @@
     "text": "Comparando os três modelos\n\n\n\n\nVocê gerencia\nProvedor gerencia\nExemplo\n\n\n\n\nIaaS\nSO, apps, dados\nServidores, rede, storage\nAWS EC2\n\n\nPaaS\nAplicação, dados\nSO, runtime, infraestrutura\nHeroku\n\n\nSaaS\nSó o uso\nTudo\nGmail\n\n\n\n\nQuanto mais à direita → menos trabalho técnico, menos controle."
   },
   {
+    "objectID": "aulas/02-modelos-servico-nist.html#visão-detalhada-por-camada",
+    "href": "aulas/02-modelos-servico-nist.html#visão-detalhada-por-camada",
+    "title": "Aula 02 — Modelos de Serviço em Nuvem e Arquitetura NIST",
+    "section": "Visão detalhada por camada",
+    "text": "Visão detalhada por camada"
+  },
+  {
     "objectID": "aulas/02-modelos-servico-nist.html#e-além-dos-três-clássicos",
     "href": "aulas/02-modelos-servico-nist.html#e-além-dos-três-clássicos",
     "title": "Aula 02 — Modelos de Serviço em Nuvem e Arquitetura NIST",
@@ -999,6 +1027,20 @@
     "title": "Aula 04 — Virtualização: Conceitos e Hipervisores",
     "section": "Tipo 1 x Tipo 2",
     "text": "Tipo 1 x Tipo 2\n\n\n\n\n\n\n\n\n\nTipo 1 (bare-metal)\nTipo 2 (hosted)\n\n\n\n\nOnde roda\nDireto no hardware\nDentro de um SO\n\n\nPerformance\nAlta\nMenor (overhead do SO hospedeiro)\n\n\nUso típico\nData centers, produção\nDesenvolvimento, testes, uso pessoal\n\n\nExemplos\nESXi, Hyper-V, Xen\nVirtualBox, VMware Workstation"
+  },
+  {
+    "objectID": "aulas/04-virtualizacao-conceitos-hipervisores.html#tipo-1-x-tipo-2-visualizando-as-camadas",
+    "href": "aulas/04-virtualizacao-conceitos-hipervisores.html#tipo-1-x-tipo-2-visualizando-as-camadas",
+    "title": "Aula 04 — Virtualização: Conceitos e Hipervisores",
+    "section": "Tipo 1 x Tipo 2 — visualizando as camadas",
+    "text": "Tipo 1 x Tipo 2 — visualizando as camadas"
+  },
+  {
+    "objectID": "aulas/04-virtualizacao-conceitos-hipervisores.html#principais-hipervisores-do-mercado",
+    "href": "aulas/04-virtualizacao-conceitos-hipervisores.html#principais-hipervisores-do-mercado",
+    "title": "Aula 04 — Virtualização: Conceitos e Hipervisores",
+    "section": "Principais hipervisores do mercado",
+    "text": "Principais hipervisores do mercado"
   },
   {
     "objectID": "aulas/04-virtualizacao-conceitos-hipervisores.html#vantagens-gerais-da-virtualização",
@@ -1194,7 +1236,14 @@
     "href": "aulas/08-vmware-xen.html#recursos-avançados-da-vmware",
     "title": "Aula 08 — VMware x Xen",
     "section": "Recursos avançados da VMware",
-    "text": "Recursos avançados da VMware\n\nvMotion — migrar uma VM em execução de um servidor físico para outro, sem desligar (zero downtime)\nHA (High Availability) — se um host físico falha, as VMs são reiniciadas automaticamente em outro host\nDRS (Distributed Resource Scheduler) — balanceia automaticamente a carga entre os hosts do cluster\n\n\n\n\n\n\n\nNota\n\n\nEsses recursos avançados são um dos motivos da VMware ser tradicionalmente adotada por grandes empresas, apesar do custo de licenciamento mais alto."
+    "text": "Recursos avançados da VMware\n\nvMotion — migrar uma VM em execução de um servidor físico para outro, sem desligar (zero downtime)\nHA (High Availability) — se um host físico falha, as VMs são reiniciadas automaticamente em outro host"
+  },
+  {
+    "objectID": "aulas/08-vmware-xen.html#ha-na-prática",
+    "href": "aulas/08-vmware-xen.html#ha-na-prática",
+    "title": "Aula 08 — VMware x Xen",
+    "section": "HA na prática",
+    "text": "HA na prática\n\n\n\n\n\n\nFuncionamento normal\n\n\n\n\n\n\n\nServidor 1 falha — VMs redistribuídas\n\n\n\n\n\n\nDRS (Distributed Resource Scheduler) — balanceia automaticamente a carga entre os hosts do cluster\n\n\n\n\n\n\n\nNota\n\n\nEsses recursos avançados são um dos motivos da VMware ser tradicionalmente adotada por grandes empresas, apesar do custo de licenciamento mais alto."
   },
   {
     "objectID": "aulas/08-vmware-xen.html#xen-visão-geral",

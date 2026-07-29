@@ -141,7 +141,7 @@
 Ricardo Pasquati Pontarolli 
 </div>
         <p class="quarto-title-affiliation">
-            Técnico em Redes de Computadores · IFSP Boituva · pasquati@ifsp.edu.br · v7
+            Técnico em Redes de Computadores · IFSP Boituva · pasquati@ifsp.edu.br · v9
           </p>
     </div>
 </div>
@@ -189,6 +189,31 @@ Ricardo Pasquati Pontarolli
 <ul>
 <li><strong>vMotion</strong> — migrar uma VM em execução de um servidor físico para outro, <strong>sem desligar</strong> (zero downtime)</li>
 <li><strong>HA (High Availability)</strong> — se um host físico falha, as VMs são reiniciadas automaticamente em outro host</li>
+</ul>
+</section>
+<section id="ha-na-prática" class="slide level2">
+<h2>HA na prática</h2>
+<div class="quarto-layout-panel" data-layout-ncol="2">
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="../images/aula08/ha-funcionamento-normal.png"></p>
+<figcaption>Funcionamento normal</figcaption>
+</figure>
+</div>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="../images/aula08/ha-funcionamento-falha.png"></p>
+<figcaption>Servidor 1 falha — VMs redistribuídas</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<ul>
 <li><strong>DRS (Distributed Resource Scheduler)</strong> — balanceia automaticamente a carga entre os hosts do cluster</li>
 </ul>
 <div class="callout callout-note callout-titled callout-style-default">
