@@ -18,7 +18,7 @@ Conectar com as Aulas 04/05: containers são "outra forma" de virtualizar, mais 
 
 ![](../images/aula09/docker-logo.svg){fig-align="center" width="25%"}
 
-- Lançado em **2013**, baseado em tecnologias mais antigas do kernel Linux: **cgroups** e **namespaces**
+- Lançado em **2013**, baseado em tecnologias mais antigas do kernel Linux: **cgroups**, **namespaces** e o projeto **LXC (Linux Containers)**, que já existia antes e inspirou o Docker
 - "Docker" tem vários significados: o **projeto open source**, o **conjunto de ferramentas**, e a **empresa** por trás dele
 
 ## Como funciona por baixo dos panos
@@ -82,6 +82,7 @@ VMs e containers **não são mutuamente exclusivos** — é comum rodar containe
 - Uma **imagem** é o "molde" — read-only, contém tudo que o container precisa para rodar
 - Um **container** é uma **instância em execução** dessa imagem (efêmero, pode ser destruído e recriado)
 - Imagens são construídas em **camadas** (layers): cada instrução do build adiciona uma camada
+- Tecnicamente, isso é implementado com sistemas de arquivos como **AUFS** ou **OverlayFS**, que empilham as camadas de forma eficiente
 - Só a **última camada** (a do container em execução) é gravável — as camadas da imagem original permanecem read-only
 
 ## Dockerfile
@@ -119,6 +120,7 @@ CMD ["python", "/app.py"]
 ## O ecossistema Docker
 
 - **Docker Hub** — repositório público com mais de 250 mil imagens prontas (`mysql`, `python`, `nginx`, `ubuntu`...)
+- **Docker Desktop** — aplicativo com interface gráfica para rodar Docker localmente no Windows/Mac, sem precisar da linha de comando para tudo
 - **Docker Compose** — define e roda **múltiplos containers juntos** via um arquivo YAML (ex.: app + banco de dados)
 - **Docker Swarm** — orquestração nativa do Docker, para gerenciar containers em vários hosts
 

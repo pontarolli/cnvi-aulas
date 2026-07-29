@@ -52,6 +52,12 @@ Depois de 3 aulas de Docker, voltamos ao nível "operação de nuvem madura" —
 Empresas grandes cada vez mais adotam estratégias multicloud — mas isso exige ferramentas de gerenciamento mais sofisticadas.
 :::
 
+## Gerenciamento de recursos
+
+- **Provisionamento e desprovisionamento automatizado** — criar e remover recursos (VMs, storage, rede) sob demanda, sem intervenção manual
+- **IAM (Identity and Access Management)** — controlar quem pode acessar e alterar cada recurso da nuvem
+- **Networking** — gerenciar redes virtuais, sub-redes e conectividade entre os recursos provisionados
+
 ---
 
 ## Infraestrutura como Código (IaC)

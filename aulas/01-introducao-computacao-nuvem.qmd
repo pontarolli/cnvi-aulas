@@ -8,6 +8,8 @@ title: "Aula 01 — Introdução à Computação em Nuvem"
 - Conhecer a **evolução histórica** que levou até a nuvem
 - Diferenciar os modelos de implantação: **pública, privada e híbrida**
 - Discutir **vantagens e desafios** de usar nuvem
+- Conhecer os principais mecanismos de **segurança na nuvem**
+- Ter uma visão do **futuro** da computação em nuvem
 
 ::: {.notes}
 Abrir perguntando: "quem aqui já usou Google Drive, Netflix ou WhatsApp hoje?" — todos usaram computação em nuvem sem perceber. Isso ancora a aula.
@@ -124,6 +126,43 @@ Onde a infraestrutura de nuvem "mora" e quem tem acesso a ela.
 
 ---
 
+## Segurança na nuvem
+
+Compartilhar infraestrutura com outras empresas (multi-tenancy) exige mecanismos de segurança específicos. Alguns dos principais:
+
+::: {.incremental}
+- **Multi-tenancy** — vários clientes compartilham a mesma infraestrutura física, isolados logicamente uns dos outros
+- **Criptografia** — dados protegidos tanto "em repouso" (armazenados) quanto "em trânsito" (trafegando pela rede)
+- **IAM (Identity and Access Management)** — controla quem pode acessar o quê, com que permissões
+:::
+
+## Segurança na nuvem (continuação)
+
+::: {.incremental}
+- **DLP (Data Loss Prevention)** — detecta e bloqueia vazamento de dados sensíveis
+- **SIEM (Security Information and Event Management)** — centraliza e correlaciona logs de segurança para detectar ataques
+- **ZTNA (Zero Trust Network Access)** — "nunca confie, sempre verifique": nenhum acesso é automaticamente confiável, mesmo vindo de dentro da rede
+- **FWaaS (Firewall as a Service)** — firewall entregue como serviço gerenciado na nuvem, sem hardware próprio
+- **CASB (Cloud Access Security Broker)** — camada de segurança entre usuários e provedores de nuvem, aplicando políticas da empresa
+:::
+
+::: {.notes}
+Não é preciso decorar as siglas — o importante é o aluno perceber que "segurança na nuvem" é uma área extensa e especializada, não só "colocar uma senha forte".
+:::
+
+---
+
+## O futuro da nuvem
+
+::: {.incremental}
+- **Computação quântica na nuvem** — provedores já oferecem acesso a computadores quânticos como serviço (ex.: AWS Braket, Azure Quantum), sem precisar ter o hardware
+- **Edge computing e IoT** — processamento acontece mais perto de onde o dado é gerado (sensores, dispositivos), reduzindo latência, em vez de mandar tudo para um data center distante
+- **SASE (Secure Access Service Edge)** — converge rede e segurança em um único serviço entregue pela nuvem
+- **Nuvem verde** — sustentabilidade também é tendência (veremos em detalhe na Aula 03)
+:::
+
+---
+
 ## E como a nuvem é "vendida"? {background-color="#fff8e1"}
 
 Prévia da próxima aula: os **modelos de serviço**
@@ -154,6 +193,8 @@ Não desenvolver aqui — é só o gancho para a Aula 02, que trata IaaS/PaaS/Sa
 - Evoluiu de mainframes → PCs distribuídos → nuvem (AWS 2006 em diante)
 - 3 modelos de implantação: **pública, privada, híbrida**
 - Vantagens (escala, custo, acesso) vêm com desafios (segurança, dependência, controle)
+- Segurança na nuvem envolve mecanismos específicos: **IAM, criptografia, DLP, SIEM, ZTNA, FWaaS, CASB**
+- Tendências futuras: **computação quântica, edge computing, SASE, nuvem verde**
 
 ## Próxima aula
 

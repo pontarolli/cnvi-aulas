@@ -34,11 +34,11 @@ Quanto mais "as a Service", menos você gerencia — e menos controle você tem.
 
 - Você aluga **infraestrutura básica**: servidores virtuais, armazenamento, rede
 - Você cuida do sistema operacional, aplicações e dados; o provedor cuida do hardware físico
-- **Exemplos:** AWS EC2, Azure Virtual Machines, Google Compute Engine
+- **Exemplos:** AWS EC2, Azure Virtual Machines, Google Compute Engine, **IBM Cloud**
 
 ::: {.incremental}
-- ✅ Escalabilidade, pagamento por uso, gerenciamento automatizado da infra física
-- ✅ Usos: hospedagem de sites, big data, ambientes de teste, backup/DR
+- ✅ Escalabilidade, pagamento por uso, gerenciamento automatizado da infra física, **acesso remoto**
+- ✅ Usos: hospedagem de sites, big data, ambientes de teste, backup/DR, **computação de alto desempenho (HPC)**
 - ⚠️ Você ainda precisa administrar o SO e a segurança da aplicação
 :::
 
@@ -53,8 +53,8 @@ Quanto mais "as a Service", menos você gerencia — e menos controle você tem.
 - **Exemplos:** Google App Engine, Azure App Services, AWS Elastic Beanstalk, Heroku
 
 ::: {.incremental}
-- ✅ IDE integrada, deploy simplificado, multiplataforma
-- ✅ Usos: desenvolvimento ágil, apps web/mobile, integração de APIs
+- ✅ IDE integrada, deploy simplificado, multiplataforma, **integração facilitada com outros serviços**
+- ✅ Usos: desenvolvimento ágil, apps web/mobile, integração de APIs, **machine learning**, **automação de processos**
 - ⚠️ Menos controle sobre o ambiente de execução
 :::
 
@@ -66,11 +66,11 @@ Quanto mais "as a Service", menos você gerencia — e menos controle você tem.
 
 - Você usa um **software pronto**, via navegador ou app, sem instalar nada
 - O provedor cuida de absolutamente tudo (infraestrutura, plataforma e aplicação)
-- **Exemplos:** Google Workspace, Microsoft 365, Netflix, Spotify, Salesforce
+- **Exemplos:** Google Workspace, Microsoft 365, Salesforce, Dropbox, Slack, Netflix, Spotify
 
 ::: {.incremental}
-- ✅ Acesso de qualquer lugar, atualização automática, modelo por assinatura
-- ✅ Usos: ERP/CRM, colaboração, e-commerce
+- ✅ Acesso de qualquer lugar, atualização automática, modelo por assinatura, **escalabilidade automática**
+- ✅ Usos: ERP/CRM, colaboração, e-commerce, **marketing digital**, **backup**
 - ⚠️ Zero controle sobre a infraestrutura ou o código
 :::
 

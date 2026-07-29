@@ -122,6 +122,7 @@ Um bom monitor de máquina virtual (MMV) deve garantir:
 ## Virtualização total: instruções sensíveis x privilegiadas
 
 - Para uma arquitetura ser **totalmente virtualizável** (condição de Popek-Goldberg), toda instrução "sensível" (que muda o estado do sistema) deve também ser "privilegiada" (só executável em modo kernel)
+- **Exemplo histórico:** o mainframe **IBM System/370** (anos 1970) foi projetado desde o início para cumprir essa condição — por isso já rodava múltiplas VMs de forma nativa e eficiente décadas antes do x86
 - O x86 clássico **não cumpria** essa condição perfeitamente — daí a necessidade de técnicas extras (tradução binária, paravirtualização, extensões de hardware como Intel VT-x/AMD-V) para virtualizar corretamente
 
 ::: {.notes}
