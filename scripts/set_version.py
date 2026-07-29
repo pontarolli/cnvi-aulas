@@ -10,6 +10,11 @@ META_PATH = ROOT / "aulas" / "_metadata.yml"
 
 
 def get_version() -> str:
+    # Baseado apenas na contagem de commits (numero de "versoes" salvas no
+    # git). Nao verifica se ha alteracoes nao commitadas: como este proprio
+    # script reescreve aulas/_metadata.yml a cada render, um check de "sujo"
+    # baseado nesse arquivo entraria em loop (alterna limpo/sujo a cada
+    # execucao). Se quiser saber se ha mudancas pendentes, use `git status`.
     try:
         count = subprocess.check_output(
             ["git", "rev-list", "--count", "HEAD"],
@@ -17,12 +22,9 @@ def get_version() -> str:
             text=True,
             stderr=subprocess.DEVNULL,
         ).strip()
-        dirty = subprocess.call(
-            ["git", "diff", "--quiet"], cwd=ROOT, stderr=subprocess.DEVNULL
-        ) != 0
-        return f"v{count}" + ("-dev" if dirty else "")
+        return f"v{count}"
     except Exception:
-        return "v0-dev"
+        return "v0"
 
 
 def main() -> None:

@@ -12,3 +12,5 @@ __pycache__/
 
 # Configuração local do Claude Code (não é conteúdo do curso)
 /.claude/
+
+**/*.quarto_ipynb
