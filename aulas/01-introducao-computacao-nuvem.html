@@ -141,265 +141,441 @@
 Ricardo Pasquati Pontarolli 
 </div>
         <p class="quarto-title-affiliation">
-            Técnico em Redes de Computadores · IFSP Boituva · pasquati@ifsp.edu.br · v25
+            Técnico em Redes de Computadores · IFSP Boituva · pasquati@ifsp.edu.br · v27
           </p>
     </div>
 </div>
 
 </section>
-<section id="objetivos-da-aula" class="slide level2">
-<h2>Objetivos da aula</h2>
+<section id="introdução" class="slide level2">
+<h2>Introdução</h2>
 <ul>
-<li>Entender <strong>o que é</strong> computação em nuvem e como ela funciona</li>
-<li>Conhecer a <strong>evolução histórica</strong> que levou até a nuvem</li>
-<li>Diferenciar os modelos de implantação: <strong>pública, privada e híbrida</strong></li>
-<li>Discutir <strong>vantagens e desafios</strong> de usar nuvem</li>
-<li>Conhecer os principais mecanismos de <strong>segurança na nuvem</strong></li>
-<li>Ter uma visão do <strong>futuro</strong> da computação em nuvem</li>
-</ul>
-<aside class="notes">
-<p>Abrir perguntando: “quem aqui já usou Google Drive, Netflix ou WhatsApp hoje?” — todos usaram computação em nuvem sem perceber. Isso ancora a aula.</p>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
-</section>
-<section id="o-que-é-computação-em-nuvem" class="slide level2">
-<h2>O que é computação em nuvem?</h2>
-<blockquote>
-<p>Entrega de recursos de TI (servidores, armazenamento, banco de dados, rede, software) <strong>pela internet</strong>, sob demanda, geralmente com pagamento conforme o uso.</p>
-</blockquote>
+<li>Serviços:
 <ul>
-<li>Em vez de comprar e manter seus próprios servidores…</li>
-<li>…você <strong>aluga capacidade computacional</strong> de um provedor (AWS, Azure, Google Cloud etc.)</li>
+<li>Google Drive,</li>
+<li>Dropbox,</li>
+<li>iCloud,</li>
+<li>AWS,</li>
+<li>Microsoft Azure.</li>
+</ul></li>
+<li>A computação em nuvem se tornou uma parte essencial da infraestrutura de TI das empresas e usuários individuais.</li>
 </ul>
 </section>
-<section id="como-ela-funciona-infraestrutura" class="slide level2">
-<h2>Como ela funciona? (infraestrutura)</h2>
+<section id="introdução---definição" class="slide level2">
+<h2>Introdução - Definição</h2>
 <ul>
-<li>Por trás da nuvem existe uma <strong>rede global de data centers</strong> com milhares de servidores físicos</li>
-<li>A <strong>virtualização</strong> é a tecnologia habilitadora: permite dividir um servidor físico em várias “máquinas” lógicas independentes</li>
-</ul>
-<div class="callout callout-note callout-titled callout-style-default">
-<div class="callout-body">
-<div class="callout-title">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<p><strong>Nota</strong></p>
-</div>
-<div class="callout-content">
-<p><strong>Vamos aprofundar virtualização daqui a algumas aulas</strong> — hoje o foco é entender o conceito de nuvem em si.</p>
-</div>
-</div>
-</div>
-</section>
-<section id="como-ela-funciona-para-o-usuário" class="slide level2">
-<h2>Como ela funciona? (para o usuário)</h2>
+<li>Computação em nuvem (Cloud Computing):
 <ul>
-<li>O usuário nunca vê o hardware — só consome o recurso final (uma VM, um banco de dados, um site no ar)</li>
-<li>Tudo o que acontece “por baixo dos panos” (servidor físico, refrigeração, rede) é responsabilidade do provedor</li>
+<li>Em termos simples, ela se refere à entrega de recursos de TI pela internet.
+<ul>
+<li>Armazenamento de dados, servidores, redes e até softwares.</li>
+</ul></li>
+<li>Ou seja, ao invés de armazenar arquivos em um computador físico ou em um servidor local, eles serão armazenados em servidores remotos, ou na “nuvem”.</li>
+<li>A nuvem permite que você acesse informações e recursos de qualquer lugar, desde que tenha uma conexão com a internet.</li>
+<li>Principal característica:
+<ul>
+<li>Capacidade de aumentar ou diminuir recursos de acordo com a demanda.</li>
+</ul></li>
+</ul></li>
 </ul>
 </section>
-<section id="computação-em-nuvem-visualmente" class="slide level2">
-<h2>Computação em nuvem, visualmente</h2>
+<section id="introdução---definição-1" class="slide level2">
+<h2>Introdução - Definição</h2>
+<ul>
+<li>A computação em nuvem revolucionou a forma como empresas e indivíduos interagem com a tecnologia.
+<ul>
+<li>oferecendo uma plataforma flexível, escalável e econômica para uma ampla gama de aplicações.</li>
+</ul></li>
+<li>A nuvem permite acesso on-demand a recursos de computação, sem a necessidade de investir em infraestrutura física.</li>
+</ul>
+</section>
+<section id="introdução---definição-2" class="slide level2">
+<h2>Introdução - Definição</h2>
+<ul>
+<li>O que é computação em nuvem?
+<ul>
+<li>Nuvem:
+<ul>
+<li>A “nuvem” é uma coleção sob demanda de servidores, armazenamento, aplicativos e outras infraestruturas de computação,</li>
+<li>eles residem em data centers em todo o mundo e podem ser acessados pela Internet.</li>
+</ul></li>
+<li>Termo completo:
+<ul>
+<li>É a capacidade de adquirir e usar serviços de computação pela Internet.</li>
+<li>Fornece recursos de computação sob demanda,</li>
+<li>A computação em nuvem evita a necessidade de instalação de servidores físicos, execução de software e gerenciamento de bancos de dados.</li>
+</ul></li>
+</ul></li>
+<li>A nuvem oferece inovação mais rápida, recursos flexíveis e economias de escala.</li>
+</ul>
+</section>
+<section id="introdução---como-funciona" class="slide level2">
+<h2>Introdução - Como funciona?</h2>
+<ul>
+<li>A nuvem é uma vasta rede de servidores de computador localizados em todo o mundo, juntamente com os dados, conteúdo, aplicativos, bancos de dados e outros recursos de computação.</li>
+<li>A computação em nuvem é possível graças à virtualização,
+<ul>
+<li>uma tecnologia que permite que um servidor físico execute vários computadores “virtuais”.</li>
+<li>Ela possibilita agrupar os recursos de muitos servidores físicos diferentes e disponibilizá-los para clientes ou usuários como um serviço único e altamente escalável.</li>
+</ul></li>
+</ul>
+</section>
+<section id="introdução---como-funciona-1" class="slide level2">
+<h2>Introdução - Como funciona?</h2>
+<ul>
+<li>A computação em nuvem reduz o custo de gerenciamento e acesso a recursos de computação.
+<ul>
+<li>Tornando o uso de hardware físico mais eficiente e permitindo que uma máquina física atenda a muitas necessidades e organizações diferentes.</li>
+</ul></li>
+</ul>
+</section>
+<section id="introdução---definição-3" class="slide level2">
+<h2>Introdução - Definição</h2>
 
 <img data-src="../images/aula01/cloud-computing-icones.png" class="quarto-figure quarto-figure-center r-stretch" style="width:70.0%"></section>
-<section id="linha-do-tempo-dos-mainframes-ao-x86" class="slide level2">
-<h2>Linha do tempo: dos mainframes ao x86</h2>
+<section id="evolução---introdução" class="slide level2">
+<h2>Evolução - Introdução</h2>
 <ul>
-<li class="fragment"><strong>Anos 1960–70</strong> — Mainframes: um computador gigante, vários terminais “burros” compartilhando o mesmo processamento</li>
-<li class="fragment"><strong>Anos 1980–90</strong> — Computação pessoal e distribuída: cada um com seu próprio PC, poder de processamento descentralizado</li>
-<li class="fragment"><strong>1999</strong> — VMware lança software de virtualização comercial para x86</li>
+<li>Computação Centralizada (Mainframe):
+<ul>
+<li>Todos os dados e recursos eram armazenados em mainframes.</li>
+<li>A computação foi se distribuindo, e começaram a surgir redes de computadores que permitiram uma abordagem mais flexível e descentralizada.</li>
+</ul></li>
+<li>Computação Distribuída:
+<ul>
+<li>Método de fazer vários computadores trabalharem juntos,</li>
+<li>Acarretou no surgimento da “nuvem”.</li>
+</ul></li>
 </ul>
 </section>
-<section id="linha-do-tempo-a-era-da-nuvem-comercial" class="slide level2">
-<h2>Linha do tempo: a era da nuvem comercial</h2>
+<section id="evolução---introdução-1" class="slide level2">
+<h2>Evolução - Introdução</h2>
 <ul>
-<li class="fragment"><strong>2006</strong> — Amazon lança o <strong>AWS (EC2/S3)</strong>, marco comercial da computação em nuvem moderna</li>
-<li class="fragment"><strong>2010s em diante</strong> — Azure, Google Cloud, containers, nuvem vira padrão de mercado</li>
+<li>O Surgimento da Nuvem:
+<ul>
+<li>O surgimento de empresas como Amazon Web Services (AWS), a computação em nuvem passou a ser popularizada.</li>
+<li>Hoje: existem gigantes como Google Cloud, Microsoft Azure e muitos outros que oferecem uma gama enorme de serviços baseados em nuvem.</li>
+</ul></li>
 </ul>
 </section>
-<section id="discussão-rápida" class="slide level2" data-background-color="#eaf5ec">
-<h2>Discussão rápida</h2>
-<p><strong>Você já usa computação em nuvem sem saber?</strong></p>
+<section id="evolução---computação-centralizada" class="slide level2">
+<h2>Evolução - Computação Centralizada</h2>
 <ul>
-<li>Google Drive / OneDrive</li>
-<li>Netflix / Spotify</li>
-<li>WhatsApp (backup na nuvem)</li>
-<li>Jogos salvos na nuvem (Steam Cloud, Google Play Games)</li>
-</ul>
-<div class="fragment">
-<p>Em duplas: listem <strong>3 exemplos</strong> de serviços em nuvem que vocês usam no dia a dia. (2 min)</p>
-</div>
-</section>
-<section id="modelos-de-implantação-deployment" class="slide level2">
-<h2>Modelos de implantação (deployment)</h2>
-<p>Onde a infraestrutura de nuvem “mora” e quem tem acesso a ela.</p>
-</section>
-<section id="nuvem-pública" class="slide level2">
-<h2>Nuvem pública</h2>
-<ul>
-<li>Infraestrutura pertence a um <strong>provedor terceirizado</strong> (AWS, Azure, GCP…)</li>
-<li>Recursos compartilhados entre <strong>múltiplos clientes</strong> (multi-tenancy)</li>
+<li>É um modelo de processamento de dados em que todas as tarefas são realizadas por um único computador central.</li>
+<li>Os usuários acessam o computador central por meio de terminais ou dispositivos com capacidades de processamento limitadas.</li>
+<li>O servidor central é responsável por processar, armazenar e gerenciar os dados.</li>
+<li>Todos os usuários de um sistema centralizado dependem de uma única fonte de serviço.</li>
 </ul>
 </section>
-<section id="nuvem-pública-vantagens-e-desvantagens" class="slide level2">
-<h2>Nuvem pública — vantagens e desvantagens</h2>
+<section id="evolução---computação-distribuída" class="slide level2">
+<h2>Evolução - Computação Distribuída</h2>
 <ul>
-<li><strong>Vantagens:</strong> custo baixo, escalabilidade praticamente ilimitada, sem manutenção própria</li>
-<li><strong>Desvantagens:</strong> menos controle, dependência do provedor</li>
+<li>Envolve a cooperação de duas ou mais máquinas se comunicando em uma rede.</li>
+<li>As máquinas que participam do sistema podem variar de computadores pessoais a supercomputadores;</li>
+<li>a rede pode conectar máquinas em um edifício ou em continentes diferentes.</li>
 </ul>
 </section>
-<section id="nuvem-privada" class="slide level2">
-<h2>Nuvem privada</h2>
+<section id="modelos-de-implantação" class="slide level2">
+<h2>Modelos de Implantação</h2>
 <ul>
-<li>Infraestrutura dedicada a <strong>uma única organização</strong></li>
-<li>Pode estar no próprio data center da empresa ou hospedada por terceiros, mas de uso exclusivo</li>
+<li>Nem todas as nuvens são iguais e nenhum tipo de computação em nuvem é adequado para todos.</li>
+<li>Vários modelos, tipos e serviços diferentes evoluíram para ajudar a oferecer a solução certa para determinadas necessidades.</li>
+<li>Abaixo as três principais maneiras de implantar serviços em nuvem:
+<ul>
+<li>Nuvem pública,</li>
+<li>Nuvem privada,</li>
+<li>Nuvem híbrida.</li>
+</ul></li>
 </ul>
 </section>
-<section id="nuvem-privada-vantagens-e-desvantagens" class="slide level2">
-<h2>Nuvem privada — vantagens e desvantagens</h2>
+<section id="modelos-de-implantação---nuvem-pública" class="slide level2">
+<h2>Modelos de Implantação - Nuvem Pública</h2>
 <ul>
-<li><strong>Vantagens:</strong> mais controle, segurança e customização</li>
-<li><strong>Desvantagens:</strong> custo mais alto, exige equipe própria de TI</li>
+<li>As nuvens públicas são de propriedade e operadas por provedores de serviços de nuvem terceirizados, que fornecem recursos de computação como servidores e armazenamento pela Internet.</li>
+<li>A Google Cloud (GCP), Azure da Microsoft e a AWS da Amazon são exemplos de nuvens públicas, líderes de mercado nesse segmento.</li>
+<li>Com uma nuvem pública, todo o hardware, software e outras infraestruturas de suporte são gerenciados pelo provedor de nuvem.</li>
+<li>Você pode acessar esses serviços e gerenciar sua conta usando um navegador da Web, API ou CLI.</li>
 </ul>
 </section>
-<section id="nuvem-híbrida" class="slide level2">
-<h2>Nuvem híbrida</h2>
+<section id="modelos-de-implantação---nuvem-pública-1" class="slide level2">
+<h2>Modelos de Implantação - Nuvem Pública</h2>
 <ul>
-<li>Combina nuvem <strong>pública + privada</strong>, integradas</li>
-<li>Ex.: dados sensíveis ficam na nuvem privada; picos de demanda “estouram” para a nuvem pública</li>
+<li>Definição: A infraestrutura é de propriedade de um provedor de serviços de nuvem e é compartilhada entre vários clientes.</li>
+<li>Exemplos: Amazon Web Services (AWS), Microsoft Azure, Google Cloud.</li>
+<li>Vantagens: Menor custo, escalabilidade, flexibilidade.</li>
+<li>Desvantagens: Menor controle sobre os dados e a segurança, dependência de um fornecedor externo.</li>
 </ul>
 </section>
-<section id="nuvem-híbrida-vantagens-e-desvantagens" class="slide level2">
-<h2>Nuvem híbrida — vantagens e desvantagens</h2>
+<section id="modelos-de-implantação---nuvem-privada" class="slide level2">
+<h2>Modelos de Implantação - Nuvem Privada</h2>
 <ul>
-<li><strong>Vantagens:</strong> flexibilidade, otimização de custo e segurança</li>
-<li><strong>Desvantagens:</strong> complexidade de integração e gestão</li>
+<li>Uma nuvem privada refere-se a recursos de computação em nuvem usados exclusivamente por uma única empresa ou organização.</li>
+<li>Uma nuvem privada pode estar fisicamente localizada no data center local da empresa.</li>
+<li>Algumas empresas também pagam provedores de serviços terceirizados para hospedar sua nuvem privada.</li>
+<li>Um ambiente de nuvem privada mantém os serviços e a infraestrutura em uma rede privada.</li>
 </ul>
 </section>
-<section id="pública-privada-e-híbrida-visualizando" class="slide level2">
-<h2>Pública, privada e híbrida — visualizando</h2>
+<section id="modelos-de-implantação---nuvem-privada-1" class="slide level2">
+<h2>Modelos de Implantação - Nuvem Privada</h2>
+<ul>
+<li>Definição: A infraestrutura de nuvem é dedicada exclusivamente a uma única organização.</li>
+<li>Exemplos: Data centers privados, soluções como VMware ou OpenStack.</li>
+<li>Vantagens: Maior controle, segurança aprimorada, personalização.</li>
+<li>Desvantagens: Maior custo inicial, manutenção complexa, escalabilidade limitada.</li>
+</ul>
+</section>
+<section id="modelos-de-implantação---nuvem-híbrida" class="slide level2">
+<h2>Modelos de Implantação - Nuvem Híbrida</h2>
+<ul>
+<li>A nuvem híbrida oferece uma combinação de nuvens públicas e privadas, conectadas em rede de forma que dados e aplicativos possam ser compartilhados entre elas.</li>
+<li>As nuvens híbridas oferecem às empresas maior flexibilidade para dimensionamento e implantação.</li>
+</ul>
+</section>
+<section id="modelos-de-implantação---nuvem-híbrida-1" class="slide level2">
+<h2>Modelos de Implantação - Nuvem Híbrida</h2>
+<ul>
+<li>Definição: Combinação de nuvem pública e privada, permitindo que os dados e aplicações sejam compartilhados entre elas.</li>
+<li>Exemplos: Empresas que mantêm dados sensíveis em uma nuvem privada, mas utilizam a nuvem pública para outras operações.</li>
+<li>Vantagens: Flexibilidade, escalabilidade, controle de dados sensíveis.</li>
+<li>Desvantagens: Complexidade na gestão, custos mais elevados.</li>
+</ul>
+</section>
+<section id="modelos-de-implantação-1" class="slide level2">
+<h2>Modelos de Implantação</h2>
 
 <img data-src="../images/aula01/hibrida-publica-privada.png" class="quarto-figure quarto-figure-center r-stretch" style="width:65.0%"></section>
-<section id="comparativo" class="slide level2">
-<h2>Comparativo</h2>
-<table class="caption-top">
-<colgroup>
-<col style="width: 25%">
-<col style="width: 25%">
-<col style="width: 25%">
-<col style="width: 25%">
-</colgroup>
-<thead>
-<tr class="header">
-<th></th>
-<th>Pública</th>
-<th>Privada</th>
-<th>Híbrida</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Custo inicial</td>
-<td>Baixo</td>
-<td>Alto</td>
-<td>Médio</td>
-</tr>
-<tr class="even">
-<td>Controle</td>
-<td>Baixo</td>
-<td>Alto</td>
-<td>Médio</td>
-</tr>
-<tr class="odd">
-<td>Escalabilidade</td>
-<td>Muito alta</td>
-<td>Limitada</td>
-<td>Alta</td>
-</tr>
-<tr class="even">
-<td>Uso típico</td>
-<td>Startups, apps web</td>
-<td>Bancos, governo, saúde</td>
-<td>Empresas em transição</td>
-</tr>
-</tbody>
-</table>
-</section>
-<section id="vantagens-da-nuvem-parte-1" class="slide level2">
-<h2>Vantagens da nuvem (parte 1)</h2>
+<section id="computação-em-nuvem---vantagens" class="slide level2">
+<h2>Computação em Nuvem - Vantagens</h2>
 <ul>
-<li class="fragment"><strong>Escalabilidade</strong> — aumentar ou reduzir recursos sob demanda</li>
-<li class="fragment"><strong>Custo-benefício</strong> — paga-se pelo uso (OPEX em vez de CAPEX)</li>
-<li class="fragment"><strong>Acessibilidade</strong> — acesso de qualquer lugar, qualquer dispositivo</li>
+<li><strong>Escalabilidade</strong>: A capacidade de aumentar ou reduzir os recursos conforme a demanda, o que é ideal para empresas de diferentes tamanhos.</li>
+<li><strong>Custo-benefício</strong>: Redução de custos com infraestrutura, hardware, e manutenção, já que o provedor de nuvem gerencia a maior parte.</li>
+<li><strong>Acessibilidade</strong>: A nuvem permite o acesso remoto e de qualquer lugar, facilitando o trabalho remoto e a colaboração entre equipes geograficamente distantes.</li>
 </ul>
 </section>
-<section id="vantagens-da-nuvem-parte-2" class="slide level2">
-<h2>Vantagens da nuvem (parte 2)</h2>
+<section id="computação-em-nuvem---vantagens-1" class="slide level2">
+<h2>Computação em Nuvem - Vantagens</h2>
 <ul>
-<li class="fragment"><strong>Backup e recuperação</strong> — redundância facilita recuperação de desastres</li>
-<li class="fragment"><strong>Inovação e agilidade</strong> — testar novas ideias sem investir em hardware</li>
+<li><strong>Backup e Recuperação</strong>: Facilita a criação de backups automáticos e a recuperação rápida de dados em caso de falhas.</li>
+<li><strong>Inovação e Agilidade</strong>: Novas ferramentas e atualizações são disponibilizadas de forma mais rápida e eficiente, permitindo inovação contínua.</li>
 </ul>
 </section>
-<section id="desafios-da-nuvem-parte-1" class="slide level2">
-<h2>Desafios da nuvem (parte 1)</h2>
+<section id="computação-em-nuvem---desafios" class="slide level2">
+<h2>Computação em Nuvem - Desafios</h2>
 <ul>
-<li class="fragment"><strong>Segurança e privacidade</strong> — dados fora do seu controle físico</li>
-<li class="fragment"><strong>Dependência de conectividade</strong> — sem internet, sem acesso</li>
+<li><strong>Segurança e Privacidade</strong>: O armazenamento de dados sensíveis em servidores de terceiros pode representar riscos em termos de privacidade e segurança.</li>
+<li><strong>Dependência de Conectividade</strong>: A computação em nuvem depende de uma conexão com a internet; a indisponibilidade da rede pode afetar a operação.</li>
+<li><strong>Controle e Gestão</strong>: Embora a nuvem ofereça muitos recursos, o controle sobre os dados e a infraestrutura pode ser limitado em comparação a uma solução local.</li>
+<li><strong>Custos Escaláveis</strong>: Apesar de os custos iniciais serem baixos, o uso contínuo de recursos pode resultar em gastos crescentes.</li>
 </ul>
 </section>
-<section id="desafios-da-nuvem-parte-2" class="slide level2">
-<h2>Desafios da nuvem (parte 2)</h2>
+<section id="computação-em-nuvem---serviços" class="slide level2">
+<h2>Computação em Nuvem - Serviços</h2>
 <ul>
-<li class="fragment"><strong>Controle e gestão</strong> — menos visibilidade sobre a infraestrutura real</li>
-<li class="fragment"><strong>Custos escaláveis</strong> — uso mal gerenciado pode sair caro (“bill shock”)</li>
+<li>A maioria dos serviços de computação em nuvem se enquadra em quatro grandes categorias:
+<ul>
+<li>Infraestrutura como serviço (IaaS),</li>
+<li>Plataforma como serviço (PaaS),</li>
+<li>Software como serviço (SaaS),</li>
+<li>Sem servidor (Serverless computing).</li>
+</ul></li>
+<li>Às vezes, eles são chamados de “pilha de computação em nuvem” porque são construídos uns sobre os outros.</li>
+<li>Saber o que são e como são diferentes facilita a realização de seus objetivos de negócios.</li>
 </ul>
 </section>
-<section id="segurança-na-nuvem" class="slide level2">
-<h2>Segurança na nuvem</h2>
-<p>Compartilhar infraestrutura com outras empresas exige mecanismos de segurança específicos.</p>
+<section id="computação-em-nuvem---iaas" class="slide level2">
+<h2>Computação em Nuvem - IaaS</h2>
 <ul>
-<li><strong>Multi-tenancy</strong> — vários clientes compartilham a mesma infraestrutura física, isolados logicamente uns dos outros</li>
+<li>Infraestrutura como serviço (IaaS):
+<ul>
+<li>Esta é a categoria mais básica de serviços de computação em nuvem.</li>
+<li>Com a IaaS, você aluga infraestrutura de TI de um provedor de nuvem com pagamento conforme o uso:
+<ul>
+<li>servidores e máquinas virtuais,</li>
+<li>armazenamento,</li>
+<li>rede,</li>
+<li>sistemas operacionais.</li>
+</ul></li>
+</ul></li>
 </ul>
 </section>
-<section id="criptografia" class="slide level2">
-<h2>Criptografia</h2>
-<p>Dados protegidos tanto <strong>em repouso</strong> (armazenados) quanto <strong>em trânsito</strong> (trafegando pela rede).</p>
+<section id="computação-em-nuvem---paas" class="slide level2">
+<h2>Computação em Nuvem - PaaS</h2>
+<ul>
+<li>Plataforma como serviço (PaaS):
+<ul>
+<li>Refere-se a serviços de computação em nuvem que fornecem um ambiente sob demanda para desenvolver, testar, entregar e gerenciar aplicativos de software.</li>
+<li>O PaaS torna mais fácil para os desenvolvedores criar rapidamente aplicativos Web ou aplicativos móveis sem se preocupar em configurar ou gerenciar a infraestrutura subjacente de servidores, armazenamento, rede e bancos de dados.</li>
+</ul></li>
+</ul>
 </section>
-<section id="iam-identity-and-access-management" class="slide level2">
-<h2>IAM (Identity and Access Management)</h2>
-<p>Controla <strong>quem pode acessar o quê</strong>, com que permissões — a base de qualquer política de segurança em nuvem.</p>
+<section id="computação-em-nuvem---saas" class="slide level2">
+<h2>Computação em Nuvem - SaaS</h2>
+<ul>
+<li>Software como serviço (SaaS):
+<ul>
+<li>É um método para fornecer aplicativos de software pela Internet, sob demanda e, normalmente, por assinatura.</li>
+<li>Com o SaaS, os provedores de nuvem hospedam e gerenciam o software e a infraestrutura subjacente e lidam com qualquer manutenção, como atualizações de software e patches de segurança.</li>
+<li>Os usuários se conectam ao aplicativo pela Internet, geralmente com um navegador da Web em seu telefone, tablet ou PC.</li>
+</ul></li>
+</ul>
 </section>
-<section id="dlp-data-loss-prevention" class="slide level2">
-<h2>DLP (Data Loss Prevention)</h2>
-<p>Detecta e bloqueia <strong>vazamento de dados sensíveis</strong>, antes que saiam da organização.</p>
+<section id="computação-em-nuvem---serverless-computing" class="slide level2">
+<h2>Computação em Nuvem - Serverless computing</h2>
+<ul>
+<li>Computação sem servidor (Serverless computing):
+<ul>
+<li>Sobrepondo-se ao PaaS, a computação sem servidor se concentra na criação de funcionalidades de aplicativos sem gastar tempo gerenciando continuamente os servidores e a infraestrutura necessários para isso.</li>
+<li>O provedor de nuvem lida com a configuração, o planejamento de capacidade e o gerenciamento do servidor para você.</li>
+<li>As arquiteturas sem servidor são altamente escaláveis e orientadas a eventos, usando recursos apenas quando ocorre uma função ou gatilho específico.</li>
+</ul></li>
+</ul>
 </section>
-<section id="siem-security-information-and-event-management" class="slide level2">
-<h2>SIEM (Security Information and Event Management)</h2>
-<p>Centraliza e correlaciona <strong>logs de segurança</strong> de toda a infraestrutura para detectar ataques em andamento.</p>
+<section id="computação-em-nuvem---serviços-1" class="slide level2">
+<h2>Computação em Nuvem - Serviços</h2>
+
+<img data-src="../images/aula02/nist-responsabilidade-compartilhada.png" class="quarto-figure quarto-figure-center r-stretch" style="width:80.0%"></section>
+<section id="computação-em-nuvem---segurança" class="slide level2">
+<h2>Computação em Nuvem - Segurança</h2>
+<ul>
+<li>A segurança na nuvem é uma grande preocupação para muitas empresas que armazenam dados e executam aplicativos na nuvem.</li>
+<li>Muitas ofertas de nuvem pública são ambientes multi-locatários
+<ul>
+<li>Significa que os dados de vários clientes ficam no mesmo servidor, aumentando a possibilidade de violação.</li>
+</ul></li>
+<li>Sabendo que muitas organizações armazenam dados confidenciais na nuvem, os cibercriminosos têm maior incentivo para tentar violar as defesas dos provedores de serviços em nuvem para que possam acessar ou roubar informações valiosas.</li>
+</ul>
 </section>
-<section id="ztna-zero-trust-network-access" class="slide level2">
-<h2>ZTNA (Zero Trust Network Access)</h2>
-<p>“<strong>Nunca confie, sempre verifique</strong>”: nenhum acesso é automaticamente confiável, mesmo vindo de dentro da rede.</p>
+<section id="computação-em-nuvem---segurança-1" class="slide level2">
+<h2>Computação em Nuvem - Segurança</h2>
+<ul>
+<li>A segurança já foi o principal obstáculo para as empresas que consideram mover dados e recursos para a nuvem.</li>
+<li>Hoje, a maioria dos provedores de serviços em nuvem investiram em medidas de segurança que oferecem maior proteção do que os data centers locais podem gerenciar.</li>
+<li>Como os provedores de nuvem investem mais pesadamente em soluções de segurança, muitas empresas descobriram que a nuvem pode oferecer melhor segurança do que seus próprios ambientes de TI locais.</li>
+</ul>
 </section>
-<section id="fwaas-firewall-as-a-service" class="slide level2">
-<h2>FWaaS (Firewall as a Service)</h2>
-<p>Firewall entregue <strong>como serviço gerenciado</strong> na nuvem, sem precisar de hardware próprio.</p>
+<section id="computação-em-nuvem---segurança-2" class="slide level2">
+<h2>Computação em Nuvem - Segurança</h2>
+<ul>
+<li>Para fortalecer a segurança na nuvem, as organizações podem adotar várias práticas recomendadas e tecnologias para garantir que seus dados permaneçam protegidos contra roubo, perda e inacessibilidade devido a interrupções.
+<ul>
+<li>A criptografia de dados fornece proteção mais forte para dados em repouso, em trânsito e em uso.</li>
+<li>As soluções de gerenciamento de identidade e acesso do usuário garantem que apenas usuários autorizados possam acessar dados e recursos na nuvem.</li>
+<li>A tecnologia de monitoramento de segurança e conformidade fornece alerta antecipado de possíveis violações, garantindo que as medidas de segurança estejam em conformidade com as estruturas regulatórias.</li>
+</ul></li>
+</ul>
 </section>
-<section id="casb-cloud-access-security-broker" class="slide level2">
-<h2>CASB (Cloud Access Security Broker)</h2>
-<p>Camada de segurança entre usuários e provedores de nuvem, <strong>aplicando as políticas da empresa</strong>.</p>
+<section id="computação-em-nuvem---segurança---soluções" class="slide level2">
+<h2>Computação em Nuvem - Segurança - Soluções</h2>
+<ul>
+<li>A proteção de ativos na nuvem requer uma abordagem em várias camadas para se defender contra uma ampla gama de ameaças.</li>
+<li>As soluções de segurança baseadas em nuvem mais comuns incluem:
+<ul>
+<li>Gerenciamento de identidade e acesso:
+<ul>
+<li>Controles fortes de identidade e acesso ajudam a impedir o acesso não autorizado a dados confidenciais.</li>
+<li>As soluções de autenticação multifator dificultam o uso de credenciais roubadas por agentes mal-intencionados para acessar ativos de nuvem.</li>
+</ul></li>
+</ul></li>
+</ul>
+</section>
+<section id="computação-em-nuvem---segurança---soluções-1" class="slide level2">
+<h2>Computação em Nuvem - Segurança - Soluções</h2>
+<ul>
+<li>As soluções de segurança baseadas em nuvem mais comuns incluem:
+<ul>
+<li>Prevenção contra perda de dados (DLP):
+<ul>
+<li>As soluções DLP inspecionam o tráfego de saída para evitar vazamentos inadvertidos ou maliciosos de dados confidenciais, como informações de cartão de crédito, dados financeiros, propriedade intelectual e outras informações valiosas.</li>
+</ul></li>
+<li>Monitoramento contínuo:
+<ul>
+<li>As soluções de segurança que permitem que as equipes de TI monitorem continuamente as plataformas e os serviços em nuvem podem ajudar a identificar e corrigir rapidamente possíveis ameaças.</li>
+</ul></li>
+</ul></li>
+</ul>
+</section>
+<section id="computação-em-nuvem---segurança---soluções-2" class="slide level2">
+<h2>Computação em Nuvem - Segurança - Soluções</h2>
+<ul>
+<li>As soluções de segurança baseadas em nuvem mais comuns incluem:
+<ul>
+<li>Gerenciamento de eventos e informações de segurança (SIEM):
+<ul>
+<li>As soluções SIEM oferecem monitoramento e análise em tempo real de eventos de segurança e rastreamento e registro de dados de segurança que suportam auditorias de segurança e esforços de conformidade.</li>
+</ul></li>
+<li>Segurança de rede em nuvem:
+<ul>
+<li>Ao monitorar o tráfego de rede, as soluções de segurança de rede em nuvem podem impedir que ameaças entrem na rede e corrigir rapidamente as ameaças que violaram as defesas com sucesso antes que possam se mover lateralmente para acessar alvos de alto valor.</li>
+</ul></li>
+</ul></li>
+</ul>
+</section>
+<section id="computação-em-nuvem---segurança---soluções-3" class="slide level2">
+<h2>Computação em Nuvem - Segurança - Soluções</h2>
+<ul>
+<li>As soluções de segurança baseadas em nuvem mais comuns incluem:
+<ul>
+<li>Acesso à rede Zero Trust (ZTNA):
+<ul>
+<li>A tecnologia ZTNA exige que usuários e aplicativos sejam autenticados em cada solicitação de acesso a ativos em nuvem, ajudando a evitar violações de dados com mais sucesso.</li>
+</ul></li>
+<li>Firewall como serviço (FWaaS):
+<ul>
+<li>Uma solução FWaaS substitui os dispositivos de firewall físico por soluções baseadas em nuvem que oferecem recursos avançados de firewall, incluindo filtragem de URL, prevenção avançada de ameaças, prevenção de intrusão, controles de acesso e segurança de DNS.</li>
+</ul></li>
+</ul></li>
+</ul>
+</section>
+<section id="computação-em-nuvem---segurança---soluções-4" class="slide level2">
+<h2>Computação em Nuvem - Segurança - Soluções</h2>
+<ul>
+<li>As soluções de segurança baseadas em nuvem mais comuns incluem:
+<ul>
+<li>Proteção de dados:
+<ul>
+<li>Ao criptografar dados em trânsito e em repouso, as equipes de TI podem proteger melhor os dados na nuvem e garantir a conformidade com uma ampla gama de estruturas regulatórias.</li>
+</ul></li>
+<li>Inteligência de ameaças:
+<ul>
+<li>A inteligência de ameaças mais recente pode ajudar as organizações a identificar e se defender contra ameaças cibernéticas emergentes.</li>
+</ul></li>
+</ul></li>
+</ul>
+</section>
+<section id="computação-em-nuvem---segurança---soluções-5" class="slide level2">
+<h2>Computação em Nuvem - Segurança - Soluções</h2>
+<ul>
+<li>As soluções de segurança baseadas em nuvem mais comuns incluem:
+<ul>
+<li>Agentes de segurança de acesso à nuvem (CASBs):
+<ul>
+<li>Um CASB fica entre os clientes e seus serviços em nuvem para ajudar a aplicar políticas de segurança e adicionar uma camada de segurança.</li>
+</ul></li>
+</ul></li>
+</ul>
+</section>
+<section id="computação-em-nuvem---futuro" class="slide level2">
+<h2>Computação em Nuvem - Futuro</h2>
+<ul>
+<li>A nuvem está em constante evolução e há várias tendências que os especialistas preveem que dominarão a computação em nuvem nos próximos anos.</li>
+<li>A nuvem permitirá a computação quântica que pode processar cálculos complexos e conjuntos de dados massivos mais rapidamente.</li>
+<li>Com o crescimento dos dispositivos da Internet das Coisas (IoT) e outros aplicativos sensíveis à latência, os provedores de nuvem provavelmente adotarão a computação de borda,
+<ul>
+<li>permitindo que os sistemas sejam mais distribuídos e aproximem os dados e o processamento dos usuários.</li>
+</ul></li>
+</ul>
+</section>
+<section id="computação-em-nuvem---futuro-1" class="slide level2">
+<h2>Computação em Nuvem - Futuro</h2>
+<ul>
+<li>A borda de serviço de acesso seguro (SASE) desempenhará um papel importante no gerenciamento de segurança e risco.</li>
+<li>As iniciativas de “nuvem verde” trabalharão para reduzir a enorme quantidade de energia que a nuvem requer para eletricidade e resfriamento, melhorando a reciclagem de hardware e reduzindo o lixo eletrônico.</li>
+</ul>
+</section>
+<section id="obrigado" class="slide level2">
+<h2>Obrigado!</h2>
 <aside class="notes">
-<p>Não é preciso decorar as siglas — o importante é o aluno perceber que “segurança na nuvem” é uma área extensa e especializada, não só “colocar uma senha forte”.</p>
+<p>Fim da Aula 01 — conteúdo fiel ao material de referência do professor anterior (PDF de 41 slides), com autoria atualizada.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -411,87 +587,6 @@ Ricardo Pasquati Pontarolli
           overflow: hidden!important;
           display:block!important;
       }</style></aside>
-</section>
-<section id="o-futuro-da-nuvem-computação-quântica" class="slide level2">
-<h2>O futuro da nuvem: computação quântica</h2>
-<p>Provedores já oferecem <strong>acesso a computadores quânticos como serviço</strong> (ex.: AWS Braket, Azure Quantum), sem precisar ter o hardware.</p>
-</section>
-<section id="o-futuro-da-nuvem-edge-computing-e-iot" class="slide level2">
-<h2>O futuro da nuvem: edge computing e IoT</h2>
-<p>Processamento acontece <strong>mais perto de onde o dado é gerado</strong> (sensores, dispositivos), reduzindo latência, em vez de mandar tudo para um data center distante.</p>
-</section>
-<section id="o-futuro-da-nuvem-sase" class="slide level2">
-<h2>O futuro da nuvem: SASE</h2>
-<p><strong>SASE (Secure Access Service Edge)</strong> converge rede e segurança em um único serviço entregue pela nuvem.</p>
-</section>
-<section id="o-futuro-da-nuvem-nuvem-verde" class="slide level2">
-<h2>O futuro da nuvem: nuvem verde</h2>
-<p>Sustentabilidade também é tendência — veremos em detalhe na <strong>Aula 03</strong>.</p>
-</section>
-<section id="e-como-a-nuvem-é-vendida" class="slide level2" data-background-color="#fff8e1">
-<h2>E como a nuvem é “vendida”?</h2>
-<p>Prévia da próxima aula: os <strong>modelos de serviço</strong></p>
-<ul>
-<li><strong>IaaS</strong> — infraestrutura (servidores, storage, rede virtuais)</li>
-</ul>
-</section>
-<section id="paas-prévia" class="slide level2">
-<h2>PaaS (prévia)</h2>
-<ul>
-<li><strong>PaaS</strong> — plataforma (ambiente pronto para desenvolver aplicações)</li>
-</ul>
-</section>
-<section id="saas-prévia" class="slide level2">
-<h2>SaaS (prévia)</h2>
-<ul>
-<li><strong>SaaS</strong> — software (aplicação pronta, só usar)</li>
-</ul>
-<aside class="notes">
-<p>Não desenvolver aqui — é só o gancho para a Aula 02, que trata IaaS/PaaS/SaaS e o modelo de referência NIST formalmente.</p>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
-</section>
-<section id="atividade-da-aula" class="slide level2">
-<h2>Atividade da aula</h2>
-<div class="callout-lab">
-<p><strong>Em duplas (10 min):</strong></p>
-<ol type="1">
-<li>Escolham 1 serviço de nuvem que vocês usam (ex.: Google Drive, Netflix, Discord)</li>
-<li>Classifiquem: é nuvem pública, privada ou híbrida? Justifiquem.</li>
-<li>Apontem 1 vantagem e 1 desafio real que vocês já perceberam usando esse serviço</li>
-</ol>
-</div>
-</section>
-<section id="síntese-da-aula" class="slide level2">
-<h2>Síntese da aula</h2>
-<ul>
-<li>Computação em nuvem = <strong>TI sob demanda, pela internet</strong>, habilitada por virtualização</li>
-<li>Evoluiu de mainframes → PCs distribuídos → nuvem (AWS 2006 em diante)</li>
-<li>3 modelos de implantação: <strong>pública, privada, híbrida</strong></li>
-<li>Vantagens (escala, custo, acesso) vêm com desafios (segurança, dependência, controle)</li>
-<li>Segurança na nuvem envolve mecanismos específicos: <strong>IAM, criptografia, DLP, SIEM, ZTNA, FWaaS, CASB</strong></li>
-<li>Tendências futuras: <strong>computação quântica, edge computing, SASE, nuvem verde</strong></li>
-</ul>
-</section>
-<section id="próxima-aula" class="slide level2">
-<h2>Próxima aula</h2>
-<p><strong>Modelos de Serviço em Nuvem</strong> — IaaS, PaaS, SaaS e a Arquitetura de Referência NIST</p>
-</section>
-<section id="referências" class="slide level2">
-<h2>Referências</h2>
-<ul>
-<li>CHEE, B.; FRANKLIN, C. <em>Computação em Nuvem: cloud computing — tecnologias e estratégias</em>. M Books, 2013.</li>
-<li>NIST — <em>The NIST Definition of Cloud Computing</em> (SP 800-145)</li>
-</ul>
 
 
 </section>
