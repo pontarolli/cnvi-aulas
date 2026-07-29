@@ -12,7 +12,7 @@ title: "Aula 01 — Introdução à Computação em Nuvem"
   - Microsoft Azure.
 - A computação em nuvem se tornou uma parte essencial da infraestrutura de TI das empresas e usuários individuais.
 
-## Introdução - Definição
+## Introdução - Definição {.smaller}
 
 - Computação em nuvem (Cloud Computing):
   - Em termos simples, ela se refere à entrega de recursos de TI pela internet.
@@ -28,7 +28,7 @@ title: "Aula 01 — Introdução à Computação em Nuvem"
   - oferecendo uma plataforma flexível, escalável e econômica para uma ampla gama de aplicações.
 - A nuvem permite acesso on-demand a recursos de computação, sem a necessidade de investir em infraestrutura física.
 
-## Introdução - Definição
+## Introdução - Definição {.smaller}
 
 - O que é computação em nuvem?
   - Nuvem:
@@ -40,7 +40,7 @@ title: "Aula 01 — Introdução à Computação em Nuvem"
     - A computação em nuvem evita a necessidade de instalação de servidores físicos, execução de software e gerenciamento de bancos de dados.
 - A nuvem oferece inovação mais rápida, recursos flexíveis e economias de escala.
 
-## Introdução - Como funciona?
+## Introdução - Como funciona? {.smaller}
 
 - A nuvem é uma vasta rede de servidores de computador localizados em todo o mundo, juntamente com os dados, conteúdo, aplicativos, bancos de dados e outros recursos de computação.
 - A computação em nuvem é possível graças à virtualização,
@@ -161,7 +161,7 @@ title: "Aula 01 — Introdução à Computação em Nuvem"
 - **Controle e Gestão**: Embora a nuvem ofereça muitos recursos, o controle sobre os dados e a infraestrutura pode ser limitado em comparação a uma solução local.
 - **Custos Escaláveis**: Apesar de os custos iniciais serem baixos, o uso contínuo de recursos pode resultar em gastos crescentes.
 
-## Computação em Nuvem - Serviços
+## Computação em Nuvem - Serviços {.smaller}
 
 - A maioria dos serviços de computação em nuvem se enquadra em quatro grandes categorias:
   - Infraestrutura como serviço (IaaS),
@@ -171,7 +171,7 @@ title: "Aula 01 — Introdução à Computação em Nuvem"
 - Às vezes, eles são chamados de "pilha de computação em nuvem" porque são construídos uns sobre os outros.
 - Saber o que são e como são diferentes facilita a realização de seus objetivos de negócios.
 
-## Computação em Nuvem - IaaS
+## Computação em Nuvem - IaaS {.smaller}
 
 - Infraestrutura como serviço (IaaS):
   - Esta é a categoria mais básica de serviços de computação em nuvem.
@@ -181,20 +181,20 @@ title: "Aula 01 — Introdução à Computação em Nuvem"
     - rede,
     - sistemas operacionais.
 
-## Computação em Nuvem - PaaS
+## Computação em Nuvem - PaaS {.smaller}
 
 - Plataforma como serviço (PaaS):
   - Refere-se a serviços de computação em nuvem que fornecem um ambiente sob demanda para desenvolver, testar, entregar e gerenciar aplicativos de software.
   - O PaaS torna mais fácil para os desenvolvedores criar rapidamente aplicativos Web ou aplicativos móveis sem se preocupar em configurar ou gerenciar a infraestrutura subjacente de servidores, armazenamento, rede e bancos de dados.
 
-## Computação em Nuvem - SaaS
+## Computação em Nuvem - SaaS {.smaller}
 
 - Software como serviço (SaaS):
   - É um método para fornecer aplicativos de software pela Internet, sob demanda e, normalmente, por assinatura.
   - Com o SaaS, os provedores de nuvem hospedam e gerenciam o software e a infraestrutura subjacente e lidam com qualquer manutenção, como atualizações de software e patches de segurança.
   - Os usuários se conectam ao aplicativo pela Internet, geralmente com um navegador da Web em seu telefone, tablet ou PC.
 
-## Computação em Nuvem - Serverless computing
+## Computação em Nuvem - Serverless computing {.smaller}
 
 - Computação sem servidor (Serverless computing):
   - Sobrepondo-se ao PaaS, a computação sem servidor se concentra na criação de funcionalidades de aplicativos sem gastar tempo gerenciando continuamente os servidores e a infraestrutura necessários para isso.
@@ -205,27 +205,27 @@ title: "Aula 01 — Introdução à Computação em Nuvem"
 
 ![](../images/aula02/nist-responsabilidade-compartilhada.png){fig-align="center" width="80%"}
 
-## Computação em Nuvem - Segurança
+## Computação em Nuvem - Segurança {.smaller}
 
 - A segurança na nuvem é uma grande preocupação para muitas empresas que armazenam dados e executam aplicativos na nuvem.
 - Muitas ofertas de nuvem pública são ambientes multi-locatários
   - Significa que os dados de vários clientes ficam no mesmo servidor, aumentando a possibilidade de violação.
 - Sabendo que muitas organizações armazenam dados confidenciais na nuvem, os cibercriminosos têm maior incentivo para tentar violar as defesas dos provedores de serviços em nuvem para que possam acessar ou roubar informações valiosas.
 
-## Computação em Nuvem - Segurança
+## Computação em Nuvem - Segurança {.smaller}
 
 - A segurança já foi o principal obstáculo para as empresas que consideram mover dados e recursos para a nuvem.
 - Hoje, a maioria dos provedores de serviços em nuvem investiram em medidas de segurança que oferecem maior proteção do que os data centers locais podem gerenciar.
 - Como os provedores de nuvem investem mais pesadamente em soluções de segurança, muitas empresas descobriram que a nuvem pode oferecer melhor segurança do que seus próprios ambientes de TI locais.
 
-## Computação em Nuvem - Segurança
+## Computação em Nuvem - Segurança {.smaller}
 
 - Para fortalecer a segurança na nuvem, as organizações podem adotar várias práticas recomendadas e tecnologias para garantir que seus dados permaneçam protegidos contra roubo, perda e inacessibilidade devido a interrupções.
   - A criptografia de dados fornece proteção mais forte para dados em repouso, em trânsito e em uso.
   - As soluções de gerenciamento de identidade e acesso do usuário garantem que apenas usuários autorizados possam acessar dados e recursos na nuvem.
   - A tecnologia de monitoramento de segurança e conformidade fornece alerta antecipado de possíveis violações, garantindo que as medidas de segurança estejam em conformidade com as estruturas regulatórias.
 
-## Computação em Nuvem - Segurança - Soluções
+## Computação em Nuvem - Segurança - Soluções {.smaller}
 
 - A proteção de ativos na nuvem requer uma abordagem em várias camadas para se defender contra uma ampla gama de ameaças.
 - As soluções de segurança baseadas em nuvem mais comuns incluem:
@@ -233,7 +233,7 @@ title: "Aula 01 — Introdução à Computação em Nuvem"
     - Controles fortes de identidade e acesso ajudam a impedir o acesso não autorizado a dados confidenciais.
     - As soluções de autenticação multifator dificultam o uso de credenciais roubadas por agentes mal-intencionados para acessar ativos de nuvem.
 
-## Computação em Nuvem - Segurança - Soluções
+## Computação em Nuvem - Segurança - Soluções {.smaller}
 
 - As soluções de segurança baseadas em nuvem mais comuns incluem:
   - Prevenção contra perda de dados (DLP):
@@ -241,7 +241,7 @@ title: "Aula 01 — Introdução à Computação em Nuvem"
   - Monitoramento contínuo:
     - As soluções de segurança que permitem que as equipes de TI monitorem continuamente as plataformas e os serviços em nuvem podem ajudar a identificar e corrigir rapidamente possíveis ameaças.
 
-## Computação em Nuvem - Segurança - Soluções
+## Computação em Nuvem - Segurança - Soluções {.smaller}
 
 - As soluções de segurança baseadas em nuvem mais comuns incluem:
   - Gerenciamento de eventos e informações de segurança (SIEM):
@@ -249,7 +249,7 @@ title: "Aula 01 — Introdução à Computação em Nuvem"
   - Segurança de rede em nuvem:
     - Ao monitorar o tráfego de rede, as soluções de segurança de rede em nuvem podem impedir que ameaças entrem na rede e corrigir rapidamente as ameaças que violaram as defesas com sucesso antes que possam se mover lateralmente para acessar alvos de alto valor.
 
-## Computação em Nuvem - Segurança - Soluções
+## Computação em Nuvem - Segurança - Soluções {.smaller}
 
 - As soluções de segurança baseadas em nuvem mais comuns incluem:
   - Acesso à rede Zero Trust (ZTNA):
@@ -257,7 +257,7 @@ title: "Aula 01 — Introdução à Computação em Nuvem"
   - Firewall como serviço (FWaaS):
     - Uma solução FWaaS substitui os dispositivos de firewall físico por soluções baseadas em nuvem que oferecem recursos avançados de firewall, incluindo filtragem de URL, prevenção avançada de ameaças, prevenção de intrusão, controles de acesso e segurança de DNS.
 
-## Computação em Nuvem - Segurança - Soluções
+## Computação em Nuvem - Segurança - Soluções {.smaller}
 
 - As soluções de segurança baseadas em nuvem mais comuns incluem:
   - Proteção de dados:
@@ -265,20 +265,20 @@ title: "Aula 01 — Introdução à Computação em Nuvem"
   - Inteligência de ameaças:
     - A inteligência de ameaças mais recente pode ajudar as organizações a identificar e se defender contra ameaças cibernéticas emergentes.
 
-## Computação em Nuvem - Segurança - Soluções
+## Computação em Nuvem - Segurança - Soluções {.smaller}
 
 - As soluções de segurança baseadas em nuvem mais comuns incluem:
   - Agentes de segurança de acesso à nuvem (CASBs):
     - Um CASB fica entre os clientes e seus serviços em nuvem para ajudar a aplicar políticas de segurança e adicionar uma camada de segurança.
 
-## Computação em Nuvem - Futuro
+## Computação em Nuvem - Futuro {.smaller}
 
 - A nuvem está em constante evolução e há várias tendências que os especialistas preveem que dominarão a computação em nuvem nos próximos anos.
 - A nuvem permitirá a computação quântica que pode processar cálculos complexos e conjuntos de dados massivos mais rapidamente.
 - Com o crescimento dos dispositivos da Internet das Coisas (IoT) e outros aplicativos sensíveis à latência, os provedores de nuvem provavelmente adotarão a computação de borda,
   - permitindo que os sistemas sejam mais distribuídos e aproximem os dados e o processamento dos usuários.
 
-## Computação em Nuvem - Futuro
+## Computação em Nuvem - Futuro {.smaller}
 
 - A borda de serviço de acesso seguro (SASE) desempenhará um papel importante no gerenciamento de segurança e risco.
 - As iniciativas de "nuvem verde" trabalharão para reduzir a enorme quantidade de energia que a nuvem requer para eletricidade e resfriamento, melhorando a reciclagem de hardware e reduzindo o lixo eletrônico.
