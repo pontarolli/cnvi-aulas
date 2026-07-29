@@ -141,7 +141,7 @@
 Ricardo Pasquati Pontarolli 
 </div>
         <p class="quarto-title-affiliation">
-            Técnico em Redes de Computadores · IFSP Boituva · pasquati@ifsp.edu.br · v23
+            Técnico em Redes de Computadores · IFSP Boituva · pasquati@ifsp.edu.br · v25
           </p>
     </div>
 </div>
@@ -181,12 +181,11 @@ Ricardo Pasquati Pontarolli
 <li>…você <strong>aluga capacidade computacional</strong> de um provedor (AWS, Azure, Google Cloud etc.)</li>
 </ul>
 </section>
-<section id="como-ela-funciona" class="slide level2">
-<h2>Como ela funciona?</h2>
+<section id="como-ela-funciona-infraestrutura" class="slide level2">
+<h2>Como ela funciona? (infraestrutura)</h2>
 <ul>
 <li>Por trás da nuvem existe uma <strong>rede global de data centers</strong> com milhares de servidores físicos</li>
 <li>A <strong>virtualização</strong> é a tecnologia habilitadora: permite dividir um servidor físico em várias “máquinas” lógicas independentes</li>
-<li>O usuário nunca vê o hardware — só consome o recurso final (uma VM, um banco de dados, um site no ar)</li>
 </ul>
 <div class="callout callout-note callout-titled callout-style-default">
 <div class="callout-body">
@@ -202,16 +201,28 @@ Ricardo Pasquati Pontarolli
 </div>
 </div>
 </section>
+<section id="como-ela-funciona-para-o-usuário" class="slide level2">
+<h2>Como ela funciona? (para o usuário)</h2>
+<ul>
+<li>O usuário nunca vê o hardware — só consome o recurso final (uma VM, um banco de dados, um site no ar)</li>
+<li>Tudo o que acontece “por baixo dos panos” (servidor físico, refrigeração, rede) é responsabilidade do provedor</li>
+</ul>
+</section>
 <section id="computação-em-nuvem-visualmente" class="slide level2">
 <h2>Computação em nuvem, visualmente</h2>
 
 <img data-src="../images/aula01/cloud-computing-icones.png" class="quarto-figure quarto-figure-center r-stretch" style="width:70.0%"></section>
-<section id="linha-do-tempo-de-onde-viemos" class="slide level2">
-<h2>Linha do tempo: de onde viemos</h2>
+<section id="linha-do-tempo-dos-mainframes-ao-x86" class="slide level2">
+<h2>Linha do tempo: dos mainframes ao x86</h2>
 <ul>
 <li class="fragment"><strong>Anos 1960–70</strong> — Mainframes: um computador gigante, vários terminais “burros” compartilhando o mesmo processamento</li>
 <li class="fragment"><strong>Anos 1980–90</strong> — Computação pessoal e distribuída: cada um com seu próprio PC, poder de processamento descentralizado</li>
 <li class="fragment"><strong>1999</strong> — VMware lança software de virtualização comercial para x86</li>
+</ul>
+</section>
+<section id="linha-do-tempo-a-era-da-nuvem-comercial" class="slide level2">
+<h2>Linha do tempo: a era da nuvem comercial</h2>
+<ul>
 <li class="fragment"><strong>2006</strong> — Amazon lança o <strong>AWS (EC2/S3)</strong>, marco comercial da computação em nuvem moderna</li>
 <li class="fragment"><strong>2010s em diante</strong> — Azure, Google Cloud, containers, nuvem vira padrão de mercado</li>
 </ul>
@@ -238,6 +249,11 @@ Ricardo Pasquati Pontarolli
 <ul>
 <li>Infraestrutura pertence a um <strong>provedor terceirizado</strong> (AWS, Azure, GCP…)</li>
 <li>Recursos compartilhados entre <strong>múltiplos clientes</strong> (multi-tenancy)</li>
+</ul>
+</section>
+<section id="nuvem-pública-vantagens-e-desvantagens" class="slide level2">
+<h2>Nuvem pública — vantagens e desvantagens</h2>
+<ul>
 <li><strong>Vantagens:</strong> custo baixo, escalabilidade praticamente ilimitada, sem manutenção própria</li>
 <li><strong>Desvantagens:</strong> menos controle, dependência do provedor</li>
 </ul>
@@ -247,6 +263,11 @@ Ricardo Pasquati Pontarolli
 <ul>
 <li>Infraestrutura dedicada a <strong>uma única organização</strong></li>
 <li>Pode estar no próprio data center da empresa ou hospedada por terceiros, mas de uso exclusivo</li>
+</ul>
+</section>
+<section id="nuvem-privada-vantagens-e-desvantagens" class="slide level2">
+<h2>Nuvem privada — vantagens e desvantagens</h2>
+<ul>
 <li><strong>Vantagens:</strong> mais controle, segurança e customização</li>
 <li><strong>Desvantagens:</strong> custo mais alto, exige equipe própria de TI</li>
 </ul>
@@ -256,6 +277,11 @@ Ricardo Pasquati Pontarolli
 <ul>
 <li>Combina nuvem <strong>pública + privada</strong>, integradas</li>
 <li>Ex.: dados sensíveis ficam na nuvem privada; picos de demanda “estouram” para a nuvem pública</li>
+</ul>
+</section>
+<section id="nuvem-híbrida-vantagens-e-desvantagens" class="slide level2">
+<h2>Nuvem híbrida — vantagens e desvantagens</h2>
+<ul>
 <li><strong>Vantagens:</strong> flexibilidade, otimização de custo e segurança</li>
 <li><strong>Desvantagens:</strong> complexidade de integração e gestão</li>
 </ul>
@@ -309,43 +335,69 @@ Ricardo Pasquati Pontarolli
 </tbody>
 </table>
 </section>
-<section id="vantagens-da-nuvem" class="slide level2">
-<h2>Vantagens da nuvem</h2>
+<section id="vantagens-da-nuvem-parte-1" class="slide level2">
+<h2>Vantagens da nuvem (parte 1)</h2>
 <ul>
 <li class="fragment"><strong>Escalabilidade</strong> — aumentar ou reduzir recursos sob demanda</li>
 <li class="fragment"><strong>Custo-benefício</strong> — paga-se pelo uso (OPEX em vez de CAPEX)</li>
 <li class="fragment"><strong>Acessibilidade</strong> — acesso de qualquer lugar, qualquer dispositivo</li>
+</ul>
+</section>
+<section id="vantagens-da-nuvem-parte-2" class="slide level2">
+<h2>Vantagens da nuvem (parte 2)</h2>
+<ul>
 <li class="fragment"><strong>Backup e recuperação</strong> — redundância facilita recuperação de desastres</li>
 <li class="fragment"><strong>Inovação e agilidade</strong> — testar novas ideias sem investir em hardware</li>
 </ul>
 </section>
-<section id="desafios-da-nuvem" class="slide level2">
-<h2>Desafios da nuvem</h2>
+<section id="desafios-da-nuvem-parte-1" class="slide level2">
+<h2>Desafios da nuvem (parte 1)</h2>
 <ul>
 <li class="fragment"><strong>Segurança e privacidade</strong> — dados fora do seu controle físico</li>
 <li class="fragment"><strong>Dependência de conectividade</strong> — sem internet, sem acesso</li>
+</ul>
+</section>
+<section id="desafios-da-nuvem-parte-2" class="slide level2">
+<h2>Desafios da nuvem (parte 2)</h2>
+<ul>
 <li class="fragment"><strong>Controle e gestão</strong> — menos visibilidade sobre a infraestrutura real</li>
 <li class="fragment"><strong>Custos escaláveis</strong> — uso mal gerenciado pode sair caro (“bill shock”)</li>
 </ul>
 </section>
 <section id="segurança-na-nuvem" class="slide level2">
 <h2>Segurança na nuvem</h2>
-<p>Compartilhar infraestrutura com outras empresas (multi-tenancy) exige mecanismos de segurança específicos. Alguns dos principais:</p>
+<p>Compartilhar infraestrutura com outras empresas exige mecanismos de segurança específicos.</p>
 <ul>
-<li class="fragment"><strong>Multi-tenancy</strong> — vários clientes compartilham a mesma infraestrutura física, isolados logicamente uns dos outros</li>
-<li class="fragment"><strong>Criptografia</strong> — dados protegidos tanto “em repouso” (armazenados) quanto “em trânsito” (trafegando pela rede)</li>
-<li class="fragment"><strong>IAM (Identity and Access Management)</strong> — controla quem pode acessar o quê, com que permissões</li>
+<li><strong>Multi-tenancy</strong> — vários clientes compartilham a mesma infraestrutura física, isolados logicamente uns dos outros</li>
 </ul>
 </section>
-<section id="segurança-na-nuvem-continuação" class="slide level2">
-<h2>Segurança na nuvem (continuação)</h2>
-<ul>
-<li class="fragment"><strong>DLP (Data Loss Prevention)</strong> — detecta e bloqueia vazamento de dados sensíveis</li>
-<li class="fragment"><strong>SIEM (Security Information and Event Management)</strong> — centraliza e correlaciona logs de segurança para detectar ataques</li>
-<li class="fragment"><strong>ZTNA (Zero Trust Network Access)</strong> — “nunca confie, sempre verifique”: nenhum acesso é automaticamente confiável, mesmo vindo de dentro da rede</li>
-<li class="fragment"><strong>FWaaS (Firewall as a Service)</strong> — firewall entregue como serviço gerenciado na nuvem, sem hardware próprio</li>
-<li class="fragment"><strong>CASB (Cloud Access Security Broker)</strong> — camada de segurança entre usuários e provedores de nuvem, aplicando políticas da empresa</li>
-</ul>
+<section id="criptografia" class="slide level2">
+<h2>Criptografia</h2>
+<p>Dados protegidos tanto <strong>em repouso</strong> (armazenados) quanto <strong>em trânsito</strong> (trafegando pela rede).</p>
+</section>
+<section id="iam-identity-and-access-management" class="slide level2">
+<h2>IAM (Identity and Access Management)</h2>
+<p>Controla <strong>quem pode acessar o quê</strong>, com que permissões — a base de qualquer política de segurança em nuvem.</p>
+</section>
+<section id="dlp-data-loss-prevention" class="slide level2">
+<h2>DLP (Data Loss Prevention)</h2>
+<p>Detecta e bloqueia <strong>vazamento de dados sensíveis</strong>, antes que saiam da organização.</p>
+</section>
+<section id="siem-security-information-and-event-management" class="slide level2">
+<h2>SIEM (Security Information and Event Management)</h2>
+<p>Centraliza e correlaciona <strong>logs de segurança</strong> de toda a infraestrutura para detectar ataques em andamento.</p>
+</section>
+<section id="ztna-zero-trust-network-access" class="slide level2">
+<h2>ZTNA (Zero Trust Network Access)</h2>
+<p>“<strong>Nunca confie, sempre verifique</strong>”: nenhum acesso é automaticamente confiável, mesmo vindo de dentro da rede.</p>
+</section>
+<section id="fwaas-firewall-as-a-service" class="slide level2">
+<h2>FWaaS (Firewall as a Service)</h2>
+<p>Firewall entregue <strong>como serviço gerenciado</strong> na nuvem, sem precisar de hardware próprio.</p>
+</section>
+<section id="casb-cloud-access-security-broker" class="slide level2">
+<h2>CASB (Cloud Access Security Broker)</h2>
+<p>Camada de segurança entre usuários e provedores de nuvem, <strong>aplicando as políticas da empresa</strong>.</p>
 <aside class="notes">
 <p>Não é preciso decorar as siglas — o importante é o aluno perceber que “segurança na nuvem” é uma área extensa e especializada, não só “colocar uma senha forte”.</p>
 <style type="text/css">
@@ -360,21 +412,38 @@ Ricardo Pasquati Pontarolli
           display:block!important;
       }</style></aside>
 </section>
-<section id="o-futuro-da-nuvem" class="slide level2">
-<h2>O futuro da nuvem</h2>
-<ul>
-<li class="fragment"><strong>Computação quântica na nuvem</strong> — provedores já oferecem acesso a computadores quânticos como serviço (ex.: AWS Braket, Azure Quantum), sem precisar ter o hardware</li>
-<li class="fragment"><strong>Edge computing e IoT</strong> — processamento acontece mais perto de onde o dado é gerado (sensores, dispositivos), reduzindo latência, em vez de mandar tudo para um data center distante</li>
-<li class="fragment"><strong>SASE (Secure Access Service Edge)</strong> — converge rede e segurança em um único serviço entregue pela nuvem</li>
-<li class="fragment"><strong>Nuvem verde</strong> — sustentabilidade também é tendência (veremos em detalhe na Aula 03)</li>
-</ul>
+<section id="o-futuro-da-nuvem-computação-quântica" class="slide level2">
+<h2>O futuro da nuvem: computação quântica</h2>
+<p>Provedores já oferecem <strong>acesso a computadores quânticos como serviço</strong> (ex.: AWS Braket, Azure Quantum), sem precisar ter o hardware.</p>
+</section>
+<section id="o-futuro-da-nuvem-edge-computing-e-iot" class="slide level2">
+<h2>O futuro da nuvem: edge computing e IoT</h2>
+<p>Processamento acontece <strong>mais perto de onde o dado é gerado</strong> (sensores, dispositivos), reduzindo latência, em vez de mandar tudo para um data center distante.</p>
+</section>
+<section id="o-futuro-da-nuvem-sase" class="slide level2">
+<h2>O futuro da nuvem: SASE</h2>
+<p><strong>SASE (Secure Access Service Edge)</strong> converge rede e segurança em um único serviço entregue pela nuvem.</p>
+</section>
+<section id="o-futuro-da-nuvem-nuvem-verde" class="slide level2">
+<h2>O futuro da nuvem: nuvem verde</h2>
+<p>Sustentabilidade também é tendência — veremos em detalhe na <strong>Aula 03</strong>.</p>
 </section>
 <section id="e-como-a-nuvem-é-vendida" class="slide level2" data-background-color="#fff8e1">
 <h2>E como a nuvem é “vendida”?</h2>
 <p>Prévia da próxima aula: os <strong>modelos de serviço</strong></p>
 <ul>
 <li><strong>IaaS</strong> — infraestrutura (servidores, storage, rede virtuais)</li>
+</ul>
+</section>
+<section id="paas-prévia" class="slide level2">
+<h2>PaaS (prévia)</h2>
+<ul>
 <li><strong>PaaS</strong> — plataforma (ambiente pronto para desenvolver aplicações)</li>
+</ul>
+</section>
+<section id="saas-prévia" class="slide level2">
+<h2>SaaS (prévia)</h2>
+<ul>
 <li><strong>SaaS</strong> — software (aplicação pronta, só usar)</li>
 </ul>
 <aside class="notes">

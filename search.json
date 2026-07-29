@@ -763,11 +763,18 @@
     "text": "O que é computação em nuvem?\n\nEntrega de recursos de TI (servidores, armazenamento, banco de dados, rede, software) pela internet, sob demanda, geralmente com pagamento conforme o uso.\n\n\nEm vez de comprar e manter seus próprios servidores…\n…você aluga capacidade computacional de um provedor (AWS, Azure, Google Cloud etc.)"
   },
   {
-    "objectID": "aulas/01-introducao-computacao-nuvem.html#como-ela-funciona",
-    "href": "aulas/01-introducao-computacao-nuvem.html#como-ela-funciona",
+    "objectID": "aulas/01-introducao-computacao-nuvem.html#como-ela-funciona-infraestrutura",
+    "href": "aulas/01-introducao-computacao-nuvem.html#como-ela-funciona-infraestrutura",
     "title": "Aula 01 — Introdução à Computação em Nuvem",
-    "section": "Como ela funciona?",
-    "text": "Como ela funciona?\n\nPor trás da nuvem existe uma rede global de data centers com milhares de servidores físicos\nA virtualização é a tecnologia habilitadora: permite dividir um servidor físico em várias “máquinas” lógicas independentes\nO usuário nunca vê o hardware — só consome o recurso final (uma VM, um banco de dados, um site no ar)\n\n\n\n\n\n\n\nNota\n\n\nVamos aprofundar virtualização daqui a algumas aulas — hoje o foco é entender o conceito de nuvem em si."
+    "section": "Como ela funciona? (infraestrutura)",
+    "text": "Como ela funciona? (infraestrutura)\n\nPor trás da nuvem existe uma rede global de data centers com milhares de servidores físicos\nA virtualização é a tecnologia habilitadora: permite dividir um servidor físico em várias “máquinas” lógicas independentes\n\n\n\n\n\n\n\nNota\n\n\nVamos aprofundar virtualização daqui a algumas aulas — hoje o foco é entender o conceito de nuvem em si."
+  },
+  {
+    "objectID": "aulas/01-introducao-computacao-nuvem.html#como-ela-funciona-para-o-usuário",
+    "href": "aulas/01-introducao-computacao-nuvem.html#como-ela-funciona-para-o-usuário",
+    "title": "Aula 01 — Introdução à Computação em Nuvem",
+    "section": "Como ela funciona? (para o usuário)",
+    "text": "Como ela funciona? (para o usuário)\n\nO usuário nunca vê o hardware — só consome o recurso final (uma VM, um banco de dados, um site no ar)\nTudo o que acontece “por baixo dos panos” (servidor físico, refrigeração, rede) é responsabilidade do provedor"
   },
   {
     "objectID": "aulas/01-introducao-computacao-nuvem.html#computação-em-nuvem-visualmente",
@@ -777,11 +784,18 @@
     "text": "Computação em nuvem, visualmente"
   },
   {
-    "objectID": "aulas/01-introducao-computacao-nuvem.html#linha-do-tempo-de-onde-viemos",
-    "href": "aulas/01-introducao-computacao-nuvem.html#linha-do-tempo-de-onde-viemos",
+    "objectID": "aulas/01-introducao-computacao-nuvem.html#linha-do-tempo-dos-mainframes-ao-x86",
+    "href": "aulas/01-introducao-computacao-nuvem.html#linha-do-tempo-dos-mainframes-ao-x86",
     "title": "Aula 01 — Introdução à Computação em Nuvem",
-    "section": "Linha do tempo: de onde viemos",
-    "text": "Linha do tempo: de onde viemos\n\nAnos 1960–70 — Mainframes: um computador gigante, vários terminais “burros” compartilhando o mesmo processamento\nAnos 1980–90 — Computação pessoal e distribuída: cada um com seu próprio PC, poder de processamento descentralizado\n1999 — VMware lança software de virtualização comercial para x86\n2006 — Amazon lança o AWS (EC2/S3), marco comercial da computação em nuvem moderna\n2010s em diante — Azure, Google Cloud, containers, nuvem vira padrão de mercado"
+    "section": "Linha do tempo: dos mainframes ao x86",
+    "text": "Linha do tempo: dos mainframes ao x86\n\nAnos 1960–70 — Mainframes: um computador gigante, vários terminais “burros” compartilhando o mesmo processamento\nAnos 1980–90 — Computação pessoal e distribuída: cada um com seu próprio PC, poder de processamento descentralizado\n1999 — VMware lança software de virtualização comercial para x86"
+  },
+  {
+    "objectID": "aulas/01-introducao-computacao-nuvem.html#linha-do-tempo-a-era-da-nuvem-comercial",
+    "href": "aulas/01-introducao-computacao-nuvem.html#linha-do-tempo-a-era-da-nuvem-comercial",
+    "title": "Aula 01 — Introdução à Computação em Nuvem",
+    "section": "Linha do tempo: a era da nuvem comercial",
+    "text": "Linha do tempo: a era da nuvem comercial\n\n2006 — Amazon lança o AWS (EC2/S3), marco comercial da computação em nuvem moderna\n2010s em diante — Azure, Google Cloud, containers, nuvem vira padrão de mercado"
   },
   {
     "objectID": "aulas/01-introducao-computacao-nuvem.html#discussão-rápida",
@@ -802,21 +816,42 @@
     "href": "aulas/01-introducao-computacao-nuvem.html#nuvem-pública",
     "title": "Aula 01 — Introdução à Computação em Nuvem",
     "section": "Nuvem pública",
-    "text": "Nuvem pública\n\nInfraestrutura pertence a um provedor terceirizado (AWS, Azure, GCP…)\nRecursos compartilhados entre múltiplos clientes (multi-tenancy)\nVantagens: custo baixo, escalabilidade praticamente ilimitada, sem manutenção própria\nDesvantagens: menos controle, dependência do provedor"
+    "text": "Nuvem pública\n\nInfraestrutura pertence a um provedor terceirizado (AWS, Azure, GCP…)\nRecursos compartilhados entre múltiplos clientes (multi-tenancy)"
+  },
+  {
+    "objectID": "aulas/01-introducao-computacao-nuvem.html#nuvem-pública-vantagens-e-desvantagens",
+    "href": "aulas/01-introducao-computacao-nuvem.html#nuvem-pública-vantagens-e-desvantagens",
+    "title": "Aula 01 — Introdução à Computação em Nuvem",
+    "section": "Nuvem pública — vantagens e desvantagens",
+    "text": "Nuvem pública — vantagens e desvantagens\n\nVantagens: custo baixo, escalabilidade praticamente ilimitada, sem manutenção própria\nDesvantagens: menos controle, dependência do provedor"
   },
   {
     "objectID": "aulas/01-introducao-computacao-nuvem.html#nuvem-privada",
     "href": "aulas/01-introducao-computacao-nuvem.html#nuvem-privada",
     "title": "Aula 01 — Introdução à Computação em Nuvem",
     "section": "Nuvem privada",
-    "text": "Nuvem privada\n\nInfraestrutura dedicada a uma única organização\nPode estar no próprio data center da empresa ou hospedada por terceiros, mas de uso exclusivo\nVantagens: mais controle, segurança e customização\nDesvantagens: custo mais alto, exige equipe própria de TI"
+    "text": "Nuvem privada\n\nInfraestrutura dedicada a uma única organização\nPode estar no próprio data center da empresa ou hospedada por terceiros, mas de uso exclusivo"
+  },
+  {
+    "objectID": "aulas/01-introducao-computacao-nuvem.html#nuvem-privada-vantagens-e-desvantagens",
+    "href": "aulas/01-introducao-computacao-nuvem.html#nuvem-privada-vantagens-e-desvantagens",
+    "title": "Aula 01 — Introdução à Computação em Nuvem",
+    "section": "Nuvem privada — vantagens e desvantagens",
+    "text": "Nuvem privada — vantagens e desvantagens\n\nVantagens: mais controle, segurança e customização\nDesvantagens: custo mais alto, exige equipe própria de TI"
   },
   {
     "objectID": "aulas/01-introducao-computacao-nuvem.html#nuvem-híbrida",
     "href": "aulas/01-introducao-computacao-nuvem.html#nuvem-híbrida",
     "title": "Aula 01 — Introdução à Computação em Nuvem",
     "section": "Nuvem híbrida",
-    "text": "Nuvem híbrida\n\nCombina nuvem pública + privada, integradas\nEx.: dados sensíveis ficam na nuvem privada; picos de demanda “estouram” para a nuvem pública\nVantagens: flexibilidade, otimização de custo e segurança\nDesvantagens: complexidade de integração e gestão"
+    "text": "Nuvem híbrida\n\nCombina nuvem pública + privada, integradas\nEx.: dados sensíveis ficam na nuvem privada; picos de demanda “estouram” para a nuvem pública"
+  },
+  {
+    "objectID": "aulas/01-introducao-computacao-nuvem.html#nuvem-híbrida-vantagens-e-desvantagens",
+    "href": "aulas/01-introducao-computacao-nuvem.html#nuvem-híbrida-vantagens-e-desvantagens",
+    "title": "Aula 01 — Introdução à Computação em Nuvem",
+    "section": "Nuvem híbrida — vantagens e desvantagens",
+    "text": "Nuvem híbrida — vantagens e desvantagens\n\nVantagens: flexibilidade, otimização de custo e segurança\nDesvantagens: complexidade de integração e gestão"
   },
   {
     "objectID": "aulas/01-introducao-computacao-nuvem.html#pública-privada-e-híbrida-visualizando",
@@ -833,46 +868,137 @@
     "text": "Comparativo\n\n\n\n\n\n\n\n\n\n\nPública\nPrivada\nHíbrida\n\n\n\n\nCusto inicial\nBaixo\nAlto\nMédio\n\n\nControle\nBaixo\nAlto\nMédio\n\n\nEscalabilidade\nMuito alta\nLimitada\nAlta\n\n\nUso típico\nStartups, apps web\nBancos, governo, saúde\nEmpresas em transição"
   },
   {
-    "objectID": "aulas/01-introducao-computacao-nuvem.html#vantagens-da-nuvem",
-    "href": "aulas/01-introducao-computacao-nuvem.html#vantagens-da-nuvem",
+    "objectID": "aulas/01-introducao-computacao-nuvem.html#vantagens-da-nuvem-parte-1",
+    "href": "aulas/01-introducao-computacao-nuvem.html#vantagens-da-nuvem-parte-1",
     "title": "Aula 01 — Introdução à Computação em Nuvem",
-    "section": "Vantagens da nuvem",
-    "text": "Vantagens da nuvem\n\nEscalabilidade — aumentar ou reduzir recursos sob demanda\nCusto-benefício — paga-se pelo uso (OPEX em vez de CAPEX)\nAcessibilidade — acesso de qualquer lugar, qualquer dispositivo\nBackup e recuperação — redundância facilita recuperação de desastres\nInovação e agilidade — testar novas ideias sem investir em hardware"
+    "section": "Vantagens da nuvem (parte 1)",
+    "text": "Vantagens da nuvem (parte 1)\n\nEscalabilidade — aumentar ou reduzir recursos sob demanda\nCusto-benefício — paga-se pelo uso (OPEX em vez de CAPEX)\nAcessibilidade — acesso de qualquer lugar, qualquer dispositivo"
   },
   {
-    "objectID": "aulas/01-introducao-computacao-nuvem.html#desafios-da-nuvem",
-    "href": "aulas/01-introducao-computacao-nuvem.html#desafios-da-nuvem",
+    "objectID": "aulas/01-introducao-computacao-nuvem.html#vantagens-da-nuvem-parte-2",
+    "href": "aulas/01-introducao-computacao-nuvem.html#vantagens-da-nuvem-parte-2",
     "title": "Aula 01 — Introdução à Computação em Nuvem",
-    "section": "Desafios da nuvem",
-    "text": "Desafios da nuvem\n\nSegurança e privacidade — dados fora do seu controle físico\nDependência de conectividade — sem internet, sem acesso\nControle e gestão — menos visibilidade sobre a infraestrutura real\nCustos escaláveis — uso mal gerenciado pode sair caro (“bill shock”)"
+    "section": "Vantagens da nuvem (parte 2)",
+    "text": "Vantagens da nuvem (parte 2)\n\nBackup e recuperação — redundância facilita recuperação de desastres\nInovação e agilidade — testar novas ideias sem investir em hardware"
+  },
+  {
+    "objectID": "aulas/01-introducao-computacao-nuvem.html#desafios-da-nuvem-parte-1",
+    "href": "aulas/01-introducao-computacao-nuvem.html#desafios-da-nuvem-parte-1",
+    "title": "Aula 01 — Introdução à Computação em Nuvem",
+    "section": "Desafios da nuvem (parte 1)",
+    "text": "Desafios da nuvem (parte 1)\n\nSegurança e privacidade — dados fora do seu controle físico\nDependência de conectividade — sem internet, sem acesso"
+  },
+  {
+    "objectID": "aulas/01-introducao-computacao-nuvem.html#desafios-da-nuvem-parte-2",
+    "href": "aulas/01-introducao-computacao-nuvem.html#desafios-da-nuvem-parte-2",
+    "title": "Aula 01 — Introdução à Computação em Nuvem",
+    "section": "Desafios da nuvem (parte 2)",
+    "text": "Desafios da nuvem (parte 2)\n\nControle e gestão — menos visibilidade sobre a infraestrutura real\nCustos escaláveis — uso mal gerenciado pode sair caro (“bill shock”)"
   },
   {
     "objectID": "aulas/01-introducao-computacao-nuvem.html#segurança-na-nuvem",
     "href": "aulas/01-introducao-computacao-nuvem.html#segurança-na-nuvem",
     "title": "Aula 01 — Introdução à Computação em Nuvem",
     "section": "Segurança na nuvem",
-    "text": "Segurança na nuvem\nCompartilhar infraestrutura com outras empresas (multi-tenancy) exige mecanismos de segurança específicos. Alguns dos principais:\n\nMulti-tenancy — vários clientes compartilham a mesma infraestrutura física, isolados logicamente uns dos outros\nCriptografia — dados protegidos tanto “em repouso” (armazenados) quanto “em trânsito” (trafegando pela rede)\nIAM (Identity and Access Management) — controla quem pode acessar o quê, com que permissões"
+    "text": "Segurança na nuvem\nCompartilhar infraestrutura com outras empresas exige mecanismos de segurança específicos.\n\nMulti-tenancy — vários clientes compartilham a mesma infraestrutura física, isolados logicamente uns dos outros"
   },
   {
-    "objectID": "aulas/01-introducao-computacao-nuvem.html#segurança-na-nuvem-continuação",
-    "href": "aulas/01-introducao-computacao-nuvem.html#segurança-na-nuvem-continuação",
+    "objectID": "aulas/01-introducao-computacao-nuvem.html#criptografia",
+    "href": "aulas/01-introducao-computacao-nuvem.html#criptografia",
     "title": "Aula 01 — Introdução à Computação em Nuvem",
-    "section": "Segurança na nuvem (continuação)",
-    "text": "Segurança na nuvem (continuação)\n\nDLP (Data Loss Prevention) — detecta e bloqueia vazamento de dados sensíveis\nSIEM (Security Information and Event Management) — centraliza e correlaciona logs de segurança para detectar ataques\nZTNA (Zero Trust Network Access) — “nunca confie, sempre verifique”: nenhum acesso é automaticamente confiável, mesmo vindo de dentro da rede\nFWaaS (Firewall as a Service) — firewall entregue como serviço gerenciado na nuvem, sem hardware próprio\nCASB (Cloud Access Security Broker) — camada de segurança entre usuários e provedores de nuvem, aplicando políticas da empresa\n\n\nNão é preciso decorar as siglas — o importante é o aluno perceber que “segurança na nuvem” é uma área extensa e especializada, não só “colocar uma senha forte”."
+    "section": "Criptografia",
+    "text": "Criptografia\nDados protegidos tanto em repouso (armazenados) quanto em trânsito (trafegando pela rede)."
   },
   {
-    "objectID": "aulas/01-introducao-computacao-nuvem.html#o-futuro-da-nuvem",
-    "href": "aulas/01-introducao-computacao-nuvem.html#o-futuro-da-nuvem",
+    "objectID": "aulas/01-introducao-computacao-nuvem.html#iam-identity-and-access-management",
+    "href": "aulas/01-introducao-computacao-nuvem.html#iam-identity-and-access-management",
     "title": "Aula 01 — Introdução à Computação em Nuvem",
-    "section": "O futuro da nuvem",
-    "text": "O futuro da nuvem\n\nComputação quântica na nuvem — provedores já oferecem acesso a computadores quânticos como serviço (ex.: AWS Braket, Azure Quantum), sem precisar ter o hardware\nEdge computing e IoT — processamento acontece mais perto de onde o dado é gerado (sensores, dispositivos), reduzindo latência, em vez de mandar tudo para um data center distante\nSASE (Secure Access Service Edge) — converge rede e segurança em um único serviço entregue pela nuvem\nNuvem verde — sustentabilidade também é tendência (veremos em detalhe na Aula 03)"
+    "section": "IAM (Identity and Access Management)",
+    "text": "IAM (Identity and Access Management)\nControla quem pode acessar o quê, com que permissões — a base de qualquer política de segurança em nuvem."
+  },
+  {
+    "objectID": "aulas/01-introducao-computacao-nuvem.html#dlp-data-loss-prevention",
+    "href": "aulas/01-introducao-computacao-nuvem.html#dlp-data-loss-prevention",
+    "title": "Aula 01 — Introdução à Computação em Nuvem",
+    "section": "DLP (Data Loss Prevention)",
+    "text": "DLP (Data Loss Prevention)\nDetecta e bloqueia vazamento de dados sensíveis, antes que saiam da organização."
+  },
+  {
+    "objectID": "aulas/01-introducao-computacao-nuvem.html#siem-security-information-and-event-management",
+    "href": "aulas/01-introducao-computacao-nuvem.html#siem-security-information-and-event-management",
+    "title": "Aula 01 — Introdução à Computação em Nuvem",
+    "section": "SIEM (Security Information and Event Management)",
+    "text": "SIEM (Security Information and Event Management)\nCentraliza e correlaciona logs de segurança de toda a infraestrutura para detectar ataques em andamento."
+  },
+  {
+    "objectID": "aulas/01-introducao-computacao-nuvem.html#ztna-zero-trust-network-access",
+    "href": "aulas/01-introducao-computacao-nuvem.html#ztna-zero-trust-network-access",
+    "title": "Aula 01 — Introdução à Computação em Nuvem",
+    "section": "ZTNA (Zero Trust Network Access)",
+    "text": "ZTNA (Zero Trust Network Access)\n“Nunca confie, sempre verifique”: nenhum acesso é automaticamente confiável, mesmo vindo de dentro da rede."
+  },
+  {
+    "objectID": "aulas/01-introducao-computacao-nuvem.html#fwaas-firewall-as-a-service",
+    "href": "aulas/01-introducao-computacao-nuvem.html#fwaas-firewall-as-a-service",
+    "title": "Aula 01 — Introdução à Computação em Nuvem",
+    "section": "FWaaS (Firewall as a Service)",
+    "text": "FWaaS (Firewall as a Service)\nFirewall entregue como serviço gerenciado na nuvem, sem precisar de hardware próprio."
+  },
+  {
+    "objectID": "aulas/01-introducao-computacao-nuvem.html#casb-cloud-access-security-broker",
+    "href": "aulas/01-introducao-computacao-nuvem.html#casb-cloud-access-security-broker",
+    "title": "Aula 01 — Introdução à Computação em Nuvem",
+    "section": "CASB (Cloud Access Security Broker)",
+    "text": "CASB (Cloud Access Security Broker)\nCamada de segurança entre usuários e provedores de nuvem, aplicando as políticas da empresa.\n\nNão é preciso decorar as siglas — o importante é o aluno perceber que “segurança na nuvem” é uma área extensa e especializada, não só “colocar uma senha forte”."
+  },
+  {
+    "objectID": "aulas/01-introducao-computacao-nuvem.html#o-futuro-da-nuvem-computação-quântica",
+    "href": "aulas/01-introducao-computacao-nuvem.html#o-futuro-da-nuvem-computação-quântica",
+    "title": "Aula 01 — Introdução à Computação em Nuvem",
+    "section": "O futuro da nuvem: computação quântica",
+    "text": "O futuro da nuvem: computação quântica\nProvedores já oferecem acesso a computadores quânticos como serviço (ex.: AWS Braket, Azure Quantum), sem precisar ter o hardware."
+  },
+  {
+    "objectID": "aulas/01-introducao-computacao-nuvem.html#o-futuro-da-nuvem-edge-computing-e-iot",
+    "href": "aulas/01-introducao-computacao-nuvem.html#o-futuro-da-nuvem-edge-computing-e-iot",
+    "title": "Aula 01 — Introdução à Computação em Nuvem",
+    "section": "O futuro da nuvem: edge computing e IoT",
+    "text": "O futuro da nuvem: edge computing e IoT\nProcessamento acontece mais perto de onde o dado é gerado (sensores, dispositivos), reduzindo latência, em vez de mandar tudo para um data center distante."
+  },
+  {
+    "objectID": "aulas/01-introducao-computacao-nuvem.html#o-futuro-da-nuvem-sase",
+    "href": "aulas/01-introducao-computacao-nuvem.html#o-futuro-da-nuvem-sase",
+    "title": "Aula 01 — Introdução à Computação em Nuvem",
+    "section": "O futuro da nuvem: SASE",
+    "text": "O futuro da nuvem: SASE\nSASE (Secure Access Service Edge) converge rede e segurança em um único serviço entregue pela nuvem."
+  },
+  {
+    "objectID": "aulas/01-introducao-computacao-nuvem.html#o-futuro-da-nuvem-nuvem-verde",
+    "href": "aulas/01-introducao-computacao-nuvem.html#o-futuro-da-nuvem-nuvem-verde",
+    "title": "Aula 01 — Introdução à Computação em Nuvem",
+    "section": "O futuro da nuvem: nuvem verde",
+    "text": "O futuro da nuvem: nuvem verde\nSustentabilidade também é tendência — veremos em detalhe na Aula 03."
   },
   {
     "objectID": "aulas/01-introducao-computacao-nuvem.html#e-como-a-nuvem-é-vendida",
     "href": "aulas/01-introducao-computacao-nuvem.html#e-como-a-nuvem-é-vendida",
     "title": "Aula 01 — Introdução à Computação em Nuvem",
     "section": "E como a nuvem é “vendida”?",
-    "text": "E como a nuvem é “vendida”?\nPrévia da próxima aula: os modelos de serviço\n\nIaaS — infraestrutura (servidores, storage, rede virtuais)\nPaaS — plataforma (ambiente pronto para desenvolver aplicações)\nSaaS — software (aplicação pronta, só usar)\n\n\nNão desenvolver aqui — é só o gancho para a Aula 02, que trata IaaS/PaaS/SaaS e o modelo de referência NIST formalmente."
+    "text": "E como a nuvem é “vendida”?\nPrévia da próxima aula: os modelos de serviço\n\nIaaS — infraestrutura (servidores, storage, rede virtuais)"
+  },
+  {
+    "objectID": "aulas/01-introducao-computacao-nuvem.html#paas-prévia",
+    "href": "aulas/01-introducao-computacao-nuvem.html#paas-prévia",
+    "title": "Aula 01 — Introdução à Computação em Nuvem",
+    "section": "PaaS (prévia)",
+    "text": "PaaS (prévia)\n\nPaaS — plataforma (ambiente pronto para desenvolver aplicações)"
+  },
+  {
+    "objectID": "aulas/01-introducao-computacao-nuvem.html#saas-prévia",
+    "href": "aulas/01-introducao-computacao-nuvem.html#saas-prévia",
+    "title": "Aula 01 — Introdução à Computação em Nuvem",
+    "section": "SaaS (prévia)",
+    "text": "SaaS (prévia)\n\nSaaS — software (aplicação pronta, só usar)\n\n\nNão desenvolver aqui — é só o gancho para a Aula 02, que trata IaaS/PaaS/SaaS e o modelo de referência NIST formalmente."
   },
   {
     "objectID": "aulas/01-introducao-computacao-nuvem.html#atividade-da-aula",
