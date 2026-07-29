@@ -45,7 +45,18 @@ docker run php
 
 ## O fluxo, visualmente
 
-![](../images/aula11/docker-run-fluxo.png){fig-align="center" width="80%"}
+```{mermaid}
+sequenceDiagram
+  participant U as Usuário
+  participant D as Docker Host
+  participant H as Docker Hub
+  U->>D: docker run hello-world
+  D->>D: Verifica imagem local
+  D->>H: docker pull hello-world (se não existir local)
+  H-->>D: Envia a imagem
+  D->>D: docker start (cria e inicia o container)
+  D-->>U: Container em execução
+```
 
 ::: {.notes}
 Reforçar: `docker pull` busca a imagem, `docker start`/`run` cria e inicia o container a partir dela.

@@ -26,7 +26,11 @@ Em toda nuvem, parte da pilha de TI é gerenciada **pelo provedor**, parte **por
 
 Quanto mais "as a Service", menos você gerencia — e menos controle você tem.
 
-![](../images/aula02/comparativo-iaas-paas-saas.png){fig-align="center" width="70%"}
+| Característica | IaaS | PaaS | SaaS |
+|---|---|---|---|
+| Controle sobre infraestrutura | Alto | Médio | Baixo |
+| Facilidade de uso | Baixa | Média | Alta |
+| Casos de uso comuns | Desenvolvimento, hospedagem | Desenvolvimento de software | Aplicativos para usuários finais |
 
 ---
 
@@ -80,7 +84,17 @@ Quanto mais à direita → **menos trabalho técnico, menos controle**.
 
 ## Visão detalhada por camada
 
-![](../images/aula02/nist-responsabilidade-compartilhada.png){fig-align="center" width="85%"}
+| Camada | Nuvem Privada | IaaS | PaaS | SaaS |
+|---|---|---|---|---|
+| Aplicações | cliente | cliente | cliente | provedor |
+| Runtimes | cliente | cliente | provedor | provedor |
+| Segurança e integração | cliente | cliente | provedor | provedor |
+| Bancos de dados | cliente | cliente | provedor | provedor |
+| Servidores | cliente | cliente | provedor | provedor |
+| Virtualização | cliente | provedor | provedor | provedor |
+| Hardware | cliente | provedor | provedor | provedor |
+| Armazenamento | cliente | provedor | provedor | provedor |
+| Rede | cliente | provedor | provedor | provedor |
 
 ## E além dos três clássicos?
 

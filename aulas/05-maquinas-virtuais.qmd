@@ -42,7 +42,16 @@ Distinguir bem: JVM não é o que estamos estudando como "VM" na disciplina — 
 
 ## O MMV / Hipervisor — condições de Popek & Goldberg
 
-![](../images/aula05/diagrama-mmv.png){fig-align="center" width="65%"}
+```{mermaid}
+flowchart TB
+  A1[Aplicações] --> S1[Sistema Operacional]
+  A2[Aplicações] --> S2[Sistema Operacional]
+  S1 --> VM1["Máquina Virtual 1"]
+  S2 --> VM2["Máquina Virtual n"]
+  VM1 --> MMV["Virtual Machine Monitor (VMM)"]
+  VM2 --> MMV
+  MMV --> HW[Hardware]
+```
 
 Um bom monitor de máquina virtual (MMV) deve garantir:
 
