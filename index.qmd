@@ -31,3 +31,11 @@ format:
 ::: {.callout-note}
 Nos slides, use as setas do teclado para navegar, **S** para abrir as notas do professor e **O** para visão geral dos slides.
 :::
+
+## Atividades Avaliativas
+
+1. [Modelos de Nuvem](atividades/atividade-1-modelos-nuvem.html)
+2. [Virtualização](atividades/atividade-2-relatorio-virtualbox.html)
+3. [VMware x Xen](atividades/atividade-3-vmware-xen.html)
+4. [Docker](atividades/atividade-4-desafio-docker.html)
+5. [Gerenciamento e Provedores de Nuvem](atividades/atividade-5-dimensionamento-nuvem.html)
